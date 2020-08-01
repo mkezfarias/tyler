@@ -1,5 +1,4 @@
 let dataText = document.querySelector(".data-text");
-console.log(dataText);
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
@@ -36,3 +35,5 @@ async function erase() {
     erase();
   }
 })();
+
+console.log("wowo");
