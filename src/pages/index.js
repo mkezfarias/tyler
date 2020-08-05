@@ -17,6 +17,7 @@ class IndexPage extends React.Component {
           title="Home"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
+
         <Link to="#">
           <img
             style={{ height: 20 }}
