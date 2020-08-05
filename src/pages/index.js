@@ -4,10 +4,12 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Button from "../components/button"
+import { Row, Col } from "react-bootstrap"
+import "../styles/global.scss"
 
 class IndexPage extends React.Component {
   render() {
-    const siteTitle = "Gatsby Starter Personal Website"
+    const siteTitle = "Tyler Vawser is asking questions."
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -15,19 +17,40 @@ class IndexPage extends React.Component {
           title="Home"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
-        <img style={{ margin: 0 }} src="./GatsbyScene.svg" alt="Gatsby Scene" />
-        <h1>
-          Hey people{" "}
-          <span role="img" aria-label="wave emoji">
-            👋
-          </span>
-        </h1>
-        <p>Welcome to your new Gatsby website. You are on your home page.</p>
-        <p>
-          This starter comes out of the box with styled components and Gatsby's
-          default starter blog running on Netlify CMS.
-        </p>
-        <p>Now go build something great!</p>
+
+        <Link to="#">
+          <img
+            style={{ height: 20 }}
+            src="https://www.svgrepo.com/show/36538/menu.svg"
+            alt="Menu"
+            href="#"
+          />
+        </Link>
+
+        <Row>Let's talk</Row>
+        <Row>Set up a call</Row>
+        <Row>
+          <Col>
+            <Link className="text-dark" to="#">
+              Twitter
+            </Link>
+          </Col>
+          <Col>/</Col>
+          <Col>
+            <Link className="text-dark" to="#">
+              Email
+            </Link>
+          </Col>
+          <Col>/</Col>
+          <Col>
+            <Link className="text-dark" to="#">
+              LinkedIn
+            </Link>
+          </Col>
+        </Row>
+        <Row>Previously At.</Row>
+        <Row>Sticker Mule / Museum Hack</Row>
+
         <Link to="/blog/">
           <Button marginTop="35px">Go to Blog</Button>
         </Link>
