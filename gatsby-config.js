@@ -88,5 +88,20 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Work Sans`,
+            variants: [`500`, `600`],
+          },
+          {
+            family: `Roboto`,
+            variants: [`400`, `500`],
+          },
+        ],
+      },
+    },
   ],
 }
