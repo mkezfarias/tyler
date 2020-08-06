@@ -12,11 +12,7 @@ class IndexPage extends React.Component {
     const siteTitle = "Tyler Vawser is asking questions."
 
     return (
-      <Layout
-        className="main-title"
-        location={this.props.location}
-        title={siteTitle}
-      >
+      <Layout location={this.props.location} title={siteTitle}>
         <SEO
           title="Tyler Vawser"
           keywords={[`blog`, `Tyler Vawser`, `Tvawser`, `react`]}

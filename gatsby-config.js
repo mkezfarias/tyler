@@ -89,18 +89,13 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          {
-            family: `Work Sans`,
-            variants: [`500`, `600`],
-          },
-          {
-            family: `Roboto`,
-            variants: [`400`, `500`],
-          },
+          `Work Sans\:300,400,400i,700`,
+          `Roboto\:300,400,400i,700`, // you can also specify font weights and styles
         ],
+        display: "swap",
       },
     },
   ],
