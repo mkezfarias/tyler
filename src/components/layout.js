@@ -4,6 +4,8 @@ import styled from "styled-components"
 
 import { rhythm, scale } from "../utils/typography"
 import menuIMG from "../images/menu.svg"
+import Typewriter from "typewriter-effect"
+import { Row, Col, Container } from "react-bootstrap"
 
 class Layout extends React.Component {
   render() {
@@ -14,35 +16,37 @@ class Layout extends React.Component {
     let menu
 
     if (location.pathname === rootPath) {
-      header = <h1 className="main-title wsans w-semibold">{title}</h1>
+      header = (
+        <Container>
+          <div className="main-title wsans w-semibold">
+            Tyler Vawser is
+            <Typewriter
+              options={{
+                strings: [
+                  "typing.",
+                  `growing <a class="fancy-link " href="https://www.apptegy.com/">Apptegy </a>.`,
+                  "on Zoom.",
+                  "asking questions.",
+                  "riding his bike.",
+                  "drinking coffee.",
+                  "running.",
+                ],
+                autoStart: true,
+                loop: true,
+              }}
+            />
+          </div>
+        </Container>
+      )
       menu = (
-        <Link
-          style={{
-            boxShadow: `none`,
-            textDecoration: `none`,
-            color: `inherit`,
-          }}
-          to="#"
-        >
+        <Link className="fancy-link" to="#">
           <img style={{ height: 20 }} src={menuIMG} alt="Menu" />
         </Link>
       )
     } else {
       header = (
-        <h3
-          style={{
-            fontFamily: `Montserrat, sans-serif`,
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={`/blog/`}
-          >
+        <h3>
+          <Link className="fancy-link" to={`/blog/`}>
             {title}
           </Link>
         </h3>
@@ -58,9 +62,9 @@ class Layout extends React.Component {
             padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
           }}
         >
-          <header>
-            {header}
-            {menu}
+          <header className="d-flex justify-content-between">
+            <div>{header}</div>
+            <div>{menu}</div>
           </header>
 
           <main>{children}</main>

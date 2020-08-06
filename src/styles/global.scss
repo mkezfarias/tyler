@@ -25,8 +25,45 @@ opacity: 1;
 
 //skyblue3 #79BCFF
 
+a {
+text-decoration: none !important;
+box-shadow: 0 0 0 0 currentColor;
+}
+
 .main-title {
     
+}
+
+a.fancy-link {
+  position: relative;
+  color:#666461
+}
+
+a.fancy-link:hover{
+  color:#666461
+}
+
+a.fancy-link::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background-color: #666461;
+  transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  color:#666461
+
+}
+
+a.fancy-link:hover::before {
+  visibility: visible;
+  width: 100%;
+  left: 0;
+  right: auto;
+  height: 2px;
+  color:#666461
+
 }
 
 .wsans {
