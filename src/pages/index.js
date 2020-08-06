@@ -12,19 +12,18 @@ class IndexPage extends React.Component {
     const siteTitle = "Tyler Vawser is asking questions."
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
+      <Layout
+        className="main-title"
+        location={this.props.location}
+        title={siteTitle}
+      >
         <SEO
-          title="Home"
-          keywords={[`blog`, `gatsby`, `javascript`, `react`]}
+          title="Tyler Vawser"
+          keywords={[`blog`, `Tyler Vawser`, `Tvawser`, `react`]}
         />
 
         <Link to="#">
-          <img
-            style={{ height: 20 }}
-            src="https://www.svgrepo.com/show/36538/menu.svg"
-            alt="Menu"
-            href="#"
-          />
+          <img style={{ height: 20 }} src="../images/menu.svg" alt="Menu" />
         </Link>
 
         <Row>Let's talk</Row>

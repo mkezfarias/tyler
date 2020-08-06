@@ -1,3 +1,60 @@
 // Override default variables before the import
+
+// gray #666461
+// darkmode white #FCFCFC
+
+//black #1F1F22 
+//darkmode gray #9F9F9F
+
+//white #FCFCFC
+//darkmode black #1F1F22 
+
+//lightblue #0C84EB
+// darkmode darkblue #063C84 gradient to #041D3B
+/*
+background: transparent linear-gradient(180deg, #063C84 0%, var(--unnamed-color-041d3b) 100%) 0% 0% no-repeat padding-box;
+background: transparent linear-gradient(180deg, #063C84 0%, #041D3B 100%) 0% 0% no-repeat padding-box;
+opacity: 1;
+*/
+
+//ligtherblue #39A3FF
+
+//skyblue #0478DE
+
+//skyeblue2  #5BA9ED
+
+//skyblue3 #79BCFF
+
+.wsans {
+  font-family: 'Work Sans', sans-serif;
+}
+
+.roboto{
+  font-family: 'Roboto', sans-serif;
+}
+
+.weight-semibold {
+  font-weight: 600;
+}
+
+.weight-medium {
+  font-weight: 500;
+}
+
+.weight-regular {
+  font-weight: 400;
+}
+
+.calendly {
+  position: relative;
+  top: 165px;
+  left: 201px;
+  width: 837px;
+  height: 751px;
+  opacity: 1;
+}
+
+
+
 // Import Bootstrap and its default variables
 @import '~bootstrap/scss/bootstrap.scss';
