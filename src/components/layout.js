@@ -39,7 +39,7 @@ class Layout extends React.Component {
         </Container>
       )
       menu = (
-        <Link className="fancy-link" to="#">
+        <Link to="#">
           <img style={{ height: 20 }} src={menuIMG} alt="Menu" />
         </Link>
       )
