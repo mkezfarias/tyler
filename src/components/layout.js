@@ -3,16 +3,30 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 
 import { rhythm, scale } from "../utils/typography"
+import menuIMG from "../images/menu.svg"
 
 class Layout extends React.Component {
   render() {
-    const { location, title, children, class1 } = this.props
+    const { location, title, children } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
     const blogPath = `${__PATH_PREFIX__}/blog/`
     let header
+    let menu
 
     if (location.pathname === rootPath) {
       header = <h1 className="main-title wsans w-semibold">{title}</h1>
+      menu = (
+        <Link
+          style={{
+            boxShadow: `none`,
+            textDecoration: `none`,
+            color: `inherit`,
+          }}
+          to="#"
+        >
+          <img style={{ height: 20 }} src={menuIMG} alt="Menu" />
+        </Link>
+      )
     } else {
       header = (
         <h3
@@ -40,11 +54,15 @@ class Layout extends React.Component {
           style={{
             marginLeft: `auto`,
             marginRight: `auto`,
-            maxWidth: rhythm(24),
+            maxWidth: `100vw`,
             padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
           }}
         >
-          <header>{header}</header>
+          <header>
+            {header}
+            {menu}
+          </header>
+
           <main>{children}</main>
         </div>
       </Wrapper>
