@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 
@@ -19,7 +19,7 @@ class Layout extends React.Component {
       header = (
         <Container>
           <div className="main-title wsans w-semibold">
-            Tyler Vawser is
+            <span className="mb-0 pb-0">Tyler Vawser is</span>
             <Typewriter
               options={{
                 strings: [
@@ -39,7 +39,7 @@ class Layout extends React.Component {
         </Container>
       )
       menu = (
-        <Link className="fancy-link" to="#">
+        <Link to="#">
           <img style={{ height: 20 }} src={menuIMG} alt="Menu" />
         </Link>
       )
@@ -58,15 +58,14 @@ class Layout extends React.Component {
           style={{
             marginLeft: `auto`,
             marginRight: `auto`,
-            maxWidth: `100vw`,
-            padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+            maxWidth: `1200vw`,
+            padding: `${rhythm(5.5)} ${rhythm(1.5)} 0 ${rhythm(1.5)} `,
           }}
         >
-          <header className="d-flex justify-content-between">
+          <header className="d-flex justify-content-between align-items-center mb-5">
             <div>{header}</div>
-            <div>{menu}</div>
           </header>
-
+          <div className="menu-fixed">{menu}</div>
           <main>{children}</main>
         </div>
       </Wrapper>

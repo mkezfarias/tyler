@@ -1,46 +1,76 @@
 // Override default variables before the import
 
-// gray #666461
-// darkmode white #FCFCFC
+:root {
+  --day-gray: #666461;
+  --night-gray: #FCFCFC;
+  --day-black: #1F1F22;
+  --night-black: #9F9F9F; 
+  --day-white: #FCFCFC;
+  --night-white: #1F1F22;
+  --day-lightblue: #0C84EB;
+  --day-lightblue-bg: transparent linear-gradient(180deg, #39A3FF 0%, #0C84EB 100%) 0% 0% no-repeat padding-box;
+  --night-lightblue-bg: transparent linear-gradient(180deg, #063C84 0%, #041D3B 100%) 0% 0% no-repeat padding-box;
+  --lighterblue: #39A3FF;
+  --skyblue: #0478DE;
+  --skyeblue2:  #5BA9ED;
+  --skyblue3: #79BCFF;
+} 
 
-//black #1F1F22 
-//darkmode gray #9F9F9F
+.night-gray {
+  color: var(--night-gray);
+}
 
-//white #FCFCFC
-//darkmode black #1F1F22 
-
-//lightblue #0C84EB
-// darkmode darkblue #063C84 gradient to #041D3B
-/*
-background: transparent linear-gradient(180deg, #063C84 0%, var(--unnamed-color-041d3b) 100%) 0% 0% no-repeat padding-box;
-background: transparent linear-gradient(180deg, #063C84 0%, #041D3B 100%) 0% 0% no-repeat padding-box;
-opacity: 1;
-*/
-
-//ligtherblue #39A3FF
-
-//skyblue #0478DE
-
-//skyeblue2  #5BA9ED
-
-//skyblue3 #79BCFF
-
+.day-gray {
+  color: #666461;
+}
+ 
 a {
 text-decoration: none !important;
 box-shadow: 0 0 0 0 currentColor;
 }
 
+.h2{
+  font-size: calc(20px + 1vw) !important;
+  line-height: 1;
+}
+
+.h3{
+  font-size: calc(15px + 1vw) !important;
+  line-height: 1;
+}
+
+.h4{
+  font-size: calc(10px + 1vw) !important;
+  line-height: 1;
+}
+
+.h5{
+  font-size: calc(10px + .75vw) !important;
+  line-height: 1;
+}
+
+
+.h6{
+  font-size: calc(10px + 0.5vw) !important;
+  line-height: 1;
+}
+
 .main-title {
-    
+  font-size: calc(20px + 3vw);
+  line-height: 1;
+}
+
+.line-height-1{
+  line-height: 1;
 }
 
 a.fancy-link {
   position: relative;
-  color:#666461
+  color: var(--day-gray);
 }
 
 a.fancy-link:hover{
-  color:#666461
+  color: var(--day-gray);
 }
 
 a.fancy-link::before {
@@ -50,10 +80,9 @@ a.fancy-link::before {
   right: 0;
   width: 0;
   height: 2px;
-  background-color: #666461;
+  background-color: var(--day-gray);
   transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
-  color:#666461
-
+  color: var(--day-gray);
 }
 
 a.fancy-link:hover::before {
@@ -62,28 +91,39 @@ a.fancy-link:hover::before {
   left: 0;
   right: auto;
   height: 2px;
-  color:#666461
-
+  color: var(--day-gray);
 }
 
 .wsans {
-  font-family: 'Work Sans';
+  font-family: 'Work Sans' !important;
 }
 
 .roboto{
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif !important;
 }
 
 .w-semibold {
-  font-weight: 600;
+  font-weight: 600 !important;
+  font-weight: bolder;
 }
 
 .w-medium {
-  font-weight: 500;
+  font-weight: 500 !important;
 }
 
 .w-regular {
-  font-weight: 400;
+  font-weight: 400 !important;
+}
+
+.wider {
+  letter-spacing: -1.4px;
+  font-stretch: wider;
+}
+
+.menu-fixed {
+  position: fixed;
+  right: 4vw;
+  top: 44vh;
 }
 
 .calendly {
