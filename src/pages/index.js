@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Button from "../components/button"
-import { Row, Col } from "react-bootstrap"
+import { Container, Row, Col } from "react-bootstrap"
 import "../styles/global.scss"
 
 class IndexPage extends React.Component {
@@ -15,36 +15,39 @@ class IndexPage extends React.Component {
           title="Tyler Vawser"
           keywords={[`blog`, `Tyler Vawser`, `Tvawser`, `react`]}
         />
-        <Row>Let's talk</Row>
-        <Row>Set up a call</Row>
-        <Row>
-          <Col xl={1}>
+
+        <Row className="wider ml-3 wsans w-medium h2 pb-0 mb-0 line-height-1">
+          Let’s talk.
+        </Row>
+        <Row className="ml-3 roboto w-regular h4 pt-0 mt-0 line-height-1">
+          Set up a call
+        </Row>
+        <Row className="ml-0 roboto w-regular h6">
+          <Col>
             <Link className="fancy-link " to="#">
               Twitter
-            </Link>
-          </Col>
-          <Col xl={1}>/</Col>
-          <Col xl={1}>
+            </Link>{" "}
+            /{" "}
             <Link className="fancy-link " to="#">
               Email
-            </Link>
-          </Col>
-          <Col xl={1}>/</Col>
-          <Col xl={1}>
+            </Link>{" "}
+            /{" "}
             <Link className="fancy-link " to="#">
               LinkedIn
             </Link>
           </Col>
-        </Row>
-        <Row>Previously At.</Row>
-        <Row>
-          <Link className="fancy-link " to="#">
-            Sticker Mule
-          </Link>{" "}
-          /{" "}
-          <Link className="fancy-link " to="#">
-            Museum Hack
-          </Link>
+          <Col>
+            <Row>Previously At.</Row>
+            <Row>
+              <Link className="fancy-link " to="#">
+                Sticker Mule
+              </Link>{" "}
+              /{" "}
+              <Link className="fancy-link " to="#">
+                Museum Hack
+              </Link>
+            </Row>
+          </Col>
         </Row>
 
         <Link to="/blog/">

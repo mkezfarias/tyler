@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 
@@ -62,7 +62,7 @@ class Layout extends React.Component {
             padding: `${rhythm(5.5)} ${rhythm(1.5)} 0 ${rhythm(1.5)} `,
           }}
         >
-          <header className="d-flex justify-content-between align-items-center">
+          <header className="d-flex justify-content-between align-items-center mb-5">
             <div>{header}</div>
             <div>{menu}</div>
           </header>
