@@ -19,11 +19,13 @@ class IndexPage extends React.Component {
         <Row className="wider ml-3 wsans w-medium h2 pb-0 mb-0 line-height-1">
           Let’s talk.
         </Row>
-        <Row className="ml-3 roboto w-regular h4 pt-0 mt-0 line-height-1">
-          Set up a call
+        <Row className="day-gray ml-3 roboto w-regular h4 pt-0 mt-0 line-height-1">
+          <Link className="fancy-link " to="#">
+            Set up a call
+          </Link>
         </Row>
-        <Row className="ml-0 roboto w-regular h6">
-          <Col>
+        <Row className="ml-0 roboto w-regular h6 d-flex justify-content-between flex-md-nowrap w-75 align-items-end mt-5 pt-5">
+          <Col lg={3} md={2}>
             <Link className="fancy-link " to="#">
               Twitter
             </Link>{" "}
@@ -36,23 +38,22 @@ class IndexPage extends React.Component {
               LinkedIn
             </Link>
           </Col>
-          <Col>
-            <Row>Previously At.</Row>
-            <Row>
-              <Link className="fancy-link " to="#">
-                Sticker Mule
-              </Link>{" "}
-              /{" "}
-              <Link className="fancy-link " to="#">
+          <Col lg={3} md={2}>
+            <Row className="justify-content-end wsans w-medium h4 d-flex">
+              Previously At.
+            </Row>
+            <Row className="justify-content-end">
+              <Link className="fancy-link  mr-1" to="#">
+                Sticker Mule{" "}
+              </Link>
+              <div>/</div>
+              <Link className="fancy-link ml-1 " to="#">
+                {" "}
                 Museum Hack
               </Link>
             </Row>
           </Col>
         </Row>
-
-        <Link to="/blog/">
-          <Button marginTop="35px">Go to Blog</Button>
-        </Link>
       </Layout>
     )
   }

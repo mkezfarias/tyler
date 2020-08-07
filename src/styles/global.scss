@@ -16,14 +16,43 @@
   --skyblue3: #79BCFF;
 } 
 
-.night {
+.night-gray {
   color: var(--night-gray);
-  color: var(--night-black);
 }
 
+.day-gray {
+  color: #666461;
+}
+ 
 a {
 text-decoration: none !important;
 box-shadow: 0 0 0 0 currentColor;
+}
+
+.h2{
+  font-size: calc(20px + 1vw) !important;
+  line-height: 1;
+}
+
+.h3{
+  font-size: calc(15px + 1vw) !important;
+  line-height: 1;
+}
+
+.h4{
+  font-size: calc(10px + 1vw) !important;
+  line-height: 1;
+}
+
+.h5{
+  font-size: calc(10px + .75vw) !important;
+  line-height: 1;
+}
+
+
+.h6{
+  font-size: calc(10px + 0.5vw) !important;
+  line-height: 1;
 }
 
 .main-title {
@@ -31,7 +60,7 @@ box-shadow: 0 0 0 0 currentColor;
   line-height: 1;
 }
 
-.l-height{
+.line-height-1{
   line-height: 1;
 }
 
@@ -63,7 +92,6 @@ a.fancy-link:hover::before {
   right: auto;
   height: 2px;
   color: var(--day-gray);
-
 }
 
 .wsans {
@@ -90,6 +118,12 @@ a.fancy-link:hover::before {
 .wider {
   letter-spacing: -1.4px;
   font-stretch: wider;
+}
+
+.menu-fixed {
+  position: fixed;
+  right: 4vw;
+  top: 44vh;
 }
 
 .calendly {

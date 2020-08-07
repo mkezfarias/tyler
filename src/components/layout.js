@@ -64,9 +64,8 @@ class Layout extends React.Component {
         >
           <header className="d-flex justify-content-between align-items-center mb-5">
             <div>{header}</div>
-            <div>{menu}</div>
           </header>
-
+          <div className="menu-fixed">{menu}</div>
           <main>{children}</main>
         </div>
       </Wrapper>
