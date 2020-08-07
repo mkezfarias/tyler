@@ -16,7 +16,7 @@ class IndexPage extends React.Component {
           keywords={[`blog`, `Tyler Vawser`, `Tvawser`, `react`]}
         />
 
-        <Row className="wider ml-3 wsans w-medium h2 pb-0 mb-0 line-height-1">
+        <Row className="wider ml-3 wsans w-medium h2 pt-3 pb-0 mb-0 line-height-1">
           Let’s talk.
         </Row>
         <Row className="day-gray ml-3 roboto w-regular h4 pt-0 mt-0 line-height-1">
