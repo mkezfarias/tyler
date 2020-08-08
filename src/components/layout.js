@@ -5,9 +5,22 @@ import styled from "styled-components"
 import { rhythm, scale } from "../utils/typography"
 import menuIMG from "../images/menu.svg"
 import Typewriter from "typewriter-effect"
-import { Row, Col, Container } from "react-bootstrap"
+import { Modal, Row, Col, Container, Button } from "react-bootstrap"
+import Menu from "./menu"
 
 class Layout extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      show: false,
+    }
+    this.handleClose = () => this.setState({ show: false })
+    this.handleShow = () => {
+      this.setState({ show: true })
+    }
+  }
+
   render() {
     const { location, title, children } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
@@ -39,9 +52,9 @@ class Layout extends React.Component {
         </Container>
       )
       menu = (
-        <Link to="#">
+        <div onClick={this.handleShow}>
           <img style={{ height: 20 }} src={menuIMG} alt="Menu" />
-        </Link>
+        </div>
       )
     } else {
       header = (
@@ -68,6 +81,20 @@ class Layout extends React.Component {
           <div className="menu-fixed">{menu}</div>
           <main>{children}</main>
         </div>
+        <Modal
+          show={this.state.show}
+          onHide={this.handleClose}
+          keyboard={false}
+          className="modal-menu"
+        >
+          <Menu />
+          <Modal.Footer>
+            <Button variant="secondary" onClick={this.handleClose}>
+              Close
+            </Button>
+            <Button variant="primary">Understood</Button>
+          </Modal.Footer>
+        </Modal>
       </Wrapper>
     )
   }
