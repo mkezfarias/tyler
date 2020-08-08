@@ -19,7 +19,9 @@ class Menu extends PureComponent {
           <Modal.Title>Modal title</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <Modal.Title>Modal title</Modal.Title>
+          <Link to="/blog">
+            <Modal.Title>Modal title</Modal.Title>
+          </Link>
           <Modal.Title>Modal title</Modal.Title>
           <Modal.Title>Modal title</Modal.Title>
         </Modal.Body>

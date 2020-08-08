@@ -14,11 +14,11 @@ class Layout extends React.Component {
 
     this.state = {
       show: false,
+      day: true,
     }
     this.handleClose = () => this.setState({ show: false })
-    this.handleShow = () => {
-      this.setState({ show: true })
-    }
+    this.handleShow = () => this.setState({ show: true })
+    this.handleColors = () => this.setState({ day: !this.state.day })
   }
 
   render() {
@@ -92,7 +92,9 @@ class Layout extends React.Component {
             <Button variant="secondary" onClick={this.handleClose}>
               Close
             </Button>
-            <Button variant="primary">Understood</Button>
+            <Button variant="primary" onClick={this.handleColors}>
+              {this.state.day ? "Noche" : "Dia"}{" "}
+            </Button>
           </Modal.Footer>
         </Modal>
       </Wrapper>

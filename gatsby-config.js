@@ -25,6 +25,13 @@ module.exports = {
         name: `blog`,
       },
     },
+    `gatsby-plugin-page-transitions`,
+    {
+      resolve: "gatsby-plugin-page-transitions",
+      options: {
+        transitionTime: 1500,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
