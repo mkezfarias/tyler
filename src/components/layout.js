@@ -11,23 +11,23 @@ import Menu from "./menu"
 class Layout extends React.Component {
   componentDidMount() {
     const getDay = window.localStorage.getItem("day")
-    return getDay
+    return this.getDay
   }
   componentDidMount() {
     const setDay = bool => window.localStorage.getItem("day", bool)
-    return setDay()
+    return this.setDay()
   }
   constructor(props) {
     super(props)
     this.state = {
       show: false,
-      day: getDay,
+      day: this.getDay,
     }
     this.handleClose = () => this.setState({ show: false })
     this.handleShow = () => this.setState({ show: true })
     this.handleColors = () => {
       this.setState({ day: !this.state.day })
-      setDay(!getDay)
+      this.setDay(!this.getDay)
     }
   }
 
