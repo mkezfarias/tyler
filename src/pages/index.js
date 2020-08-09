@@ -4,8 +4,10 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Button from "../components/button"
-import { Container, Row, Col } from "react-bootstrap"
+import { Container, Row, Col, Modal } from "react-bootstrap"
 import "../styles/global.scss"
+import TransitionLink from "gatsby-plugin-transition-link"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 class IndexPage extends React.Component {
   render() {
@@ -20,11 +22,17 @@ class IndexPage extends React.Component {
           Let’s talk.
         </Row>
         <Row className="day-gray ml-3 roboto w-regular h4 pt-0 mt-0 line-height-1">
-          <Link className="fancy-link " to="#">
+          <AniLink
+            className="fancy-link"
+            swipe
+            direction="left"
+            top="exit"
+            to="blog"
+          >
             Set up a call
-          </Link>
+          </AniLink>
         </Row>
-        <Row className="ml-0 roboto w-regular h6 d-flex justify-content-between flex-md-nowrap w-75 align-items-end mt-5 pt-5">
+        <Row className="ml-0 mr-5 pr-5 roboto w-regular h6 d-flex justify-content-between flex-md-nowrap w-100 align-items-end mt-5 pt-5">
           <Col lg={3} md={2}>
             <Link className="fancy-link " to="#">
               Twitter
@@ -38,7 +46,7 @@ class IndexPage extends React.Component {
               LinkedIn
             </Link>
           </Col>
-          <Col lg={3} md={2}>
+          <Col lg={3} md={2} className="mr-5 pr-5">
             <Row className="justify-content-end wsans w-medium h4 d-flex">
               Previously At.
             </Row>

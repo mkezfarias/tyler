@@ -135,6 +135,17 @@ a.fancy-link:hover::before {
   opacity: 1;
 }
 
+.modal-content, .modal-dialog {
+  position: absolute !important;
+  right: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  top: 0 !important;
+  bottom: 0 !important;;
+  height: 100vh !important;
+  width: 50vw !important;
+}
 
 
 // Import Bootstrap and its default variables
