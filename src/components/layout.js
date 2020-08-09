@@ -16,14 +16,10 @@ class Layout extends React.Component {
 
     this.state = {
       show: false,
-      day: window.localStorage.getItem("day"),
     }
 
     this.handleClose = () => this.setState({ show: false })
     this.handleShow = () => this.setState({ show: true })
-    this.handleColors = () => {
-      this.setState({ day: !this.state.day })
-    }
   }
 
   render() {
