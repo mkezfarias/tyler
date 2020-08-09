@@ -15,10 +15,13 @@ class Menu extends PureComponent {
   render() {
     return (
       <>
-        <Modal.Header closeButton>
-          <Modal.Title>Modal title</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
+        <Modal.Body
+          style={{
+            background: "var(--gradient-background)",
+            transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+            transition: `0.4s`,
+          }}
+        >
           <Link to="/blog">
             <Modal.Title>Modal title</Modal.Title>
           </Link>

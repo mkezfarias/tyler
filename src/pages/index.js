@@ -18,11 +18,30 @@ class IndexPage extends React.Component {
           keywords={[`blog`, `Tyler Vawser`, `Tvawser`, `react`]}
         />
 
-        <Row className="wider ml-3 wsans w-medium h2 pt-3 pb-0 mb-0 line-height-1">
+        <Row
+          style={{
+            color: "var(--textNormal)",
+            transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+            transition: `0.4s`,
+          }}
+          className="wider ml-3 wsans w-medium h2 pt-3 pb-0 mb-0 line-height-1"
+        >
           Let’s talk.
         </Row>
-        <Row className="day-gray ml-3 roboto w-regular h4 pt-0 mt-0 line-height-1">
+        <Row
+          style={{
+            color: "var(--textTitle)",
+            transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+            transition: `0.4s`,
+          }}
+          className="ml-3 roboto w-regular h4 pt-0 mt-0 line-height-1"
+        >
           <AniLink
+            style={{
+              color: "var(--textTitle)",
+              transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+              transition: `0.4s`,
+            }}
             className="fancy-link"
             swipe
             direction="left"
@@ -32,30 +51,84 @@ class IndexPage extends React.Component {
             Set up a call
           </AniLink>
         </Row>
-        <Row className="ml-0 mr-5 pr-5 roboto w-regular h6 d-flex justify-content-between flex-md-nowrap w-100 align-items-end mt-5 pt-5">
+        <Row
+          style={{
+            color: "var(--textTitle)",
+            transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+            transition: `0.4s`,
+          }}
+          className="ml-0 mr-5 pr-5 roboto w-regular h6 d-flex justify-content-between flex-md-nowrap w-100 align-items-end mt-5 pt-5"
+        >
           <Col lg={3} md={2}>
-            <Link className="fancy-link " to="#">
+            <Link
+              style={{
+                color: "var(--textTitle)",
+                transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+                transition: `0.4s`,
+              }}
+              className="fancy-link "
+              to="#"
+            >
               Twitter
             </Link>{" "}
             /{" "}
-            <Link className="fancy-link " to="#">
+            <Link
+              style={{
+                color: "var(--textTitle)",
+                transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+                transition: `0.4s`,
+              }}
+              className="fancy-link "
+              to="#"
+            >
               Email
             </Link>{" "}
             /{" "}
-            <Link className="fancy-link " to="#">
+            <Link
+              style={{
+                color: "var(--textTitle)",
+                transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+                transition: `0.4s`,
+              }}
+              className="fancy-link "
+              to="#"
+            >
               LinkedIn
             </Link>
           </Col>
           <Col lg={3} md={2} className="mr-5 pr-5">
-            <Row className="justify-content-end wsans w-medium h4 d-flex">
+            <Row
+              style={{
+                color: "var(--textNormal)",
+                transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+                transition: `0.4s`,
+              }}
+              className="justify-content-end wsans w-medium h4 d-flex"
+            >
               Previously At.
             </Row>
             <Row className="justify-content-end">
-              <Link className="fancy-link  mr-1" to="#">
+              <Link
+                style={{
+                  color: "var(--textTitle)",
+                  transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+                  transition: `0.4s`,
+                }}
+                className="fancy-link  mr-1"
+                to="#"
+              >
                 Sticker Mule{" "}
               </Link>
               <div>/</div>
-              <Link className="fancy-link ml-1 " to="#">
+              <Link
+                style={{
+                  color: "var(--textTitle)",
+                  transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+                  transition: `0.4s`,
+                }}
+                className="fancy-link ml-1 "
+                to="#"
+              >
                 {" "}
                 Museum Hack
               </Link>
