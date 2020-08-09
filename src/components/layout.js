@@ -8,19 +8,21 @@ import Typewriter from "typewriter-effect"
 import { Modal, Row, Col, Container, Button } from "react-bootstrap"
 import Menu from "./menu"
 
+const windowGlobal = typeof window !== "undefined" && window
+
 class Layout extends React.Component {
   constructor(props) {
     super(props)
 
     this.state = {
       show: false,
-      day: window.localStorage.getItem("day"),
+      day: windowGlobal.localStorage.getItem("day"),
     }
     this.handleClose = () => this.setState({ show: false })
     this.handleShow = () => this.setState({ show: true })
     this.handleColors = () => {
       this.setState({ day: !this.state.day })
-      window.localStorage.setItem("day", this.state.day)
+      windowGlobal.localStorage.setItem("day", this.state.day)
     }
   }
 
