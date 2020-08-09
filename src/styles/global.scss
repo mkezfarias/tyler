@@ -14,7 +14,37 @@
   --skyblue: #0478DE;
   --skyeblue2:  #5BA9ED;
   --skyblue3: #79BCFF;
-} 
+  --dayMenu-bg: url("../images/menu.svg") no-repeat right top;
+  --nightMenu-bg: url("../images/menu2.svg") no-repeat right top;
+}
+
+body {
+  --bg: var(--day-white);
+  --textNormal: var(--day-black);
+  --textTitle: var(--day-gray);
+  --lighterblue: #39A3FF;
+  --skyblue: #0478DE;
+  --skyeblue2:  #5BA9ED;
+  --skyblue3: #79BCFF;
+  --menu-img: var(--dayMenu-bg);
+  background-color: var(--bg);
+  --gradient-background: transparent linear-gradient(180deg, #39A3FF 0%, #0C84EB 100%) 0% 0% no-repeat padding-box;
+  --footer: #0C84EB
+}
+
+body.dark {
+  -webkit-font-smoothing: antialiased;
+  --bg: var(--night-white);
+  --textNormal: var(--night-black);
+  --textTitle: var(--night-gray);
+  --lighterblue: #39A3FF;
+  --skyblue: #0478DE;
+  --skyeblue2:  #5BA9ED;
+  --skyblue3: #79BCFF;
+  --menu-img: var(--nightMenu-bg);
+  --gradient-background: transparent linear-gradient(180deg, #063C84 0%, #041D3B 100%) 0% 0% no-repeat padding-box;
+  --footer: #041D3B
+}
 
 .night-gray {
   color: var(--night-gray);

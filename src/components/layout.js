@@ -4,10 +4,11 @@ import styled from "styled-components"
 
 import { rhythm, scale } from "../utils/typography"
 import menuIMG from "../images/menu.svg"
+import menuDarkIMG from "../images/menu2.svg"
 import Typewriter from "typewriter-effect"
 import { Modal, Row, Col, Container, Button } from "react-bootstrap"
 import Menu from "./menu"
-import localStorageMemory from "localstorage-memory"
+import { ThemeToggler } from "gatsby-plugin-dark-mode"
 
 class Layout extends React.Component {
   constructor(props) {
@@ -15,15 +16,10 @@ class Layout extends React.Component {
 
     this.state = {
       show: false,
-      day: localStorageMemory.getItem("day"),
     }
-    localStorageMemory
+
     this.handleClose = () => this.setState({ show: false })
     this.handleShow = () => this.setState({ show: true })
-    this.handleColors = () => {
-      this.setState({ day: !this.state.day })
-      localStorageMemory.setItem("day", this.state.day)
-    }
   }
 
   render() {
@@ -36,7 +32,14 @@ class Layout extends React.Component {
     if (location.pathname === rootPath) {
       header = (
         <Container>
-          <div className="main-title wsans w-semibold">
+          <div
+            style={{
+              color: "var(--textNormal)",
+              transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+              transition: `0.4s`,
+            }}
+            className="main-title wsans w-semibold"
+          >
             <span className="mb-0 pb-0">Tyler Vawser is</span>
             <Typewriter
               options={{
@@ -57,9 +60,16 @@ class Layout extends React.Component {
         </Container>
       )
       menu = (
-        <div onClick={this.handleShow}>
-          <img style={{ height: 20 }} src={menuIMG} alt="Menu" />
-        </div>
+        <div
+          style={{
+            background: `var(--menu-img)`,
+            transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+            transition: `0.4s`,
+            height: "30px",
+            width: "30px",
+          }}
+          onClick={this.handleShow}
+        ></div>
       )
     } else {
       header = (
@@ -73,17 +83,18 @@ class Layout extends React.Component {
     return (
       <Wrapper
         style={{
-          background: `${this.state.day ? "red" : "white"}`,
+          backgroundColor: "var(--bg)",
           transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
           transition: `0.4s`,
+          minHeight: `100vh`,
         }}
       >
         <div
           style={{
             marginLeft: `auto`,
             marginRight: `auto`,
-            maxWidth: `1200vw`,
-            height: `100vh`,
+            maxWidth: `1400px`,
+
             padding: `${rhythm(5.5)} ${rhythm(1.5)} 0 ${rhythm(1.5)} `,
           }}
         >
@@ -99,15 +110,44 @@ class Layout extends React.Component {
           keyboard={false}
           className="modal-menu"
         >
-          <Menu />
-          <Modal.Footer>
-            <Button variant="secondary" onClick={this.handleClose}>
-              Close
-            </Button>
+          <Modal.Body
+            style={{
+              background: "var(--gradient-background)",
+              transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+              transition: `0.4s`,
+            }}
+          >
+            <Link to="/about">
+              <Modal.Title>About</Modal.Title>
+            </Link>
+            <Link to="/blog">
+              <Modal.Title>Posts</Modal.Title>
+            </Link>
+            <Link to="/favorites">
+              <Modal.Title>Favorites</Modal.Title>
+            </Link>
+            <Link to="/calendly">
+              <Modal.Title>Start a Call</Modal.Title>
+            </Link>
+            <ThemeToggler>
+              {({ theme, toggleTheme }) => (
+                <label>
+                  <input
+                    type="checkbox"
+                    onChange={e => {
+                      console.log(theme)
+                      toggleTheme(e.target.checked ? "dark" : "light")
+                    }}
+                    checked={theme === "dark"}
+                  />{" "}
+                  Dark mode
+                </label>
+              )}
+            </ThemeToggler>
             <Button variant="primary" onClick={this.handleColors}>
-              {this.state.day ? "Noche" : "Dia"}{" "}
+              {this.state.day ? "Night" : "Day Mode"}{" "}
             </Button>
-          </Modal.Footer>
+          </Modal.Body>
         </Modal>
       </Wrapper>
     )
