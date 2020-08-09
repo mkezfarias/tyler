@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState, Component } from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 
@@ -7,22 +7,23 @@ import menuIMG from "../images/menu.svg"
 import Typewriter from "typewriter-effect"
 import { Modal, Row, Col, Container, Button } from "react-bootstrap"
 import Menu from "./menu"
-import localStorageMemory from "localstorage-memory"
 
 class Layout extends React.Component {
+  componentDidMount() {
+    const getDay = window.localStorage.getItem("day")
+    const setDay = bool => window.localStorage.getItem("day", bool)
+  }
   constructor(props) {
     super(props)
-
     this.state = {
       show: false,
-      day: localStorageMemory.getItem("day"),
+      day: getDay,
     }
-    localStorageMemory
     this.handleClose = () => this.setState({ show: false })
     this.handleShow = () => this.setState({ show: true })
     this.handleColors = () => {
       this.setState({ day: !this.state.day })
-      localStorageMemory.setItem("day", this.state.day)
+      setDay(!getDay)
     }
   }
 
