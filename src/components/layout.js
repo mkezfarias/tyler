@@ -7,9 +7,7 @@ import menuIMG from "../images/menu.svg"
 import Typewriter from "typewriter-effect"
 import { Modal, Row, Col, Container, Button } from "react-bootstrap"
 import Menu from "./menu"
-import { LocalStorage } from "node-localstorage"
-
-global.localStorage = new LocalStorage("./scratch")
+import localStorageMemory from "localstorage-memory"
 
 class Layout extends React.Component {
   constructor(props) {
@@ -17,13 +15,14 @@ class Layout extends React.Component {
 
     this.state = {
       show: false,
-      day: localStorage.getItem("day"),
+      day: localStorageMemory.getItem("day"),
     }
+    localStorageMemory
     this.handleClose = () => this.setState({ show: false })
     this.handleShow = () => this.setState({ show: true })
     this.handleColors = () => {
       this.setState({ day: !this.state.day })
-      localStorage.setItem("day", this.state.day)
+      localStorageMemory.setItem("day", this.state.day)
     }
   }
 
