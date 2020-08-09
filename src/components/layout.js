@@ -11,7 +11,11 @@ import Menu from "./menu"
 class Layout extends React.Component {
   componentDidMount() {
     const getDay = window.localStorage.getItem("day")
+    return getDay
+  }
+  componentDidMount() {
     const setDay = bool => window.localStorage.getItem("day", bool)
+    return setDay()
   }
   constructor(props) {
     super(props)
