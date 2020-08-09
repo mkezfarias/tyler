@@ -11,6 +11,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-netlify-cms`,
+    `gatsby-plugin-transition-link`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
@@ -23,13 +24,6 @@ module.exports = {
       options: {
         path: `${__dirname}/content/blog`,
         name: `blog`,
-      },
-    },
-    `gatsby-plugin-page-transitions`,
-    {
-      resolve: "gatsby-plugin-page-transitions",
-      options: {
-        transitionTime: 1500,
       },
     },
     {

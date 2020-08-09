@@ -14,11 +14,14 @@ class Layout extends React.Component {
 
     this.state = {
       show: false,
-      day: true,
+      day: window.localStorage.getItem("day"),
     }
     this.handleClose = () => this.setState({ show: false })
     this.handleShow = () => this.setState({ show: true })
-    this.handleColors = () => this.setState({ day: !this.state.day })
+    this.handleColors = () => {
+      this.setState({ day: !this.state.day })
+      window.localStorage.setItem("day", this.state.day)
+    }
   }
 
   render() {
@@ -66,12 +69,19 @@ class Layout extends React.Component {
       )
     }
     return (
-      <Wrapper>
+      <Wrapper
+        style={{
+          background: `${this.state.day ? "red" : "white"}`,
+          transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+          transition: `0.4s`,
+        }}
+      >
         <div
           style={{
             marginLeft: `auto`,
             marginRight: `auto`,
             maxWidth: `1200vw`,
+            height: `100vh`,
             padding: `${rhythm(5.5)} ${rhythm(1.5)} 0 ${rhythm(1.5)} `,
           }}
         >
