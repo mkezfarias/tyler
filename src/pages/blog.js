@@ -46,9 +46,21 @@ class Blog extends React.Component {
             )
           })}
         </div>
-        <Link to="/">
-          <Button marginTop="85px">Go Home</Button>
-        </Link>
+        <AniLink
+          style={{
+            color: "var(--textTitle)",
+            transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+            transition: `0.4s`,
+          }}
+          className="fancy-link"
+          cover
+          bg="var(--gradient-background)"
+          direction="left"
+          top="entry"
+          to="/"
+        >
+          Go Home
+        </AniLink>
       </Layout>
     )
   }

@@ -43,7 +43,8 @@ class IndexPage extends React.Component {
               transition: `0.4s`,
             }}
             className="fancy-link"
-            swipe
+            cover
+            bg="#663399"
             direction="left"
             top="exit"
             to="blog"
@@ -96,7 +97,7 @@ class IndexPage extends React.Component {
               LinkedIn
             </Link>
           </Col>
-          <Col lg={3} md={2} className="mr-5 pr-5">
+          <Col lg={3} md={2} className="mr-5 pr-5 previously-fixed">
             <Row
               style={{
                 color: "var(--textNormal)",
