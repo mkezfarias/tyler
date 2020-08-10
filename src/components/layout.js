@@ -6,9 +6,20 @@ import { rhythm, scale } from "../utils/typography"
 import menuIMG from "../images/menu.svg"
 import menuDarkIMG from "../images/menu2.svg"
 import Typewriter from "typewriter-effect"
-import { Modal, Row, Col, Container, Button } from "react-bootstrap"
+import {
+  Modal,
+  Row,
+  Col,
+  Container,
+  Button,
+  CloseButton,
+} from "react-bootstrap"
 import Menu from "./menu"
 import { ThemeToggler } from "gatsby-plugin-dark-mode"
+import whiteLogo from "../images/logo-white.svg"
+import dayButton from "../images/daymode.svg"
+import nightButton from "../images/night-button.svg"
+import closeBTN from "../images/x.svg"
 
 class Layout extends React.Component {
   constructor(props) {
@@ -117,36 +128,67 @@ class Layout extends React.Component {
               transition: `0.4s`,
             }}
           >
-            <Link to="/about">
-              <Modal.Title>About</Modal.Title>
+            <Link to="/">
+              <img
+                src={whiteLogo}
+                alt="Tyler Vawser"
+                className="logo-fixed"
+              ></img>
             </Link>
-            <Link to="/blog">
-              <Modal.Title>Posts</Modal.Title>
-            </Link>
-            <Link to="/favorites">
-              <Modal.Title>Favorites</Modal.Title>
-            </Link>
-            <Link to="/calendly">
-              <Modal.Title>Start a Call</Modal.Title>
-            </Link>
-            <ThemeToggler>
-              {({ theme, toggleTheme }) => (
-                <label>
-                  <input
-                    type="checkbox"
-                    onChange={e => {
-                      console.log(theme)
-                      toggleTheme(e.target.checked ? "dark" : "light")
-                    }}
-                    checked={theme === "dark"}
-                  />{" "}
-                  Dark mode
-                </label>
-              )}
-            </ThemeToggler>
-            <Button variant="primary" onClick={this.handleColors}>
-              {this.state.day ? "Night" : "Day Mode"}{" "}
-            </Button>
+            <div className="d-flex flex-column p-2 justify-content-center align-items-end items-fixed">
+              <Link className="text-light roboto w-regular h2 my-4" to="/about">
+                About
+              </Link>
+
+              <Link className="text-light roboto w-regular h2 my-3" to="/blog">
+                Posts
+              </Link>
+
+              <Link
+                className="text-light roboto w-regular h2 my-3"
+                to="/favorites"
+              >
+                Favorites
+              </Link>
+
+              <Link
+                className="text-light roboto w-regular h2 my-4"
+                to="/calendly"
+              >
+                Start a Call
+              </Link>
+            </div>
+            <Col className="d-flex flex-column night-fixed">
+              <Link to="/" className="text-light roboto w-regular ml-0">
+                EN 日 ES{" "}
+              </Link>
+
+              <ThemeToggler>
+                {({ theme, toggleTheme }) => (
+                  <label>
+                    <input
+                      hidden
+                      type="checkbox"
+                      onChange={e => {
+                        console.log(theme)
+                        toggleTheme(e.target.checked ? "dark" : "light")
+                      }}
+                      checked={theme === "dark"}
+                    />{" "}
+                    <img
+                      src={theme === "dark" ? dayButton : nightButton}
+                      alt="Nigh/Day Mode"
+                    ></img>
+                  </label>
+                )}
+              </ThemeToggler>
+            </Col>
+            <img
+              src={closeBTN}
+              alt="Close Button"
+              className="close-button"
+              onClick={this.handleClose}
+            ></img>
           </Modal.Body>
         </Modal>
       </Wrapper>

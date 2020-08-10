@@ -70,7 +70,7 @@ class IndexPage extends React.Component {
               className="fancy-link "
               to="#"
             >
-              Twitter
+              T
             </Link>{" "}
             /{" "}
             <Link
@@ -82,7 +82,7 @@ class IndexPage extends React.Component {
               className="fancy-link "
               to="#"
             >
-              Email
+              E
             </Link>{" "}
             /{" "}
             <Link
@@ -94,10 +94,10 @@ class IndexPage extends React.Component {
               className="fancy-link "
               to="#"
             >
-              LinkedIn
+              L
             </Link>
           </Col>
-          <Col lg={3} md={2} className="mr-5 pr-5 previously-fixed">
+          <Col lg={3} md={2} className="mr-5 pr-5">
             <Row
               style={{
                 color: "var(--textNormal)",
@@ -106,7 +106,7 @@ class IndexPage extends React.Component {
               }}
               className="justify-content-end wsans w-medium h4 d-flex"
             >
-              Previously At.
+              P
             </Row>
             <Row className="justify-content-end">
               <Link
@@ -118,7 +118,7 @@ class IndexPage extends React.Component {
                 className="fancy-link  mr-1"
                 to="#"
               >
-                Sticker Mule{" "}
+                S
               </Link>
               <div>/</div>
               <Link
@@ -129,10 +129,7 @@ class IndexPage extends React.Component {
                 }}
                 className="fancy-link ml-1 "
                 to="#"
-              >
-                {" "}
-                Museum Hack
-              </Link>
+              ></Link>
             </Row>
           </Col>
         </Row>

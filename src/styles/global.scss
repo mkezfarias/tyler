@@ -59,12 +59,12 @@ text-decoration: none !important;
 box-shadow: 0 0 0 0 currentColor;
 }
 
-.h2{
+.h2.h2.h2{
   font-size: calc(20px + 1vw) !important;
   line-height: 1;
 }
 
-.h3{
+.h3.h3.h3{
   font-size: calc(15px + 1vw) !important;
   line-height: 1;
 }
@@ -156,6 +156,34 @@ a.fancy-link:hover::before {
   top: 44vh;
 }
 
+.close-button{
+  position: fixed;
+  right: 4vw;
+  top: 44vh;
+}
+
+.logo-fixed{
+  position: fixed;
+  right: 5vw;
+  top: 4vh;
+}
+
+.items-fixed{
+  position: fixed;
+  right: 10vw;
+  top: 23vh
+}
+
+.night-fixed {
+  position: fixed !important;
+  bottom: 0vh !important;
+}
+
+.previously-fixed {
+  position: fixed !important;
+  bottom: 19.5vh !important;
+  right: 14vh !important;
+}
 .calendly {
   position: relative;
   top: 165px;
