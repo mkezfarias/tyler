@@ -20,6 +20,7 @@ import whiteLogo from "../images/logo-white.svg"
 import dayButton from "../images/daymode.svg"
 import nightButton from "../images/night-button.svg"
 import closeBTN from "../images/x.svg"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 class Layout extends React.Component {
   constructor(props) {
@@ -71,16 +72,30 @@ class Layout extends React.Component {
         </Container>
       )
       menu = (
-        <div
+        <AniLink
           style={{
-            background: `var(--menu-img)`,
+            color: "var(--textTitle)",
             transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-            transition: `0.4s`,
-            height: "30px",
-            width: "30px",
+            transition: `0.6s`,
           }}
-          onClick={this.handleShow}
-        ></div>
+          to="/full-menu"
+          className="fancy-link"
+          cover
+          bg="var(--gradient-background)"
+          direction="left"
+          top="entry"
+          duration={2}
+        >
+          <div
+            style={{
+              background: `var(--menu-img)`,
+              transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+              transition: `0.4s`,
+              height: "30px",
+              width: "30px",
+            }}
+          ></div>
+        </AniLink>
       )
     } else {
       header = (
@@ -105,18 +120,19 @@ class Layout extends React.Component {
             marginLeft: `auto`,
             marginRight: `auto`,
             maxWidth: `1400px`,
-
             padding: `${rhythm(5.5)} ${rhythm(1.5)} 0 ${rhythm(1.5)} `,
           }}
         >
           <header className="d-flex justify-content-between align-items-center mb-5">
-            <div>{header}</div>
+            <div onClick={this.handleShow}>{header}</div>
           </header>
           <div className="menu-fixed">{menu}</div>
           <main>{children}</main>
         </div>
         <Modal
           show={this.state.show}
+          backdrop="static"
+          animation={false}
           onHide={this.handleClose}
           keyboard={false}
           className="modal-menu"

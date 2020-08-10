@@ -8,8 +8,27 @@ import { Container, Row, Col, Modal } from "react-bootstrap"
 import "../styles/global.scss"
 import TransitionLink from "gatsby-plugin-transition-link"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
+import { ThemeToggler } from "gatsby-plugin-dark-mode"
+import whiteLogo from "../images/logo-white.svg"
+import dayButton from "../images/daymode.svg"
+import nightButton from "../images/night-button.svg"
+import closeBTN from "../images/x.svg"
 
-class IndexPage extends React.Component {
+class FullMenu extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      show: true,
+    }
+
+    this.handleClose = () => this.setState({ show: false })
+    this.handleShow = () => this.setState({ show: true })
+    this.bgTransparent = e => {
+      let bg = document.querySelector(".modal-backdrop")
+      bg.style.opacity = "0"
+    }
+  }
   render() {
     return (
       <Layout location={this.props.location}>
@@ -19,14 +38,21 @@ class IndexPage extends React.Component {
         />
 
         <Row
+          id="padding-x"
           style={{
             color: "var(--textNormal)",
             transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
             transition: `0.4s`,
           }}
-          className="wider ml-3 wsans w-medium h2 pt-3 pb-0 mb-0 line-height-1"
+          className="wider ml-3 wsans w-medium h2 pb-0 mb-0 line-height-1 mt-0"
         >
-          Let’s talk.
+          <Col
+            lg={5}
+            className="w-semibold "
+            style={{ fontSize: `calc(20px + 5vw)` }}
+          >
+            Tyler is waiting to see that you’ll pick first.{" "}
+          </Col>
         </Row>
         <Row
           style={{
@@ -35,23 +61,7 @@ class IndexPage extends React.Component {
             transition: `0.4s`,
           }}
           className="ml-3 roboto w-regular h4 pt-0 mt-0 line-height-1"
-        >
-          <AniLink
-            style={{
-              color: "var(--textTitle)",
-              transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-              transition: `0.4s`,
-            }}
-            className="fancy-link"
-            cover
-            bg="#663399"
-            direction="left"
-            top="exit"
-            to="blog"
-          >
-            Set up a call
-          </AniLink>
-        </Row>
+        ></Row>
         <Row
           style={{
             color: "var(--textTitle)",
@@ -59,83 +69,102 @@ class IndexPage extends React.Component {
             transition: `0.4s`,
           }}
           className="ml-0 mr-5 pr-5 roboto w-regular h6 d-flex justify-content-between flex-md-nowrap w-100 align-items-end mt-5 pt-5"
+        ></Row>
+        <Modal
+          onEntered={this.bgTransparent}
+          show={this.state.show}
+          animation={false}
+          className="modal-menu"
+          backdropClassName="transparent-opacity"
         >
-          <Col lg={3} md={2}>
-            <Link
-              style={{
-                color: "var(--textTitle)",
-                transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-                transition: `0.4s`,
-              }}
-              className="fancy-link "
-              to="#"
-            >
-              T
-            </Link>{" "}
-            /{" "}
-            <Link
-              style={{
-                color: "var(--textTitle)",
-                transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-                transition: `0.4s`,
-              }}
-              className="fancy-link "
-              to="#"
-            >
-              E
-            </Link>{" "}
-            /{" "}
-            <Link
-              style={{
-                color: "var(--textTitle)",
-                transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-                transition: `0.4s`,
-              }}
-              className="fancy-link "
-              to="#"
-            >
-              L
+          <Modal.Body
+            style={{
+              background: "var(--gradient-background)",
+              transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+              transition: `0.4s`,
+            }}
+          >
+            <Link to="/">
+              <img
+                src={whiteLogo}
+                alt="Tyler Vawser"
+                className="logo-fixed"
+              ></img>
             </Link>
-          </Col>
-          <Col lg={3} md={2} className="mr-5 pr-5">
-            <Row
-              style={{
-                color: "var(--textNormal)",
-                transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-                transition: `0.4s`,
-              }}
-              className="justify-content-end wsans w-medium h4 d-flex"
-            >
-              P
-            </Row>
-            <Row className="justify-content-end">
-              <Link
-                style={{
-                  color: "var(--textTitle)",
-                  transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-                  transition: `0.4s`,
-                }}
-                className="fancy-link  mr-1"
-                to="#"
-              >
-                S
+            <div className="d-flex flex-column p-2 justify-content-center align-items-end items-fixed">
+              <Link className="text-light roboto w-regular h2 my-4" to="/about">
+                About
               </Link>
-              <div>/</div>
+
+              <Link className="text-light roboto w-regular h2 my-3" to="/blog">
+                Posts
+              </Link>
+
               <Link
-                style={{
-                  color: "var(--textTitle)",
-                  transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-                  transition: `0.4s`,
-                }}
-                className="fancy-link ml-1 "
-                to="#"
-              ></Link>
-            </Row>
-          </Col>
-        </Row>
+                className="text-light roboto w-regular h2 my-3"
+                to="/favorites"
+              >
+                Favorites
+              </Link>
+
+              <Link
+                className="text-light roboto w-regular h2 my-4"
+                to="/calendly"
+              >
+                Start a Call
+              </Link>
+            </div>
+            <Col className="d-flex flex-column night-fixed">
+              <Link to="/" className="text-light roboto w-regular ml-0">
+                EN 日 ES{" "}
+              </Link>
+
+              <ThemeToggler>
+                {({ theme, toggleTheme }) => (
+                  <label>
+                    <input
+                      hidden
+                      type="checkbox"
+                      onChange={e => {
+                        console.log(theme)
+                        toggleTheme(e.target.checked ? "dark" : "light")
+                      }}
+                      checked={theme === "dark"}
+                    />{" "}
+                    <img
+                      src={theme === "dark" ? dayButton : nightButton}
+                      alt="Nigh/Day Mode"
+                    ></img>
+                  </label>
+                )}
+              </ThemeToggler>
+            </Col>
+
+            <AniLink
+              style={{
+                color: "var(--textTitle)",
+                transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+                transition: `0.6s`,
+              }}
+              to="/"
+              className="fancy-link"
+              cover
+              bg="var(--gradient-background)"
+              direction="right"
+              top="entry"
+              duration={2}
+            >
+              <img
+                src={closeBTN}
+                alt="Close Button"
+                className="close-button"
+              ></img>
+            </AniLink>
+          </Modal.Body>
+        </Modal>
       </Layout>
     )
   }
 }
 
-export default IndexPage
+export default FullMenu

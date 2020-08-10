@@ -205,6 +205,15 @@ a.fancy-link:hover::before {
   width: 50vw !important;
 }
 
+#padding-x{
+  position: fixed;
+  top: 20vh;
+}
+
+.transparent-opacity.transparent-opacity.transparent-opacity {
+  background-color: transparent !important;
+}
+
 
 // Import Bootstrap and its default variables
 @import '~bootstrap/scss/bootstrap.scss';

@@ -54,7 +54,7 @@ class Blog extends React.Component {
           }}
           className="fancy-link"
           cover
-          bg="#663399"
+          bg="var(--gradient-background)"
           direction="left"
           top="entry"
           to="/"
