@@ -28,7 +28,7 @@ body {
   --skyblue3: #79BCFF;
   --menu-img: var(--dayMenu-bg);
   background-color: var(--bg);
-  --gradient-background:  linear-gradient(180deg, #39A3FF 0%, #0C84EB 100%) 0% 0% no-repeat padding-box;
+  --gradient-background:  linear-gradient(180deg, #0C84EB 0%, #0C84EB 100%) 0% 0% no-repeat padding-box;
   --footer: #0C84EB
 }
 
@@ -200,6 +200,11 @@ a.fancy-link:hover::before {
 
 .p-text {
  font-size: calc(10px + .3vw);
+}
+
+.fav-title {
+  color: var(--skyblue3) !important;
+  font-size: calc(20px + 1.2vw) !important;
 }
 
 .calendly {
