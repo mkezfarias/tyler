@@ -197,6 +197,11 @@ a.fancy-link:hover::before {
   bottom: 19.5vh !important;
   right: 14vh !important;
 }
+
+.p-text {
+ font-size: calc(10px + .3vw);
+}
+
 .calendly {
   position: relative;
   top: 165px;

@@ -100,10 +100,45 @@ class Favorites extends React.Component {
           }}
         >
           <Row className="d-flex justify-content-center">
-            <Col>
-              <Row>
-                <img src={toolsIcon} alt="Tools" />{" "}
-                <div className="text-ligth"> Favorite tools</div>
+            <Col xl={{ span: 6, offset: 1 }}>
+              <Row className="d-flex align-items-baseline">
+                <img src={toolsIcon} alt="Tools"></img>
+                <span className="px-2 mt-4 text-light wsans w-regular h1">
+                  Favorite tools
+                </span>
+              </Row>
+              <Row className="d-flex ml-5">
+                <p className=" text-light p-text">
+                  <strong>Lorem ipsum: </strong>
+                  Lorem ipsum: dolor sit amet, consetetur sadipscing elitr, sed
+                  diam nonumy
+                </p>
+              </Row>
+              <Row className="d-flex ml-5">
+                <p className=" text-light p-text">
+                  <strong>Lorem ipsum: </strong>
+                  Lorem ipsum: dolor sit amet, consetetur sadipscing elitr, sed
+                  diam nonumy eirmod
+                </p>
+              </Row>
+              <Row className="d-flex ml-5">
+                <p className=" text-light p-text">
+                  <strong>Lorem ipsum: </strong>
+                  Lorem ipsum: dolor sit amet, consetetur sadipscing elitr, sed
+                </p>
+              </Row>
+              <Row className="d-flex ml-5">
+                <p className=" text-light p-text">
+                  <strong>Lorem ipsum: </strong>
+                  Lorem ipsum: dolor sit amet, consetetur sadipscing elitr, sed
+                  diam nonumy
+                </p>
+              </Row>
+              <Row className="d-flex ml-5">
+                <p className=" text-light p-text">
+                  <strong>Lorem ipsum: </strong>
+                  Lorem ipsum: dolor sit amet, consetetur
+                </p>
               </Row>
             </Col>
           </Row>
