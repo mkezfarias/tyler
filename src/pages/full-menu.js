@@ -3,8 +3,7 @@ import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Button from "../components/button"
-import { Container, Row, Col, Modal } from "react-bootstrap"
+import { Row, Col } from "react-bootstrap"
 import "../styles/global.scss"
 import TransitionLink from "gatsby-plugin-transition-link"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
@@ -17,17 +16,6 @@ import closeBTN from "../images/x.svg"
 class FullMenu extends React.Component {
   constructor(props) {
     super(props)
-
-    this.state = {
-      show: true,
-    }
-
-    this.handleClose = () => this.setState({ show: false })
-    this.handleShow = () => this.setState({ show: true })
-    this.bgTransparent = e => {
-      let bg = document.querySelector(".modal-backdrop")
-      bg.style.opacity = "0"
-    }
   }
   render() {
     return (
@@ -70,20 +58,15 @@ class FullMenu extends React.Component {
           }}
           className="ml-0 mr-5 pr-5 roboto w-regular h6 d-flex justify-content-between flex-md-nowrap w-100 align-items-end mt-5 pt-5"
         ></Row>
-        <Modal
-          onEntered={this.bgTransparent}
-          show={this.state.show}
-          animation={false}
-          className="modal-menu"
-          backdropClassName="transparent-opacity"
+        <div
+          className="fixed-full-menu"
+          style={{
+            background: "var(--gradient-background)",
+            transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+            transition: `0.4s`,
+          }}
         >
-          <Modal.Body
-            style={{
-              background: "var(--gradient-background)",
-              transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-              transition: `0.4s`,
-            }}
-          >
+          <div>
             <Link to="/">
               <img
                 src={whiteLogo}
@@ -143,16 +126,15 @@ class FullMenu extends React.Component {
             <AniLink
               style={{
                 color: "var(--textTitle)",
-                transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-                transition: `0.6s`,
               }}
               to="/"
               className="fancy-link"
               cover
               bg="var(--gradient-background)"
-              direction="right"
+              direction="left"
               top="entry"
               duration={2}
+              entryOffset={800}
             >
               <img
                 src={closeBTN}
@@ -160,8 +142,8 @@ class FullMenu extends React.Component {
                 className="close-button"
               ></img>
             </AniLink>
-          </Modal.Body>
-        </Modal>
+          </div>
+        </div>
       </Layout>
     )
   }
