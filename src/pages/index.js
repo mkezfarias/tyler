@@ -4,33 +4,138 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Button from "../components/button"
+import { Container, Row, Col, Modal } from "react-bootstrap"
+import "../styles/global.scss"
+import TransitionLink from "gatsby-plugin-transition-link"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 class IndexPage extends React.Component {
   render() {
-    const siteTitle = "Gatsby Starter Personal Website"
-
     return (
-      <Layout location={this.props.location} title={siteTitle}>
+      <Layout location={this.props.location}>
         <SEO
-          title="Home"
-          keywords={[`blog`, `gatsby`, `javascript`, `react`]}
+          title="Tyler Vawser"
+          keywords={[`blog`, `Tyler Vawser`, `Tvawser`, `react`]}
         />
-        <img style={{ margin: 0 }} src="./GatsbyScene.svg" alt="Gatsby Scene" />
-        <h1>
-          Hey people{" "}
-          <span role="img" aria-label="wave emoji">
-            👋
-          </span>
-        </h1>
-        <p>Welcome to your new Gatsby website. You are on your home page.</p>
-        <p>
-          This starter comes out of the box with styled components and Gatsby's
-          default starter blog running on Netlify CMS.
-        </p>
-        <p>Now go build something great!</p>
-        <Link to="/blog/">
-          <Button marginTop="35px">Go to Blog</Button>
-        </Link>
+
+        <Row
+          style={{
+            color: "var(--textNormal)",
+            transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+            transition: `0.4s`,
+          }}
+          className="wider ml-3 wsans w-medium h2 pt-3 pb-0 mb-0 line-height-1"
+        >
+          Let’s talk.
+        </Row>
+        <Row
+          style={{
+            color: "var(--textTitle)",
+            transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+            transition: `0.4s`,
+          }}
+          className="ml-3 roboto w-regular h4 pt-0 mt-0 line-height-1"
+        >
+          <AniLink
+            style={{
+              color: "var(--textTitle)",
+              transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+              transition: `0.4s`,
+            }}
+            className="fancy-link"
+            cover
+            bg="#663399"
+            direction="left"
+            top="exit"
+            to="blog"
+          >
+            Set up a call
+          </AniLink>
+        </Row>
+        <Row
+          style={{
+            color: "var(--textTitle)",
+            transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+            transition: `0.4s`,
+          }}
+          className="ml-0 mr-5 pr-5 roboto w-regular h6 d-flex justify-content-between flex-md-nowrap w-100 align-items-end mt-5 pt-5"
+        >
+          <Col lg={3} md={2}>
+            <Link
+              style={{
+                color: "var(--textTitle)",
+                transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+                transition: `0.4s`,
+              }}
+              className="fancy-link "
+              to="#"
+            >
+              Twitter
+            </Link>{" "}
+            /{" "}
+            <Link
+              style={{
+                color: "var(--textTitle)",
+                transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+                transition: `0.4s`,
+              }}
+              className="fancy-link "
+              to="#"
+            >
+              Email
+            </Link>{" "}
+            /{" "}
+            <Link
+              style={{
+                color: "var(--textTitle)",
+                transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+                transition: `0.4s`,
+              }}
+              className="fancy-link "
+              to="#"
+            >
+              LinkedIn
+            </Link>
+          </Col>
+          <Col lg={3} md={2} className="mr-5 pr-5 previously-fixed">
+            <Row
+              style={{
+                color: "var(--textNormal)",
+                transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+                transition: `0.4s`,
+              }}
+              className="justify-content-end wsans w-medium h4 d-flex"
+            >
+              Previously At.
+            </Row>
+            <Row className="justify-content-end">
+              <Link
+                style={{
+                  color: "var(--textTitle)",
+                  transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+                  transition: `0.4s`,
+                }}
+                className="fancy-link  mr-1"
+                to="#"
+              >
+                Sticker Mule{" "}
+              </Link>
+              <div>/</div>
+              <Link
+                style={{
+                  color: "var(--textTitle)",
+                  transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+                  transition: `0.4s`,
+                }}
+                className="fancy-link ml-1 "
+                to="#"
+              >
+                {" "}
+                Museum Hack
+              </Link>
+            </Row>
+          </Col>
+        </Row>
       </Layout>
     )
   }

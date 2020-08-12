@@ -1,0 +1,240 @@
+// Override default variables before the import
+
+:root {
+  --day-gray: #666461;
+  --night-gray: #FCFCFC;
+  --day-black: #1F1F22;
+  --night-black: #9F9F9F; 
+  --day-white: #FCFCFC;
+  --night-white: #1F1F22;
+  --day-lightblue: #0C84EB;
+  --day-lightblue-bg: transparent linear-gradient(180deg, #39A3FF 0%, #0C84EB 100%) 0% 0% no-repeat padding-box;
+  --night-lightblue-bg: transparent linear-gradient(180deg, #063C84 0%, #041D3B 100%) 0% 0% no-repeat padding-box;
+  --lighterblue: #39A3FF;
+  --skyblue: #0478DE;
+  --skyeblue2:  #5BA9ED;
+  --skyblue3: #79BCFF;
+  --dayMenu-bg: url("../images/menu.svg") no-repeat right top;
+  --nightMenu-bg: url("../images/menu2.svg") no-repeat right top;
+}
+
+body {
+  --bg: var(--day-white);
+  --textNormal: var(--day-black);
+  --textTitle: var(--day-gray);
+  --lighterblue: #39A3FF;
+  --skyblue: #0478DE;
+  --skyeblue2:  #5BA9ED;
+  --skyblue3: #79BCFF;
+  --menu-img: var(--dayMenu-bg);
+  background-color: var(--bg);
+  --gradient-background:  linear-gradient(180deg, #0C84EB 0%, #0C84EB 100%) 0% 0% no-repeat padding-box;
+  --footer: #0C84EB
+}
+
+body.dark {
+  -webkit-font-smoothing: antialiased;
+  --bg: var(--night-white);
+  --textNormal: var(--night-black);
+  --textTitle: var(--night-gray);
+  --lighterblue: #39A3FF;
+  --skyblue: #0478DE;
+  --skyeblue2:  #5BA9ED;
+  --skyblue3: #79BCFF;
+  --menu-img: var(--nightMenu-bg);
+  --gradient-background: linear-gradient(180deg, #063C84 0%, #041D3B 100%) 0% 0% no-repeat padding-box;
+  --footer: #041D3B
+}
+
+.night-gray {
+  color: var(--night-gray);
+}
+
+.day-gray {
+  color: #666461;
+}
+ 
+a {
+text-decoration: none !important;
+box-shadow: 0 0 0 0 currentColor;
+}
+
+.h2.h2.h2{
+  font-size: calc(20px + 1vw) !important;
+  line-height: 1;
+}
+
+.h3.h3.h3{
+  font-size: calc(15px + 1vw) !important;
+  line-height: 1;
+}
+
+.h4{
+  font-size: calc(10px + 1vw) !important;
+  line-height: 1;
+}
+
+.h5{
+  font-size: calc(10px + .75vw) !important;
+  line-height: 1;
+}
+
+
+.h6{
+  font-size: calc(10px + 0.5vw) !important;
+  line-height: 1;
+}
+
+.main-title {
+  font-size: calc(20px + 3vw);
+  line-height: 1;
+}
+
+.line-height-1{
+  line-height: 1;
+}
+
+a.fancy-link {
+  position: relative;
+  color: var(--day-gray);
+}
+
+a.fancy-link:hover{
+  color: var(--day-gray);
+}
+
+a.fancy-link::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--day-gray);
+  transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  color: var(--day-gray);
+}
+
+a.fancy-link:hover::before {
+  visibility: visible;
+  width: 100%;
+  left: 0;
+  right: auto;
+  height: 2px;
+  color: var(--day-gray);
+}
+
+.wsans {
+  font-family: 'Work Sans' !important;
+}
+
+.roboto{
+  font-family: 'Roboto', sans-serif !important;
+}
+
+.w-semibold {
+  font-weight: 600 !important;
+  font-weight: bolder;
+}
+
+.w-medium {
+  font-weight: 500 !important;
+}
+
+.w-regular {
+  font-weight: 400 !important;
+}
+
+.wider {
+  letter-spacing: -1.4px;
+  font-stretch: wider;
+}
+
+.menu-fixed {
+  position: fixed;
+  right: 4vw;
+  top: 44vh;
+}
+
+.fixed-full-menu{
+  position: absolute !important;
+  right: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  top: 0 !important;
+  bottom: 0 !important;;
+  height: 100vh !important;
+  width: 50vw !important;
+  background-color: var(--day-lightblue-bg) !important;
+}
+
+.close-button{
+  position: fixed;
+  right: 4vw;
+  top: 44vh;
+}
+
+.logo-fixed{
+  position: fixed;
+  right: 5vw;
+  top: 4vh;
+}
+
+.items-fixed{
+  position: fixed;
+  right: 10vw;
+  top: 23vh
+}
+
+.night-fixed {
+  position: fixed !important;
+  bottom: 0vh !important;
+}
+
+.previously-fixed {
+  position: fixed !important;
+  bottom: 19.5vh !important;
+  right: 14vh !important;
+}
+
+.p-text {
+ font-size: calc(10px + .3vw);
+}
+
+.fav-title {
+  color: var(--skyblue3) !important;
+  font-size: calc(20px + 1.2vw) !important;
+}
+
+.calendly {
+  position: relative;
+  top: 165px;
+  left: 201px;
+  width: 837px;
+  height: 751px;
+  opacity: 1;
+}
+
+.modal-content, .modal-dialog {
+  position: absolute !important;
+  right: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  top: 0 !important;
+  bottom: 0 !important;;
+  height: 100vh !important;
+  width: 50vw !important;
+}
+
+#padding-x{
+  position: fixed;
+  top: 20vh;
+}
+
+
+  
+
+// Import Bootstrap and its default variables
+@import '~bootstrap/scss/bootstrap.scss';

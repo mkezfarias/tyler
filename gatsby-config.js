@@ -11,6 +11,9 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-netlify-cms`,
+    `gatsby-plugin-transition-link`,
+    `gatsby-plugin-dark-mode`,
+    `gatsby-plugin-sass`,
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -85,6 +88,16 @@ module.exports = {
       resolve: `gatsby-plugin-typography`,
       options: {
         pathToConfigModule: `src/utils/typography`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Work Sans\:300,400,400i,500,600,700`,
+          `Roboto\:300,400,400i,500,600,700`,
+        ],
+        display: "swap",
       },
     },
   ],
