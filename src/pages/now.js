@@ -172,7 +172,7 @@ const favoritesArray = [
   },
 ]
 
-class Favorites extends React.Component {
+class Now extends React.Component {
   constructor(props) {
     super(props)
 
@@ -206,12 +206,12 @@ class Favorites extends React.Component {
                   padding: `-20vh 10vw 0 10vw`,
                   fontSize: `calc(20px + 4vw)`,
                 }}
-                className="wider wsans w-medium pb-0 mb-4 line-height-1 mt-0 w-semibold align-center"
+                className="wider wsans w-medium pb-0 mb-0 line-height-1 mt-0 w-semibold align-center"
               >
-                Tyler wants to share some of his favorite resources{" "}
+                Tyler wants to share what he is doing now
               </Col>
             </Row>
-            <Row>
+            <Row className="mt-5 py-4">
               <Col
                 style={{
                   color: "var(--textNormal)",
@@ -225,7 +225,7 @@ class Favorites extends React.Component {
                 }}
                 className="roboto w-medium"
               >
-                Check them out here
+                Check it out here
               </Col>
             </Row>
             <Row>
@@ -408,4 +408,4 @@ class Favorites extends React.Component {
   }
 }
 
-export default Favorites
+export default Now

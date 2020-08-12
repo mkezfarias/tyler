@@ -1,15 +1,13 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { Link } from "gatsby"
 
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { rhythm } from "../utils/typography"
 import Button from "../components/button"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
 import { Container, Row, Col, Modal } from "react-bootstrap"
 import "../styles/global.scss"
 import TransitionLink from "gatsby-plugin-transition-link"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import { ThemeToggler } from "gatsby-plugin-dark-mode"
 import whiteLogo from "../images/logo-white.svg"
 import darkLogo from "../images/logo.svg"
@@ -26,7 +24,7 @@ import videosIcon from "../images/favorite videos icon.svg"
 import footerIMG from "../images/footer.png"
 import footerIMG2 from "../images/footer@2x.png"
 
-class Blog extends React.Component {
+class About extends React.Component {
   constructor(props) {
     super(props)
 
@@ -37,63 +35,84 @@ class Blog extends React.Component {
     this.handleClose = () => this.setState({ show: false })
     this.handleShow = () => this.setState({ show: true })
   }
-  render() {
-    const { data } = this.props
-    const siteTitle = data.site.siteMetadata.title
-    const posts = data.allMdx.edges
 
+  render() {
     return (
-      <Layout location={this.props.location} title={siteTitle}>
-        <SEO title="All posts" />
-        <Bio />
-        <div style={{ margin: "20px 0 40px", paddingBottom: "19vh" }}>
-          {posts.map(({ node }) => {
-            const title = node.frontmatter.title || node.fields.slug
-            return (
-              <div key={node.fields.slug}>
-                <h3
-                  style={{
-                    marginBottom: rhythm(1 / 4),
-                  }}
-                >
-                  <Link
-                    style={{ boxShadow: `none` }}
-                    to={`/blog${node.fields.slug}`}
-                  >
-                    {title}
-                  </Link>
-                </h3>
-                <small>{node.frontmatter.date}</small>
-                <p
-                  dangerouslySetInnerHTML={{
-                    __html: node.frontmatter.description || node.excerpt,
-                  }}
-                />
-              </div>
-            )
-          })}
+      <Layout location={this.props.location}>
+        <SEO
+          title="Tyler Vawser"
+          keywords={[`blog`, `Tyler Vawser`, `Tvawser`, `react`]}
+        />
+        <div>
+          <Row>
+            <Col
+              xl={7}
+              style={{
+                color: "var(--textNormal)",
+                transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+                transition: `0.4s`,
+                textAlign: `center`,
+                margin: `auto`,
+                maxWidth: `90vw`,
+                padding: `-20vh 10vw 0 10vw`,
+                fontSize: `calc(20px + 4vw)`,
+              }}
+              className="wider wsans w-medium pb-0 mb-0 line-height-1 mt-0 w-semibold align-center"
+            >
+              Tyler has an amazing story to tell.
+            </Col>
+          </Row>
+          <Row>
+            <Col
+              style={{
+                color: "var(--textNormal)",
+                transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+                transition: `0.4s`,
+                textAlign: `center`,
+                margin: `auto`,
+                maxWidth: `90vw`,
+                padding: `10vh 10vw 0 10vw`,
+                fontSize: `calc(10px + .7vw)`,
+              }}
+              className="roboto w-medium"
+            >
+              Check them out here
+            </Col>
+          </Row>
+          <Row>
+            <Col
+              style={{
+                color: "var(--textNormal)",
+                transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+                transition: `0.4s`,
+                textAlign: `center`,
+                margin: `auto`,
+                maxWidth: `90vw`,
+                padding: `0 10vw 0 10vw`,
+                fontSize: `calc(10px + .7vw)`,
+              }}
+              className="roboto w-medium"
+            >
+              <img src={arrowIMG} alt="Arrow down"></img>
+            </Col>
+          </Row>
         </div>
-        <AniLink
+        <Container
+          fluid
           style={{
-            color: "var(--textTitle)",
-            transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-            transition: `0.4s`,
+            background: "var(--gradient-background)",
+            width: `110vw`,
+            margin: `6vh -10vw 0 -10vw`,
           }}
-          className="fancy-link"
-          cover
-          bg="var(--gradient-background)"
-          direction="left"
-          top="entry"
-          to="/"
         >
-          Go Home
-        </AniLink>
+          <Row className="d-flex justify-content-center   pb-5">
+            <Col xl={{ span: 6, offset: 1 }} className="mb-5 pb-5"></Col>
+          </Row>
+        </Container>
         <Modal
-          onEntered={this.bgTransparent}
           show={this.state.show}
           animation={false}
           onHide={this.handleClose}
-          className="modal-menu bg-transparent"
           backdropClassName="transparent-opacity"
         >
           <Modal.Body
@@ -200,29 +219,4 @@ class Blog extends React.Component {
   }
 }
 
-export default Blog
-
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
-      edges {
-        node {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-            description
-          }
-        }
-      }
-    }
-  }
-`
+export default About

@@ -228,6 +228,10 @@ a.fancy-link:hover::before {
   width: 50vw !important;
 }
 
+.modal-open {
+  padding: 0 !important;
+}
+
 #padding-x{
   position: fixed;
   top: 20vh;
