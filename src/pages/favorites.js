@@ -32,37 +32,44 @@ const favoritesArray = [
       {
         link: "https://www.alfredapp.com/",
         subTitle: "Alfred App",
-        subText: "The single most powerful app on my computer. With the powerpack (paid) you can create workflows, hotkeys, text expansion, etc. It’s very powerful but requires some time and deep dives to take full advantage.",
+        subText:
+          "The single most powerful app on my computer. With the powerpack (paid) you can create workflows, hotkeys, text expansion, etc. It’s very powerful but requires some time and deep dives to take full advantage.",
       },
       {
         link: "https://bear.app/",
         subTitle: "Bear App",
-        subText: "I wanted something much faster than Evernote (RIP) & has more function/style/organization than TextEdit. Bear is exactly that. It pairs nicely with my Alfred workflows.",
+        subText:
+          "I wanted something much faster than Evernote (RIP) & has more function/style/organization than TextEdit. Bear is exactly that. It pairs nicely with my Alfred workflows.",
       },
       {
         link: "https://www.gmailtabs.com/",
         subTitle: "Gmail Tabs",
-        subText: "The budget (aka free) version of Superhuman email. I use this to organize my inbox with tabs that create saved searches.",
+        subText:
+          "The budget (aka free) version of Superhuman email. I use this to organize my inbox with tabs that create saved searches.",
       },
-       {
+      {
         link: "https://www.overdrive.com/",
         subTitle: "Overdrive",
-        subText: "Audible for free (via libraries). An incredible resource that allows you to download audio books and ebooks immediately via a local library.",
+        subText:
+          "Audible for free (via libraries). An incredible resource that allows you to download audio books and ebooks immediately via a local library.",
       },
       {
         link: "https://www.mowglii.com/itsycal/",
         subTitle: "ItsyCal",
-        subText: " I spend 50% to 85% of my day on Zoom calls. I hate having to open a browser to view my calendar mid-call. Itsycal makes it easy to see your schedule and with a hotkey it opens automatically over any windows you have. ",
+        subText:
+          " I spend 50% to 85% of my day on Zoom calls. I hate having to open a browser to view my calendar mid-call. Itsycal makes it easy to see your schedule and with a hotkey it opens automatically over any windows you have. ",
       },
       {
         link: "https://www.tynsoe.org/v2/geektool/",
         subTitle: "GeekTool",
-        subText: "90% aesthetics, 10% function. This is a nice tool to make your desktop custom by adding scripts. For example, I added the time and date to the center of my menu bar (just below my webcam) so I don’t have to take my eyes away from a video call.",
+        subText:
+          "90% aesthetics, 10% function. This is a nice tool to make your desktop custom by adding scripts. For example, I added the time and date to the center of my menu bar (just below my webcam) so I don’t have to take my eyes away from a video call.",
       },
       {
         link: "https://www.macbartender.com/",
         subTitle: "Bartender",
-        subText: "A simple app that hides all of the menu bar icons I have (wifi, battery, etc). I only have two menu bar icons active and 15 hidden. Makes the desktop cleaner.",
+        subText:
+          "A simple app that hides all of the menu bar icons I have (wifi, battery, etc). I only have two menu bar icons active and 15 hidden. Makes the desktop cleaner.",
       },
     ],
   },
@@ -263,10 +270,13 @@ class Favorites extends React.Component {
                       </Row>
                       {favoriteSet.items.map(item => {
                         return (
-                          <Row className="d-flex ml-5">
+                          <Row className="d-flex ml-5  w-75">
                             <Link to={item.link} target="_blank">
+                              <p className=" text-light  w-semibold mb-0">
+                                {" "}
+                                {item.subTitle}{" "}
+                              </p>
                               <p className=" text-light p-text">
-                                <strong> {item.subTitle} </strong>
                                 {item.subText}
                               </p>
                             </Link>

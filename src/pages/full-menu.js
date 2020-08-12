@@ -83,6 +83,10 @@ class FullMenu extends React.Component {
                 Posts
               </Link>
 
+              <Link className="text-light roboto w-regular h2 my-3" to="/now">
+                Now
+              </Link>
+
               <Link
                 className="text-light roboto w-regular h2 my-3"
                 to="/favorites"
