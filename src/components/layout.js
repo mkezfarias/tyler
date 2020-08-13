@@ -99,11 +99,24 @@ class Layout extends React.Component {
       )
     } else {
       header = (
-        <h3>
-          <Link className="fancy-link" to={`/blog/`}>
+        <Row>
+          <Col
+            xl={12}
+            style={{
+              color: "var(--textNormal)",
+              transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+              transition: `0.4s`,
+              textAlign: `center`,
+              margin: `auto`,
+              maxWidth: `100vw`,
+              padding: `-0vh 10vw 0 10vw`,
+              fontSize: `calc(20px + 2vw)`,
+            }}
+            className="wider wsans w-medium pb-0 mb-0 line-height-1 mt-0 w-semibold "
+          >
             {title}
-          </Link>
-        </h3>
+          </Col>
+        </Row>
       )
     }
     return (

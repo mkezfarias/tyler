@@ -100,7 +100,11 @@ class About extends React.Component {
         <Container fluid style={{}}>
           <Row className="d-flex justify-content-center pb-5">
             <Col xl={{ span: 7 }} className="mb-5 pb-5 pt-5">
-              <p>
+              <p
+                style={{
+                  color: "var(--textNormal)",
+                }}
+              >
                 <strong>Hi! My name is Tyler Vawser.</strong> I create
                 connections with people and growth in companies. Right now, I
                 spend my waking hours finding and talking to great people who
@@ -111,7 +115,11 @@ class About extends React.Component {
                 .
               </p>
 
-              <p>
+              <p
+                style={{
+                  color: "var(--textNormal)",
+                }}
+              >
                 <strong>
                   Nearly all of my best moments and memories involve meeting
                   someone unexpected.
@@ -120,14 +128,22 @@ class About extends React.Component {
                 has a higher probability.
               </p>
 
-              <p>
+              <p
+                style={{
+                  color: "var(--textNormal)",
+                }}
+              >
                 The best way I know to do that is to bring thoughtful and
                 interesting people together — and make it easy to talk about
                 ideas. Outside of work I do that by hosting dinner parties. At
                 work, I do that in conversations and interviews.{" "}
               </p>
 
-              <p>
+              <p
+                style={{
+                  color: "var(--textNormal)",
+                }}
+              >
                 I’m working on finding thoughtful people that find meaning in
                 excellence at a great company, Apptegy. We want to create a
                 company in particular way without compromise. Our culture is
@@ -137,20 +153,32 @@ class About extends React.Component {
                 offends our expectations and egos.
               </p>
 
-              <p>
+              <p
+                style={{
+                  color: "var(--textNormal)",
+                }}
+              >
                 Before Apptegy, I had nothing to do with recruiting, HR, People
                 Operations. I had only ever hired and managed for my own teams.
                 In fact, most of my career has been in marketing and working
                 with CEOs.{" "}
               </p>
 
-              <p>
+              <p
+                style={{
+                  color: "var(--textNormal)",
+                }}
+              >
                 For me, having a particular career or following a linear path
                 means little. What means a lot is being able to visibly see my
                 work progress and last after I’m on to what’s next.{" "}
               </p>
 
-              <p>
+              <p
+                style={{
+                  color: "var(--textNormal)",
+                }}
+              >
                 What’s next? More serendipity. If you’re reading this, let’s
                 chat.{" "}
                 <Link
@@ -164,7 +192,11 @@ class About extends React.Component {
 
               <hr className="m-5" />
 
-              <p>
+              <p
+                style={{
+                  color: "var(--textNormal)",
+                }}
+              >
                 At a certain point in early in my career,{" "}
                 <strong>
                   I learned the hard way that intelligence, fame, money, and
@@ -175,14 +207,22 @@ class About extends React.Component {
                 media and done my best to live a more private life.{" "}
               </p>
 
-              <p>
+              <p
+                style={{
+                  color: "var(--textNormal)",
+                }}
+              >
                 On the one hand I enjoy hosting dinner parties with strangers.
                 And on the other, someone who likes to be left alone. If there’s
                 one daily struggle it’s that I want people to enjoy being around
                 me and I also want to keep to myself.{" "}
               </p>
 
-              <p>
+              <p
+                style={{
+                  color: "var(--textNormal)",
+                }}
+              >
                 My ideal weekly routine involves talking to high-performers
                 throughout the week, hosting a dinner party that brings 10 great
                 people together (without anyone knowing my name), a 4 hour
@@ -190,7 +230,11 @@ class About extends React.Component {
                 with my kids, and playing a RTS game alone.
               </p>
 
-              <p>
+              <p
+                style={{
+                  color: "var(--textNormal)",
+                }}
+              >
                 <strong>
                   The people I respect the most are not looking for attention
                 </strong>{" "}
@@ -198,7 +242,11 @@ class About extends React.Component {
                 would rather it fade away.{" "}
               </p>
 
-              <p>
+              <p
+                style={{
+                  color: "var(--textNormal)",
+                }}
+              >
                 <strong>
                   I want those around me to be aware, creative, and thankful.
                 </strong>{" "}
@@ -210,7 +258,11 @@ class About extends React.Component {
                 head.{" "}
               </p>
 
-              <p>
+              <p
+                style={{
+                  color: "var(--textNormal)",
+                }}
+              >
                 Creativity to me isn’t painting a canvas, but figuring it out
                 —whatever it may be. When life throws something at you or you
                 create your own mess, do you assume that there is a way forward
@@ -218,14 +270,22 @@ class About extends React.Component {
                 you can’t see a way forward?{" "}
               </p>
 
-              <p>
+              <p
+                style={{
+                  color: "var(--textNormal)",
+                }}
+              >
                 Thankfulness or gratitude is the only way to live a happy life.
                 Without it, I obsess over the future or what should have been in
                 the past. With it, I can live in the moment and really see and
                 hear the people that are closest to me.{" "}
               </p>
 
-              <p>
+              <p
+                style={{
+                  color: "var(--textNormal)",
+                }}
+              >
                 <strong>
                   Happiness to me is defined by being calm and having a
                   challenge.
@@ -236,7 +296,11 @@ class About extends React.Component {
                 boredom is on the horizon, I lose both: calm and challenge.{" "}
               </p>
 
-              <p>
+              <p
+                style={{
+                  color: "var(--textNormal)",
+                }}
+              >
                 <strong>
                   Something I think about a lot but don’t talk about often is
                   the Continental Divide Trail.
@@ -249,11 +313,19 @@ class About extends React.Component {
               </p>
 
               <hr className="m-5" />
-              <p>
+              <p
+                style={{
+                  color: "var(--textNormal)",
+                }}
+              >
                 <strong>In the past…</strong>
               </p>
 
-              <p>
+              <p
+                style={{
+                  color: "var(--textNormal)",
+                }}
+              >
                 <strong>
                   In 2015, I became friends with Nick Gray, who founded Museum
                   Hack.
@@ -270,7 +342,11 @@ class About extends React.Component {
                 Rock.{" "}
               </p>
 
-              <p>
+              <p
+                style={{
+                  color: "var(--textNormal)",
+                }}
+              >
                 <strong>
                   In 2015, I built the first marketing team at Sticker Mule.
                 </strong>{" "}
@@ -282,7 +358,11 @@ class About extends React.Component {
                 something really great that continues today.{" "}
               </p>
 
-              <p>
+              <p
+                style={{
+                  color: "var(--textNormal)",
+                }}
+              >
                 <strong>
                   In March 2013, I replied to an email from Noah Kagan
                 </strong>{" "}
@@ -293,7 +373,11 @@ class About extends React.Component {
                 skype?”
               </p>
 
-              <p>
+              <p
+                style={{
+                  color: "var(--textNormal)",
+                }}
+              >
                 That kicked off my informal, formal training into the world of
                 Quant Based Marketing and high growth startup marketing. (Noah
                 was #30 at Facebook and worked closely with Mark Zuckerberg in
@@ -305,7 +389,11 @@ class About extends React.Component {
                 Appsumo/Sumo work.{" "}
               </p>
 
-              <p>
+              <p
+                style={{
+                  color: "var(--textNormal)",
+                }}
+              >
                 <strong>
                   Before all of that, in 2010 I worked for The King’s College in
                   NYC.
@@ -322,7 +410,11 @@ class About extends React.Component {
                 world of startups.{" "}
               </p>
 
-              <p>
+              <p
+                style={{
+                  color: "var(--textNormal)",
+                }}
+              >
                 <strong>
                   Prior to living in NYC, I lived in Japan for a year + a few
                   summers.
@@ -338,7 +430,11 @@ class About extends React.Component {
                 Japan, felt like a second home that I returned to each summer.{" "}
               </p>
 
-              <p>
+              <p
+                style={{
+                  color: "var(--textNormal)",
+                }}
+              >
                 I’m pretty sure that spending summers in Hong Kong (1x) or Japan
                 (3x) “on my own” when I was 14 to 18 taught me that I just have
                 to “get on the plane” and I can figure it out when I land.
@@ -351,7 +447,11 @@ class About extends React.Component {
                 labor, and also read a ton. On weekends{" "}
               </p>
 
-              <p>
+              <p
+                style={{
+                  color: "var(--textNormal)",
+                }}
+              >
                 <strong>This is the most I’ve written about myself</strong> but
                 hopefully it gives you an idea of who I am, what I value, and
                 what I’ve done so far. If you’ve read this far, my hope is that
@@ -359,7 +459,12 @@ class About extends React.Component {
                 story and know who you are and what you’re working on.{" "}
               </p>
 
-              <p className="mb-5">
+              <p
+                style={{
+                  color: "var(--textNormal)",
+                }}
+                className="mb-5"
+              >
                 The easiest way to connect is by{" "}
                 <Link
                   target="_blank"

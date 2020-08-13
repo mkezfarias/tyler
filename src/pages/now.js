@@ -24,6 +24,13 @@ import videosIcon from "../images/favorite videos icon.svg"
 import footerIMG from "../images/footer.png"
 import footerIMG2 from "../images/footer@2x.png"
 
+const goals = [
+  "1. Lorem ipsum dolor sit amet",
+  "2. Consetetur sadipscing elitr",
+  "3. Sed diam nonumy eirmod tempor",
+  "4. At vero eos et accusam et justo",
+]
+
 class Now extends React.Component {
   constructor(props) {
     super(props)
@@ -101,18 +108,24 @@ class Now extends React.Component {
         <Container fluid style={{}}>
           <Row className="d-flex justify-content-center pb-5">
             <Col xl={{ span: 7 }} className="mb-5 pb-5 pt-5">
-              <p>
-                <strong>Hi! My name is Tyler Vawser.</strong> I create
-                connections with people and growth in companies. Right now, I
-                spend my waking hours finding and talking to great people who
-                want to continue building{" "}
+              <p
+                style={{
+                  color: "var(--textNormal)",
+                }}
+              >
+                Right now, I spend my waking hours finding and talking to great
+                people who want to continue building{" "}
                 <Link target="_blank" to="https://www.apptegy.com/careers/">
                   Apptegy
                 </Link>
                 .
               </p>
 
-              <p>
+              <p
+                style={{
+                  color: "var(--textNormal)",
+                }}
+              >
                 <strong>
                   Nearly all of my best moments and memories involve meeting
                   someone unexpected.
@@ -121,14 +134,22 @@ class Now extends React.Component {
                 has a higher probability.
               </p>
 
-              <p>
+              <p
+                style={{
+                  color: "var(--textNormal)",
+                }}
+              >
                 The best way I know to do that is to bring thoughtful and
                 interesting people together — and make it easy to talk about
                 ideas. Outside of work I do that by hosting dinner parties. At
                 work, I do that in conversations and interviews.{" "}
               </p>
 
-              <p>
+              <p
+                style={{
+                  color: "var(--textNormal)",
+                }}
+              >
                 I’m working on finding thoughtful people that find meaning in
                 excellence at a great company, Apptegy. We want to create a
                 company in particular way without compromise. Our culture is
@@ -138,20 +159,32 @@ class Now extends React.Component {
                 offends our expectations and egos.
               </p>
 
-              <p>
+              <p
+                style={{
+                  color: "var(--textNormal)",
+                }}
+              >
                 Before Apptegy, I had nothing to do with recruiting, HR, People
                 Operations. I had only ever hired and managed for my own teams.
                 In fact, most of my career has been in marketing and working
                 with CEOs.{" "}
               </p>
 
-              <p>
+              <p
+                style={{
+                  color: "var(--textNormal)",
+                }}
+              >
                 For me, having a particular career or following a linear path
                 means little. What means a lot is being able to visibly see my
                 work progress and last after I’m on to what’s next.{" "}
               </p>
 
-              <p>
+              <p
+                style={{
+                  color: "var(--textNormal)",
+                }}
+              >
                 What’s next? More serendipity. If you’re reading this, let’s
                 chat.{" "}
                 <Link
@@ -162,228 +195,96 @@ class Now extends React.Component {
                 </Link>
                 .{" "}
               </p>
+            </Col>
+          </Row>
+          <Row
+            style={{
+              background: "var(--gradient-background)",
+              width: `110vw`,
+              margin: `0 -10vw 0 -10vw`,
+            }}
+          >
+            <Col
+              xl={11}
+              style={{
+                color: "var(--textNormal)",
+                transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+                transition: `0.4s`,
+                margin: `auto`,
+                maxWidth: `80vw`,
+                padding: `10vh 10vw 30vh 10vw`,
+                fontSize: `calc(20px + .5vw)`,
+              }}
+              className="wider wsans w-semibold mb-0 line-height-1 mt-0 w-semibold "
+            >
+              <Row className="text-light py-1 mb-3">My goals & values.</Row>
+              <Row className="mx-auto">
+                <Col xl={10} className="m-auto mb-3 pb-3">
+                  {goals.map(goal => (
+                    <Row className=" w-regular roboto text-light h5 wider ml-4">
+                      {goal}
+                    </Row>
+                  ))}
+                </Col>
+              </Row>
+              <hr
+                className="pb-1 mt-5 b-none"
+                style={{ backgroundColor: `#79BCFF`, transform: `scaleX(1.3)` }}
+              />
 
-              <hr className="m-5" />
-
-              <p>
-                At a certain point in early in my career,{" "}
-                <strong>
-                  I learned the hard way that intelligence, fame, money, and
-                  title don’t create happiness.
-                </strong>{" "}
-                In fact, having all of the above often leans to misery and
-                embarrassment. Since that point, I’ve kept away from social
-                media and done my best to live a more private life.{" "}
-              </p>
-
-              <p>
-                On the one hand I enjoy hosting dinner parties with strangers.
-                And on the other, someone who likes to be left alone. If there’s
-                one daily struggle it’s that I want people to enjoy being around
-                me and I also want to keep to myself.{" "}
-              </p>
-
-              <p>
-                My ideal weekly routine involves talking to high-performers
-                throughout the week, hosting a dinner party that brings 10 great
-                people together (without anyone knowing my name), a 4 hour
-                silent meditation, a long bike ride, reading Japanese novels
-                with my kids, and playing a RTS game alone.
-              </p>
-
-              <p>
-                <strong>
-                  The people I respect the most are not looking for attention
-                </strong>{" "}
-                and don’t seek it out. If they have it, they’ve earned it and
-                would rather it fade away.{" "}
-              </p>
-
-              <p>
-                <strong>
-                  I want those around me to be aware, creative, and thankful.
-                </strong>{" "}
-                Before my kids were born, I spent a lot of time thinking about
-                how I wanted them to be when they were 25 and 35 years old. Like
-                my own career, I don’t particularly care what their title or
-                field is. What I care about, and hope they do too, is that they
-                are aware of themselves, of others, and stay out of their own
-                head.{" "}
-              </p>
-
-              <p>
-                Creativity to me isn’t painting a canvas, but figuring it out
-                —whatever it may be. When life throws something at you or you
-                create your own mess, do you assume that there is a way forward
-                and then start acting on a solution? Or does life break you and
-                you can’t see a way forward?{" "}
-              </p>
-
-              <p>
-                Thankfulness or gratitude is the only way to live a happy life.
-                Without it, I obsess over the future or what should have been in
-                the past. With it, I can live in the moment and really see and
-                hear the people that are closest to me.{" "}
-              </p>
-
-              <p>
-                <strong>
-                  Happiness to me is defined by being calm and having a
-                  challenge.
-                </strong>{" "}
-                I want to have (and often do have) a calmness in my mind and
-                body. Yet, I also want a challenge that requires me to push
-                harder than I’m used to and makes me doubt if I’m capable. When
-                boredom is on the horizon, I lose both: calm and challenge.{" "}
-              </p>
-
-              <p>
-                <strong>
-                  Something I think about a lot but don’t talk about often is
-                  the Continental Divide Trail.
-                </strong>{" "}
-                If I have one big regret, it’s not hiking the CDT after college.
-                To me the trail offers so much of what I value: an intense
-                challenge that bears down on you for months, requires you to
-                focus on the essentials and no luxuries/conveniences, and time
-                alone (really alone) in the world.
-              </p>
-
-              <hr className="m-5" />
-              <p>
-                <strong>In the past…</strong>
-              </p>
-
-              <p>
-                <strong>
-                  In 2015, I became friends with Nick Gray, who founded Museum
-                  Hack.
-                </strong>{" "}
-                There are all kinds of people in this world: extroverts,
-                introverts, creators, consumers, thinkers, doers, etc. Nick is
-                one of the best friends you could ask for. He showed me first
-                hand how to be intensely intentional. Nick is an expert at
-                bringing people together, making them feel wonderful, and
-                connecting them to other awesome people. Nick is one of just a
-                handful of people that shaped what I expect of myself and also
-                gave me hope in people. With Nick’s encouragement and advice, I
-                kicked off a series of dinner parties when I moved to Little
-                Rock.{" "}
-              </p>
-
-              <p>
-                <strong>
-                  In 2015, I built the first marketing team at Sticker Mule.
-                </strong>{" "}
-                The company accelerated rapidly after we brought on some of the
-                best teammates I’ve worked with. My experience there gave me
-                confidence that the best people you can hire are intrinsically
-                driven to do their best and when given autonomy will surprise
-                you in the best ways. We achieved a lot together and built
-                something really great that continues today.{" "}
-              </p>
-
-              <p>
-                <strong>
-                  In March 2013, I replied to an email from Noah Kagan
-                </strong>{" "}
-                and showed him that his email system (Aweber at the time) was
-                sending each email 3x to his entire list. I had a good amount of
-                experience with Aweber from some other projects and offered to
-                help. His response, “omg. please let me give you money. you on
-                skype?”
-              </p>
-
-              <p>
-                That kicked off my informal, formal training into the world of
-                Quant Based Marketing and high growth startup marketing. (Noah
-                was #30 at Facebook and worked closely with Mark Zuckerberg in
-                the early days of Facebook.) Among the marketing “lessons,” I
-                learned to reverse engineer and “just figure it out.” For the
-                next 2 years at night and on weekends, Noah helped me learn how
-                to think about marketing generally and I helped Noah grow Okdork
-                (his personal site) and email list as well as help out with some
-                Appsumo/Sumo work.{" "}
-              </p>
-
-              <p>
-                <strong>
-                  Before all of that, in 2010 I worked for The King’s College in
-                  NYC.
-                </strong>{" "}
-                I started as an Executive Assistant which quickly became a wild
-                80-100 hour week Chief of Staff role. I’ll skip over the details
-                to say it’s the most I’ve worked in my life and it shaped how I
-                work now. “There’s always more time” became my mantra.
-                Unfortunately, the work and this mantra burned me out, nearly
-                wrecked my marriage, and showed me that if you’re going to work
-                hard you should be careful of who you are working for and their
-                own integrity. I continued at King’s for awhile, taking on
-                Marketing and Development (Fundraising) before jumping into the
-                world of startups.{" "}
-              </p>
-
-              <p>
-                <strong>
-                  Prior to living in NYC, I lived in Japan for a year + a few
-                  summers.
-                </strong>{" "}
-                My wife and I wanted to live internationally and decided it
-                would be best to do that before we were too comfortable, had
-                kids, or came up with a good excuse to stay home. We moved to
-                Seki, Japan (Gifu-ken) —north of the large city Nagoya. It was
-                the same city that I spent my summers in high school living in.
-                I like to think that experience normal Japan —not the otaku,
-                anime-loving, western-projecting Japan that Americans (and
-                others) are so weirdly obsessed with. At the time Seki and
-                Japan, felt like a second home that I returned to each summer.{" "}
-              </p>
-
-              <p>
-                I’m pretty sure that spending summers in Hong Kong (1x) or Japan
-                (3x) “on my own” when I was 14 to 18 taught me that I just have
-                to “get on the plane” and I can figure it out when I land.
-                Looking back, it was probably the best preparation for real
-                life. It was there I had to grow up. I booked my own flights,
-                made my way through international airports without really
-                knowing what I was doing (I have stories), met many new people
-                that were both entirely different from anyone I had known and
-                oddly familiar. Most days I set my own schedule, did manual
-                labor, and also read a ton. On weekends{" "}
-              </p>
-
-              <p>
-                <strong>This is the most I’ve written about myself</strong> but
-                hopefully it gives you an idea of who I am, what I value, and
-                what I’ve done so far. If you’ve read this far, my hope is that
-                we can connect by phone, email or Zoom. I’d like to hear your
-                story and know who you are and what you’re working on.{" "}
-              </p>
-
-              <p className="mb-5">
-                The easiest way to connect is by{" "}
-                <Link
-                  target="_blank"
-                  to="https://calendly.com/tyler-apptegy/chat"
-                >
-                  picking a time here that works for you
-                </Link>
-                .{" "}
-              </p>
+              <Row className="text-light py-1 my-4 py-5 ">
+                <Col xl={4}>Services.</Col>
+                <Col xl={4}>
+                  <Row className=" w-regular roboto text-light h5 wider">
+                    <Row className="text-left">
+                      - Lorem ipsum dolor sit amet
+                    </Row>
+                    <Row className="text-left">
+                      - Consetetur sadipscing elitr
+                    </Row>
+                    <Row className="text-left">- Sed diam nonumy eirmod </Row>
+                    <Row className="text-left">- Tempor invidunt ut labore</Row>
+                    <Row className="text-left">- Et dolore magna aliquyam</Row>
+                  </Row>
+                </Col>
+                <Col xl={4}>
+                  <Row className=" w-regular roboto text-light h5 wider">
+                    <Row className="text-left">
+                      - Lorem ipsum dolor sit amet
+                    </Row>
+                    <Row className="text-left">
+                      - Consetetur sadipscing elitr
+                    </Row>
+                    <Row className="text-left">- Sed diam nonumy eirmod </Row>
+                    <Row className="text-left">- Tempor invidunt ut labore</Row>
+                    <Row className="text-left">- Et dolore magna aliquyam</Row>
+                  </Row>
+                </Col>
+              </Row>
+              <hr
+                className="pb-1 mt-5 b-none"
+                style={{ backgroundColor: `#79BCFF`, transform: `scaleX(1.3)` }}
+              />
+              <Row className="text-light py-1 my-4 py-5 ">
+                <Col xl={5}>Let’s talk.</Col>
+                <Col xl={{ span: 6, offset: 4 }}>
+                  <Row className=" w-regular roboto text-light h5 wider">
+                    <Row className="text-left pt-4">
+                      Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                      sed diam nonumy eirmod. Tyler is waiting to hear from you.
+                    </Row>
+                    <Row className="text-left pt-4">
+                      <Link style={{ color: `#79BCFF` }} to="/calendly">
+                        Get in touch.
+                      </Link>
+                    </Row>
+                  </Row>
+                </Col>
+              </Row>
             </Col>
           </Row>
         </Container>
-        <Container
-          fluid
-          style={{
-            background: "var(--gradient-background)",
-            width: `110vw`,
-            margin: `6vh -10vw 0 -10vw`,
-          }}
-          className="bg-danger"
-        >
-          <p>aaa</p>
-        </Container>
+
         <Modal
           show={this.state.show}
           animation={false}
