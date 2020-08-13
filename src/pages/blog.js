@@ -7,7 +7,7 @@ import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
 import Button from "../components/button"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
-import { Container, Row, Col, Modal } from "react-bootstrap"
+import { Card, Container, Row, Col, Modal, CardColumns } from "react-bootstrap"
 import "../styles/global.scss"
 import TransitionLink from "gatsby-plugin-transition-link"
 import { ThemeToggler } from "gatsby-plugin-dark-mode"
@@ -45,34 +45,65 @@ class Blog extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="All posts" />
-        <Bio />
-        <div style={{ margin: "20px 0 40px", paddingBottom: "19vh" }}>
+        <Row className="mx-5 px-5">
+          <Col className="mx-3" xl={9}>
+            <Bio />
+          </Col>
+        </Row>
+
+        <Row
+          style={{ margin: "auto", paddingBottom: "19vh" }}
+          className="px-5 mx-5"
+        >
           {posts.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
             return (
-              <div key={node.fields.slug}>
-                <h3
+              <Col lg={5}>
+                <Card
+                  key={node.fields.slug}
                   style={{
-                    marginBottom: rhythm(1 / 4),
+                    margin: "20px 40px",
+                    border: `none`,
+                    borderRadius: `0px`,
+                    background: `#fcfcfc`,
+                    boxShadow: `6px 6px 12px #e5e5e5, 
+                    -6px -6px 12px #ffffff`,
                   }}
                 >
-                  <Link
-                    style={{ boxShadow: `none` }}
-                    to={`/blog${node.fields.slug}`}
-                  >
-                    {title}
-                  </Link>
-                </h3>
-                <small>{node.frontmatter.date}</small>
-                <p
-                  dangerouslySetInnerHTML={{
-                    __html: node.frontmatter.description || node.excerpt,
-                  }}
-                />
-              </div>
+                  <Card.Body>
+                    <Card.Title>
+                      <h3
+                        className="wsans w-medium"
+                        style={{
+                          color: `var(--textNormal)`,
+                          marginBottom: rhythm(1 / 4),
+                        }}
+                      >
+                        <Link
+                          style={{ boxShadow: `none` }}
+                          to={`/blog${node.fields.slug}`}
+                        >
+                          {title}
+                        </Link>
+                      </h3>
+                    </Card.Title>
+                    <Card.Text>
+                      <p
+                        dangerouslySetInnerHTML={{
+                          __html: node.frontmatter.description || node.excerpt,
+                        }}
+                      />
+                    </Card.Text>
+                    <small className="text-muted">
+                      {node.frontmatter.date}
+                    </small>
+                  </Card.Body>
+                </Card>
+              </Col>
             )
           })}
-        </div>
+        </Row>
+
         <AniLink
           style={{
             color: "var(--textTitle)",
