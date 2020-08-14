@@ -24,6 +24,10 @@ import videosIcon from "../images/favorite videos icon.svg"
 import footerIMG from "../images/footer.png"
 import footerIMG2 from "../images/footer@2x.png"
 
+const nowContent = {
+  title: "Tyler wants to share what he is doing now",
+}
+
 const bigNow = [
   "1. Lorem ipsum dolor sit amet",
   "2. Consetetur sadipscing elitr",
@@ -108,7 +112,7 @@ class Now extends React.Component {
               }}
               className="wider wsans w-medium pb-0 mb-0 line-height-1 mt-0 w-semibold align-center"
             >
-              Tyler wants to share what he is doing now
+              {nowContent.title}{" "}
             </Col>
           </Row>
           <Row className="mt-5 py-4">
@@ -146,7 +150,7 @@ class Now extends React.Component {
             </Col>
           </Row>
         </div>
-        <Container fluid style={{}}>
+        <Container fluid>
           <Row className="d-flex justify-content-center pb-5">
             <Col xl={{ span: 7 }} className="mb-5 pb-5 pt-5">
               <p
@@ -156,9 +160,9 @@ class Now extends React.Component {
               >
                 Right now, I spend my waking hours finding and talking to great
                 people who want to continue building{" "}
-                <Link target="_blank" to="https://www.apptegy.com/careers/">
+                <a target="_blank" href="https://www.apptegy.com/careers/">
                   Apptegy
-                </Link>
+                </a>
                 .
               </p>
 
@@ -226,15 +230,7 @@ class Now extends React.Component {
                   color: "var(--textNormal)",
                 }}
               >
-                What’s next? More serendipity. If you’re reading this, let’s
-                chat.{" "}
-                <Link
-                  target="_blank"
-                  to="https://calendly.com/tyler-apptegy/chat"
-                >
-                  Set up a call for us
-                </Link>
-                .{" "}
+                {nowContent.p}
               </p>
             </Col>
           </Row>
@@ -287,13 +283,13 @@ class Now extends React.Component {
                   {onMyMindLinks.map(mind => (
                     <Row className="text-left">
                       {" "}
-                      <Link
+                      <a
                         style={{ color: `#add5ff` }}
                         className="py-1"
-                        to={mind.link}
+                        href={mind.link}
                       >
                         {mind.text} {mind.type}
-                      </Link>
+                      </a>
                     </Row>
                   ))}
                 </div>
