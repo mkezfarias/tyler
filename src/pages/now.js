@@ -24,12 +24,53 @@ import videosIcon from "../images/favorite videos icon.svg"
 import footerIMG from "../images/footer.png"
 import footerIMG2 from "../images/footer@2x.png"
 
-const goals = [
+const bigNow = [
   "1. Lorem ipsum dolor sit amet",
   "2. Consetetur sadipscing elitr",
   "3. Sed diam nonumy eirmod tempor",
   "4. At vero eos et accusam et justo",
 ]
+
+const onMyMind = [
+  "- Lorem ipsum dolor sit amet",
+  "- Consetetur sadipscing elitr",
+  "- Sed diam nonumy eirmod tempor",
+  "- Sed diam nonumy eirmod tempor",
+  "- At vero eos et accusam et justo",
+]
+
+const onMyMindLinks = [
+  {
+    link: "https://www.calnewport.com/books/digital-minimalism/",
+    text: "Digital Minimalism by Cal Newport",
+    type: "(book)",
+  },
+  {
+    link:
+      "https://open.spotify.com/playlist/7wgD1FW1Pp3LTp9di8YHBB?si=JZwsWRKMQm-knYVxl9fIKQ",
+    text: "Minimal piano",
+    type: "(playlist)",
+  },
+  {
+    link:
+      "https://readjapaneseliterature.com/2020/07/24/manazuru-by-hiromi-kawakami-and-a-man-by-keiichiro-hirano/",
+    text: "Manazura by Hiromi Kawakami",
+    type: "(book)",
+  },
+  {
+    link: "https://jamesclear.com/atomic-habits",
+    text: "Atomic Habits by James Clear",
+    type: "(book)",
+  },
+  {
+    link: "https://firstround.com/review/speed-as-a-habit/",
+    text: "Speed as a Habit",
+    type: "(article)",
+  },
+]
+
+const letsTalk =
+  "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod. Tyler is waiting to hear from you."
 
 class Now extends React.Component {
   constructor(props) {
@@ -48,7 +89,7 @@ class Now extends React.Component {
       <Layout location={this.props.location}>
         <SEO
           title="Tyler Vawser"
-          keywords={[`blog`, `Tyler Vawser`, `Tvawser`, `react`]}
+          keywords={[`blog`, `Tyler Vawser`, `Tvawser`, `react`]} //edit these on each page depending on the content of the page
         />
 
         <div>
@@ -217,12 +258,13 @@ class Now extends React.Component {
               }}
               className="wider wsans w-semibold mb-0 line-height-1 mt-0 w-semibold "
             >
-              <Row className="text-light py-1 mb-3">My goals & values.</Row>
+              <Row className="text-light mb-3">What I am doing now:</Row>
+
               <Row className="mx-auto">
                 <Col xl={10} className="m-auto mb-3 pb-3">
-                  {goals.map(goal => (
+                  {bigNow.map(big => (
                     <Row className=" w-regular roboto text-light h5 wider ml-4">
-                      {goal}
+                      {big}
                     </Row>
                   ))}
                 </Col>
@@ -232,35 +274,31 @@ class Now extends React.Component {
                 style={{ backgroundColor: `#79BCFF`, transform: `scaleX(1.3)` }}
               />
 
-              <Row className="text-light py-1 my-4 py-5 ">
-                <Col xl={4}>Services.</Col>
-                <Col xl={4}>
-                  <Row className=" w-regular roboto text-light h5 wider">
-                    <Row className="text-left">
-                      - Lorem ipsum dolor sit amet
-                    </Row>
-                    <Row className="text-left">
-                      - Consetetur sadipscing elitr
-                    </Row>
-                    <Row className="text-left">- Sed diam nonumy eirmod </Row>
-                    <Row className="text-left">- Tempor invidunt ut labore</Row>
-                    <Row className="text-left">- Et dolore magna aliquyam</Row>
-                  </Row>
-                </Col>
-                <Col xl={4}>
-                  <Row className=" w-regular roboto text-light h5 wider">
-                    <Row className="text-left">
-                      - Lorem ipsum dolor sit amet
-                    </Row>
-                    <Row className="text-left">
-                      - Consetetur sadipscing elitr
-                    </Row>
-                    <Row className="text-left">- Sed diam nonumy eirmod </Row>
-                    <Row className="text-left">- Tempor invidunt ut labore</Row>
-                    <Row className="text-left">- Et dolore magna aliquyam</Row>
-                  </Row>
-                </Col>
+              <Row className="text-light my-4 pt-5 mb-3">
+                What is on my mind:
               </Row>
+              <Col xl={12} className="d-flex justify-content-around">
+                <div className=" w-regular roboto text-light h5 wider">
+                  {onMyMind.map(mind => (
+                    <Row className="text-left py-1">{mind}</Row>
+                  ))}
+                </div>
+                <div className=" w-regular roboto text-light h5 wider ml-4">
+                  {onMyMindLinks.map(mind => (
+                    <Row className="text-left">
+                      {" "}
+                      <Link
+                        style={{ color: `#add5ff` }}
+                        className="py-1"
+                        to={mind.link}
+                      >
+                        {mind.text} {mind.type}
+                      </Link>
+                    </Row>
+                  ))}
+                </div>
+              </Col>
+
               <hr
                 className="pb-1 mt-5 b-none"
                 style={{ backgroundColor: `#79BCFF`, transform: `scaleX(1.3)` }}
@@ -269,12 +307,9 @@ class Now extends React.Component {
                 <Col xl={5}>Let’s talk.</Col>
                 <Col xl={{ span: 6, offset: 4 }}>
                   <Row className=" w-regular roboto text-light h5 wider">
+                    <Row className="text-left pt-4">{letsTalk}</Row>
                     <Row className="text-left pt-4">
-                      Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                      sed diam nonumy eirmod. Tyler is waiting to hear from you.
-                    </Row>
-                    <Row className="text-left pt-4">
-                      <Link style={{ color: `#79BCFF` }} to="/calendly">
+                      <Link style={{ color: `#add5ff` }} to="/calendly">
                         Get in touch.
                       </Link>
                     </Row>

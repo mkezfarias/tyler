@@ -15,7 +15,14 @@ class IndexPage extends React.Component {
       <Layout location={this.props.location}>
         <SEO
           title="Tyler Vawser"
-          keywords={[`blog`, `Tyler Vawser`, `Tvawser`, `react`]}
+          keywords={[
+            `blog`,
+            `Tyler Vawser`,
+            `Tvawser`,
+            `tvaw`,
+            `Apptegy`,
+            `VP of People`,
+          ]}
         />
 
         <Row
@@ -68,7 +75,7 @@ class IndexPage extends React.Component {
                 transition: `0.4s`,
               }}
               className="fancy-link "
-              to="#"
+              to="https://twitter.com/tvaw"
             >
               Twitter
             </Link>{" "}
@@ -80,7 +87,7 @@ class IndexPage extends React.Component {
                 transition: `0.4s`,
               }}
               className="fancy-link "
-              to="#"
+              to="mailto:tvawser@gmail.com?subject=Saw%20your%20website%20lets%20chat"
             >
               Email
             </Link>{" "}
@@ -92,7 +99,7 @@ class IndexPage extends React.Component {
                 transition: `0.4s`,
               }}
               className="fancy-link "
-              to="#"
+              to="https://www.linkedin.com/in/tylervawser/"
             >
               LinkedIn
             </Link>
@@ -106,7 +113,7 @@ class IndexPage extends React.Component {
               }}
               className="justify-content-end wsans w-medium h4 d-flex"
             >
-              Previously At.
+              Previously at
             </Row>
             <Row className="justify-content-end">
               <Link
@@ -116,11 +123,11 @@ class IndexPage extends React.Component {
                   transition: `0.4s`,
                 }}
                 className="fancy-link  mr-1"
-                to="#"
+                to="https://www.stickermule.com/"
               >
                 Sticker Mule{" "}
               </Link>
-              <div>/</div>
+              <div className="pl-1"> /</div>
               <Link
                 style={{
                   color: "var(--textTitle)",
@@ -128,10 +135,36 @@ class IndexPage extends React.Component {
                   transition: `0.4s`,
                 }}
                 className="fancy-link ml-1 "
-                to="#"
+                to="https://museumhack.com/"
+              >
+                Museum Hack{"  "}
+              </Link>
+              <div className="pl-1"> /</div>
+            </Row>
+            <Row className="justify-content-end">
+              <Link
+                style={{
+                  color: "var(--textTitle)",
+                  transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+                  transition: `0.4s`,
+                }}
+                className="fancy-link ml-1 "
+                to="https://okdork.com/"
+              >
+                OkDork{" "}
+              </Link>
+              <div className="pl-1"> /</div>
+              <Link
+                style={{
+                  color: "var(--textTitle)",
+                  transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+                  transition: `0.4s`,
+                }}
+                className="fancy-link ml-1 "
+                to="hhttps://www.tkc.edu/"
               >
                 {" "}
-                Museum Hack
+                The Kings College
               </Link>
             </Row>
           </Col>

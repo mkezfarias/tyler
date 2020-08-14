@@ -22,7 +22,14 @@ class FullMenu extends React.Component {
       <Layout location={this.props.location}>
         <SEO
           title="Tyler Vawser"
-          keywords={[`blog`, `Tyler Vawser`, `Tvawser`, `react`]}
+          keywords={[
+            `blog`,
+            `Tyler Vawser`,
+            `Tvawser`,
+            `Tvaw`,
+            `VP of People`,
+            `Apptegy`,
+          ]}
         />
 
         <Row
@@ -37,9 +44,9 @@ class FullMenu extends React.Component {
           <Col
             lg={5}
             className="w-semibold "
-            style={{ fontSize: `calc(20px + 5vw)` }}
+            style={{ fontSize: `calc(18px + 5vw)` }}
           >
-            Tyler is waiting to see that you’ll pick first.{" "}
+            Tyler is waiting to see what you’ll pick first.{" "}
           </Col>
         </Row>
         <Row
