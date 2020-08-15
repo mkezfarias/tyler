@@ -25,7 +25,7 @@ import footerIMG from "../images/footer.png"
 import footerIMG2 from "../images/footer@2x.png"
 
 const nowContent = {
-  title: "Here's what Tyler is doing now",
+  title: "What Tyler is doing now",
 }
 
 const bigNow = [
@@ -74,10 +74,9 @@ const onMyMindLinks = [
   },
 ]
 
-const nowUpdate  [
+const nowUpdate = [
   "Friday, August 14, 2020",
   "This page is inspired by Derek Sivers",
-  
   ]
 
 class Now extends React.Component {
