@@ -57,7 +57,7 @@ class Layout extends React.Component {
               options={{
                strings: [
                   `growing <a class="fancy-link " href="https://www.apptegy.com/">Apptegy</a>.`,
-                  `reading <a class="fancy-link " href="https://www.apptegy.com/">Manazura</a> by Hiromi Kawakami.`,
+                  `reading <a class="fancy-link " href="https://readjapaneseliterature.com/2020/07/24/manazuru-by-hiromi-kawakami-and-a-man-by-keiichiro-hirano/">Manazura</a>.`,
                   "on a Zoom call.",
                   "hiring thoughtful software engineers.",
                   "meeting interesting people.",
