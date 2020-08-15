@@ -25,12 +25,12 @@ import footerIMG from "../images/footer.png"
 import footerIMG2 from "../images/footer@2x.png"
 
 const nowContent = {
-  title: "Tyler wants to share what he is doing now",
+  title: "Here's what Tyler is doing now",
 }
 
 const bigNow = [
   "1. Living in Little Rock, Arkansas",
-  "2. Building <a href='https://www.apptegy.com/'>Apptegy</a>",
+  "2. Building teams at Apptegy",
   "3. Hiring thoughtful engineers in Little Rock & Monterrey",
   "4. Exploring digital minimalism & classical piano",
   "5. Keeping up with 4 kids",
@@ -74,8 +74,11 @@ const onMyMindLinks = [
   },
 ]
 
-const letsTalk =
-  "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod. Tyler is waiting to hear from you."
+const nowUpdate  [
+  "Friday, August 14, 2020",
+  "This page is inspired by Derek Sivers",
+  
+  ]
 
 class Now extends React.Component {
   constructor(props) {
@@ -305,10 +308,10 @@ class Now extends React.Component {
                 style={{ backgroundColor: `#79BCFF`, transform: `scaleX(1.3)` }}
               />
               <Row className="text-light py-1 my-4 py-5 ">
-                <Col xl={5}>Let’s talk.</Col>
+                <Col xl={5}>Last updated:.</Col>
                 <Col xl={{ span: 6, offset: 4 }}>
                   <Row className=" w-regular roboto text-light h5 wider">
-                    <Row className="text-left pt-4">{letsTalk}</Row>
+                    <Row className="text-left pt-4">{nowUpdate}</Row>
                     <Row className="text-left pt-4">
                       <Link
                         style={{ color: `#add5ff` }}
