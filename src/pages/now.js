@@ -74,9 +74,7 @@ const onMyMindLinks = [
   },
 ]
 
-const nowUpdate = [
-  "TEXTTEST",
-  ]
+const nowUpdate = I would like to hear your story and know who you are and what you’re working on. The easiest way to connect is by picking a time here that works for you.
 
 class Now extends React.Component {
   constructor(props) {
@@ -193,7 +191,6 @@ class Now extends React.Component {
               >
                 It also has meant removing and reducing stuff. 
                 Clearing surfaces and reducing the objects around my work space and living spaces is an old OCD hobby that I've taken up again.
-              {" "}
               </p>
 
               <p
@@ -237,10 +234,11 @@ class Now extends React.Component {
                   target="_blank"
                   href="https://nownownow.com/about"
                   style={{ color: `var(--skyblue3)` }}
-                >Derek Sivers
-                  </a>. 
-                It is similar to an about page, but it tells you what I am doing now (what my priorities are and how I am spending my time)— not just what I have done in the past. 
-                This entire site is inspired with that in mind. 
+                >
+                  Derek Sivers
+                  </a>
+                  . It is similar to an about page, but it tells you what I am doing now (what my priorities are and how I am spending my time)— not just what I have done in the past. 
+                This entire site is inspired with that in mind.</em>
               </p>
 
  <p
@@ -325,7 +323,7 @@ Last updated: August 15,2020
                 style={{ backgroundColor: `#79BCFF`, transform: `scaleX(1.3)` }}
               />
               <Row className="text-light py-1 my-4 py-5 ">
-                <Col xl={5}>Last updated:.</Col>
+                <Col xl={5}>Let's talk:</Col>
                 <Col xl={{ span: 6, offset: 4 }}>
                   <Row className=" w-regular roboto text-light h5 wider">
                     <Row className="text-left pt-4">{nowUpdate} </Row>
