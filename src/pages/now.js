@@ -74,8 +74,10 @@ const onMyMindLinks = [
   },
 ]
 
-const nowUpdate = I would like to hear your story and know who you are and what you’re working on. The easiest way to connect is by picking a time here that works for you.
-
+const nowUpdate = 
+      [
+        "I would like to hear your story and know who you are and what you’re working on. The easiest way to connect is by picking a time here that works for you.",
+]
 class Now extends React.Component {
   constructor(props) {
     super(props)
