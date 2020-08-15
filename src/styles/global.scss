@@ -29,7 +29,8 @@ body {
   --menu-img: var(--dayMenu-bg);
   background-color: var(--bg);
   --gradient-background:  linear-gradient(180deg, #0C84EB 0%, #0C84EB 100%) 0% 0% no-repeat padding-box;
-  --footer: #0C84EB
+  --footer: #0C84EB;
+  --card-bg:  7px 7px 14px #d9d9d9, -7px -7px 14px #ffffff;
 }
 
 body.dark {
@@ -43,7 +44,8 @@ body.dark {
   --skyblue3: #79BCFF;
   --menu-img: var(--nightMenu-bg);
   --gradient-background: linear-gradient(180deg, #063C84 0%, #041D3B 100%) 0% 0% no-repeat padding-box;
-  --footer: #041D3B
+  --footer: #041D3B;
+  --card-bg: 7px 7px 14px #1b1b1d, -7px -7px 14px #232327 ;
 }
 
 .night-gray {
@@ -226,6 +228,10 @@ a.fancy-link:hover::before {
   bottom: 0 !important;;
   height: 100vh !important;
   width: 50vw !important;
+}
+
+.modal-open {
+  padding: 0 !important;
 }
 
 #padding-x{

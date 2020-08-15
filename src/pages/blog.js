@@ -6,10 +6,38 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
 import Button from "../components/button"
-import TransitionLink from "gatsby-plugin-transition-link"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
+import { Card, Container, Row, Col, Modal, CardColumns } from "react-bootstrap"
+import "../styles/global.scss"
+import TransitionLink from "gatsby-plugin-transition-link"
+import { ThemeToggler } from "gatsby-plugin-dark-mode"
+import whiteLogo from "../images/logo-white.svg"
+import darkLogo from "../images/logo.svg"
+import dayButton from "../images/daymode.svg"
+import nightButton from "../images/night-button.svg"
+import closeBTN from "../images/x.svg"
+import menuIMG from "../images/menu.svg"
+import menuDarkIMG from "../images/menu2.svg"
+import arrowIMG from "../images/arrow.svg"
+import toolsIcon from "../images/favorite tools icon.svg"
+import podcastsIcon from "../images/favorite podcasts icon.svg"
+import travelIcon from "../images/favorite podcasts icon.svg"
+import videosIcon from "../images/favorite videos icon.svg"
+import footerIMG from "../images/footer.png"
+import footerIMG2 from "../images/footer@2x.png"
+import Menu from "../components/menu"
 
 class Blog extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      show: false,
+    }
+
+    this.handleClose = () => this.setState({ show: false })
+    this.handleShow = () => this.setState({ show: true })
+  }
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
@@ -18,34 +46,66 @@ class Blog extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="All posts" />
-        <Bio />
-        <div style={{ margin: "20px 0 40px" }}>
+        <Row className="mx-5 px-5">
+          <Col className="mx-3" xl={9} style={{ color: `var(--textNormal)` }}>
+            <Bio />
+          </Col>
+        </Row>
+
+        <Row
+          style={{ margin: "auto", paddingBottom: "19vh" }}
+          className="px-5 mx-5"
+        >
           {posts.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
             return (
-              <div key={node.fields.slug}>
-                <h3
+              <Col lg={5}>
+                <Card
+                  key={node.fields.slug}
                   style={{
-                    marginBottom: rhythm(1 / 4),
+                    margin: "20px 40px",
+                    border: `none`,
+                    borderRadius: `0px`,
+                    background: `var(--bg)`,
+                    boxShadow: `var(--card-bg)`,
                   }}
                 >
-                  <Link
-                    style={{ boxShadow: `none` }}
-                    to={`/blog${node.fields.slug}`}
-                  >
-                    {title}
-                  </Link>
-                </h3>
-                <small>{node.frontmatter.date}</small>
-                <p
-                  dangerouslySetInnerHTML={{
-                    __html: node.frontmatter.description || node.excerpt,
-                  }}
-                />
-              </div>
+                  <Card.Body>
+                    <Card.Title>
+                      <h3
+                        className="wsans w-medium"
+                        style={{
+                          color: `var(--textNormal)`,
+                          marginBottom: rhythm(1 / 4),
+                        }}
+                      >
+                        <Link
+                          style={{ boxShadow: `none`, color: `#5BA9ED` }}
+                          to={`/blog${node.fields.slug}`}
+                          className="fancy-link"
+                        >
+                          {title}
+                        </Link>
+                      </h3>
+                    </Card.Title>
+                    <Card.Text>
+                      <p
+                        style={{ color: `var(--textNormal)` }}
+                        dangerouslySetInnerHTML={{
+                          __html: node.frontmatter.description || node.excerpt,
+                        }}
+                      />
+                    </Card.Text>
+                    <small className="text-muted">
+                      {node.frontmatter.date}
+                    </small>
+                  </Card.Body>
+                </Card>
+              </Col>
             )
           })}
-        </div>
+        </Row>
+
         <AniLink
           style={{
             color: "var(--textTitle)",
@@ -61,6 +121,55 @@ class Blog extends React.Component {
         >
           Go Home
         </AniLink>
+        <Modal
+          onEntered={this.bgTransparent}
+          show={this.state.show}
+          animation={false}
+          onHide={this.handleClose}
+          className="modal-menu bg-transparent"
+          backdropClassName="transparent-opacity"
+        >
+          <Modal.Body
+            style={{
+              background: "var(--gradient-background)",
+              transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+              transition: `0.4s`,
+            }}
+          >
+            <Menu />
+            <div onClick={this.handleClose}>
+              <img
+                src={closeBTN}
+                alt="Close Button"
+                className="close-button"
+              ></img>
+            </div>
+          </Modal.Body>
+        </Modal>
+        <Link to="/">
+          <img src={darkLogo} alt="Tyler Vawser" className="logo-fixed"></img>
+        </Link>
+        <div
+          onClick={this.handleShow}
+          style={{
+            background: `var(--menu-img)`,
+            transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+            transition: `0.4s`,
+            height: "30px",
+            width: "30px",
+          }}
+          className="menu-fixed"
+        ></div>
+        <img
+          src={footerIMG}
+          style={{
+            position: "absolute",
+            bottom: `0`,
+            right: `0`,
+            left: `0`,
+            margin: `0 0 0 0`,
+          }}
+        ></img>
       </Layout>
     )
   }

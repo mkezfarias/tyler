@@ -1,14 +1,16 @@
 module.exports = {
   siteMetadata: {
     // edit below
-    title: `Gatsby Starter Personal Blog`,
-    author: `Gatsby`,
-    description: `A starter personal blog with styled components, dark mode, and Netlify CMS.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    title: `Tyler’s latest posts:`, // this is the blog page title
+    author: `Gatsby`, // do not change
+    description: `meta description`, // update meta description
+    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`, // updated url
     social: {
-      twitter: `gatsbyjs`,
+      twitter: `gatsbyjs`, // update twitter handle
     },
   },
+
+  //don't change these configs please
   plugins: [
     `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-transition-link`,
