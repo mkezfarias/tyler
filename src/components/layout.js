@@ -56,7 +56,7 @@ class Layout extends React.Component {
             <Typewriter
               options={{
                strings: [
-                  `growing https://www.apptegy.com/">Apptegy</a>.`,
+                  `growing <a class="fancy-link " href="https://www.apptegy.com/">Apptegy</a>.`,
                   `reading <a class="fancy-link " href="https://www.apptegy.com/">Manazura</a> by Hiromi Kawakami.`,
                   "on a Zoom call.",
                   "hiring thoughtful software engineers.",
