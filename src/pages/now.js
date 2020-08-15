@@ -37,10 +37,10 @@ const bigNow = [
 ]
 
 const onMyMind = [
-  "How phones & social media stop us from living our best lives",
+  "How to use my phone for 1 hour or less a day",
   "Finding the best music to focus & read",
   "Johatsu—people that disappear",
-  "Little & often habits create enourmous results",
+  "Consistent actions create enourmous results",
   "How I can act, think, and become fast-er",
 ]
 
@@ -169,7 +169,7 @@ class Now extends React.Component {
                 >
                   Apptegy
                 </a>
-                . Much of my day is spent talking to interesting people about software engineering, SaaS sales, and other opportunities we are creating as we grow.
+                . Much of my day is spent talking to people about software engineering, SaaS sales, and other opportunities we are creating as we grow.
               </p>
 
               <p
@@ -182,8 +182,8 @@ class Now extends React.Component {
                 </strong>{" "}
                 That has meant returning to habits that made me who I am. 
                 Each day, after I pour my first cup of coffee I sit down in a white swivel chair next to my bookshelf. 
-                And I read whatever is near by. 
-                Sometimes that is a Japanese novel, other times, it is an improvement book, and still others poetry (e.g. Thomas Hardy).
+                And I read whatever is nearby:  
+                a Japanese novel, an improvement book, or poetry (e.g. Thomas Hardy).
               </p>
 
               <p
@@ -200,7 +200,7 @@ class Now extends React.Component {
                   color: "var(--textNormal)",
                 }}
               >
-                When I create time, I am learning the basics of javascript and React. 
+                When I create the time, I am learning javascript and React. 
                 It is a losing battle, but one that I want to fight as long as I am interviewing engineers and involved with a software company. 
                 An hour of trying to code might be the single best way to humble me. 
               </p>
@@ -210,10 +210,9 @@ class Now extends React.Component {
                   color: "var(--textNormal)",
                 }}
               >
-                Before Apptegy, I had nothing to do with recruiting, HR, People
-                Operations. I had only ever hired and managed for my own teams.
-                In fact, most of my career has been in marketing and working
-                with CEOs.{" "}
+               Something I am working on improving is contacting and talking to the people I care about.
+               This is the easiest thing for me to put off. But each year I realize how important it is and that it is not going to get easier without being intentional.
+               {" "}
               </p>
 
               <p
@@ -222,7 +221,7 @@ class Now extends React.Component {
                 }}
               >
                 The most important part of my life now and for the next 20 years are my kids. 
-                Spending time with them, building marble contraptions, playing Rummikub, teaching them to read, and how to think about mathematics are the highlight of every day. 
+                Spending time with them, building marble contraptions, playing Rummikub, teaching them to read, and teaching them how to think about mathematics are the highlight of every day. 
                 As much as I love working and driving towards a goal, I want to use that energy and momentum I build at work to pour into my kids.{" "}
               </p>
 
@@ -231,7 +230,7 @@ class Now extends React.Component {
                   color: "var(--textNormal)",
                 }}
               >
-               <em>This is a Now page. Now pages are inspired by 
+               <em>This is a Now page. Now pages are inspired by  
                    <a
                   target="_blank"
                   href="https://nownownow.com/about"
@@ -248,7 +247,7 @@ class Now extends React.Component {
                   color: "var(--textNormal)",
                 }}
               >
-Last updated: August 15,2020
+Last updated: August 15, 2020
               </p>
               <p
                 style={{
