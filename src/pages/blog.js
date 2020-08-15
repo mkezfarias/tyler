@@ -25,6 +25,7 @@ import travelIcon from "../images/favorite podcasts icon.svg"
 import videosIcon from "../images/favorite videos icon.svg"
 import footerIMG from "../images/footer.png"
 import footerIMG2 from "../images/footer@2x.png"
+import Menu from "../components/menu"
 
 class Blog extends React.Component {
   constructor(props) {
@@ -46,7 +47,7 @@ class Blog extends React.Component {
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="All posts" />
         <Row className="mx-5 px-5">
-          <Col className="mx-3" xl={9}>
+          <Col className="mx-3" xl={9} style={{ color: `var(--textNormal)` }}>
             <Bio />
           </Col>
         </Row>
@@ -65,9 +66,8 @@ class Blog extends React.Component {
                     margin: "20px 40px",
                     border: `none`,
                     borderRadius: `0px`,
-                    background: `#fcfcfc`,
-                    boxShadow: `6px 6px 12px #e5e5e5, 
-                    -6px -6px 12px #ffffff`,
+                    background: `var(--bg)`,
+                    boxShadow: `var(--card-bg)`,
                   }}
                 >
                   <Card.Body>
@@ -80,8 +80,9 @@ class Blog extends React.Component {
                         }}
                       >
                         <Link
-                          style={{ boxShadow: `none` }}
+                          style={{ boxShadow: `none`, color: `#5BA9ED` }}
                           to={`/blog${node.fields.slug}`}
+                          className="fancy-link"
                         >
                           {title}
                         </Link>
@@ -89,6 +90,7 @@ class Blog extends React.Component {
                     </Card.Title>
                     <Card.Text>
                       <p
+                        style={{ color: `var(--textNormal)` }}
                         dangerouslySetInnerHTML={{
                           __html: node.frontmatter.description || node.excerpt,
                         }}
@@ -134,65 +136,7 @@ class Blog extends React.Component {
               transition: `0.4s`,
             }}
           >
-            <Link to="/">
-              <img
-                src={whiteLogo}
-                alt="Tyler Vawser"
-                className="logo-fixed"
-              ></img>
-            </Link>
-            <div className="d-flex flex-column p-2 justify-content-center align-items-end items-fixed">
-              <Link className="text-light roboto w-regular h2 my-4" to="/about">
-                About
-              </Link>
-
-              <Link className="text-light roboto w-regular h2 my-3" to="/blog">
-                Posts
-              </Link>
-
-              <Link className="text-light roboto w-regular h2 my-3" to="/now">
-                Now
-              </Link>
-
-              <Link
-                className="text-light roboto w-regular h2 my-3"
-                to="/favorites"
-              >
-                Favorites
-              </Link>
-
-              <Link
-                className="text-light roboto w-regular h2 my-4"
-                to="/calendly"
-              >
-                Start a Call
-              </Link>
-            </div>
-            <Col className="d-flex flex-column night-fixed">
-              <Link to="/" className="text-light roboto w-regular ml-0">
-                EN 日 ES{" "}
-              </Link>
-
-              <ThemeToggler>
-                {({ theme, toggleTheme }) => (
-                  <label>
-                    <input
-                      hidden
-                      type="checkbox"
-                      onChange={e => {
-                        console.log(theme)
-                        toggleTheme(e.target.checked ? "dark" : "light")
-                      }}
-                      checked={theme === "dark"}
-                    />{" "}
-                    <img
-                      src={theme === "dark" ? dayButton : nightButton}
-                      alt="Nigh/Day Mode"
-                    ></img>
-                  </label>
-                )}
-              </ThemeToggler>
-            </Col>
+            <Menu />
             <div onClick={this.handleClose}>
               <img
                 src={closeBTN}

@@ -23,6 +23,7 @@ import travelIcon from "../images/favorite podcasts icon.svg"
 import videosIcon from "../images/favorite videos icon.svg"
 import footerIMG from "../images/footer.png"
 import footerIMG2 from "../images/footer@2x.png"
+import Menu from "../components/menu"
 
 class Calendly extends React.Component {
   constructor(props) {
@@ -77,9 +78,11 @@ class Calendly extends React.Component {
           <Col xl={{ span: 6, offset: 1 }} className="mb-5 pb-5"></Col>
         </Container>
         <Modal
+          onEntered={this.bgTransparent}
           show={this.state.show}
           animation={false}
           onHide={this.handleClose}
+          className="modal-menu bg-transparent"
           backdropClassName="transparent-opacity"
         >
           <Modal.Body
@@ -89,65 +92,7 @@ class Calendly extends React.Component {
               transition: `0.4s`,
             }}
           >
-            <Link to="/">
-              <img
-                src={whiteLogo}
-                alt="Tyler Vawser"
-                className="logo-fixed"
-              ></img>
-            </Link>
-            <div className="d-flex flex-column p-2 justify-content-center align-items-end items-fixed">
-              <Link className="text-light roboto w-regular h2 my-4" to="/about">
-                About
-              </Link>
-
-              <Link className="text-light roboto w-regular h2 my-3" to="/blog">
-                Posts
-              </Link>
-
-              <Link className="text-light roboto w-regular h2 my-3" to="/now">
-                Now
-              </Link>
-
-              <Link
-                className="text-light roboto w-regular h2 my-3"
-                to="/favorites"
-              >
-                Favorites
-              </Link>
-
-              <Link
-                className="text-light roboto w-regular h2 my-4"
-                to="/calendly"
-              >
-                Start a Call
-              </Link>
-            </div>
-            <Col className="d-flex flex-column night-fixed">
-              <Link to="/" className="text-light roboto w-regular ml-0">
-                EN 日 ES{" "}
-              </Link>
-
-              <ThemeToggler>
-                {({ theme, toggleTheme }) => (
-                  <label>
-                    <input
-                      hidden
-                      type="checkbox"
-                      onChange={e => {
-                        console.log(theme)
-                        toggleTheme(e.target.checked ? "dark" : "light")
-                      }}
-                      checked={theme === "dark"}
-                    />{" "}
-                    <img
-                      src={theme === "dark" ? dayButton : nightButton}
-                      alt="Nigh/Day Mode"
-                    ></img>
-                  </label>
-                )}
-              </ThemeToggler>
-            </Col>
+            <Menu />
             <div onClick={this.handleClose}>
               <img
                 src={closeBTN}

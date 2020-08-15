@@ -160,7 +160,11 @@ class Now extends React.Component {
               >
                 Right now, I spend my waking hours finding and talking to great
                 people who want to continue building{" "}
-                <a target="_blank" href="https://www.apptegy.com/careers/">
+                <a
+                  target="_blank"
+                  href="https://www.apptegy.com/careers/"
+                  style={{ color: `var(--skyblue3)` }}
+                >
                   Apptegy
                 </a>
                 .
@@ -285,7 +289,7 @@ class Now extends React.Component {
                       {" "}
                       <a
                         style={{ color: `#add5ff` }}
-                        className="py-1"
+                        className="py-1 fancy-link"
                         href={mind.link}
                       >
                         {mind.text} {mind.type}
@@ -305,7 +309,11 @@ class Now extends React.Component {
                   <Row className=" w-regular roboto text-light h5 wider">
                     <Row className="text-left pt-4">{letsTalk}</Row>
                     <Row className="text-left pt-4">
-                      <Link style={{ color: `#add5ff` }} to="/calendly">
+                      <Link
+                        style={{ color: `#add5ff` }}
+                        className="fancy-link"
+                        to="/calendly"
+                      >
                         Get in touch.
                       </Link>
                     </Row>
