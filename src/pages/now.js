@@ -30,7 +30,7 @@ const nowContent = {
 
 const bigNow = [
   "1. Living in Little Rock, Arkansas",
-  "2. Building <a href="https://www.apptegy.com/">Apptegy</a>",
+  "2. Building <a href='https://www.apptegy.com/'>Apptegy</a>",
   "3. Hiring thoughtful engineers in Little Rock & Monterrey",
   "4. Exploring digital minimalism & classical piano",
   "5. Keeping up with 4 kids",
