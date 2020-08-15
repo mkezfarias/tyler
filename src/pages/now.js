@@ -29,10 +29,11 @@ const nowContent = {
 }
 
 const bigNow = [
-  "1. Lorem ipsum dolor sit amet",
-  "2. Consetetur sadipscing elitr",
-  "3. Sed diam nonumy eirmod tempor",
-  "4. At vero eos et accusam et justo",
+  "1. Living in Little Rock, Arkansas",
+  "2. Building <a href=“https://www.apptegy.com/“>Apptegy</a>",
+  "3. Hiring thoughtful engineers in Little Rock & Monterrey",
+  "4. Exploring digital minimalism & classical piano",
+  "5. Keeping up with 4 kids”,
 ]
 
 const onMyMind = [
