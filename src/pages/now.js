@@ -30,15 +30,18 @@ const nowContent = {
 
 const bigNow = [
   "1. Living in Little Rock, Arkansas",
-  "2. Building teams at <a class="fancy-link " href=`https://www.apptegy.com/careers/`>Apptegy</a>",
-  "3. Hiring thoughtful engineers in Little Rock & Monterrey",
+  "2. Building teams at Apptegy",
+  "3. Hiring RoR & Vue engineers in Little Rock and Monterrey",
   "4. Exploring digital minimalism & classical piano",
   "5. Keeping up with 4 kids",
 ]
 
 const onMyMind = [
-  "- Text",
-  "- Consetetur sadipscing elitr",
+  "How phones & social media stop us from living our best lives",
+  "Finding the best music to focus & read",
+  "Johatsu—people that disappear",
+  "Little & often habits create enourmous results",
+  "How I can act, think, and become fast-er",
 ]
 
 const onMyMindLinks = [
@@ -166,7 +169,7 @@ class Now extends React.Component {
                 >
                   Apptegy
                 </a>
-                .
+                . Much of my day is spent talking to interesting people about software engineering, SaaS sales, and other opportunities we are creating as we grow.
               </p>
 
               <p
@@ -175,11 +178,12 @@ class Now extends React.Component {
                 }}
               >
                 <strong>
-                  Nearly all of my best moments and memories involve meeting
-                  someone unexpected.
+                  This has been a year focused on... focusing.
                 </strong>{" "}
-                For that reason, I believe in creating moments when serendipity
-                has a higher probability.
+                That has meant returning to habits that made me who I am. 
+                Each day, after I pour my first cup of coffee I sit down in a white swivel chair next to my bookshelf. 
+                And I read whatever is near by. 
+                Sometimes that is a Japanese novel, other times, it is an improvement book, and still others poetry (e.g. Thomas Hardy).
               </p>
 
               <p
@@ -187,10 +191,9 @@ class Now extends React.Component {
                   color: "var(--textNormal)",
                 }}
               >
-                The best way I know to do that is to bring thoughtful and
-                interesting people together — and make it easy to talk about
-                ideas. Outside of work I do that by hosting dinner parties. At
-                work, I do that in conversations and interviews.{" "}
+                It also has meant removing and reducing stuff. 
+                Clearing surfaces and reducing the objects around my work space and living spaces is an old OCD hobby that I've taken up again.
+              {" "}
               </p>
 
               <p
@@ -198,13 +201,9 @@ class Now extends React.Component {
                   color: "var(--textNormal)",
                 }}
               >
-                I’m working on finding thoughtful people that find meaning in
-                excellence at a great company, Apptegy. We want to create a
-                company in particular way without compromise. Our culture is
-                visible, real and ever-growing. Yet the two more subtle ways
-                that our culture stands out are: 1) challenging assumptions and
-                2) running contrary to traditional practices—even when that
-                offends our expectations and egos.
+                When I create time, I am learning the basics of javascript and React. 
+                It is a losing battle, but one that I want to fight as long as I am interviewing engineers and involved with a software company. 
+                An hour of trying to code might be the single best way to humble me. 
               </p>
 
               <p
@@ -223,11 +222,34 @@ class Now extends React.Component {
                   color: "var(--textNormal)",
                 }}
               >
-                For me, having a particular career or following a linear path
-                means little. What means a lot is being able to visibly see my
-                work progress and last after I’m on to what’s next.{" "}
+                The most important part of my life now and for the next 20 years are my kids. 
+                Spending time with them, building marble contraptions, playing Rummikub, teaching them to read, and how to think about mathematics are the highlight of every day. 
+                As much as I love working and driving towards a goal, I want to use that energy and momentum I build at work to pour into my kids.{" "}
               </p>
 
+  <p
+                style={{
+                  color: "var(--textNormal)",
+                }}
+              >
+               <em>This is a Now page. Now pages are inspired by 
+                   <a
+                  target="_blank"
+                  href="https://nownownow.com/about"
+                  style={{ color: `var(--skyblue3)` }}
+                >Derek Sivers
+                  </a>. 
+                It is similar to an about page, but it tells you what I am doing now (what my priorities are and how I am spending my time)— not just what I have done in the past. 
+                This entire site is inspired with that in mind. 
+              </p>
+
+ <p
+                style={{
+                  color: "var(--textNormal)",
+                }}
+              >
+Last updated: August 15,2020
+              </p>
               <p
                 style={{
                   color: "var(--textNormal)",
