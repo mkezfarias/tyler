@@ -30,18 +30,15 @@ const nowContent = {
 
 const bigNow = [
   "1. Living in Little Rock, Arkansas",
-  "2. Building teams at Apptegy",
+  `2. Building teams at <a class="fancy-link " href="https://www.apptegy.com/careers/">Apptegy</a>`,
   "3. Hiring thoughtful engineers in Little Rock & Monterrey",
   "4. Exploring digital minimalism & classical piano",
   "5. Keeping up with 4 kids",
 ]
 
 const onMyMind = [
-  "- Lorem ipsum dolor sit amet",
+  "- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   "- Consetetur sadipscing elitr",
-  "- Sed diam nonumy eirmod tempor",
-  "- Sed diam nonumy eirmod tempor",
-  "- At vero eos et accusam et justo",
 ]
 
 const onMyMindLinks = [
@@ -75,8 +72,7 @@ const onMyMindLinks = [
 ]
 
 const nowUpdate = [
-  "Friday, August 14, 2020",
-  "This page is inspired by Derek Sivers",
+  `Now pages are inspired by <a class="fancy-link " href="https://nownownow.com/about">Derek Sivers</a>. It's similar to an about page, but it tells you what I'm focused on right now — not just what I've done in the past. Last updated: August 15,2020`,
   ]
 
 class Now extends React.Component {
