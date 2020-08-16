@@ -63,21 +63,35 @@ class Calendly extends React.Component {
               Calendly
             </Col>
           </Row>
-          <Row>
-      const Calendly = () => {
-  return (
-    <div style={{ height: "800px" }}>
-      <iframe
-        src="https://calendly.com/tyler-apptegy/call-with-tyler"
-        width="100%"
-        height="100%"
-        frameborder="0"
-      ></iframe>
-    </div>
-  );
-      </Row>
           <Row></Row>
+          <Row>
+      </Row>
         </div>
+      class Calendly extends React.Component {
+  componentDidMount() {
+    const head = document.querySelector('head');
+    const script = document.createElement('script');
+    script.setAttribute('src',  'https://assets.calendly.com/assets/external/widget.js');
+    head.appendChild(script);
+  }
+
+  componentWillUnmount() {
+    // whatever you need to cleanup the widgets code
+  }
+
+  render(){
+    return (
+      <div>
+        <div id="schedule_form">
+          <div 
+            className="calendly-inline-widget"
+            data-url="https://calendly.com/tyler-apptegy/call-with-tyler"
+            style={{ minWidth: '320px', height: '580px' }} />
+        </div>
+      </div>
+    );
+  }
+}
         <Container fluid>
           <Col
             style={{
