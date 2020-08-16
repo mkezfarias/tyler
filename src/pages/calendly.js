@@ -63,12 +63,12 @@ class Calendly extends React.Component {
               Calendly
             </Col>
           </Row>
-          <Row></Row>
-          <Row>
-      <!-- Calendly inline widget begin -->
+       <!-- Calendly inline widget begin -->
 <div class="calendly-inline-widget" data-url="https://calendly.com/tyler-apptegy/call-with-tyler" style="min-width:320px;height:630px;"></div>
 <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
 <!-- Calendly inline widget end -->
+          <Row></Row>
+          <Row>
       </Row>
         </div>
         <Container fluid>
