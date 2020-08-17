@@ -24,6 +24,10 @@ import videosIcon from "../images/favorite videos icon.svg"
 import footerIMG from "../images/footer.png"
 import footerIMG2 from "../images/footer@2x.png"
 import Menu from "../components/menu"
+import CalendlyEmbed from "../components/CalendlyEmbed"
+import twitterIMG from "../images/twitter.svg"
+import mailIMG from "../images/mail.svg"
+import linkedinIMG from "../images/linkedin.svg"
 
 class Calendly extends React.Component {
   constructor(props) {
@@ -44,28 +48,88 @@ class Calendly extends React.Component {
           title="Tyler Vawser"
           keywords={[`blog`, `Tyler Vawser`, `Tvawser`, `react`]}
         />
-        <div>
-          <Row>
+        <div className="my-0 py-0">
+          <Row style={{ marginTop: `-20vh` }}>
             <Col
               xl={7}
+              className="wider wsans w-medium pb-0 mb-0 line-height-1 mt-0 w-semibold align-center"
+              style={{}}
+            >
+              <CalendlyEmbed
+                className="mb-0"
+                account="tyler-apptegy"
+                eventName="call-with-tyler"
+              />
+            </Col>
+            <Col
+              xl={5}
               style={{
                 color: "var(--textNormal)",
-                transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-                transition: `0.4s`,
+                background: `var(--gradient-background)`,
                 textAlign: `center`,
-                margin: `auto`,
-                maxWidth: `90vw`,
-                padding: `-20vh 10vw 0 10vw`,
-                fontSize: `calc(20px + 4vw)`,
+                fontSize: `calc(20px + 2vw)`,
+                position: `absolute`,
+                top: `0`,
+                right: `0`,
+                bottom: `0`,
               }}
-              className="wider wsans w-medium pb-0 mb-0 line-height-1 mt-0 w-semibold align-center"
+              className="wider wsans w-medium line-height-1  w-semibold align-center"
             >
-              Calendly
+              <Row
+                className="d-flex justify-content-end align-items-end"
+                style={{
+                  color: `#fbfbfb`,
+                  padding: `0 6vw`,
+                  textAlign: `end`,
+                  position: `fixed`,
+                  bottom: `5vh`,
+                  marginRight: `3vw`,
+                }}
+              >
+                <Col xl={12}>You can also check out my social media</Col>
+                <Col
+                  xl={{ span: 8, offset: 3 }}
+                  className="d-flex  justify-content-between pt-3 "
+                >
+                  <a
+                    href="https://twitter.com/Tvaw"
+                    className="d-flex align-items-end justify-content-between"
+                  >
+                    <img
+                      src={twitterIMG}
+                      alt="Link to Tyler's twitter"
+                      className="d-flex align-self-end"
+                    />
+                  </a>
+
+                  <a href="https://www.linkedin.com/in/tylervawser/">
+                    <img
+                      className="d-flex align-self-end"
+                      src={linkedinIMG}
+                      alt="Link to Tyler's Linkedin profile"
+                    />
+                  </a>
+
+                  <a href="https://twitter.com/Tvaw">
+                    <img
+                      src={mailIMG}
+                      alt="Link to Tyler's twitter"
+                      className="d-flex align-self-end"
+                    />
+                  </a>
+                </Col>
+              </Row>
+              <Row
+                style={{
+                  padding: `6vw`,
+                  marginBottom: `20vh`,
+                  textAlign: `end`,
+                  position: `fixed`,
+                  bottom: `20px`,
+                }}
+              ></Row>
             </Col>
           </Row>
-          <Row></Row>
-          <Row>
-      </Row>
         </div>
         <Container fluid>
           <Col
@@ -104,7 +168,7 @@ class Calendly extends React.Component {
           </Modal.Body>
         </Modal>
         <Link to="/">
-          <img src={darkLogo} alt="Tyler Vawser" className="logo-fixed"></img>
+          <img src={whiteLogo} alt="Tyler Vawser" className="logo-fixed"></img>
         </Link>
         <div
           onClick={this.handleShow}
@@ -117,16 +181,6 @@ class Calendly extends React.Component {
           }}
           className="menu-fixed"
         ></div>
-        <img
-          src={footerIMG}
-          style={{
-            position: "absolute",
-            bottom: `0`,
-            right: `0`,
-            left: `0`,
-            margin: `0 0 0 0`,
-          }}
-        ></img>
       </Layout>
     )
   }

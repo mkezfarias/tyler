@@ -18,6 +18,7 @@
   --nightMenu-bg: url("../images/menu2.svg") no-repeat right top;
 }
 
+
 body {
   --bg: var(--day-white);
   --textNormal: var(--day-black);
@@ -33,6 +34,9 @@ body {
   --card-bg:  7px 7px 14px #d9d9d9, -7px -7px 14px #ffffff;
 }
 
+.tl-wrapper--mount{
+  background-color: var(--bg);
+}
 body.dark {
   -webkit-font-smoothing: antialiased;
   --bg: var(--night-white);
@@ -96,13 +100,27 @@ box-shadow: 0 0 0 0 currentColor;
   line-height: 1;
 }
 
+.items-fixed > a.fancy-link {
+  position: relative;
+  color: (white);
+}
+
 a.fancy-link {
   position: relative;
   color: var(--day-gray);
 }
 
+.items-fixed > a.fancy-link:hover{
+ color: white;
+}
+
 a.fancy-link:hover{
   color: var(--day-gray);
+}
+
+.items-fixed > a.fancy-link::before, .items-fixed > a.fancy-link:hover::before {
+background-color: whitesmoke;  
+color: white;
 }
 
 a.fancy-link::before {

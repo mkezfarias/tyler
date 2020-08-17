@@ -37,38 +37,34 @@ class Menu extends React.Component {
         </Link>
         <div className="d-flex flex-column p-2 justify-content-center align-items-end items-fixed">
           <Link
-            className="text-light roboto w-regular h2 my-4 fancy-link"
-            to="/about"
+            className="text-light roboto w-regular h2 my-4  fancy-link"
+            to="/calendly"
           >
-            About
+            Set up a call
           </Link>
-
           <Link
             className="text-light roboto w-regular h2 my-3 fancy-link"
             to="/blog"
           >
             Posts
           </Link>
-
-          <Link
-            className="text-light roboto w-regular h2 my-3  fancy-link"
-            to="/now"
-          >
-            Now
-          </Link>
-
           <Link
             className="text-light roboto w-regular h2 my-3  fancy-link"
             to="/favorites"
           >
             Favorites
           </Link>
-
           <Link
-            className="text-light roboto w-regular h2 my-4  fancy-link"
-            to="/calendly"
+            className="text-light roboto w-regular h2 my-3  fancy-link"
+            to="/now"
           >
-            Start a Call
+            Now
+          </Link>
+          <Link
+            className="text-light roboto w-regular h2 my-4 fancy-link"
+            to="/about"
+          >
+            About
           </Link>
         </div>
         <Col className="d-flex flex-column night-fixed">
