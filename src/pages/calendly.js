@@ -86,7 +86,7 @@ class Calendly extends React.Component {
                   marginRight: `3vw`,
                 }}
               >
-                <Col xl={12}>You can also check out my social media</Col>
+                <Col xl={12}>Tyler is on social media.</Col>
                 <Col
                   xl={{ span: 8, offset: 3 }}
                   className="d-flex  justify-content-between pt-3 "
@@ -110,10 +110,10 @@ class Calendly extends React.Component {
                     />
                   </a>
 
-                  <a href="https://twitter.com/Tvaw">
+                  <a href="mailto:tvawser@gmail.com?subject=Saw%20your%20website%20lets%20chat">
                     <img
                       src={mailIMG}
-                      alt="Link to Tyler's twitter"
+                      alt="Link to Tyler's email"
                       className="d-flex align-self-end"
                     />
                   </a>
