@@ -20,11 +20,11 @@ class CalendlyEmbed extends React.Component {
   render() {
     const { account, eventName } = this.props
     return (
-      <div id="schedule_form">
+      <div id="schedule_form" style={{ backgroundColor: "var(--bg)" }}>
         <div
           className="calendly-inline-widget"
           data-url={this.buildCalendlyUrl(account, eventName)}
-          style={{ minWidth: "480px", height: "640px" }}
+          style={{ minWidth: "480px", height: "1100px" }}
         />
       </div>
     )
