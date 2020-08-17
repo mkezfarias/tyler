@@ -55,7 +55,7 @@ class Layout extends React.Component {
             <span className="mb-0 pb-0">Tyler Vawser is</span>
             <Typewriter
               options={{
-               strings: [
+                strings: [
                   `growing <a class="fancy-link " href="https://www.apptegy.com/">Apptegy</a>.`,
                   `reading <a class="fancy-link " href="https://readjapaneseliterature.com/2020/07/24/manazuru-by-hiromi-kawakami-and-a-man-by-keiichiro-hirano/">Manazura</a>.`,
                   "on a Zoom call.",
@@ -134,6 +134,7 @@ class Layout extends React.Component {
             marginLeft: `auto`,
             marginRight: `auto`,
             maxWidth: `1400px`,
+            backgroundColor: `var(--bg)`,
             padding: `${rhythm(5.5)} ${rhythm(1.5)} 0 ${rhythm(1.5)} `,
           }}
         >

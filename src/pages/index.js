@@ -68,41 +68,41 @@ class IndexPage extends React.Component {
           className="ml-0 mr-5 pr-5 roboto w-regular h6 d-flex justify-content-between flex-md-nowrap w-100 align-items-end mt-5 pt-5"
         >
           <Col lg={3} md={2}>
-            <Link
+            <a
               style={{
                 color: "var(--textTitle)",
                 transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
                 transition: `0.4s`,
               }}
               className="fancy-link "
-              to="https://twitter.com/tvaw"
+              href="https://twitter.com/tvaw"
             >
               Twitter
-            </Link>{" "}
+            </a>{" "}
             /{" "}
-            <Link
+            <a
               style={{
                 color: "var(--textTitle)",
                 transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
                 transition: `0.4s`,
               }}
               className="fancy-link "
-              to="mailto:tvawser@gmail.com?subject=Saw%20your%20website%20lets%20chat"
+              href="mailto:tvawser@gmail.com?subject=Saw%20your%20website%20lets%20chat"
             >
               Email
-            </Link>{" "}
+            </a>{" "}
             /{" "}
-            <Link
+            <a
               style={{
                 color: "var(--textTitle)",
                 transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
                 transition: `0.4s`,
               }}
               className="fancy-link "
-              to="https://www.linkedin.com/in/tylervawser/"
+              href="https://www.linkedin.com/in/tylervawser/"
             >
               LinkedIn
-            </Link>
+            </a>
           </Col>
           <Col lg={3} md={2} className="mr-5 pr-5 previously-fixed">
             <Row
