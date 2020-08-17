@@ -25,22 +25,23 @@ import footerIMG from "../images/footer.png"
 import footerIMG2 from "../images/footer@2x.png"
 
 const nowContent = {
-  title: "Tyler wants to share what he is doing now",
+  title: "What Tyler is doing now",
 }
 
 const bigNow = [
-  "1. Lorem ipsum dolor sit amet",
-  "2. Consetetur sadipscing elitr",
-  "3. Sed diam nonumy eirmod tempor",
-  "4. At vero eos et accusam et justo",
+  "1. Living in Little Rock, Arkansas",
+  "2. Building teams at Apptegy",
+  "3. Hiring RoR & Vue engineers in Little Rock and Monterrey",
+  "4. Exploring digital minimalism & classical piano",
+  "5. Keeping up with 4 kids",
 ]
 
 const onMyMind = [
-  "- Lorem ipsum dolor sit amet",
-  "- Consetetur sadipscing elitr",
-  "- Sed diam nonumy eirmod tempor",
-  "- Sed diam nonumy eirmod tempor",
-  "- At vero eos et accusam et justo",
+  "How to use my phone for 1 hour or less a day",
+  "Finding the best music to focus & read",
+  "Johatsu—people that disappear",
+  "Consistent actions create enourmous results",
+  "How I can act, think, and become fast-er",
 ]
 
 const onMyMindLinks = [
@@ -73,9 +74,10 @@ const onMyMindLinks = [
   },
 ]
 
-const letsTalk =
-  "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod. Tyler is waiting to hear from you."
-
+const nowUpdate = 
+      [
+        "I would like to hear your story and know who you are and what you’re working on. The easiest way to connect is by picking a time here that works for you.",
+]
 class Now extends React.Component {
   constructor(props) {
     super(props)
@@ -167,7 +169,7 @@ class Now extends React.Component {
                 >
                   Apptegy
                 </a>
-                .
+                . Much of my day is spent talking to people about software engineering, SaaS sales, and other opportunities we are creating as we grow.
               </p>
 
               <p
@@ -176,11 +178,12 @@ class Now extends React.Component {
                 }}
               >
                 <strong>
-                  Nearly all of my best moments and memories involve meeting
-                  someone unexpected.
+                  This has been a year focused on... focusing.
                 </strong>{" "}
-                For that reason, I believe in creating moments when serendipity
-                has a higher probability.
+                That has meant returning to habits that made me who I am. 
+                Each day, after I pour my first cup of coffee I sit down in a white swivel chair next to my bookshelf. 
+                And I read whatever is nearby:  
+                a Japanese novel, an improvement book, or poetry (e.g. Thomas Hardy).
               </p>
 
               <p
@@ -188,10 +191,8 @@ class Now extends React.Component {
                   color: "var(--textNormal)",
                 }}
               >
-                The best way I know to do that is to bring thoughtful and
-                interesting people together — and make it easy to talk about
-                ideas. Outside of work I do that by hosting dinner parties. At
-                work, I do that in conversations and interviews.{" "}
+                It also has meant removing and reducing stuff. 
+                Clearing surfaces and reducing the objects around my work space and living spaces is an old OCD hobby that I've taken up again.
               </p>
 
               <p
@@ -199,13 +200,9 @@ class Now extends React.Component {
                   color: "var(--textNormal)",
                 }}
               >
-                I’m working on finding thoughtful people that find meaning in
-                excellence at a great company, Apptegy. We want to create a
-                company in particular way without compromise. Our culture is
-                visible, real and ever-growing. Yet the two more subtle ways
-                that our culture stands out are: 1) challenging assumptions and
-                2) running contrary to traditional practices—even when that
-                offends our expectations and egos.
+                When I create the time, I am learning javascript and React. 
+                It is a losing battle, but one that I want to fight as long as I am interviewing engineers and involved with a software company. 
+                An hour of trying to code might be the single best way to humble me. 
               </p>
 
               <p
@@ -213,10 +210,9 @@ class Now extends React.Component {
                   color: "var(--textNormal)",
                 }}
               >
-                Before Apptegy, I had nothing to do with recruiting, HR, People
-                Operations. I had only ever hired and managed for my own teams.
-                In fact, most of my career has been in marketing and working
-                with CEOs.{" "}
+               Something I am working on improving is contacting and talking to the people I care about.
+               This is the easiest thing for me to put off. But each year I realize how important it is and that it is not going to get easier without being intentional.
+               {" "}
               </p>
 
               <p
@@ -224,11 +220,35 @@ class Now extends React.Component {
                   color: "var(--textNormal)",
                 }}
               >
-                For me, having a particular career or following a linear path
-                means little. What means a lot is being able to visibly see my
-                work progress and last after I’m on to what’s next.{" "}
+                The most important part of my life now and for the next 20 years are my kids. 
+                Spending time with them, building marble contraptions, playing Rummikub, teaching them to read, and teaching them how to think about mathematics are the highlight of every day. 
+                As much as I love working and driving towards a goal, I want to use that energy and momentum I build at work to pour into my kids.{" "}
               </p>
 
+  <p
+                style={{
+                  color: "var(--textNormal)",
+                }}
+              >
+               <em>This is a Now page. Now pages are inspired by  
+                   <a
+                  target="_blank"
+                  href="https://nownownow.com/about"
+                  style={{ color: `var(--skyblue3)` }}
+                >
+                  Derek Sivers
+                  </a>
+                  . It is similar to an about page, but it tells you what I am doing now (what my priorities are and how I am spending my time)— not just what I have done in the past. 
+                This entire site is inspired with that in mind.</em>
+              </p>
+
+ <p
+                style={{
+                  color: "var(--textNormal)",
+                }}
+              >
+Last updated: August 15, 2020
+              </p>
               <p
                 style={{
                   color: "var(--textNormal)",
@@ -304,10 +324,10 @@ class Now extends React.Component {
                 style={{ backgroundColor: `#79BCFF`, transform: `scaleX(1.3)` }}
               />
               <Row className="text-light py-1 my-4 py-5 ">
-                <Col xl={5}>Let’s talk.</Col>
+                <Col xl={5}>Let's talk:</Col>
                 <Col xl={{ span: 6, offset: 4 }}>
                   <Row className=" w-regular roboto text-light h5 wider">
-                    <Row className="text-left pt-4">{letsTalk}</Row>
+                    <Row className="text-left pt-4">{nowUpdate} </Row>
                     <Row className="text-left pt-4">
                       <Link
                         style={{ color: `#add5ff` }}

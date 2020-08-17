@@ -64,7 +64,8 @@ class Calendly extends React.Component {
             </Col>
           </Row>
           <Row></Row>
-          <Row></Row>
+          <Row>
+      </Row>
         </div>
         <Container fluid>
           <Col

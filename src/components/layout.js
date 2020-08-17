@@ -55,14 +55,15 @@ class Layout extends React.Component {
             <span className="mb-0 pb-0">Tyler Vawser is</span>
             <Typewriter
               options={{
-                strings: [
-                  "typing.",
-                  `growing <a class="fancy-link " href="https://www.apptegy.com/">Apptegy </a>.`,
-                  "on Zoom.",
-                  "asking questions.",
-                  "riding his bike.",
+               strings: [
+                  `growing <a class="fancy-link " href="https://www.apptegy.com/">Apptegy</a>.`,
+                  `reading <a class="fancy-link " href="https://readjapaneseliterature.com/2020/07/24/manazuru-by-hiromi-kawakami-and-a-man-by-keiichiro-hirano/">Manazura</a>.`,
+                  "on a Zoom call.",
+                  "hiring thoughtful software engineers.",
+                  "meeting interesting people.",
+                  "exploring digital minimalism.",
                   "drinking coffee.",
-                  "running.",
+                  `listening to <a class="fancy-link " href="https://open.spotify.com/playlist/7wgD1FW1Pp3LTp9di8YHBB?si=JZwsWRKMQm-knYVxl9fIKQ">minimal piano</a>.`,
                 ],
                 autoStart: true,
                 loop: true,
