@@ -100,13 +100,27 @@ box-shadow: 0 0 0 0 currentColor;
   line-height: 1;
 }
 
+.items-fixed > a.fancy-link {
+  position: relative;
+  color: (white);
+}
+
 a.fancy-link {
   position: relative;
   color: var(--day-gray);
 }
 
+.items-fixed > a.fancy-link:hover{
+ color: white;
+}
+
 a.fancy-link:hover{
   color: var(--day-gray);
+}
+
+.items-fixed > a.fancy-link::before, .items-fixed > a.fancy-link:hover::before {
+background-color: whitesmoke;  
+color: white;
 }
 
 a.fancy-link::before {
