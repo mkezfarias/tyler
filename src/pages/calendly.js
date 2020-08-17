@@ -76,6 +76,7 @@ class Calendly extends React.Component {
               className="wider wsans w-medium line-height-1  w-semibold align-center"
             >
               <Row
+                className="d-flex justify-content-end align-items-end"
                 style={{
                   color: `#fbfbfb`,
                   padding: `0 6vw`,
@@ -85,24 +86,36 @@ class Calendly extends React.Component {
                   marginRight: `3vw`,
                 }}
               >
-                {" "}
-                You can also check out my social media
-                <Col>
-                  <a href="https://twitter.com/Tvaw">
-                    <img src={twitterIMG} alt="Link to Tyler's twitter" />
-                  </a>
-                </Col>{" "}
-                <Col>
-                  <a href="https://www.linkedin.com/in/tylervawser/">
+                <Col xl={12}>You can also check out my social media</Col>
+                <Col
+                  xl={{ span: 8, offset: 3 }}
+                  className="d-flex  justify-content-between pt-3 "
+                >
+                  <a
+                    href="https://twitter.com/Tvaw"
+                    className="d-flex align-items-end justify-content-between"
+                  >
                     <img
                       src={twitterIMG}
+                      alt="Link to Tyler's twitter"
+                      className="d-flex align-self-end"
+                    />
+                  </a>
+
+                  <a href="https://www.linkedin.com/in/tylervawser/">
+                    <img
+                      className="d-flex align-self-end"
+                      src={linkedinIMG}
                       alt="Link to Tyler's Linkedin profile"
                     />
                   </a>
-                </Col>{" "}
-                <Col>
+
                   <a href="https://twitter.com/Tvaw">
-                    <img src={twitterIMG} alt="Link to Tyler's twitter" />
+                    <img
+                      src={mailIMG}
+                      alt="Link to Tyler's twitter"
+                      className="d-flex align-self-end"
+                    />
                   </a>
                 </Col>
               </Row>
