@@ -6,19 +6,35 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
+import darkLogo from "../images/logo.svg"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.mdx
-    const siteTitle = this.props.data.site.siteMetadata.title
     const { previous, next } = this.props.pageContext
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
+      <Layout location={this.props.location}>
         <SEO
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
         />
+        <AniLink
+          style={{
+            color: "var(--textTitle)",
+          }}
+          to="/"
+          className="fancy-link"
+          cover
+          bg="var(--gradient-background)"
+          direction="left"
+          top="entry"
+          duration={1.5}
+          entryOffset={800}
+        >
+          <img src={darkLogo} alt="Tyler Vawser" className="logo-fixed"></img>
+        </AniLink>
         <h1>{post.frontmatter.title}</h1>
         <p
           style={{

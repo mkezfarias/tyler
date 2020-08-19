@@ -101,7 +101,7 @@ class Menu extends React.Component {
             bg="var(--gradient-background)"
             direction="left"
             top="entry"
-            duration={2}
+            duration={1}
             entryOffset={800}
             className="text-light roboto w-regular h2 my-3 fancy-link"
             to="/now"
@@ -126,9 +126,17 @@ class Menu extends React.Component {
           </AniLink>
         </div>
         <Col className="d-flex flex-column night-fixed">
-          <Link to="/" className="text-light roboto w-regular ml-0">
-            EN 日 ES{" "}
-          </Link>
+          <Row className="d-flex justify-content-start w-50 pl-3">
+            <a href="a" className="text-light roboto w-regular pr-2 pl-1">
+              EN
+            </a>
+            <a href="a" className="text-light roboto w-regular px-2">
+              日
+            </a>
+            <a href="a" className="text-light roboto w-regular px-2">
+              ES
+            </a>
+          </Row>
 
           <ThemeToggler>
             {({ theme, toggleTheme }) => (

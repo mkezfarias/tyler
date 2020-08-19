@@ -48,6 +48,21 @@ class Blog extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="All posts" />
+        <AniLink
+          style={{
+            color: "var(--textTitle)",
+          }}
+          to="/"
+          className="fancy-link"
+          cover
+          bg="var(--gradient-background)"
+          direction="left"
+          top="entry"
+          duration={1.5}
+          entryOffset={800}
+        >
+          <img src={darkLogo} alt="Tyler Vawser" className="logo-fixed"></img>
+        </AniLink>
         <Row className="mx-5 px-5">
           <Col className="mx-3" xl={9} style={{ color: `var(--textNormal)` }}>
             <Bio />
@@ -158,9 +173,7 @@ class Blog extends React.Component {
             </div>
           </Modal.Body>
         </Modal>
-        <Link to="/">
-          <img src={darkLogo} alt="Tyler Vawser" className="logo-fixed"></img>
-        </Link>
+
         <div
           onClick={this.handleShow}
           style={{
