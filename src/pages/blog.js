@@ -7,6 +7,8 @@ import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
 import Button from "../components/button"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
+import { TransitionState } from "gatsby-plugin-transition-link"
+
 import { Card, Container, Row, Col, Modal, CardColumns } from "react-bootstrap"
 import "../styles/global.scss"
 import TransitionLink from "gatsby-plugin-transition-link"
@@ -46,6 +48,21 @@ class Blog extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="All posts" />
+        <AniLink
+          style={{
+            color: "var(--textTitle)",
+          }}
+          to="/"
+          className="fancy-link"
+          cover
+          bg="var(--gradient-background)"
+          direction="left"
+          top="entry"
+          duration={1.5}
+          entryOffset={800}
+        >
+          <img src={darkLogo} alt="Tyler Vawser" className="logo-fixed"></img>
+        </AniLink>
         <Row className="mx-5 px-5">
           <Col className="mx-3" xl={9} style={{ color: `var(--textNormal)` }}>
             <Bio />
@@ -79,13 +96,21 @@ class Blog extends React.Component {
                           marginBottom: rhythm(1 / 4),
                         }}
                       >
-                        <Link
-                          style={{ boxShadow: `none`, color: `#5BA9ED` }}
-                          to={`/blog${node.fields.slug}`}
+                        <AniLink
+                          style={{
+                            bg: "var(--gradient-background)",
+                            color: "#5ba9ed",
+                            transition: `0.4s`,
+                          }}
                           className="fancy-link"
+                          cover
+                          bg="var(--gradient-background)"
+                          top="exit"
+                          direction="left"
+                          to={`/blog${node.fields.slug}`}
                         >
                           {title}
-                        </Link>
+                        </AniLink>
                       </h3>
                     </Card.Title>
                     <Card.Text>
@@ -106,21 +131,6 @@ class Blog extends React.Component {
           })}
         </Row>
 
-        <AniLink
-          style={{
-            color: "var(--textTitle)",
-            transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-            transition: `0.4s`,
-          }}
-          className="fancy-link"
-          cover
-          bg="var(--gradient-background)"
-          direction="left"
-          top="entry"
-          to="/"
-        >
-          Go Home
-        </AniLink>
         <Modal
           onEntered={this.bgTransparent}
           show={this.state.show}
@@ -136,7 +146,24 @@ class Blog extends React.Component {
               transition: `0.4s`,
             }}
           >
-            <Menu />
+            <AniLink
+              style={{
+                bg: "var(--gradient-background)",
+                color: "#5ba9ed",
+                transition: `0.4s`,
+              }}
+              className="fancy-link"
+              cover
+              bg="var(--gradient-background)"
+              top="exit"
+              direction="left"
+              className="text-light roboto w-regular h2 my-4 fancy-link"
+              to="/about"
+            >
+              <div onClick={this.handleClose}>TransitionTest</div>
+            </AniLink>
+            <Menu handleClose={this.handleClose} />
+
             <div onClick={this.handleClose}>
               <img
                 src={closeBTN}
@@ -146,9 +173,7 @@ class Blog extends React.Component {
             </div>
           </Modal.Body>
         </Modal>
-        <Link to="/">
-          <img src={darkLogo} alt="Tyler Vawser" className="logo-fixed"></img>
-        </Link>
+
         <div
           onClick={this.handleShow}
           style={{

@@ -85,7 +85,7 @@ class Layout extends React.Component {
           bg="var(--gradient-background)"
           direction="left"
           top="entry"
-          duration={2}
+          duration={1}
         >
           <div
             style={{

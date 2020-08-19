@@ -193,6 +193,21 @@ class Favorites extends React.Component {
             title="Tyler Vawser"
             keywords={[`blog`, `Tyler Vawser`, `Tvawser`, `react`]}
           />
+          <AniLink
+            style={{
+              color: "var(--textTitle)",
+            }}
+            to="/"
+            className="fancy-link"
+            cover
+            bg="var(--gradient-background)"
+            direction="left"
+            top="entry"
+            duration={1.5}
+            entryOffset={800}
+          >
+            <img src={darkLogo} alt="Tyler Vawser" className="logo-fixed"></img>
+          </AniLink>
           <div>
             <Row>
               <Col
@@ -315,9 +330,7 @@ class Favorites extends React.Component {
               </div>
             </Modal.Body>
           </Modal>
-          <Link to="/">
-            <img src={darkLogo} alt="Tyler Vawser" className="logo-fixed"></img>
-          </Link>
+
           <div
             onClick={this.handleShow}
             style={{

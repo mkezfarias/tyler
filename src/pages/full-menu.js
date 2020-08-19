@@ -86,7 +86,7 @@ class FullMenu extends React.Component {
               bg="var(--gradient-background)"
               direction="left"
               top="entry"
-              duration={2}
+              duration={1.5}
               entryOffset={800}
             >
               <img
