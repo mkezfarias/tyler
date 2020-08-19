@@ -8,7 +8,9 @@ import { Container, Row, Col, Modal } from "react-bootstrap"
 import "../styles/global.scss"
 import TransitionLink from "gatsby-plugin-transition-link"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
+import ThemeToggler from "gatsby-plugin-dark-mode/ThemeToggler"
 
+var hours = new Date().getHours()
 class IndexPage extends React.Component {
   render() {
     return (
@@ -24,7 +26,26 @@ class IndexPage extends React.Component {
             `VP of People`,
           ]}
         />
-
+        <ThemeToggler>
+          {({ theme, toggleTheme }) => (
+            <label>
+              <input
+                type="checkbox"
+                onLoad={e => {
+                  console.log(hours, e.target.checked)
+                  hours >= `7` && hours <= `17`
+                    ? (e.target.checked = true)
+                    : (e.target.checked = false)
+                }}
+                onChange={e => {
+                  console.log(theme, hours)
+                  toggleTheme(e.target.checked ? "dark" : "light")
+                }}
+                checked={theme === "dark"}
+              />{" "}
+            </label>
+          )}
+        </ThemeToggler>
         <Row
           style={{
             color: "var(--textNormal)",

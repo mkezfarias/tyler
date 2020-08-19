@@ -90,6 +90,8 @@ class Now extends React.Component {
     this.handleShow = () => this.setState({ show: true })
   }
 
+  componentDidMount() {}
+
   render() {
     return (
       <Layout location={this.props.location}>
@@ -97,6 +99,33 @@ class Now extends React.Component {
           title="Tyler Vawser"
           keywords={[`blog`, `Tyler Vawser`, `Tvawser`, `react`]} //edit these on each page depending on the content of the page
         />
+        <ThemeToggler>
+          {({ theme, toggleTheme }) => {
+            let hours = parseInt(
+              new Date().toLocaleTimeString("en-GB").slice(0, 2)
+            )
+
+            if (hours >= 7 && hours < 17) {
+              hours = "light"
+              localStorage.setItem("theme", "light")
+            } else {
+              hours = "dark"
+              localStorage.setItem("theme", "dark")
+            }
+
+            const strict = localStorage.getItem("strict-theme")
+
+            return (
+              <label>
+                <input
+                  hidden
+                  type="checkbox"
+                  checked={hours === "dark" ? true : false}
+                />{" "}
+              </label>
+            )
+          }}
+        </ThemeToggler>
         <AniLink
           style={{
             color: "var(--textTitle)",
@@ -402,7 +431,7 @@ class Now extends React.Component {
             >
               <div onClick={this.handleClose}>TransitionTest</div>
             </AniLink>
-            <Menu handleClose={this.handleClose} />
+            <Menu handleClose={this.handleClose} dark={true} />
 
             <div onClick={this.handleClose}>
               <img

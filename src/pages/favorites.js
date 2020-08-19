@@ -320,7 +320,7 @@ class Favorites extends React.Component {
                 transition: `0.4s`,
               }}
             >
-              <Menu />
+              <Menu handleClose={this.handleClose} />
               <div onClick={this.handleClose}>
                 <img
                   src={closeBTN}
