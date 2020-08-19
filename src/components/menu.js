@@ -32,28 +32,67 @@ class Menu extends React.Component {
   render() {
     return (
       <>
-        <Link to="/">
+        <AniLink
+          style={{
+            color: "var(--textTitle)",
+          }}
+          to="/"
+          cover
+          bg="var(--gradient-background)"
+          direction="right"
+          top="entry"
+          duration={1}
+          entryOffset={800}
+        >
+          {" "}
           <img src={whiteLogo} alt="Tyler Vawser" className="logo-fixed"></img>
-        </Link>
+        </AniLink>
         <div className="d-flex flex-column p-2 justify-content-center align-items-end items-fixed">
-          <Link
-            className="text-light roboto w-regular h2 my-4  fancy-link"
+          <AniLink
+            style={{
+              color: "var(--textTitle)",
+            }}
+            cover
+            bg="var(--gradient-background)"
+            direction="left"
+            top="entry"
+            duration={1}
+            entryOffset={800}
+            className="text-light roboto w-regular h2 my-4 fancy-link"
             to="/calendly"
           >
             Set up a call
-          </Link>
-          <Link
+          </AniLink>
+          <AniLink
+            style={{
+              color: "var(--textTitle)",
+            }}
+            cover
+            bg="var(--gradient-background)"
+            direction="left"
+            top="entry"
+            duration={1}
+            entryOffset={800}
             className="text-light roboto w-regular h2 my-3 fancy-link"
             to="/blog"
           >
             Posts
-          </Link>
-          <Link
-            className="text-light roboto w-regular h2 my-3  fancy-link"
+          </AniLink>
+          <AniLink
+            style={{
+              color: "var(--textTitle)",
+            }}
+            cover
+            bg="var(--gradient-background)"
+            direction="left"
+            top="entry"
+            duration={2}
+            entryOffset={800}
+            className="text-light roboto w-regular h2 my-3 fancy-link"
             to="/favorites"
           >
             Favorites
-          </Link>
+          </AniLink>
           <Link
             className="text-light roboto w-regular h2 my-3  fancy-link"
             to="/now"
