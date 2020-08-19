@@ -8,8 +8,23 @@ import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
 import darkLogo from "../images/logo.svg"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
+import { Container, Col, Modal } from "react-bootstrap"
+import Menu from "../components/menu"
+import closeBTN from "../images/x.svg"
+import footerIMG from "../images/footer.svg"
 
 class BlogPostTemplate extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      show: false,
+    }
+
+    this.handleClose = () => this.setState({ show: false })
+    this.handleShow = () => this.setState({ show: true })
+  }
+
   render() {
     const post = this.props.data.mdx
     const { previous, next } = this.props.pageContext
@@ -35,49 +50,117 @@ class BlogPostTemplate extends React.Component {
         >
           <img src={darkLogo} alt="Tyler Vawser" className="logo-fixed"></img>
         </AniLink>
-        <h1>{post.frontmatter.title}</h1>
-        <p
-          style={{
-            ...scale(-1 / 5),
-            display: `block`,
-            marginBottom: rhythm(1),
-            marginTop: rhythm(-1),
-          }}
+        <Container
+          className="px-5"
+          style={{ marginTop: `-50px`, marginBottom: `100px` }}
         >
-          {post.frontmatter.date}
-        </p>
-        <MDXRenderer>{post.body}</MDXRenderer>
-        <hr
-          style={{
-            marginBottom: rhythm(1),
-          }}
-        />
-        <Bio />
-
-        <ul
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0,
-          }}
+          <Col xl={8} className="m-auto pb-5 mb-5">
+            <h1
+              style={{
+                color: "var(--textTitle)",
+              }}
+            >
+              {post.frontmatter.title}
+            </h1>
+            <p
+              className="pl-1"
+              style={{
+                ...scale(-1 / 5),
+                display: `block`,
+                marginBottom: rhythm(1),
+                marginTop: rhythm(1),
+                color: "var(--textTitle)",
+              }}
+            >
+              <h6 style={{ color: "var(--textTitle)" }}>
+                {post.frontmatter.date}
+              </h6>
+            </p>
+            <MDXRenderer style="color: var(--textNormal);">
+              {post.body}
+            </MDXRenderer>
+            <div
+              style={{
+                borderBottom: `1px solid var(--textTitle)`,
+                marginTop: rhythm(2),
+                marginBottom: rhythm(2),
+              }}
+            />
+            {
+              //            <Footer />
+            }
+            <ul
+              style={{
+                display: `flex`,
+                flexWrap: `wrap`,
+                justifyContent: `space-between`,
+                listStyle: `none`,
+                padding: 0,
+              }}
+            >
+              <li>
+                {previous && (
+                  <Link to={`/blog${previous.fields.slug}`} rel="prev">
+                    ← {previous.frontmatter.title}
+                  </Link>
+                )}
+              </li>
+              <li>
+                {next && (
+                  <Link to={`/blog${next.fields.slug}`} rel="next">
+                    {next.frontmatter.title} →
+                  </Link>
+                )}
+              </li>
+            </ul>
+            <div
+              onClick={this.handleShow}
+              style={{
+                background: `var(--menu-img)`,
+                transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+                transition: `0.4s`,
+                height: "30px",
+                width: "30px",
+              }}
+              className="menu-fixed"
+            ></div>
+          </Col>
+        </Container>
+        <Modal
+          onEntered={this.bgTransparent}
+          show={this.state.show}
+          animation={false}
+          onHide={this.handleClose}
+          className="modal-menu bg-transparent"
+          backdropClassName="transparent-opacity"
         >
-          <li>
-            {previous && (
-              <Link to={`/blog${previous.fields.slug}`} rel="prev">
-                ← {previous.frontmatter.title}
-              </Link>
-            )}
-          </li>
-          <li>
-            {next && (
-              <Link to={`/blog${next.fields.slug}`} rel="next">
-                {next.frontmatter.title} →
-              </Link>
-            )}
-          </li>
-        </ul>
+          <Modal.Body
+            style={{
+              background: "var(--gradient-background)",
+              transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+              transition: `0.4s`,
+            }}
+          >
+            <Menu />
+            <div onClick={this.handleClose}>
+              <img
+                src={closeBTN}
+                alt="Close Button"
+                className="close-button"
+              ></img>
+            </div>
+          </Modal.Body>
+        </Modal>
+        <img
+          src={footerIMG}
+          style={{
+            position: "absolute",
+            bottom: `0`,
+            right: `0`,
+            left: `0`,
+            margin: `0 0 0 0`,
+          }}
+        ></img>
       </Layout>
     )
   }

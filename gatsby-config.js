@@ -22,7 +22,6 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-feed-mdx`,
-    `@xavivars/gatsby-plugin-static-site`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

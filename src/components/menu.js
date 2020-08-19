@@ -130,10 +130,16 @@ class Menu extends React.Component {
             <a href="a" className="text-light roboto w-regular pr-2 pl-1">
               EN
             </a>
-            <a href="a" className="text-light roboto w-regular px-2">
+            <a
+              href={`http://translate.google.com/translate?hl=&sl=en&tl=ja&u=www.tylervawser.com`}
+              className="text-light roboto w-regular px-2"
+            >
               日
             </a>
-            <a href="a" className="text-light roboto w-regular px-2">
+            <a
+              href={`http://translate.google.com/translate?hl=&sl=en&tl=es&u=www.tylervawser.com`}
+              className="text-light roboto w-regular px-2"
+            >
               ES
             </a>
           </Row>
