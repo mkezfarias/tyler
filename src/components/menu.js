@@ -32,45 +32,117 @@ class Menu extends React.Component {
   render() {
     return (
       <>
-        <Link to="/">
+        <AniLink
+          style={{
+            color: "var(--textTitle)",
+          }}
+          to="/"
+          cover
+          bg="var(--gradient-background)"
+          direction="right"
+          top="entry"
+          duration={1}
+          entryOffset={800}
+        >
+          {" "}
           <img src={whiteLogo} alt="Tyler Vawser" className="logo-fixed"></img>
-        </Link>
+        </AniLink>
         <div className="d-flex flex-column p-2 justify-content-center align-items-end items-fixed">
-          <Link
-            className="text-light roboto w-regular h2 my-4  fancy-link"
+          <AniLink
+            style={{
+              color: "var(--textTitle)",
+            }}
+            cover
+            bg="var(--gradient-background)"
+            direction="left"
+            top="entry"
+            duration={1}
+            entryOffset={800}
+            className="text-light roboto w-regular h2 my-4 fancy-link"
             to="/calendly"
           >
             Set up a call
-          </Link>
-          <Link
+          </AniLink>
+          <AniLink
+            style={{
+              color: "var(--textTitle)",
+            }}
+            cover
+            bg="var(--gradient-background)"
+            direction="left"
+            top="entry"
+            duration={1}
+            entryOffset={800}
             className="text-light roboto w-regular h2 my-3 fancy-link"
             to="/blog"
           >
             Posts
-          </Link>
-          <Link
-            className="text-light roboto w-regular h2 my-3  fancy-link"
+          </AniLink>
+          <AniLink
+            style={{
+              color: "var(--textTitle)",
+            }}
+            cover
+            bg="var(--gradient-background)"
+            direction="left"
+            top="entry"
+            duration={1}
+            entryOffset={800}
+            className="text-light roboto w-regular h2 my-3 fancy-link"
             to="/favorites"
           >
             Favorites
-          </Link>
-          <Link
-            className="text-light roboto w-regular h2 my-3  fancy-link"
+          </AniLink>
+          <AniLink
+            style={{
+              color: "var(--textTitle)",
+            }}
+            cover
+            bg="var(--gradient-background)"
+            direction="left"
+            top="entry"
+            duration={1}
+            entryOffset={800}
+            className="text-light roboto w-regular h2 my-3 fancy-link"
             to="/now"
           >
             Now
-          </Link>
-          <Link
+          </AniLink>
+          <AniLink
+            style={{
+              bg: "var(--gradient-background)",
+              color: "#5ba9ed",
+              transition: `0.4s`,
+            }}
+            className="fancy-link"
+            cover
+            bg="var(--gradient-background)"
+            top="exit"
+            direction="left"
             className="text-light roboto w-regular h2 my-4 fancy-link"
             to="/about"
           >
             About
-          </Link>
+          </AniLink>
         </div>
         <Col className="d-flex flex-column night-fixed">
-          <Link to="/" className="text-light roboto w-regular ml-0">
-            EN 日 ES{" "}
-          </Link>
+          <Row className="d-flex justify-content-start w-50 pl-3">
+            <a href="a" className="text-light roboto w-regular pr-2 pl-1">
+              EN
+            </a>
+            <a
+              href={`http://translate.google.com/translate?hl=&sl=en&tl=ja&u=www.tylervawser.com`}
+              className="text-light roboto w-regular px-2"
+            >
+              日
+            </a>
+            <a
+              href={`http://translate.google.com/translate?hl=&sl=en&tl=es&u=www.tylervawser.com`}
+              className="text-light roboto w-regular px-2"
+            >
+              ES
+            </a>
+          </Row>
 
           <ThemeToggler>
             {({ theme, toggleTheme }) => (

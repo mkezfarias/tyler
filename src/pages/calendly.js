@@ -49,7 +49,7 @@ class Calendly extends React.Component {
           keywords={[`blog`, `Tyler Vawser`, `Tvawser`, `react`]}
         />
         <div className="my-0 py-0">
-          <Row style={{ marginTop: `-20vh` }}>
+          <Row style={{ marginTop: `-30vh` }}>
             <Col
               xl={7}
               className="wider wsans w-medium pb-0 mb-0 line-height-1 mt-0 w-semibold align-center"

@@ -54,7 +54,7 @@ class IndexPage extends React.Component {
             bg="#663399"
             direction="left"
             top="exit"
-            to="blog"
+            to="calendly"
           >
             Set up a call
           </AniLink>
