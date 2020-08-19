@@ -1,6 +1,5 @@
 import React from "react"
-import Link from "gatsby-plugin-transition-link"
-import { TransitionState } from "gatsby-plugin-transition-link"
+import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -39,33 +38,26 @@ class IndexPage extends React.Component {
         <Row
           style={{
             color: "var(--textTitle)",
-
+            transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
             transition: `0.4s`,
           }}
           className="ml-3 roboto w-regular h4 pt-0 mt-0 line-height-1"
         >
-          <TransitionLink
+          <AniLink
+            style={{
+              color: "var(--textTitle)",
+              transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+              transition: `0.4s`,
+            }}
+            className="fancy-link"
+            cover
+            bg="#663399"
+            direction="left"
+            top="exit"
             to="blog"
-            exit={{ length: 0.5 }}
-            entry={{ delay: 0.5 }}
           >
-            Go to page 2
-            <AniLink
-              style={{
-                bg: "var(--gradient-background)",
-                transition: `0.4s`,
-              }}
-              className="fancy-link"
-              bg="var(--gradient-background)"
-              cover
-              direction="left"
-              top="exit"
-              to="blog"
-              duration={1}
-            >
-              Set up a call
-            </AniLink>
-          </TransitionLink>
+            Set up a call
+          </AniLink>
         </Row>
         <Row
           style={{

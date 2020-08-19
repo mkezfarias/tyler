@@ -23,6 +23,7 @@ import travelIcon from "../images/favorite podcasts icon.svg"
 import videosIcon from "../images/favorite videos icon.svg"
 import footerIMG from "../images/footer.png"
 import footerIMG2 from "../images/footer@2x.png"
+import Menu from "../components/menu"
 
 const nowContent = {
   title: "What Tyler is doing now",
@@ -74,9 +75,8 @@ const onMyMindLinks = [
   },
 ]
 
-const nowUpdate = 
-      [
-        "I would like to hear your story and know who you are and what you’re working on. The easiest way to connect is by picking a time here that works for you.",
+const nowUpdate = [
+  "I would like to hear your story and know who you are and what you’re working on. The easiest way to connect is by picking a time here that works for you.",
 ]
 class Now extends React.Component {
   constructor(props) {
@@ -169,7 +169,9 @@ class Now extends React.Component {
                 >
                   Apptegy
                 </a>
-                . Much of my day is spent talking to people about software engineering, SaaS sales, and other opportunities we are creating as we grow.
+                . Much of my day is spent talking to people about software
+                engineering, SaaS sales, and other opportunities we are creating
+                as we grow.
               </p>
 
               <p
@@ -177,13 +179,12 @@ class Now extends React.Component {
                   color: "var(--textNormal)",
                 }}
               >
-                <strong>
-                  This has been a year focused on... focusing.
-                </strong>{" "}
-                That has meant returning to habits that made me who I am. 
-                Each day, after I pour my first cup of coffee I sit down in a white swivel chair next to my bookshelf. 
-                And I read whatever is nearby:  
-                a Japanese novel, an improvement book, or poetry (e.g. Thomas Hardy).
+                <strong>This has been a year focused on... focusing.</strong>{" "}
+                That has meant returning to habits that made me who I am. Each
+                day, after I pour my first cup of coffee I sit down in a white
+                swivel chair next to my bookshelf. And I read whatever is
+                nearby: a Japanese novel, an improvement book, or poetry (e.g.
+                Thomas Hardy).
               </p>
 
               <p
@@ -191,8 +192,9 @@ class Now extends React.Component {
                   color: "var(--textNormal)",
                 }}
               >
-                It also has meant removing and reducing stuff. 
-                Clearing surfaces and reducing the objects around my work space and living spaces is an old OCD hobby that I've taken up again.
+                It also has meant removing and reducing stuff. Clearing surfaces
+                and reducing the objects around my work space and living spaces
+                is an old OCD hobby that I've taken up again.
               </p>
 
               <p
@@ -200,9 +202,11 @@ class Now extends React.Component {
                   color: "var(--textNormal)",
                 }}
               >
-                When I create the time, I am learning javascript and React. 
-                It is a losing battle, but one that I want to fight as long as I am interviewing engineers and involved with a software company. 
-                An hour of trying to code might be the single best way to humble me. 
+                When I create the time, I am learning javascript and React. It
+                is a losing battle, but one that I want to fight as long as I am
+                interviewing engineers and involved with a software company. An
+                hour of trying to code might be the single best way to humble
+                me.
               </p>
 
               <p
@@ -210,9 +214,10 @@ class Now extends React.Component {
                   color: "var(--textNormal)",
                 }}
               >
-               Something I am working on improving is contacting and talking to the people I care about.
-               This is the easiest thing for me to put off. But each year I realize how important it is and that it is not going to get easier without being intentional.
-               {" "}
+                Something I am working on improving is contacting and talking to
+                the people I care about. This is the easiest thing for me to put
+                off. But each year I realize how important it is and that it is
+                not going to get easier without being intentional.{" "}
               </p>
 
               <p
@@ -220,34 +225,42 @@ class Now extends React.Component {
                   color: "var(--textNormal)",
                 }}
               >
-                The most important part of my life now and for the next 20 years are my kids. 
-                Spending time with them, building marble contraptions, playing Rummikub, teaching them to read, and teaching them how to think about mathematics are the highlight of every day. 
-                As much as I love working and driving towards a goal, I want to use that energy and momentum I build at work to pour into my kids.{" "}
+                The most important part of my life now and for the next 20 years
+                are my kids. Spending time with them, building marble
+                contraptions, playing Rummikub, teaching them to read, and
+                teaching them how to think about mathematics are the highlight
+                of every day. As much as I love working and driving towards a
+                goal, I want to use that energy and momentum I build at work to
+                pour into my kids.{" "}
               </p>
 
-  <p
+              <p
                 style={{
                   color: "var(--textNormal)",
                 }}
               >
-               <em>This is a Now page. Now pages are inspired by  
-                   <a
-                  target="_blank"
-                  href="https://nownownow.com/about"
-                  style={{ color: `var(--skyblue3)` }}
-                >
-                  Derek Sivers
+                <em>
+                  This is a Now page. Now pages are inspired by
+                  <a
+                    target="_blank"
+                    href="https://nownownow.com/about"
+                    style={{ color: `var(--skyblue3)` }}
+                  >
+                    Derek Sivers
                   </a>
-                  . It is similar to an about page, but it tells you what I am doing now (what my priorities are and how I am spending my time)— not just what I have done in the past. 
-                This entire site is inspired with that in mind.</em>
+                  . It is similar to an about page, but it tells you what I am
+                  doing now (what my priorities are and how I am spending my
+                  time)— not just what I have done in the past. This entire site
+                  is inspired with that in mind.
+                </em>
               </p>
 
- <p
+              <p
                 style={{
                   color: "var(--textNormal)",
                 }}
               >
-Last updated: August 15, 2020
+                Last updated: August 15, 2020
               </p>
               <p
                 style={{
@@ -345,9 +358,11 @@ Last updated: August 15, 2020
         </Container>
 
         <Modal
+          onEntered={this.bgTransparent}
           show={this.state.show}
           animation={false}
           onHide={this.handleClose}
+          className="modal-menu bg-transparent"
           backdropClassName="transparent-opacity"
         >
           <Modal.Body
@@ -357,65 +372,24 @@ Last updated: August 15, 2020
               transition: `0.4s`,
             }}
           >
-            <Link to="/">
-              <img
-                src={whiteLogo}
-                alt="Tyler Vawser"
-                className="logo-fixed"
-              ></img>
-            </Link>
-            <div className="d-flex flex-column p-2 justify-content-center align-items-end items-fixed">
-              <Link className="text-light roboto w-regular h2 my-4" to="/about">
-                About
-              </Link>
+            <AniLink
+              style={{
+                bg: "var(--gradient-background)",
+                color: "#5ba9ed",
+                transition: `0.4s`,
+              }}
+              className="fancy-link"
+              cover
+              bg="var(--gradient-background)"
+              top="exit"
+              direction="left"
+              className="text-light roboto w-regular h2 my-4 fancy-link"
+              to="/about"
+            >
+              <div onClick={this.handleClose}>TransitionTest</div>
+            </AniLink>
+            <Menu handleClose={this.handleClose} />
 
-              <Link className="text-light roboto w-regular h2 my-3" to="/blog">
-                Posts
-              </Link>
-
-              <Link className="text-light roboto w-regular h2 my-3" to="/now">
-                Now
-              </Link>
-
-              <Link
-                className="text-light roboto w-regular h2 my-3"
-                to="/favorites"
-              >
-                Favorites
-              </Link>
-
-              <Link
-                className="text-light roboto w-regular h2 my-4"
-                to="/calendly"
-              >
-                Start a Call
-              </Link>
-            </div>
-            <Col className="d-flex flex-column night-fixed">
-              <Link to="/" className="text-light roboto w-regular ml-0">
-                EN 日 ES{" "}
-              </Link>
-
-              <ThemeToggler>
-                {({ theme, toggleTheme }) => (
-                  <label>
-                    <input
-                      hidden
-                      type="checkbox"
-                      onChange={e => {
-                        console.log(theme)
-                        toggleTheme(e.target.checked ? "dark" : "light")
-                      }}
-                      checked={theme === "dark"}
-                    />{" "}
-                    <img
-                      src={theme === "dark" ? dayButton : nightButton}
-                      alt="Nigh/Day Mode"
-                    ></img>
-                  </label>
-                )}
-              </ThemeToggler>
-            </Col>
             <div onClick={this.handleClose}>
               <img
                 src={closeBTN}

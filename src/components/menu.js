@@ -86,25 +86,44 @@ class Menu extends React.Component {
             bg="var(--gradient-background)"
             direction="left"
             top="entry"
-            duration={2}
+            duration={1}
             entryOffset={800}
             className="text-light roboto w-regular h2 my-3 fancy-link"
             to="/favorites"
           >
             Favorites
           </AniLink>
-          <Link
-            className="text-light roboto w-regular h2 my-3  fancy-link"
+          <AniLink
+            style={{
+              color: "var(--textTitle)",
+            }}
+            cover
+            bg="var(--gradient-background)"
+            direction="left"
+            top="entry"
+            duration={2}
+            entryOffset={800}
+            className="text-light roboto w-regular h2 my-3 fancy-link"
             to="/now"
           >
             Now
-          </Link>
-          <Link
+          </AniLink>
+          <AniLink
+            style={{
+              bg: "var(--gradient-background)",
+              color: "#5ba9ed",
+              transition: `0.4s`,
+            }}
+            className="fancy-link"
+            cover
+            bg="var(--gradient-background)"
+            top="exit"
+            direction="left"
             className="text-light roboto w-regular h2 my-4 fancy-link"
             to="/about"
           >
             About
-          </Link>
+          </AniLink>
         </div>
         <Col className="d-flex flex-column night-fixed">
           <Link to="/" className="text-light roboto w-regular ml-0">

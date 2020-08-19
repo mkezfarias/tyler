@@ -131,7 +131,24 @@ class Blog extends React.Component {
               transition: `0.4s`,
             }}
           >
-            <Menu />
+            <AniLink
+              style={{
+                bg: "var(--gradient-background)",
+                color: "#5ba9ed",
+                transition: `0.4s`,
+              }}
+              className="fancy-link"
+              cover
+              bg="var(--gradient-background)"
+              top="exit"
+              direction="left"
+              className="text-light roboto w-regular h2 my-4 fancy-link"
+              to="/about"
+            >
+              <div onClick={this.handleClose}>TransitionTest</div>
+            </AniLink>
+            <Menu handleClose={this.handleClose} />
+
             <div onClick={this.handleClose}>
               <img
                 src={closeBTN}
