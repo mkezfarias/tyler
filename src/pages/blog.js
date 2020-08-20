@@ -131,7 +131,7 @@ class Blog extends React.Component {
           })}
         </Row>
 
-        <Modal
+        {/* <Modal
           onEntered={this.bgTransparent}
           show={this.state.show}
           animation={false}
@@ -146,22 +146,6 @@ class Blog extends React.Component {
               transition: `0.4s`,
             }}
           >
-            <AniLink
-              style={{
-                bg: "var(--gradient-background)",
-                color: "#5ba9ed",
-                transition: `0.4s`,
-              }}
-              className="fancy-link"
-              cover
-              bg="var(--gradient-background)"
-              top="exit"
-              direction="left"
-              className="text-light roboto w-regular h2 my-4 fancy-link"
-              to="/about"
-            >
-              <div onClick={this.handleClose}>TransitionTest</div>
-            </AniLink>
             <Menu handleClose={this.handleClose} />
 
             <div onClick={this.handleClose}>
@@ -172,9 +156,9 @@ class Blog extends React.Component {
               ></img>
             </div>
           </Modal.Body>
-        </Modal>
+        </Modal> */}
 
-        <div
+        {/* <div
           onClick={this.handleShow}
           style={{
             background: `var(--menu-img)`,
@@ -184,7 +168,7 @@ class Blog extends React.Component {
             width: "30px",
           }}
           className="menu-fixed"
-        ></div>
+        ></div> */}
         <img
           src={footerIMG}
           style={{

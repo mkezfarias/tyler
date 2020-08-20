@@ -219,9 +219,9 @@ class About extends React.Component {
                 }}
               >
                 On the one hand I enjoy hosting dinner parties with strangers.
-                And on the other hand, I’m someone who likes to be left alone. If there’s
-                one daily struggle it’s that I want people to enjoy being around
-                me and I also want to keep to myself.{" "}
+                And on the other hand, I’m someone who likes to be left alone.
+                If there’s one daily struggle it’s that I want people to enjoy
+                being around me and I also want to keep to myself.{" "}
               </p>
 
               <p
@@ -232,8 +232,8 @@ class About extends React.Component {
                 My ideal weekly routine involves talking to high-performers
                 throughout the week, hosting a dinner party that brings 10 great
                 people together (without anyone knowing my name), a 4 hour
-                silent meditation, a long bike ride, reading Japanese novels, building stuff
-                with my kids, and playing a RTS game alone.
+                silent meditation, a long bike ride, reading Japanese novels,
+                building stuff with my kids, and playing a RTS game alone.
               </p>
 
               <p
@@ -244,7 +244,7 @@ class About extends React.Component {
                 <strong>
                   The people I respect the most are not looking for attention
                 </strong>{" "}
-                and don’t seek it out. If they have it  , they’ve earned it and
+                and don’t seek it out. If they have it , they’ve earned it and
                 would rather it fade away.{" "}
               </p>
 
@@ -384,15 +384,15 @@ class About extends React.Component {
                   color: "var(--textNormal)",
                 }}
               >
-                That kicked off my informal training into the world of
-                Quant Based Marketing and high growth startup marketing. (Noah
-                was #30 at Facebook and worked with Mark Zuckerberg in
-                the early days of Facebook.) Among the marketing “lessons,” I
-                learned to reverse engineer and “just figure it out.” For the
-                next 2 years at night and on weekends, Noah helped me learn how
-                to think about marketing generally and I helped Noah grow Okdork
-                (his personal site) and email list as well as help out with some
-                Appsumo/Sumo work.{" "}
+                That kicked off my informal training into the world of Quant
+                Based Marketing and high growth startup marketing. (Noah was #30
+                at Facebook and worked with Mark Zuckerberg in the early days of
+                Facebook.) Among the marketing “lessons,” I learned to reverse
+                engineer and “just figure it out.” For the next 2 years at night
+                and on weekends, Noah helped me learn how to think about
+                marketing generally and I helped Noah grow Okdork (his personal
+                site) and email list as well as help out with some Appsumo/Sumo
+                work.{" "}
               </p>
 
               <p
@@ -443,14 +443,15 @@ class About extends React.Component {
               >
                 I’m pretty sure that spending summers in Hong Kong (1x) or Japan
                 (3x) “on my own” when I was 14 to 18 taught me that I just have
-                to get on the plane and I can figure it out when I land.
-                Looking back, it was probably the best preparation for real
-                life. I booked my own flights,
-                made my way through international airports without really
-                knowing what I was doing (I have stories), met many new people
-                that were both entirely different from anyone I had known and
-                oddly familiar. Most days I set my own schedule, did manual
-                labor, and also read a ton. On weekends, I explored, spent time with great friends, and played in the river.{" "}
+                to get on the plane and I can figure it out when I land. Looking
+                back, it was probably the best preparation for real life. I
+                booked my own flights, made my way through international
+                airports without really knowing what I was doing (I have
+                stories), met many new people that were both entirely different
+                from anyone I had known and oddly familiar. Most days I set my
+                own schedule, did manual labor, and also read a ton. On
+                weekends, I explored, spent time with great friends, and played
+                in the river.{" "}
               </p>
 
               <p
@@ -484,7 +485,7 @@ class About extends React.Component {
             </Col>
           </Row>
         </Container>
-        <Modal
+        {/* <Modal
           onEntered={this.bgTransparent}
           show={this.state.show}
           animation={false}
@@ -499,7 +500,7 @@ class About extends React.Component {
               transition: `0.4s`,
             }}
           >
-            <Menu />
+            <Menu handleClose={this.handleClose} />
             <div onClick={this.handleClose}>
               <img
                 src={closeBTN}
@@ -508,11 +509,23 @@ class About extends React.Component {
               ></img>
             </div>
           </Modal.Body>
-        </Modal>
-        <Link to="/">
+        </Modal> */}
+        <AniLink
+          style={{
+            color: "var(--textTitle)",
+          }}
+          cover
+          bg="var(--gradient-background)"
+          direction="left"
+          top="entry"
+          duration={1}
+          entryOffset={800}
+          className="text-light roboto w-regular h2 my-3 fancy-link"
+          to="/"
+        >
           <img src={darkLogo} alt="Tyler Vawser" className="logo-fixed"></img>
-        </Link>
-        <div
+        </AniLink>
+        {/* <div
           onClick={this.handleShow}
           style={{
             background: `var(--menu-img)`,
@@ -522,7 +535,7 @@ class About extends React.Component {
             width: "30px",
           }}
           className="menu-fixed"
-        ></div>
+        ></div> */}
         <img
           src={footerIMG}
           style={{

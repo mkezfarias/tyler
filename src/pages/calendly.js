@@ -53,7 +53,6 @@ class Calendly extends React.Component {
             <Col
               xl={7}
               className="wider wsans w-medium pb-0 mb-0 line-height-1 mt-0 w-semibold align-center"
-              style={{}}
             >
               <CalendlyEmbed
                 className="mb-0"
@@ -68,13 +67,38 @@ class Calendly extends React.Component {
                 background: `var(--gradient-background)`,
                 textAlign: `center`,
                 fontSize: `calc(20px + 2vw)`,
-                position: `absolute`,
+                position: `fixed`,
                 top: `0`,
                 right: `0`,
                 bottom: `0`,
+                zIndex: `0`,
               }}
               className="wider wsans w-medium line-height-1  w-semibold align-center"
             >
+              <AniLink
+                style={{
+                  color: "var(--textTitle)",
+                  transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+                  transition: `0.6s`,
+                }}
+                to="/full-menu"
+                className="menu-fixed"
+                cover
+                bg="var(--gradient-background)"
+                direction="left"
+                top="entry"
+                duration={1}
+              >
+                <div
+                  style={{
+                    background: `var(--menu-img)`,
+                    transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+                    transition: `0.4s`,
+                    height: "30px",
+                    width: "30px",
+                  }}
+                ></div>
+              </AniLink>
               <Row
                 className="d-flex justify-content-end align-items-end"
                 style={{
@@ -142,7 +166,7 @@ class Calendly extends React.Component {
           ></Col>
           <Col xl={{ span: 6, offset: 1 }} className="mb-5 pb-5"></Col>
         </Container>
-        <Modal
+        {/* <Modal
           onEntered={this.bgTransparent}
           show={this.state.show}
           animation={false}
@@ -157,7 +181,8 @@ class Calendly extends React.Component {
               transition: `0.4s`,
             }}
           >
-            <Menu />
+            <Menu handleClose={this.handleClose} dark={true} />
+
             <div onClick={this.handleClose}>
               <img
                 src={closeBTN}
@@ -166,11 +191,11 @@ class Calendly extends React.Component {
               ></img>
             </div>
           </Modal.Body>
-        </Modal>
+        </Modal> */}
         <Link to="/">
           <img src={whiteLogo} alt="Tyler Vawser" className="logo-fixed"></img>
         </Link>
-        <div
+        {/* <div
           onClick={this.handleShow}
           style={{
             background: `var(--menu-img)`,
@@ -180,7 +205,7 @@ class Calendly extends React.Component {
             width: "30px",
           }}
           className="menu-fixed"
-        ></div>
+        ></div> */}
       </Layout>
     )
   }

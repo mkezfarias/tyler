@@ -119,6 +119,20 @@ class Layout extends React.Component {
           </Col>
         </Row>
       )
+      menu = (
+        <div
+          onClick={this.handleShow}
+          style={{
+            background: `var(--menu-img)`,
+            transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+            transition: `0.4s`,
+            height: "30px",
+            width: "30px",
+            zIndex: `300`,
+          }}
+          className="menu-fixed"
+        ></div>
+      )
     }
     return (
       <Wrapper
@@ -142,15 +156,22 @@ class Layout extends React.Component {
             <div onClick={this.handleShow}>{header}</div>
           </header>
           <div className="menu-fixed">{menu}</div>
-          <main>{children}</main>
+          <main
+            style={{
+              transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+              transition: `0.5s`,
+            }}
+          >
+            {children}
+          </main>
         </div>
         <Modal
+          onEntered={this.bgTransparent}
           show={this.state.show}
-          backdrop="static"
           animation={false}
           onHide={this.handleClose}
-          keyboard={false}
-          className="modal-menu"
+          className="modal-menu bg-transparent"
+          backdropClassName="transparent-opacity"
         >
           <Modal.Body
             style={{
@@ -159,67 +180,15 @@ class Layout extends React.Component {
               transition: `0.4s`,
             }}
           >
-            <Link to="/">
+            <Menu handleClose={this.handleClose} />
+
+            <div onClick={this.handleClose}>
               <img
-                src={whiteLogo}
-                alt="Tyler Vawser"
-                className="logo-fixed"
+                src={closeBTN}
+                alt="Close Button"
+                className="close-button"
               ></img>
-            </Link>
-            <div className="d-flex flex-column p-2 justify-content-center align-items-end items-fixed">
-              <Link className="text-light roboto w-regular h2 my-4" to="/about">
-                About
-              </Link>
-
-              <Link className="text-light roboto w-regular h2 my-3" to="/blog">
-                Posts
-              </Link>
-
-              <Link
-                className="text-light roboto w-regular h2 my-3"
-                to="/favorites"
-              >
-                Favorites
-              </Link>
-
-              <Link
-                className="text-light roboto w-regular h2 my-4"
-                to="/calendly"
-              >
-                Start a Call
-              </Link>
             </div>
-            <Col className="d-flex flex-column night-fixed">
-              <Link to="/" className="text-light roboto w-regular ml-0">
-                EN 日 ES{" "}
-              </Link>
-
-              <ThemeToggler>
-                {({ theme, toggleTheme }) => (
-                  <label>
-                    <input
-                      hidden
-                      type="checkbox"
-                      onChange={e => {
-                        console.log(theme)
-                        toggleTheme(e.target.checked ? "dark" : "light")
-                      }}
-                      checked={theme === "dark"}
-                    />{" "}
-                    <img
-                      src={theme === "dark" ? dayButton : nightButton}
-                      alt="Nigh/Day Mode"
-                    ></img>
-                  </label>
-                )}
-              </ThemeToggler>
-            </Col>
-            <img
-              src={closeBTN}
-              alt="Close Button"
-              className="close-button"
-              onClick={this.handleClose}
-            ></img>
           </Modal.Body>
         </Modal>
       </Wrapper>

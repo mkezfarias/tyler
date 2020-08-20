@@ -90,6 +90,8 @@ class Now extends React.Component {
     this.handleShow = () => this.setState({ show: true })
   }
 
+  componentDidMount() {}
+
   render() {
     return (
       <Layout location={this.props.location}>
@@ -97,6 +99,7 @@ class Now extends React.Component {
           title="Tyler Vawser"
           keywords={[`blog`, `Tyler Vawser`, `Tvawser`, `react`]} //edit these on each page depending on the content of the page
         />
+
         <AniLink
           style={{
             color: "var(--textTitle)",
@@ -386,7 +389,7 @@ class Now extends React.Component {
               transition: `0.4s`,
             }}
           >
-            <AniLink
+            {/* <AniLink
               style={{
                 bg: "var(--gradient-background)",
                 color: "#5ba9ed",
@@ -401,8 +404,8 @@ class Now extends React.Component {
               to="/about"
             >
               <div onClick={this.handleClose}>TransitionTest</div>
-            </AniLink>
-            <Menu handleClose={this.handleClose} />
+            </AniLink> */}
+            <Menu handleClose={this.handleClose} dark={true} />
 
             <div onClick={this.handleClose}>
               <img
