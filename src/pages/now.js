@@ -415,7 +415,7 @@ class Now extends React.Component {
               transition: `0.4s`,
             }}
           >
-            <AniLink
+            {/* <AniLink
               style={{
                 bg: "var(--gradient-background)",
                 color: "#5ba9ed",
@@ -430,7 +430,7 @@ class Now extends React.Component {
               to="/about"
             >
               <div onClick={this.handleClose}>TransitionTest</div>
-            </AniLink>
+            </AniLink> */}
             <Menu handleClose={this.handleClose} dark={true} />
 
             <div onClick={this.handleClose}>

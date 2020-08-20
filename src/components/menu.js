@@ -55,18 +55,10 @@ const Menu = ({ handleClose }) => {
           top="entry"
           duration={1}
           entryOffset={800}
-          className="text-light roboto w-regular h2 my-4 fancy-link"
+          className="text-light roboto w-regular h2 my-3 fancy-link"
           to="/calendly"
         >
-          <span
-            onClick={e => {
-              setTimeout(() => {
-                handleClose()
-              }, 500)
-            }}
-          >
-            Set up a call
-          </span>
+          <span onClick={handleClose}>Set up a call</span>
         </AniLink>
         <AniLink
           style={{
@@ -81,15 +73,7 @@ const Menu = ({ handleClose }) => {
           className="text-light roboto w-regular h2 my-3 fancy-link"
           to="/blog"
         >
-          <span
-            onClick={e => {
-              setTimeout(() => {
-                handleClose()
-              }, 700)
-            }}
-          >
-            Posts
-          </span>
+          <span onClick={handleClose}>Posts</span>
         </AniLink>
         <AniLink
           style={{
@@ -104,15 +88,7 @@ const Menu = ({ handleClose }) => {
           className="text-light roboto w-regular h2 my-3 fancy-link"
           to="/favorites"
         >
-          <span
-            onClick={e => {
-              setTimeout(() => {
-                handleClose()
-              }, 500)
-            }}
-          >
-            Favorites
-          </span>
+          <span onClick={handleClose}> Favorites</span>
         </AniLink>
         <AniLink
           style={{
@@ -127,15 +103,7 @@ const Menu = ({ handleClose }) => {
           className="text-light roboto w-regular h2 my-3 fancy-link"
           to="/now"
         >
-          <span
-            onClick={e => {
-              setTimeout(() => {
-                handleClose()
-              }, 500)
-            }}
-          >
-            Now
-          </span>
+          <span onClick={handleClose}>Now</span>
         </AniLink>
         <AniLink
           style={{
@@ -151,15 +119,7 @@ const Menu = ({ handleClose }) => {
           className="text-light roboto w-regular h2 my-4 fancy-link"
           to="/about"
         >
-          <span
-            onClick={e => {
-              setTimeout(() => {
-                handleClose()
-              }, 500)
-            }}
-          >
-            About
-          </span>
+          <span onClick={handleClose}>About</span>
         </AniLink>
       </div>
       <Col className="d-flex flex-column night-fixed">
@@ -206,6 +166,9 @@ const Menu = ({ handleClose }) => {
           }}
         </ThemeToggler>
       </Col>
+      <div onClick={handleClose}>
+        <img src={closeBTN} alt="Close Button" className="close-button"></img>
+      </div>
     </>
   )
 }

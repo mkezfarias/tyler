@@ -131,7 +131,7 @@ class Blog extends React.Component {
           })}
         </Row>
 
-        <Modal
+        {/* <Modal
           onEntered={this.bgTransparent}
           show={this.state.show}
           animation={false}
@@ -156,9 +156,9 @@ class Blog extends React.Component {
               ></img>
             </div>
           </Modal.Body>
-        </Modal>
+        </Modal> */}
 
-        <div
+        {/* <div
           onClick={this.handleShow}
           style={{
             background: `var(--menu-img)`,
@@ -168,7 +168,7 @@ class Blog extends React.Component {
             width: "30px",
           }}
           className="menu-fixed"
-        ></div>
+        ></div> */}
         <img
           src={footerIMG}
           style={{

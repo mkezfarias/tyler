@@ -510,9 +510,21 @@ class About extends React.Component {
             </div>
           </Modal.Body>
         </Modal>
-        <Link to="/">
+        <AniLink
+          style={{
+            color: "var(--textTitle)",
+          }}
+          cover
+          bg="var(--gradient-background)"
+          direction="left"
+          top="entry"
+          duration={1}
+          entryOffset={800}
+          className="text-light roboto w-regular h2 my-3 fancy-link"
+          to="/"
+        >
           <img src={darkLogo} alt="Tyler Vawser" className="logo-fixed"></img>
-        </Link>
+        </AniLink>
         <div
           onClick={this.handleShow}
           style={{

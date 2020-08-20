@@ -157,7 +157,8 @@ class Calendly extends React.Component {
               transition: `0.4s`,
             }}
           >
-            <Menu handleClose={this.handleClose} />
+            <Menu handleClose={this.handleClose} dark={true} />
+
             <div onClick={this.handleClose}>
               <img
                 src={closeBTN}
