@@ -106,11 +106,6 @@ const Menu = ({ handleClose }) => {
           <span onClick={handleClose}>Now</span>
         </AniLink>
         <AniLink
-          style={{
-            bg: "var(--gradient-background)",
-            color: "#5ba9ed",
-            transition: `0.4s`,
-          }}
           className="fancy-link"
           cover
           bg="var(--gradient-background)"
@@ -123,7 +118,7 @@ const Menu = ({ handleClose }) => {
         </AniLink>
       </div>
       <Col className="d-flex flex-column night-fixed">
-        <Row className="d-flex justify-content-start w-50 pl-3">
+        {/* <Row className="d-flex justify-content-start w-50 pl-3">
           <a href="a" className="text-light roboto w-regular pr-2 pl-1">
             EN
           </a>
@@ -139,7 +134,7 @@ const Menu = ({ handleClose }) => {
           >
             ES
           </a>
-        </Row>
+        </Row> */}
 
         <ThemeToggler>
           {({ theme, toggleTheme }) => {

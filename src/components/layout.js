@@ -119,6 +119,20 @@ class Layout extends React.Component {
           </Col>
         </Row>
       )
+      menu = (
+        <div
+          onClick={this.handleShow}
+          style={{
+            background: `var(--menu-img)`,
+            transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+            transition: `0.4s`,
+            height: "30px",
+            width: "30px",
+            zIndex: `300`,
+          }}
+          className="menu-fixed"
+        ></div>
+      )
     }
     return (
       <Wrapper
@@ -170,17 +184,6 @@ class Layout extends React.Component {
             </div>
           </Modal.Body>
         </Modal>
-        <div
-          onClick={this.handleShow}
-          style={{
-            background: `var(--menu-img)`,
-            transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-            transition: `0.4s`,
-            height: "30px",
-            width: "30px",
-          }}
-          className="menu-fixed"
-        ></div>
       </Wrapper>
     )
   }

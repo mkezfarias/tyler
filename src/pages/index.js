@@ -10,7 +10,6 @@ import TransitionLink from "gatsby-plugin-transition-link"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import ThemeToggler from "gatsby-plugin-dark-mode/ThemeToggler"
 
-var hours = new Date().getHours()
 class IndexPage extends React.Component {
   render() {
     return (
@@ -26,26 +25,7 @@ class IndexPage extends React.Component {
             `VP of People`,
           ]}
         />
-        <ThemeToggler>
-          {({ theme, toggleTheme }) => (
-            <label>
-              <input
-                type="checkbox"
-                onLoad={e => {
-                  console.log(hours, e.target.checked)
-                  hours >= `7` && hours <= `17`
-                    ? (e.target.checked = true)
-                    : (e.target.checked = false)
-                }}
-                onChange={e => {
-                  console.log(theme, hours)
-                  toggleTheme(e.target.checked ? "dark" : "light")
-                }}
-                checked={theme === "dark"}
-              />{" "}
-            </label>
-          )}
-        </ThemeToggler>
+
         <Row
           style={{
             color: "var(--textNormal)",
@@ -125,68 +105,90 @@ class IndexPage extends React.Component {
               LinkedIn
             </a>
           </Col>
-          <Col lg={3} md={2} className="mr-5 pr-5 previously-fixed">
+          <Col
+            xl={{ span: 4, offset: 4 }}
+            className="mr-3 pr-5 d-flex justify-items-end flex-column align-items-end"
+          >
             <Row
               style={{
                 color: "var(--textNormal)",
                 transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
                 transition: `0.4s`,
               }}
-              className="justify-content-end wsans w-medium h4 d-flex"
+              className="justify-content-end wsans w-medium h4 d-flex ml-auto"
             >
               Previously at
             </Row>
-            <Row className="justify-content-end">
-              <Link
-                style={{
-                  color: "var(--textTitle)",
-                  transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-                  transition: `0.4s`,
-                }}
-                className="fancy-link  mr-1"
-                to="https://www.stickermule.com/"
+            <Row className="justify-content-end d-flex ml-auto">
+              <Col
+                xl={5}
+                className="d-flex justify-items-around text-nowrap ml-auto"
               >
-                Sticker Mule{" "}
-              </Link>
-              <div className="pl-1"> /</div>
-              <Link
-                style={{
-                  color: "var(--textTitle)",
-                  transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-                  transition: `0.4s`,
-                }}
-                className="fancy-link ml-1 "
-                to="https://museumhack.com/"
+                <a
+                  style={{
+                    color: "var(--textTitle)",
+                    transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+                    transition: `0.4s`,
+                  }}
+                  className="fancy-link  ml-auto"
+                  href="https://www.stickermule.com/"
+                >
+                  Sticker Mule{" "}
+                </a>
+                <div className="pl-1"> / </div>
+              </Col>
+              <Col
+                xl={5}
+                className="d-flex justify-items-around text-nowrap ml-auto mr-0 pr-0"
               >
-                Museum Hack{"  "}
-              </Link>
-              <div className="pl-1"> /</div>
-            </Row>
-            <Row className="justify-content-end">
-              <Link
-                style={{
-                  color: "var(--textTitle)",
-                  transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-                  transition: `0.4s`,
-                }}
-                className="fancy-link ml-1 "
-                to="https://okdork.com/"
+                <a
+                  style={{
+                    color: "var(--textTitle)",
+                    transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+                    transition: `0.4s`,
+                  }}
+                  className="fancy-link ml-auto"
+                  href="https://museumhack.com/"
+                >
+                  Museum Hack{"  "}
+                </a>
+                <div className="pl-1"> /</div>
+              </Col>
+
+              <Col
+                xl={5}
+                className="d-flex justify-items-around text-nowrap ml-auto"
               >
-                OkDork{" "}
-              </Link>
-              <div className="pl-1"> /</div>
-              <Link
-                style={{
-                  color: "var(--textTitle)",
-                  transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-                  transition: `0.4s`,
-                }}
-                className="fancy-link ml-1 "
-                to="hhttps://www.tkc.edu/"
+                <a
+                  style={{
+                    color: "var(--textTitle)",
+                    transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+                    transition: `0.4s`,
+                  }}
+                  className="fancy-link ml-auto"
+                  href="https://okdork.com/"
+                >
+                  OkDork
+                </a>
+                <div className="pl-1"> /</div>
+              </Col>
+              <Col
+                xl={5}
+                className="d-flex justify-items-around text-nowrap ml-auto mr-2"
               >
-                {" "}
-                The Kings College
-              </Link>
+                <a
+                  style={{
+                    color: "var(--textTitle)",
+                    transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+                    transition: `0.4s`,
+                  }}
+                  className="fancy-link ml-auto "
+                  href="https://www.tkc.edu/"
+                >
+                  The Kings College
+                </a>
+                <div className="pl-1"> / </div>
+              </Col>
             </Row>
           </Col>
         </Row>

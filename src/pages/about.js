@@ -485,7 +485,7 @@ class About extends React.Component {
             </Col>
           </Row>
         </Container>
-        <Modal
+        {/* <Modal
           onEntered={this.bgTransparent}
           show={this.state.show}
           animation={false}
@@ -509,7 +509,7 @@ class About extends React.Component {
               ></img>
             </div>
           </Modal.Body>
-        </Modal>
+        </Modal> */}
         <AniLink
           style={{
             color: "var(--textTitle)",
@@ -525,7 +525,7 @@ class About extends React.Component {
         >
           <img src={darkLogo} alt="Tyler Vawser" className="logo-fixed"></img>
         </AniLink>
-        <div
+        {/* <div
           onClick={this.handleShow}
           style={{
             background: `var(--menu-img)`,
@@ -535,7 +535,7 @@ class About extends React.Component {
             width: "30px",
           }}
           className="menu-fixed"
-        ></div>
+        ></div> */}
         <img
           src={footerIMG}
           style={{

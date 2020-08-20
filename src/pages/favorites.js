@@ -305,7 +305,7 @@ class Favorites extends React.Component {
               </Col>
             </Row>
           </Container>
-          <Modal
+          {/* <Modal
             onEntered={this.bgTransparent}
             show={this.state.show}
             animation={false}
@@ -329,9 +329,9 @@ class Favorites extends React.Component {
                 ></img>
               </div>
             </Modal.Body>
-          </Modal>
+          </Modal> */}
 
-          <div
+          {/* <div
             onClick={this.handleShow}
             style={{
               background: `var(--menu-img)`,
@@ -341,7 +341,7 @@ class Favorites extends React.Component {
               width: "30px",
             }}
             className="menu-fixed"
-          ></div>
+          ></div> */}
           <img
             src={footerIMG}
             style={{
