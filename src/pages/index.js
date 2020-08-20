@@ -25,33 +25,6 @@ class IndexPage extends React.Component {
             `VP of People`,
           ]}
         />
-        <ThemeToggler>
-          {({ theme, toggleTheme }) => {
-            let hours = parseInt(
-              new Date().toLocaleTimeString("en-GB").slice(0, 2)
-            )
-
-            if (hours >= 7 && hours < 17) {
-              hours = "light"
-              typeof window !== "undefined" &&
-                window.localStorage.setItem("theme", "light")
-            } else {
-              hours = "dark"
-              typeof window !== "undefined" &&
-                window.localStorage.setItem("theme", "dark")
-            }
-
-            return (
-              <label>
-                <input
-                  hidden
-                  type="checkbox"
-                  checked={hours === "dark" ? true : false}
-                />{" "}
-              </label>
-            )
-          }}
-        </ThemeToggler>
         <Row
           style={{
             color: "var(--textNormal)",
