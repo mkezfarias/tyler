@@ -50,10 +50,8 @@ class FullMenu extends React.Component {
             Tyler is waiting to see what you’ll pick first.{" "}
           </Col>
         </Row>
-        
-            <Menu />
 
-        </div>
+        <Menu />
       </Layout>
     )
   }

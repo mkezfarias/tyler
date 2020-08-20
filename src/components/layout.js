@@ -156,7 +156,14 @@ class Layout extends React.Component {
             <div onClick={this.handleShow}>{header}</div>
           </header>
           <div className="menu-fixed">{menu}</div>
-          <main>{children}</main>
+          <main
+            style={{
+              transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+              transition: `0.5s`,
+            }}
+          >
+            {children}
+          </main>
         </div>
         <Modal
           onEntered={this.bgTransparent}
