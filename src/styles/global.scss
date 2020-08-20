@@ -178,9 +178,9 @@ a.fancy-link:hover::before {
 }
 
 .menu-fixed {
-  position: fixed;
-  right: 4vw;
-  top: 44vh;
+  position: fixed !important;
+  right: 4vw !important; 
+  top: 44vh !important;
 }
 
 .fixed-full-menu{
