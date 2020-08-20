@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, navigate } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -17,7 +17,9 @@ import Menu from "../components/menu"
 class FullMenu extends React.Component {
   constructor(props) {
     super(props)
+    this.handleClose = () => navigate("/")
   }
+
   render() {
     return (
       <Layout location={this.props.location}>
@@ -49,9 +51,38 @@ class FullMenu extends React.Component {
           >
             Tyler is waiting to see what you’ll pick first.{" "}
           </Col>
-        </Row>
 
-        <Menu />
+          <Col
+            lg={7}
+            style={{
+              background: "var(--gradient-background)",
+              position: `fixed`,
+              top: `0`,
+              bottom: `0`,
+              right: `0`,
+            }}
+          >
+            <Menu handleClose={this.handleClose} />
+          </Col>
+          <AniLink
+            style={{
+              color: "var(--textTitle)",
+            }}
+            to="/"
+            cover
+            bg="var(--gradient-background)"
+            direction="right"
+            top="entry"
+            duration={1}
+            entryOffset={800}
+          >
+            <img
+              src={closeBTN}
+              alt="Close Button"
+              className="close-button"
+            ></img>
+          </AniLink>
+        </Row>
       </Layout>
     )
   }
