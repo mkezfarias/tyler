@@ -50,52 +50,9 @@ class FullMenu extends React.Component {
             Tyler is waiting to see what you’ll pick first.{" "}
           </Col>
         </Row>
-        <Row
-          style={{
-            color: "var(--textTitle)",
-            transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-            transition: `0.4s`,
-          }}
-          className="ml-3 roboto w-regular h4 pt-0 mt-0 line-height-1"
-        ></Row>
-        <Row
-          style={{
-            color: "var(--textTitle)",
-            transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-            transition: `0.4s`,
-          }}
-          className="ml-0 mr-5 pr-5 roboto w-regular h6 d-flex justify-content-between flex-md-nowrap w-100 align-items-end mt-5 pt-5"
-        ></Row>
-        <div
-          className="fixed-full-menu"
-          style={{
-            background: "var(--gradient-background)",
-            transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-            transition: `0.4s`,
-          }}
-        >
-          <div>
+        
             <Menu />
-            <AniLink
-              style={{
-                color: "var(--textTitle)",
-              }}
-              to="/"
-              className="fancy-link"
-              cover
-              bg="var(--gradient-background)"
-              direction="left"
-              top="entry"
-              duration={1.5}
-              entryOffset={800}
-            >
-              <img
-                src={closeBTN}
-                alt="Close Button"
-                className="close-button"
-              ></img>
-            </AniLink>
-          </div>
+
         </div>
       </Layout>
     )
