@@ -1,4 +1,27 @@
 // Override default variables before the import
+@media (max-width: 576px) {
+  .main-title {
+    font-size: calc(23px + 8vw) !important;
+    line-height: 1;
+    padding-right: 10px;
+    padding-bottom: 10px;
+  }
+
+  .container-static{
+    position: absolute;
+    bottom: 0;
+  }
+
+  .link-mobile {
+    font-size: calc(12px + 1vw) !important;
+  }
+
+  .previously-mobile{
+    position: fixed;
+    bottom: 20px;
+    right: 2vw;
+  }
+}
 
 :root {
   --day-gray: #666461;
@@ -181,6 +204,12 @@ a.fancy-link:hover::before {
   position: fixed !important;
   right: 4vw !important; 
   top: 44vh !important;
+}
+
+.menu-fixed-mobile {
+  position: fixed !important;
+  right: 4vw !important; 
+  top: 4vh !important;
 }
 
 .fixed-full-menu{

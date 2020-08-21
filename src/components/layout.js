@@ -59,9 +59,9 @@ class Layout extends React.Component {
                   `growing <a class="fancy-link " href="https://www.apptegy.com/">Apptegy</a>.`,
                   `reading <a class="fancy-link " href="https://readjapaneseliterature.com/2020/07/24/manazuru-by-hiromi-kawakami-and-a-man-by-keiichiro-hirano/">Manazura</a>.`,
                   "on a Zoom call.",
-                  "hiring thoughtful software engineers.",
+                  "answering emails.",
                   "meeting interesting people.",
-                  "exploring digital minimalism.",
+                  "is going for a walk.",
                   "drinking coffee.",
                   `listening to <a class="fancy-link " href="https://open.spotify.com/playlist/7wgD1FW1Pp3LTp9di8YHBB?si=JZwsWRKMQm-knYVxl9fIKQ">minimal piano</a>.`,
                 ],
@@ -95,6 +95,17 @@ class Layout extends React.Component {
               height: "30px",
               width: "30px",
             }}
+            className="menu-fixed d-none d-md-block"
+          ></div>
+          <div
+            style={{
+              background: `var(--menu-img)`,
+              transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+              transition: `0.4s`,
+              height: "30px",
+              width: "30px",
+            }}
+            className="menu-fixed-mobile d-block d-md-none"
           ></div>
         </AniLink>
       )
@@ -120,18 +131,32 @@ class Layout extends React.Component {
         </Row>
       )
       menu = (
-        <div
-          onClick={this.handleShow}
-          style={{
-            background: `var(--menu-img)`,
-            transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-            transition: `0.4s`,
-            height: "30px",
-            width: "30px",
-            zIndex: `300`,
-          }}
-          className="menu-fixed"
-        ></div>
+        <>
+          <div
+            onClick={this.handleShow}
+            style={{
+              background: `var(--menu-img)`,
+              transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+              transition: `0.4s`,
+              height: "30px",
+              width: "30px",
+              zIndex: `300`,
+            }}
+            className="menu-fixed d-none d-md-block"
+          ></div>
+          <div
+            onClick={this.handleShow}
+            style={{
+              background: `var(--menu-img)`,
+              transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+              transition: `0.4s`,
+              height: "30px",
+              width: "30px",
+              zIndex: `300`,
+            }}
+            className="menu-fixed-mobile d-block d-md-none"
+          ></div>
+        </>
       )
     }
     return (
@@ -176,10 +201,10 @@ class Layout extends React.Component {
             marginRight: `auto`,
             maxWidth: `1400px`,
             backgroundColor: `var(--bg)`,
-            padding: `${rhythm(5.5)} ${rhythm(1.5)} 0 ${rhythm(1.5)} `,
           }}
+          className="pt-5 pl-1 pl-3 pl-1 mt-4 mt-md-5 mr-md-4 mb-md-1 ml-md-4"
         >
-          <header className="d-flex justify-content-between align-items-center mb-5">
+          <header className="d-flex justify-content-between align-items-center mb-5 mt-md-5">
             <div onClick={this.handleShow}>{header}</div>
           </header>
           <div className="menu-fixed">{menu}</div>
