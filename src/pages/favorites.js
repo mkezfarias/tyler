@@ -198,7 +198,7 @@ class Favorites extends React.Component {
               color: "var(--textTitle)",
             }}
             to="/"
-            className="fancy-link"
+            className="fancy-link logo-fixed-mobile"
             cover
             bg="var(--gradient-background)"
             direction="left"
@@ -206,7 +206,16 @@ class Favorites extends React.Component {
             duration={1.5}
             entryOffset={800}
           >
-            <img src={darkLogo} alt="Tyler Vawser" className="logo-fixed"></img>
+            <img
+              src={darkLogo}
+              alt="Tyler Vawser"
+              className="logo-fixed d-none d-md-block"
+            />
+            <img
+              src={darkLogo}
+              alt="Tyler Vawser"
+              className="logo-fixed-mobile d-block d-md-none"
+            />
           </AniLink>
           <div>
             <Row>
@@ -305,43 +314,6 @@ class Favorites extends React.Component {
               </Col>
             </Row>
           </Container>
-          {/* <Modal
-            onEntered={this.bgTransparent}
-            show={this.state.show}
-            animation={false}
-            onHide={this.handleClose}
-            className="modal-menu bg-transparent"
-            backdropClassName="transparent-opacity"
-          >
-            <Modal.Body
-              style={{
-                background: "var(--gradient-background)",
-                transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-                transition: `0.4s`,
-              }}
-            >
-              <Menu handleClose={this.handleClose} />
-              <div onClick={this.handleClose}>
-                <img
-                  src={closeBTN}
-                  alt="Close Button"
-                  className="close-button"
-                ></img>
-              </div>
-            </Modal.Body>
-          </Modal> */}
-
-          {/* <div
-            onClick={this.handleShow}
-            style={{
-              background: `var(--menu-img)`,
-              transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-              transition: `0.4s`,
-              height: "30px",
-              width: "30px",
-            }}
-            className="menu-fixed"
-          ></div> */}
           <img
             src={footerIMG}
             style={{

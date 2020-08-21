@@ -21,6 +21,15 @@
     bottom: 20px;
     right: 2vw;
   }
+
+.logo-fixed-mobile{
+  position: absolute !important;
+  top: -5px !important;
+  left: 10px !important;
+  width: 100px !important;
+  height: 100px !important;
+}
+    
 }
 
 :root {

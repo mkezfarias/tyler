@@ -24,8 +24,6 @@ import videosIcon from "../images/favorite videos icon.svg"
 import footerIMG from "../images/footer.png"
 import footerIMG2 from "../images/footer@2x.png"
 
-var hours = new Date().getHours()
-
 const Menu = ({ handleClose }) => {
   return (
     <>
