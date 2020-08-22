@@ -24,7 +24,7 @@ import videosIcon from "../images/favorite videos icon.svg"
 import footerIMG from "../images/footer.png"
 import footerIMG2 from "../images/footer@2x.png"
 
-const Menu = ({ handleClose }) => {
+const Menu = ({ handleClose, zIndex }) => {
   return (
     <>
       <AniLink
@@ -49,7 +49,7 @@ const Menu = ({ handleClose }) => {
           }}
           cover
           bg="var(--gradient-background)"
-          direction="left"
+          direction="right"
           top="entry"
           duration={1}
           entryOffset={800}
@@ -64,7 +64,7 @@ const Menu = ({ handleClose }) => {
           }}
           cover
           bg="var(--gradient-background)"
-          direction="left"
+          direction="right"
           top="entry"
           duration={1}
           entryOffset={800}
@@ -79,7 +79,7 @@ const Menu = ({ handleClose }) => {
           }}
           cover
           bg="var(--gradient-background)"
-          direction="left"
+          direction="right"
           top="entry"
           duration={1}
           entryOffset={800}
@@ -94,7 +94,7 @@ const Menu = ({ handleClose }) => {
           }}
           cover
           bg="var(--gradient-background)"
-          direction="left"
+          direction="right"
           top="entry"
           duration={1}
           entryOffset={800}
@@ -108,7 +108,7 @@ const Menu = ({ handleClose }) => {
           cover
           bg="var(--gradient-background)"
           top="exit"
-          direction="left"
+          direction="right"
           className="text-light roboto w-regular h2 my-4 fancy-link"
           to="/about"
         >

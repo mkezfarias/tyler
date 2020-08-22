@@ -487,18 +487,6 @@ class About extends React.Component {
             </Col>
           </Row>
         </Container>
-
-        {/* <div
-          onClick={this.handleShow}
-          style={{
-            background: `var(--menu-img)`,
-            transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-            transition: `0.4s`,
-            height: "30px",
-            width: "30px",
-          }}
-          className="menu-fixed"
-        ></div> */}
         <img
           src={footerIMG}
           style={{

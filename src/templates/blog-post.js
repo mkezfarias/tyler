@@ -12,6 +12,7 @@ import { Container, Col, Modal } from "react-bootstrap"
 import Menu from "../components/menu"
 import closeBTN from "../images/x.svg"
 import footerIMG from "../images/footer.svg"
+import LogoFixedMobile from "../components/LogoFixedMobile"
 
 class BlogPostTemplate extends React.Component {
   constructor(props) {
@@ -35,6 +36,7 @@ class BlogPostTemplate extends React.Component {
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
         />
+        <LogoFixedMobile />
         <AniLink
           style={{
             color: "var(--textTitle)",
@@ -45,7 +47,7 @@ class BlogPostTemplate extends React.Component {
           bg="var(--gradient-background)"
           direction="left"
           top="entry"
-          duration={1.5}
+          duration={1}
           entryOffset={800}
         >
           <img src={darkLogo} alt="Tyler Vawser" className="logo-fixed"></img>
@@ -113,44 +115,9 @@ class BlogPostTemplate extends React.Component {
                 )}
               </li>
             </ul>
-            <div
-              onClick={this.handleShow}
-              style={{
-                background: `var(--menu-img)`,
-                transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-                transition: `0.4s`,
-                height: "30px",
-                width: "30px",
-              }}
-              className="menu-fixed"
-            ></div>
           </Col>
         </Container>
-        <Modal
-          onEntered={this.bgTransparent}
-          show={this.state.show}
-          animation={false}
-          onHide={this.handleClose}
-          className="modal-menu bg-transparent"
-          backdropClassName="transparent-opacity"
-        >
-          <Modal.Body
-            style={{
-              background: "var(--gradient-background)",
-              transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-              transition: `0.4s`,
-            }}
-          >
-            <Menu />
-            <div onClick={this.handleClose}>
-              <img
-                src={closeBTN}
-                alt="Close Button"
-                className="close-button"
-              ></img>
-            </div>
-          </Modal.Body>
-        </Modal>
+
         <img
           src={footerIMG}
           style={{

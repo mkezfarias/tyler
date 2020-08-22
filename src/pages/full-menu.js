@@ -17,7 +17,7 @@ import Menu from "../components/menu"
 class FullMenu extends React.Component {
   constructor(props) {
     super(props)
-    this.handleClose = () => navigate("/")
+    this.handleCloseX = () => navigate("/")
   }
 
   render() {

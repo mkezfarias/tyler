@@ -9,6 +9,8 @@ import "../styles/global.scss"
 import TransitionLink from "gatsby-plugin-transition-link"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import ThemeToggler from "gatsby-plugin-dark-mode/ThemeToggler"
+import MenuFixedIcon from "../components/MenuFixedIcon"
+import LogoFixedMobile from "../components/LogoFixedMobile"
 
 class IndexPage extends React.Component {
   render() {
@@ -25,6 +27,7 @@ class IndexPage extends React.Component {
             `VP of People`,
           ]}
         />
+        <LogoFixedMobile noDisplay={"d-none"} />
         <div fluid className="container-static">
           <Row
             style={{
