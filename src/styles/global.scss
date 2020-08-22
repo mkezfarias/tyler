@@ -1,5 +1,11 @@
 // Override default variables before the import
 @media (max-width: 576px) {
+  .tl-edges { 
+    width: 100% !important;
+    overflow: hidden !important;
+    overflow-y: hidden !important;
+  }
+
   .main-title {
     font-size: calc(23px + 8vw) !important;
     line-height: 1;
@@ -244,6 +250,12 @@ a.fancy-link:hover::before {
   z-index: 10;
 }
 
+.tl-edges { 
+  width: 100% !important;
+  overflow: unset;
+  overflow-y: hidden;
+}
+
 .sidebar-fixed {
   position: absolute !important;
   right: 0 !important;
@@ -252,7 +264,7 @@ a.fancy-link:hover::before {
   border-radius: 0 !important;
   top: 0 !important;
   bottom: 0 !important;;
-  width: 50vw !important;
+  width: 30vw !important;
   background: var(--gradient-background) !important;
 }
 

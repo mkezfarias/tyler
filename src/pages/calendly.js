@@ -6,8 +6,6 @@ import SEO from "../components/seo"
 import Button from "../components/button"
 import { Container, Row, Col, Modal } from "react-bootstrap"
 import "../styles/global.scss"
-import TransitionLink from "gatsby-plugin-transition-link"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
 import { ThemeToggler } from "gatsby-plugin-dark-mode"
 import whiteLogo from "../images/logo-white.svg"
 import darkLogo from "../images/logo.svg"
@@ -47,44 +45,53 @@ class Calendly extends React.Component {
           keywords={[`blog`, `Tyler Vawser`, `Tvawser`, `react`]}
         />
         <LogoFixedMobile />
-        <Col xl={6} sm={11} className="">
+        <Col xl={6} sm={11}>
           <CalendlyEmbed account="tyler-apptegy" eventName="call-with-tyler" />
         </Col>
-        <div className="sidebar-fixed">
-          <Col xl={5} className="">
-            You can also check out my social media
-          </Col>
-          <Col
-            xl={{ span: 8, offset: 3 }}
-            className="d-flex  justify-content-between pt-3 "
+        <div className="sidebar-fixed pl-5 ">
+          <Row
+            className="mx-auto px-auto"
+            style={{ position: `fixed`, bottom: `10px` }}
           >
-            <a
-              href="https://twitter.com/Tvaw"
-              className="d-flex align-items-end justify-content-between"
+            <Col
+              xl={10}
+              style={{ fontSize: `20px`, zIndex: 0 }}
+              className="wider wsans w-medium line-height-1 text-light h2 md-h1 w-semibold align-center m-auto m-md-4 pl-5 pt-4 text-right"
             >
-              <img
-                src={twitterIMG}
-                alt="Link to Tyler's twitter"
-                className="d-flex align-self-end"
-              />
-            </a>
+              You can also check out my social media
+            </Col>
+            <Col
+              xl={{ span: 8, offset: 2 }}
+              className="d-flex  justify-content-between pt-3 pl-5 "
+            >
+              <a
+                href="https://twitter.com/Tvaw"
+                className="d-flex align-items-end justify-content-between"
+              >
+                <img
+                  src={twitterIMG}
+                  alt="Link to Tyler's twitter"
+                  className="d-flex align-self-end"
+                />
+              </a>
 
-            <a href="https://www.linkedin.com/in/tylervawser/">
-              <img
-                className="d-flex align-self-end"
-                src={linkedinIMG}
-                alt="Link to Tyler's Linkedin profile"
-              />
-            </a>
+              <a href="https://www.linkedin.com/in/tylervawser/">
+                <img
+                  className="d-flex align-self-end"
+                  src={linkedinIMG}
+                  alt="Link to Tyler's Linkedin profile"
+                />
+              </a>
 
-            <a href="https://twitter.com/Tvaw">
-              <img
-                src={mailIMG}
-                alt="Link to Tyler's twitter"
-                className="d-flex align-self-end"
-              />
-            </a>
-          </Col>
+              <a href="https://twitter.com/Tvaw">
+                <img
+                  src={mailIMG}
+                  alt="Link to Tyler's twitter"
+                  className="d-flex align-self-end"
+                />
+              </a>
+            </Col>
+          </Row>
         </div>
       </Layout>
     )
