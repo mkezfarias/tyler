@@ -139,7 +139,6 @@ class Layout extends React.Component {
               textAlign: `center`,
               margin: `auto`,
               maxWidth: `100vw`,
-              padding: `-0vh 10vw 0 10vw`,
               fontSize: `calc(20px + 2vw)`,
             }}
             className="wider wsans w-medium pb-0 mb-0 line-height-1 mt-0 w-semibold "

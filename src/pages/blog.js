@@ -47,28 +47,32 @@ class Blog extends React.Component {
     const posts = data.allMdx.edges
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
+      <Layout
+        location={this.props.location}
+        title={siteTitle}
+        style={{ color: `var(--textNormal)`, margin: `50px !important` }}
+      >
         <SEO title="All posts" />
         <LogoFixedMobile />
 
-        <Row className="mx-5 px-5">
-          <Col className="mx-3" xl={9} style={{ color: `var(--textNormal)` }}>
+        <Row
+          className="mx-md-5 mx-px-5 px-3 mx-3"
+          style={{ color: `var(--textNormal)` }}
+        >
+          <Col xl={10} className="mr-5">
             <Bio />
           </Col>
         </Row>
 
-        <Row
-          style={{ margin: "auto", paddingBottom: "19vh" }}
-          className="px-5 mx-5"
-        >
+        <Row style={{ paddingBottom: "19vh" }} className="mx-md-5 px-md-5 ">
           {posts.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
             return (
-              <Col lg={5}>
+              <Col lg={5} xs={12} sm={12}>
                 <Card
                   key={node.fields.slug}
                   style={{
-                    margin: "20px 40px",
+                    margin: "20px 30px",
                     border: `none`,
                     borderRadius: `0px`,
                     background: `var(--bg)`,
