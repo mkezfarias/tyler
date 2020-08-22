@@ -45,7 +45,16 @@
     margin-top: 0 !important;
    }
   
-
+   .sidebar-fixed.sidebar-fixed.sidebar-fixed {
+    position: absolute !important;
+    right: 0 !important;
+    margin: 0 !important;
+    bottom: 0 !important;
+    top: calc(100% - 25vh) !important;
+    height: 25vh !important;
+    width: 100vw !important;
+    background: var(--gradient-background) !important;
+  }
 }
 
 :root {
@@ -233,6 +242,18 @@ a.fancy-link:hover::before {
   right: 4vw !important; 
   top: 44vh !important;
   z-index: 10;
+}
+
+.sidebar-fixed {
+  position: absolute !important;
+  right: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  top: 0 !important;
+  bottom: 0 !important;;
+  width: 50vw !important;
+  background: var(--gradient-background) !important;
 }
 
 .fixed-full-menu{
