@@ -166,32 +166,7 @@ class Calendly extends React.Component {
           ></Col>
           <Col xl={{ span: 6, offset: 1 }} className="mb-5 pb-5"></Col>
         </Container>
-        {/* <Modal
-          onEntered={this.bgTransparent}
-          show={this.state.show}
-          animation={false}
-          onHide={this.handleClose}
-          className="modal-menu bg-transparent"
-          backdropClassName="transparent-opacity"
-        >
-          <Modal.Body
-            style={{
-              background: "var(--gradient-background)",
-              transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-              transition: `0.4s`,
-            }}
-          >
-            <Menu handleClose={this.handleClose} dark={true} />
 
-            <div onClick={this.handleClose}>
-              <img
-                src={closeBTN}
-                alt="Close Button"
-                className="close-button"
-              ></img>
-            </div>
-          </Modal.Body>
-        </Modal> */}
         <Link to="/">
           <img src={whiteLogo} alt="Tyler Vawser" className="logo-fixed"></img>
         </Link>

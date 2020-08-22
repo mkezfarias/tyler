@@ -124,23 +124,6 @@ class IndexPage extends React.Component {
                 className="justify-content-end d-flex flex-column ml-md-auto align-items-end pr-3 pr-md-0 flex-md-row"
                 style={{ justifyContent: `space-evenly` }}
               >
-                {/* <Col
-                  xl={5}
-                  className="d-flex justify-items-end text-nowrap ml-md-5 pl-md-5"
-                >
-                  <a
-                    style={{
-                      color: "var(--textTitle)",
-                      transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-                      transition: `0.4s`,
-                    }}
-                    className="fancy-link  ml-"
-                    
-                  >
-                    
-                  </a>
-                  <span className="d-none d-md-inline pl-1">/ </span>
-                </Col> */}
                 <div className="d-flex line" style={{ flexBasis: `40%` }}>
                   <a
                     style={{

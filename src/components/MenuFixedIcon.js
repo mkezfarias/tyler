@@ -24,37 +24,49 @@ import videosIcon from "../images/favorite videos icon.svg"
 import footerIMG from "../images/footer.png"
 import footerIMG2 from "../images/footer@2x.png"
 
-var hours = new Date().getHours()
-
-const LogoFixedMobile = ({ handleClose }) => {
+const MenuFixedIcon = ({ handleShow }) => {
   return (
     <>
+      <div
+        onClick={handleShow}
+        style={{
+          background: `var(--menu-img)`,
+          transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+          transition: `0.4s`,
+          height: "30px",
+          width: "30px",
+          zIndex: `300`,
+        }}
+        className="menu-fixed d-none d-md-block"
+      ></div>
       <AniLink
         style={{
           color: "var(--textTitle)",
+          transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+          transition: `0.6s`,
         }}
-        to="/"
-        className="fancy-link logo-fixed-mobile"
+        to="/full-menu"
+        className="fancy-link"
         cover
         bg="var(--gradient-background)"
-        direction="left"
+        direction="right"
         top="entry"
-        duration={1.5}
-        entryOffset={800}
+        duration={1}
       >
-        <img
-          src={darkLogo}
-          alt="Tyler Vawser"
-          className="logo-fixed d-none d-md-block"
-        />
-        <img
-          src={darkLogo}
-          alt="Tyler Vawser"
-          className="logo-fixed-mobile d-block d-md-none"
-        />
+        <div
+          style={{
+            background: `var(--menu-img)`,
+            transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+            transition: `0.4s`,
+            height: "30px",
+            width: "30px",
+            zIndex: `300`,
+          }}
+          className="menu-fixed-mobile d-block d-md-none"
+        ></div>
       </AniLink>
     </>
   )
 }
 
-export default LogoFixedMobile
+export default MenuFixedIcon

@@ -53,7 +53,7 @@ const Menu = ({ handleClose }) => {
           top="entry"
           duration={1}
           entryOffset={800}
-          className="text-light roboto w-regular h2 my-3 fancy-link"
+          className="text-light roboto w-regular h2 my-3 fancy-link "
           to="/calendly"
         >
           <span onClick={handleClose}>Set up a call</span>

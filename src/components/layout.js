@@ -21,6 +21,7 @@ import dayButton from "../images/daymode.svg"
 import nightButton from "../images/night-button.svg"
 import closeBTN from "../images/x.svg"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
+import MenuFixedIcon from "./MenuFixedIcon"
 
 class Layout extends React.Component {
   constructor(props) {
@@ -72,43 +73,7 @@ class Layout extends React.Component {
           </div>
         </Container>
       )
-      menu = (
-        <AniLink
-          style={{
-            color: "var(--textTitle)",
-            transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-            transition: `0.6s`,
-          }}
-          to="/full-menu"
-          className="fancy-link"
-          cover
-          bg="var(--gradient-background)"
-          direction="left"
-          top="entry"
-          duration={1}
-        >
-          <div
-            style={{
-              background: `var(--menu-img)`,
-              transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-              transition: `0.4s`,
-              height: "30px",
-              width: "30px",
-            }}
-            className="menu-fixed d-none d-md-block"
-          ></div>
-          <div
-            style={{
-              background: `var(--menu-img)`,
-              transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-              transition: `0.4s`,
-              height: "30px",
-              width: "30px",
-            }}
-            className="menu-fixed-mobile d-block d-md-none"
-          ></div>
-        </AniLink>
-      )
+      menu = <MenuFixedIcon />
     } else {
       header = (
         <Row>
@@ -130,34 +95,7 @@ class Layout extends React.Component {
           </Col>
         </Row>
       )
-      menu = (
-        <>
-          <div
-            onClick={this.handleShow}
-            style={{
-              background: `var(--menu-img)`,
-              transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-              transition: `0.4s`,
-              height: "30px",
-              width: "30px",
-              zIndex: `300`,
-            }}
-            className="menu-fixed d-none d-md-block"
-          ></div>
-          <div
-            onClick={this.handleShow}
-            style={{
-              background: `var(--menu-img)`,
-              transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-              transition: `0.4s`,
-              height: "30px",
-              width: "30px",
-              zIndex: `300`,
-            }}
-            className="menu-fixed-mobile d-block d-md-none"
-          ></div>
-        </>
-      )
+      menu = <MenuFixedIcon handleShow={this.handleShow} />
     }
     return (
       <Wrapper

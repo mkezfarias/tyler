@@ -24,6 +24,7 @@ import videosIcon from "../images/favorite videos icon.svg"
 import footerIMG from "../images/footer.png"
 import footerIMG2 from "../images/footer@2x.png"
 import Menu from "../components/menu"
+import LogoFixedMobile from "../components/LogoFixedMobile"
 
 const favoritesArray = [
   {
@@ -193,30 +194,7 @@ class Favorites extends React.Component {
             title="Tyler Vawser"
             keywords={[`blog`, `Tyler Vawser`, `Tvawser`, `react`]}
           />
-          <AniLink
-            style={{
-              color: "var(--textTitle)",
-            }}
-            to="/"
-            className="fancy-link logo-fixed-mobile"
-            cover
-            bg="var(--gradient-background)"
-            direction="left"
-            top="entry"
-            duration={1.5}
-            entryOffset={800}
-          >
-            <img
-              src={darkLogo}
-              alt="Tyler Vawser"
-              className="logo-fixed d-none d-md-block"
-            />
-            <img
-              src={darkLogo}
-              alt="Tyler Vawser"
-              className="logo-fixed-mobile d-block d-md-none"
-            />
-          </AniLink>
+          <LogoFixedMobile />
           <div>
             <Row>
               <Col
