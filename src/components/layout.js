@@ -21,6 +21,7 @@ import dayButton from "../images/daymode.svg"
 import nightButton from "../images/night-button.svg"
 import closeBTN from "../images/x.svg"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
+import MenuFixedIcon from "./MenuFixedIcon"
 
 class Layout extends React.Component {
   constructor(props) {
@@ -38,6 +39,7 @@ class Layout extends React.Component {
     const { location, title, children } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
     const blogPath = `${__PATH_PREFIX__}/blog/`
+    const fullMenuPath = `${__PATH_PREFIX__}/full-menu`
     let header
     let menu
 
@@ -78,12 +80,15 @@ class Layout extends React.Component {
             color: "var(--textTitle)",
             transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
             transition: `0.6s`,
+            height: "30px",
+            width: "30px",
+            zIndex: `300`,
           }}
           to="/full-menu"
-          className="fancy-link"
+          className="menu-fixed-mobile d-none d-md-block"
           cover
           bg="var(--gradient-background)"
-          direction="left"
+          direction="right"
           top="entry"
           duration={1}
         >
@@ -94,21 +99,34 @@ class Layout extends React.Component {
               transition: `0.4s`,
               height: "30px",
               width: "30px",
+              zIndex: `300`,
             }}
-            className="menu-fixed d-none d-md-block"
-          ></div>
-          <div
-            style={{
-              background: `var(--menu-img)`,
-              transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-              transition: `0.4s`,
-              height: "30px",
-              width: "30px",
-            }}
-            className="menu-fixed-mobile d-block d-md-none"
+            className="d-none d-md-block"
           ></div>
         </AniLink>
       )
+    } else if (location.pathname === fullMenuPath) {
+      header = (
+        <Row>
+          <Col
+            xl={12}
+            style={{
+              color: "var(--textNormal)",
+              transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+              transition: `0.4s`,
+              textAlign: `center`,
+              margin: `auto`,
+              maxWidth: `100vw`,
+              padding: `-0vh 10vw 0 10vw`,
+              fontSize: `calc(20px + 2vw)`,
+            }}
+            className="wider wsans w-medium pb-0 mb-0 line-height-1 mt-0 w-semibold "
+          >
+            {title}
+          </Col>
+        </Row>
+      )
+      menu = null
     } else {
       header = (
         <Row>
@@ -130,34 +148,7 @@ class Layout extends React.Component {
           </Col>
         </Row>
       )
-      menu = (
-        <>
-          <div
-            onClick={this.handleShow}
-            style={{
-              background: `var(--menu-img)`,
-              transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-              transition: `0.4s`,
-              height: "30px",
-              width: "30px",
-              zIndex: `300`,
-            }}
-            className="menu-fixed d-none d-md-block"
-          ></div>
-          <div
-            onClick={this.handleShow}
-            style={{
-              background: `var(--menu-img)`,
-              transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-              transition: `0.4s`,
-              height: "30px",
-              width: "30px",
-              zIndex: `300`,
-            }}
-            className="menu-fixed-mobile d-block d-md-none"
-          ></div>
-        </>
-      )
+      menu = <MenuFixedIcon handleShow={this.handleShow} />
     }
     return (
       <Wrapper

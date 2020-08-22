@@ -28,6 +28,7 @@ import CalendlyEmbed from "../components/CalendlyEmbed"
 import twitterIMG from "../images/twitter.svg"
 import mailIMG from "../images/mail.svg"
 import linkedinIMG from "../images/linkedin.svg"
+import LogoFixedMobile from "../components/LogoFixedMobile"
 
 class Calendly extends React.Component {
   constructor(props) {
@@ -48,61 +49,46 @@ class Calendly extends React.Component {
           title="Tyler Vawser"
           keywords={[`blog`, `Tyler Vawser`, `Tvawser`, `react`]}
         />
+        <LogoFixedMobile />
+
         <div className="my-0 py-0">
-          <Row style={{ marginTop: `-30vh` }}>
+          <Row
+            style={{}}
+            className=" calendly-widget d-flex justify-content-start align-items-end"
+          >
             <Col
               xl={7}
+              sm={10}
               className="wider wsans w-medium pb-0 mb-0 line-height-1 mt-0 w-semibold align-center"
             >
               <CalendlyEmbed
-                className="mb-0"
+                className="mb-0 mx-auto"
                 account="tyler-apptegy"
                 eventName="call-with-tyler"
               />
             </Col>
+          </Row>
+          <Row
+            style={{
+              color: "var(--textNormal)",
+              background: `var(--gradient-background)`,
+              textAlign: `center`,
+              fontSize: `calc(20px + 2vw)`,
+              position: `fixed`,
+              top: `0`,
+              right: `0`,
+              bottom: `0`,
+              zIndex: `0`,
+            }}
+          >
             <Col
               xl={5}
-              style={{
-                color: "var(--textNormal)",
-                background: `var(--gradient-background)`,
-                textAlign: `center`,
-                fontSize: `calc(20px + 2vw)`,
-                position: `fixed`,
-                top: `0`,
-                right: `0`,
-                bottom: `0`,
-                zIndex: `0`,
-              }}
+              sm={12}
               className="wider wsans w-medium line-height-1  w-semibold align-center"
             >
-              <AniLink
-                style={{
-                  color: "var(--textTitle)",
-                  transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-                  transition: `0.6s`,
-                }}
-                to="/full-menu"
-                className="menu-fixed"
-                cover
-                bg="var(--gradient-background)"
-                direction="left"
-                top="entry"
-                duration={1}
-              >
-                <div
-                  style={{
-                    background: `var(--menu-img)`,
-                    transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-                    transition: `0.4s`,
-                    height: "30px",
-                    width: "30px",
-                  }}
-                ></div>
-              </AniLink>
               <Row
                 className="d-flex justify-content-end align-items-end"
                 style={{
-                  color: `#fbfbfb`,
                   padding: `0 6vw`,
                   textAlign: `end`,
                   position: `fixed`,
@@ -166,46 +152,6 @@ class Calendly extends React.Component {
           ></Col>
           <Col xl={{ span: 6, offset: 1 }} className="mb-5 pb-5"></Col>
         </Container>
-        {/* <Modal
-          onEntered={this.bgTransparent}
-          show={this.state.show}
-          animation={false}
-          onHide={this.handleClose}
-          className="modal-menu bg-transparent"
-          backdropClassName="transparent-opacity"
-        >
-          <Modal.Body
-            style={{
-              background: "var(--gradient-background)",
-              transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-              transition: `0.4s`,
-            }}
-          >
-            <Menu handleClose={this.handleClose} dark={true} />
-
-            <div onClick={this.handleClose}>
-              <img
-                src={closeBTN}
-                alt="Close Button"
-                className="close-button"
-              ></img>
-            </div>
-          </Modal.Body>
-        </Modal> */}
-        <Link to="/">
-          <img src={whiteLogo} alt="Tyler Vawser" className="logo-fixed"></img>
-        </Link>
-        {/* <div
-          onClick={this.handleShow}
-          style={{
-            background: `var(--menu-img)`,
-            transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-            transition: `0.4s`,
-            height: "30px",
-            width: "30px",
-          }}
-          className="menu-fixed"
-        ></div> */}
       </Layout>
     )
   }

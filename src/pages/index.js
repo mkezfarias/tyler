@@ -9,6 +9,8 @@ import "../styles/global.scss"
 import TransitionLink from "gatsby-plugin-transition-link"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import ThemeToggler from "gatsby-plugin-dark-mode/ThemeToggler"
+import MenuFixedIcon from "../components/MenuFixedIcon"
+import LogoFixedMobile from "../components/LogoFixedMobile"
 
 class IndexPage extends React.Component {
   render() {
@@ -25,6 +27,7 @@ class IndexPage extends React.Component {
             `VP of People`,
           ]}
         />
+        <LogoFixedMobile noDisplay={"d-none"} />
         <div fluid className="container-static">
           <Row
             style={{
@@ -116,49 +119,76 @@ class IndexPage extends React.Component {
                   transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
                   transition: `0.4s`,
                 }}
-                className="justify-content-end wsans w-medium md-h4 d-flex ml-auto pr-3 h3 "
+                className="justify-content-md-around justify-content-end wsans w-medium md-h4 d-flex ml-auto pr-3 pr-md-5 mr-md-0 h3"
               >
                 Previously at
               </Row>
-              <Row className="justify-content-end d-flex ml-md-auto">
-                <Col
-                  xl={5}
-                  className="d-flex justify-items-end text-nowrap ml-md-auto"
-                >
+              <Row
+                className="justify-content-end d-flex flex-column ml-md-auto align-items-end pr-3 pr-md-0 flex-md-row"
+                style={{ justifyContent: `space-evenly` }}
+              >
+                <div className="d-flex line" style={{ flexBasis: `40%` }}>
                   <a
                     style={{
                       color: "var(--textTitle)",
                       transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
                       transition: `0.4s`,
                     }}
-                    className="fancy-link  ml-auto"
+                    className="fancy-link ml-0 d-flex "
                     href="https://www.stickermule.com/"
                   >
-                    Sticker Mule{" "}
+                    Sticker Mule
                   </a>
                   <span className="d-none d-md-inline pl-1">/ </span>
-                </Col>
-                <Col
-                  xl={5}
-                  className="d-flex justify-items-end text-nowrap ml-md-auto"
-                >
+                </div>
+                <div className="d-flex line" style={{ flexBasis: `40%` }}>
                   <a
                     style={{
                       color: "var(--textTitle)",
                       transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
                       transition: `0.4s`,
                     }}
-                    className="fancy-link ml-auto d-flex"
+                    className="fancy-link ml-0 d-flex"
                     href="https://museumhack.com/"
                   >
-                    Museum Hack{"  "}
+                    Museum Hack
                   </a>
                   <span className="d-none d-md-inline pl-1">/ </span>
-                </Col>
+                </div>
+                <div className="d-flex line" style={{ flexBasis: `40%` }}>
+                  <a
+                    style={{
+                      color: "var(--textTitle)",
+                      transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+                      transition: `0.4s`,
+                    }}
+                    className="fancy-link ml-0 d-flex"
+                    href="https://okdork.com/"
+                  >
+                    OkDork
+                  </a>
+                  <span className="d-none d-md-inline pl-1">/</span>
+                </div>
+                <div className="d-flex line" style={{ flexBasis: `40%` }}>
+                  <a
+                    style={{
+                      color: "var(--textTitle)",
+                      transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+                      transition: `0.4s`,
+                    }}
+                    className="fancy-link ml-0 d-flex"
+                    href="https://www.tkc.edu/"
+                  >
+                    The Kings College
+                  </a>
+                  <span className="d-none d-md-inline pl-1">/ </span>
+                </div>
+                {/*                   
+                
 
                 <Col
                   xl={5}
-                  className="d-flex justify-items-end text-nowrap ml-md-auto"
+                  className="d-flex justify-items-end text-nowrap ml-md-1"
                 >
                   <a
                     style={{
@@ -167,7 +197,7 @@ class IndexPage extends React.Component {
                       transition: `0.4s`,
                     }}
                     className="fancy-link ml-auto"
-                    href="https://okdork.com/"
+                    
                   >
                     OkDork
                   </a>
@@ -184,12 +214,12 @@ class IndexPage extends React.Component {
                       transition: `0.4s`,
                     }}
                     className="fancy-link ml-auto "
-                    href="https://www.tkc.edu/"
+                    
                   >
                     The Kings College
                   </a>
                   <span className="d-none d-md-inline pl-1">/ </span>
-                </Col>
+                </Col> */}
               </Row>
             </Col>
           </Row>

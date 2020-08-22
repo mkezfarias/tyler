@@ -21,6 +21,31 @@
     bottom: 20px;
     right: 2vw;
   }
+
+  .logo-fixed-mobile{
+    position: absolute !important;
+    top: -5px !important;
+    left: 10px !important;
+    width: 100px !important;
+    height: 100px !important;
+    z-index: 10;
+
+  }
+
+  .menu-fixed-mobile {
+    position: absolute !important;
+    top: 25px !important;
+    right: -40px !important;
+    width: 100px !important;
+    height: 100px !important;
+    z-index: 10;
+  }
+
+  .calendly-widget, .calendly-inline-widget {
+    margin-top: 0 !important;
+   }
+  
+
 }
 
 :root {
@@ -41,6 +66,9 @@
   --nightMenu-bg: url("../images/menu2.svg") no-repeat right top;
 }
 
+.calendly-widget, .calendly-inline-widget {
+ margin-top: -20vh;   
+}
 
 body {
   --bg: var(--day-white);
@@ -204,12 +232,7 @@ a.fancy-link:hover::before {
   position: fixed !important;
   right: 4vw !important; 
   top: 44vh !important;
-}
-
-.menu-fixed-mobile {
-  position: fixed !important;
-  right: 4vw !important; 
-  top: 4vh !important;
+  z-index: 10;
 }
 
 .fixed-full-menu{
