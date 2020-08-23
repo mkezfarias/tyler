@@ -32,7 +32,7 @@ const LogoFixedMobile = ({ noDisplay }) => {
           color: "var(--textTitle)",
         }}
         to="/"
-        className={`fancy-link logo-fixed-mobile ${noDisplay}`}
+        className={`logo-fixed-mobile ${noDisplay}`}
         cover
         bg="var(--gradient-background)"
         direction="left"
