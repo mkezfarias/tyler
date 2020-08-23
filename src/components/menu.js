@@ -40,7 +40,12 @@ const Menu = ({ handleClose, zIndex }) => {
         entryOffset={800}
       >
         {" "}
-        <img src={whiteLogo} alt="Tyler Vawser" className="logo-fixed"></img>
+        <img
+          src={whiteLogo}
+          onClick={handleClose}
+          alt="Tyler Vawser"
+          className="logo-fixed"
+        ></img>
       </AniLink>
       <div className="d-flex flex-column p-2 justify-content-center align-items-end items-fixed">
         <AniLink

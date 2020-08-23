@@ -1,5 +1,7 @@
 // Override default variables before the import
 @media (max-width: 576px) {
+
+
   .main-title {
     font-size: calc(23px + 8vw) !important;
     line-height: 1;
@@ -337,6 +339,11 @@ a.fancy-link:hover::before {
   top: 20vh;
 }
 
+.tl-edges {
+  width: 100% !important;
+  overflow: hidden !important;
+  overflow-y: hidden !important;
+  }
 
   
 
