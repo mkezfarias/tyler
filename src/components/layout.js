@@ -40,6 +40,7 @@ class Layout extends React.Component {
     const rootPath = `${__PATH_PREFIX__}/`
     const blogPath = `${__PATH_PREFIX__}/blog/`
     const fullMenuPath = `${__PATH_PREFIX__}/full-menu`
+    const fullMenuPath2 = `${__PATH_PREFIX__}/full-menu/`
     let header
     let menu
 
@@ -105,7 +106,10 @@ class Layout extends React.Component {
           ></div>
         </AniLink>
       )
-    } else if (location.pathname === fullMenuPath) {
+    } else if (
+      location.pathname === fullMenuPath ||
+      location.pathname === fullMenuPath2
+    ) {
       header = (
         <Row>
           <Col
