@@ -130,7 +130,7 @@ class Now extends React.Component {
                 margin: `auto`,
                 maxWidth: `90vw`,
                 padding: `10vh 10vw 0 10vw`,
-                fontSize: `calc(10px + .7vw)`,
+                fontSize: `calc(14px + .7vw)`,
               }}
               className="roboto w-medium"
             >

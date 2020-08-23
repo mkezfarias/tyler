@@ -55,7 +55,13 @@ class Blog extends React.Component {
           className="mx-md-5 mx-px-5 px-0 mx-2"
           style={{ color: `var(--textNormal)` }}
         >
-          <Col xl={10} className="mx-md-5 px-md-4 mr-4 ">
+          <Col
+            sm={10}
+            md={10}
+            lg={10}
+            xl={10}
+            className="mx-md-5 px-md-4 mr-4 "
+          >
             <Bio />
           </Col>
         </Row>
@@ -64,7 +70,7 @@ class Blog extends React.Component {
           {posts.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
             return (
-              <Col lg={5} xs={12} sm={12}>
+              <Col lg={5} xs={12} sm={12} md={12}>
                 <Card
                   key={node.fields.slug}
                   style={{

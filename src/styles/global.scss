@@ -33,21 +33,7 @@
   }
   
 
-  .calendly-widget, .calendly-inline-widget {
-    margin-top: 0 !important;
-   }
   
-   .sidebar-fixed.sidebar-fixed.sidebar-fixed {
-    position: absolute !important;
-    right: 0 !important;
-    margin: 0 !important;
-    bottom: 0 !important;
-    top: calc(100% - 25vh) !important;
-    height: 25vh !important;
-    width: 100vw !important;
-    background: var(--gradient-background) !important;
-  }
-
   .menu-fixed.menu-fixed {
     position: fixed !important;
     right: 4vw !important; 
@@ -56,6 +42,26 @@
   }
 }
 
+@media (max-width: 767px) {
+
+  .sidebar-fixed.sidebar-fixed.sidebar-fixed {
+    position: absolute !important;
+    right: 0 !important;
+    margin: 0 !important;
+    bottom: 0 !important;
+    top: calc(100% - 30vh) !important;
+    height: 30vh !important;
+    width: 100vw !important;
+    background: var(--gradient-background) !important;
+  }
+  .calendly-widget, .calendly-inline-widget {
+    margin-top: 0 !important;
+   }
+  .social-text{
+   
+   }
+
+}
 :root {
   --day-gray: #666461;
   --night-gray: #FCFCFC;

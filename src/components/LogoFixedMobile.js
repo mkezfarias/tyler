@@ -24,8 +24,6 @@ import videosIcon from "../images/favorite videos icon.svg"
 import footerIMG from "../images/footer.png"
 import footerIMG2 from "../images/footer@2x.png"
 
-var hours = new Date().getHours()
-
 const LogoFixedMobile = ({ noDisplay }) => {
   return (
     <>
@@ -45,12 +43,12 @@ const LogoFixedMobile = ({ noDisplay }) => {
         <img
           src={darkLogo}
           alt="Tyler Vawser"
-          className="logo-fixed d-none d-md-block"
+          className="logo-fixed d-none d-sm-block"
         />
         <img
           src={darkLogo}
           alt="Tyler Vawser"
-          className="logo-fixed-mobile d-block d-md-none"
+          className="logo-fixed-mobile d-block d-sm-none"
         />
       </AniLink>
     </>
