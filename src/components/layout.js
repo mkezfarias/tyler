@@ -76,7 +76,7 @@ class Layout extends React.Component {
         </Container>
       )
       menu = (
-        <AniLink
+        <Link
           style={{
             color: "var(--textTitle)",
             transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
@@ -104,7 +104,7 @@ class Layout extends React.Component {
             }}
             className="d-none d-md-block"
           ></div>
-        </AniLink>
+        </Link>
       )
     } else if (
       location.pathname === fullMenuPath ||
