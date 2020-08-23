@@ -339,13 +339,5 @@ a.fancy-link:hover::before {
   top: 20vh;
 }
 
-.tl-edges {
-  width: 100% !important;
-  overflow: hidden !important;
-  overflow-y: hidden !important;
-  }
-
-  
-
 // Import Bootstrap and its default variables
 @import '~bootstrap/scss/bootstrap.scss';
