@@ -1,4 +1,61 @@
 // Override default variables before the import
+@media (max-width: 576px) {
+  .main-title {
+    font-size: calc(23px + 8vw) !important;
+    line-height: 1;
+    padding-right: 10px;
+    padding-bottom: 10px;
+  }
+
+  .container-static{
+    position: absolute;
+    bottom: 0;
+  }
+
+  .link-mobile {
+    font-size: calc(12px + 1vw) !important;
+  }
+
+  .previously-mobile{
+    position: fixed;
+    bottom: 20px;
+    right: 2vw;
+  }
+
+  .logo-fixed-mobile{
+    position: absolute !important;
+    top: -5px !important;
+    left: 10px !important;
+    width: 100px !important;
+    height: 100px !important;
+    z-index: 10;
+
+  }
+
+  .menu-fixed-mobile {
+    position: absolute !important;
+    top: 25px !important;
+    right: -40px !important;
+    width: 100px !important;
+    height: 100px !important;
+    z-index: 10;
+  }
+
+  .calendly-widget, .calendly-inline-widget {
+    margin-top: 0 !important;
+   }
+  
+   .sidebar-fixed.sidebar-fixed.sidebar-fixed {
+    position: absolute !important;
+    right: 0 !important;
+    margin: 0 !important;
+    bottom: 0 !important;
+    top: calc(100% - 25vh) !important;
+    height: 25vh !important;
+    width: 100vw !important;
+    background: var(--gradient-background) !important;
+  }
+}
 
 :root {
   --day-gray: #666461;
@@ -18,6 +75,9 @@
   --nightMenu-bg: url("../images/menu2.svg") no-repeat right top;
 }
 
+.calendly-widget, .calendly-inline-widget {
+ margin-top: -20vh;   
+}
 
 body {
   --bg: var(--day-white);
@@ -181,6 +241,19 @@ a.fancy-link:hover::before {
   position: fixed !important;
   right: 4vw !important; 
   top: 44vh !important;
+  z-index: 10;
+}
+
+.sidebar-fixed {
+  position: absolute !important;
+  right: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  top: 0 !important;
+  bottom: 0 !important;;
+  width: 30vw !important;
+  background: var(--gradient-background) !important;
 }
 
 .fixed-full-menu{

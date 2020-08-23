@@ -24,6 +24,7 @@ import videosIcon from "../images/favorite videos icon.svg"
 import footerIMG from "../images/footer.png"
 import footerIMG2 from "../images/footer@2x.png"
 import Menu from "../components/menu"
+import LogoFixedMobile from "../components/LogoFixedMobile"
 
 const nowContent = {
   title: "What Tyler is doing now",
@@ -99,22 +100,7 @@ class Now extends React.Component {
           title="Tyler Vawser"
           keywords={[`blog`, `Tyler Vawser`, `Tvawser`, `react`]} //edit these on each page depending on the content of the page
         />
-
-        <AniLink
-          style={{
-            color: "var(--textTitle)",
-          }}
-          to="/"
-          className="fancy-link"
-          cover
-          bg="var(--gradient-background)"
-          direction="left"
-          top="entry"
-          duration={1.5}
-          entryOffset={800}
-        >
-          <img src={darkLogo} alt="Tyler Vawser" className="logo-fixed"></img>
-        </AniLink>
+        <LogoFixedMobile />
         <div>
           <Row>
             <Col
@@ -374,60 +360,6 @@ class Now extends React.Component {
           </Row>
         </Container>
 
-        <Modal
-          onEntered={this.bgTransparent}
-          show={this.state.show}
-          animation={false}
-          onHide={this.handleClose}
-          className="modal-menu bg-transparent"
-          backdropClassName="transparent-opacity"
-        >
-          <Modal.Body
-            style={{
-              background: "var(--gradient-background)",
-              transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-              transition: `0.4s`,
-            }}
-          >
-            {/* <AniLink
-              style={{
-                bg: "var(--gradient-background)",
-                color: "#5ba9ed",
-                transition: `0.4s`,
-              }}
-              className="fancy-link"
-              cover
-              bg="var(--gradient-background)"
-              top="exit"
-              direction="left"
-              className="text-light roboto w-regular h2 my-4 fancy-link"
-              to="/about"
-            >
-              <div onClick={this.handleClose}>TransitionTest</div>
-            </AniLink> */}
-            <Menu handleClose={this.handleClose} dark={true} />
-
-            <div onClick={this.handleClose}>
-              <img
-                src={closeBTN}
-                alt="Close Button"
-                className="close-button"
-              ></img>
-            </div>
-          </Modal.Body>
-        </Modal>
-
-        <div
-          onClick={this.handleShow}
-          style={{
-            background: `var(--menu-img)`,
-            transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-            transition: `0.4s`,
-            height: "30px",
-            width: "30px",
-          }}
-          className="menu-fixed"
-        ></div>
         <img
           src={footerIMG}
           style={{

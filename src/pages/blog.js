@@ -28,6 +28,7 @@ import videosIcon from "../images/favorite videos icon.svg"
 import footerIMG from "../images/footer.png"
 import footerIMG2 from "../images/footer@2x.png"
 import Menu from "../components/menu"
+import LogoFixedMobile from "../components/LogoFixedMobile"
 
 class Blog extends React.Component {
   constructor(props) {
@@ -46,41 +47,32 @@ class Blog extends React.Component {
     const posts = data.allMdx.edges
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
+      <Layout
+        location={this.props.location}
+        title={siteTitle}
+        style={{ color: `var(--textNormal)`, margin: `50px !important` }}
+      >
         <SEO title="All posts" />
-        <AniLink
-          style={{
-            color: "var(--textTitle)",
-          }}
-          to="/"
-          className="fancy-link"
-          cover
-          bg="var(--gradient-background)"
-          direction="left"
-          top="entry"
-          duration={1.5}
-          entryOffset={800}
+        <LogoFixedMobile />
+
+        <Row
+          className="mx-md-5 mx-px-5 px-3 mx-3"
+          style={{ color: `var(--textNormal)` }}
         >
-          <img src={darkLogo} alt="Tyler Vawser" className="logo-fixed"></img>
-        </AniLink>
-        <Row className="mx-5 px-5">
-          <Col className="mx-3" xl={9} style={{ color: `var(--textNormal)` }}>
+          <Col xl={10} className="mr-5">
             <Bio />
           </Col>
         </Row>
 
-        <Row
-          style={{ margin: "auto", paddingBottom: "19vh" }}
-          className="px-5 mx-5"
-        >
+        <Row style={{ paddingBottom: "19vh" }} className="mx-md-5 px-md-5 ">
           {posts.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
             return (
-              <Col lg={5}>
+              <Col lg={5} xs={12} sm={12}>
                 <Card
                   key={node.fields.slug}
                   style={{
-                    margin: "20px 40px",
+                    margin: "20px 30px",
                     border: `none`,
                     borderRadius: `0px`,
                     background: `var(--bg)`,
@@ -131,44 +123,6 @@ class Blog extends React.Component {
           })}
         </Row>
 
-        {/* <Modal
-          onEntered={this.bgTransparent}
-          show={this.state.show}
-          animation={false}
-          onHide={this.handleClose}
-          className="modal-menu bg-transparent"
-          backdropClassName="transparent-opacity"
-        >
-          <Modal.Body
-            style={{
-              background: "var(--gradient-background)",
-              transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-              transition: `0.4s`,
-            }}
-          >
-            <Menu handleClose={this.handleClose} />
-
-            <div onClick={this.handleClose}>
-              <img
-                src={closeBTN}
-                alt="Close Button"
-                className="close-button"
-              ></img>
-            </div>
-          </Modal.Body>
-        </Modal> */}
-
-        {/* <div
-          onClick={this.handleShow}
-          style={{
-            background: `var(--menu-img)`,
-            transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-            transition: `0.4s`,
-            height: "30px",
-            width: "30px",
-          }}
-          className="menu-fixed"
-        ></div> */}
         <img
           src={footerIMG}
           style={{
