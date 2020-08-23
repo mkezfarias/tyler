@@ -1,7 +1,6 @@
 // Override default variables before the import
 @media (max-width: 576px) {
 
-
   .main-title {
     font-size: calc(23px + 8vw) !important;
     line-height: 1;
@@ -338,6 +337,14 @@ a.fancy-link:hover::before {
   position: fixed;
   top: 20vh;
 }
+
+div.tl-edges { 
+   width: 100%;
+   overflow-y: hidden !important;
+
+}
+
+  
 
 // Import Bootstrap and its default variables
 @import '~bootstrap/scss/bootstrap.scss';
