@@ -9,6 +9,7 @@ import "../styles/global.scss"
 import TransitionLink from "gatsby-plugin-transition-link"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import ThemeToggler from "gatsby-plugin-dark-mode/ThemeToggler"
+import MenuFixedIcon from "../components/MenuFixedIcon"
 
 class IndexPage extends React.Component {
   render() {
@@ -25,6 +26,7 @@ class IndexPage extends React.Component {
             `VP of People`,
           ]}
         />
+
         <div fluid className="container-static">
           <Row
             style={{
@@ -124,23 +126,6 @@ class IndexPage extends React.Component {
                 className="justify-content-end d-flex flex-column ml-md-auto align-items-end pr-3 pr-md-0 flex-md-row"
                 style={{ justifyContent: `space-evenly` }}
               >
-                {/* <Col
-                  xl={5}
-                  className="d-flex justify-items-end text-nowrap ml-md-5 pl-md-5"
-                >
-                  <a
-                    style={{
-                      color: "var(--textTitle)",
-                      transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-                      transition: `0.4s`,
-                    }}
-                    className="fancy-link  ml-"
-                    
-                  >
-                    
-                  </a>
-                  <span className="d-none d-md-inline pl-1">/ </span>
-                </Col> */}
                 <div className="d-flex line" style={{ flexBasis: `40%` }}>
                   <a
                     style={{
@@ -197,43 +182,6 @@ class IndexPage extends React.Component {
                   </a>
                   <span className="d-none d-md-inline pl-1">/ </span>
                 </div>
-                {/*                   
-                
-
-                <Col
-                  xl={5}
-                  className="d-flex justify-items-end text-nowrap ml-md-1"
-                >
-                  <a
-                    style={{
-                      color: "var(--textTitle)",
-                      transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-                      transition: `0.4s`,
-                    }}
-                    className="fancy-link ml-auto"
-                    
-                  >
-                    OkDork
-                  </a>
-                  <span className="d-none d-md-inline pl-1">/ </span>
-                </Col>
-                <Col
-                  xl={5}
-                  className="d-flex justify-items-end text-nowrap ml-md-auto"
-                >
-                  <a
-                    style={{
-                      color: "var(--textTitle)",
-                      transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-                      transition: `0.4s`,
-                    }}
-                    className="fancy-link ml-auto "
-                    
-                  >
-                    The Kings College
-                  </a>
-                  <span className="d-none d-md-inline pl-1">/ </span>
-                </Col> */}
               </Row>
             </Col>
           </Row>

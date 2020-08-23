@@ -45,7 +45,7 @@ class Calendly extends React.Component {
           keywords={[`blog`, `Tyler Vawser`, `Tvawser`, `react`]}
         />
         <LogoFixedMobile />
-        <Col xl={6} sm={11}>
+        <Col xl={6} sm={11} style={{ minHeight: `1120px` }}>
           <CalendlyEmbed account="tyler-apptegy" eventName="call-with-tyler" />
         </Col>
         <div className="sidebar-fixed pl-5 ">
@@ -55,13 +55,15 @@ class Calendly extends React.Component {
           >
             <Col
               xl={10}
-              style={{ fontSize: `20px`, zIndex: 0 }}
+              xs={11}
+              style={{ fontSize: `20px` }}
               className="wider wsans w-medium line-height-1 text-light h2 md-h1 w-semibold align-center m-auto m-md-4 pl-5 pt-4 text-right"
             >
               You can also check out my social media
             </Col>
             <Col
               xl={{ span: 8, offset: 2 }}
+              xs={11}
               className="d-flex  justify-content-between pt-3 pl-5 "
             >
               <a

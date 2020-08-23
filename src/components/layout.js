@@ -86,7 +86,7 @@ class Layout extends React.Component {
             zIndex: `300`,
           }}
           to="/full-menu"
-          className="menu-fixed-mobile d-none d-md-block"
+          className="menu-fixed d-block"
           cover
           bg="var(--gradient-background)"
           direction="right"
@@ -102,7 +102,18 @@ class Layout extends React.Component {
               width: "30px",
               zIndex: `300`,
             }}
-            className="d-none d-md-block"
+            className="d-block d-md-none menu-fixed"
+          ></div>
+          <div
+            style={{
+              background: `var(--menu-img)`,
+              transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+              transition: `0.4s`,
+              height: "30px",
+              width: "30px",
+              zIndex: `300`,
+            }}
+            className="d-md-block d-none"
           ></div>
         </AniLink>
       )
@@ -133,7 +144,7 @@ class Layout extends React.Component {
       menu = null
     } else {
       header = (
-        <Row>
+        <Row className="mx-md-2 mx-px-2 mx-1 px-1">
           <Col
             xl={12}
             style={{
@@ -145,13 +156,75 @@ class Layout extends React.Component {
               maxWidth: `100vw`,
               fontSize: `calc(20px + 2vw)`,
             }}
-            className="wider wsans w-medium pb-0 mb-0 line-height-1 mt-0 w-semibold "
+            className="wider wsans w-medium mx-md-5 mx-px-5 line-height-1 mt-0 w-semibold "
           >
             {title}
           </Col>
         </Row>
       )
-      menu = <MenuFixedIcon handleShow={this.handleShow} />
+      menu = (
+        <div
+          style={{
+            color: "var(--textTitle)",
+            transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+            transition: `0.6s`,
+            height: "30px",
+            width: "30px",
+            zIndex: `300`,
+          }}
+          to="/full-menu"
+          className="menu-fixed d-block"
+          cover
+          bg="var(--gradient-background)"
+          direction="right"
+          top="entry"
+          duration={1}
+        >
+          <AniLink
+            style={{
+              color: "var(--textTitle)",
+              transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+              transition: `0.6s`,
+              height: "30px",
+              width: "30px",
+              zIndex: `300`,
+            }}
+            to="/full-menu"
+            className="menu-fixed d-block"
+            cover
+            bg="var(--gradient-background)"
+            direction="right"
+            top="entry"
+            duration={1}
+          >
+            <div
+              style={{
+                background: `var(--menu-img)`,
+                transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+                transition: `0.4s`,
+                height: "30px",
+                width: "30px",
+                zIndex: `300`,
+              }}
+              className="d-block d-md-none menu-fixed"
+            ></div>
+          </AniLink>
+
+          <div onClick={this.handleShow}>
+            <div
+              style={{
+                background: `var(--menu-img)`,
+                transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+                transition: `0.4s`,
+                height: "30px",
+                width: "30px",
+                zIndex: `300`,
+              }}
+              className="d-md-block d-none"
+            ></div>
+          </div>
+        </div>
+      )
     }
     return (
       <Wrapper
@@ -201,7 +274,7 @@ class Layout extends React.Component {
           <header className="d-flex justify-content-between align-items-center mb-5 mt-md-5">
             <div onClick={this.handleShow}>{header}</div>
           </header>
-          <div className="menu-fixed">{menu}</div>
+          <div className="menu-fixed menu-fixed-mobile ">{menu}</div>
           <main
             style={{
               transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,

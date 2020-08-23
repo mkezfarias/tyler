@@ -37,26 +37,16 @@ class BlogPostTemplate extends React.Component {
           description={post.frontmatter.description || post.excerpt}
         />
         <LogoFixedMobile />
-        <AniLink
-          style={{
-            color: "var(--textTitle)",
-          }}
-          to="/"
-          className="fancy-link"
-          cover
-          bg="var(--gradient-background)"
-          direction="left"
-          top="entry"
-          duration={1}
-          entryOffset={800}
-        >
-          <img src={darkLogo} alt="Tyler Vawser" className="logo-fixed"></img>
-        </AniLink>
+
         <Container
-          className="px-5"
+          className="px-md-5 pr-5 pt-4"
           style={{ marginTop: `-50px`, marginBottom: `100px` }}
         >
-          <Col xl={8} className="m-auto pb-5 mb-5">
+          <Col
+            xl={8}
+            xs={12}
+            className="m-auto pr-3 mr-3 m-md-auto pb-md-5 mb-md-5"
+          >
             <h1
               style={{
                 color: "var(--textTitle)",

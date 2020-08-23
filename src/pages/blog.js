@@ -52,10 +52,10 @@ class Blog extends React.Component {
         <LogoFixedMobile />
 
         <Row
-          className="mx-md-5 mx-px-5 px-3 mx-3"
+          className="mx-md-5 mx-px-5 px-0 mx-2"
           style={{ color: `var(--textNormal)` }}
         >
-          <Col xl={10} className="mr-5">
+          <Col xl={10} className="mx-md-5 px-md-4 mr-4 ">
             <Bio />
           </Col>
         </Row>
@@ -68,7 +68,7 @@ class Blog extends React.Component {
                 <Card
                   key={node.fields.slug}
                   style={{
-                    margin: "20px 30px",
+                    margin: "20px 30px 20px 10px",
                     border: `none`,
                     borderRadius: `0px`,
                     background: `var(--bg)`,
