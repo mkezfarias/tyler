@@ -172,13 +172,7 @@ class Layout extends React.Component {
             width: "30px",
             zIndex: `300`,
           }}
-          to="/full-menu"
-          className="menu-fixed d-block"
-          cover
-          bg="var(--gradient-background)"
-          direction="right"
-          top="entry"
-          duration={1}
+          className="menu-fixed"
         >
           <AniLink
             style={{
@@ -210,19 +204,18 @@ class Layout extends React.Component {
             ></div>
           </AniLink>
 
-          <div onClick={this.handleShow}>
-            <div
-              style={{
-                background: `var(--menu-img)`,
-                transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-                transition: `0.4s`,
-                height: "30px",
-                width: "30px",
-                zIndex: `300`,
-              }}
-              className="d-md-block d-none"
-            ></div>
-          </div>
+          <div
+            style={{
+              background: `var(--menu-img)`,
+              transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+              transition: `0.4s`,
+              height: "30px",
+              width: "30px",
+              zIndex: `300`,
+            }}
+            className="d-md-block d-none menu-fixed"
+            onClick={this.handleShow}
+          ></div>
         </div>
       )
     }
