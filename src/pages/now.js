@@ -25,6 +25,7 @@ import footerIMG from "../images/footer.png"
 import footerIMG2 from "../images/footer@2x.png"
 import Menu from "../components/menu"
 import LogoFixedMobile from "../components/LogoFixedMobile"
+import FooterBlue from "../components/Footer"
 
 const nowContent = {
   title: "What Tyler is doing now",
@@ -171,7 +172,7 @@ class Now extends React.Component {
         </div>
         <Container fluid>
           <Row className="d-flex justify-content-center pb-5">
-            <Col xl={{ span: 7 }} className="mb-5 pb-5 pt-5">
+            <Col xl={{ span: 7 }} xs={10} sm={10} className="mb-5 pb-5 pt-5">
               <p
                 style={{
                   color: "var(--textNormal)",
@@ -298,7 +299,7 @@ class Now extends React.Component {
             margin: `6vh -10vw 0 -10vw`,
           }}
         >
-          <Row className="d-flex justify-content-center pb-5">
+          <Row className="d-flex justify-content-center pb-5 pt-4">
             <Col
               xs={{ span: 9 }}
               sm={{ span: 9 }}
@@ -352,7 +353,7 @@ class Now extends React.Component {
                 </span>
               </Row>
               <Row className="d-flex ml-2 ml-md-5 w-100 w-md-50">
-                <p className=" text-light  w-semibold mb-0 py-2 w-md-50">
+                <p className=" text-light  w-semibold mb-0 py-2">
                   {letsTalk.content}
                 </p>
               </Row>
@@ -368,9 +369,7 @@ class Now extends React.Component {
             </Col>
           </Row>
         </Container>
-
-        <img
-          src={footerIMG}
+        <FooterBlue
           style={{
             position: "absolute",
             bottom: `0`,
@@ -378,7 +377,7 @@ class Now extends React.Component {
             left: `0`,
             margin: `0 0 0 0`,
           }}
-        ></img>
+        />
       </Layout>
     )
   }
