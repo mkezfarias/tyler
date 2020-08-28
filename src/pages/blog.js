@@ -47,19 +47,21 @@ class Blog extends React.Component {
     const posts = data.allMdx.edges
 
     return (
-      <Layout
-        location={this.props.location}
-        title={siteTitle}
-        style={{ color: `var(--textNormal)`, margin: `50px !important` }}
-      >
+      <Layout location={this.props.location} title={siteTitle}>
         <SEO title="All posts" />
         <LogoFixedMobile />
 
         <Row
-          className="mx-md-5 mx-px-5 px-3 mx-3"
+          className="mx-md-5 mx-px-5 px-0 mx-2"
           style={{ color: `var(--textNormal)` }}
         >
-          <Col xl={10} className="mr-5">
+          <Col
+            sm={10}
+            md={10}
+            lg={10}
+            xl={10}
+            className="mx-md-5 px-md-4 mr-4 "
+          >
             <Bio />
           </Col>
         </Row>
@@ -68,11 +70,11 @@ class Blog extends React.Component {
           {posts.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
             return (
-              <Col lg={5} xs={12} sm={12}>
+              <Col lg={5} xs={12} sm={12} md={12}>
                 <Card
                   key={node.fields.slug}
                   style={{
-                    margin: "20px 30px",
+                    margin: "20px 30px 20px 10px",
                     border: `none`,
                     borderRadius: `0px`,
                     background: `var(--bg)`,

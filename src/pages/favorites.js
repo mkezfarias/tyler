@@ -224,7 +224,7 @@ class Favorites extends React.Component {
                   margin: `auto`,
                   maxWidth: `90vw`,
                   padding: `10vh 10vw 0 10vw`,
-                  fontSize: `calc(10px + .7vw)`,
+                  fontSize: `calc(14px + .7vw)`,
                 }}
                 className="roboto w-medium"
               >
@@ -257,8 +257,15 @@ class Favorites extends React.Component {
               margin: `6vh -10vw 0 -10vw`,
             }}
           >
-            <Row className="d-flex justify-content-center   pb-5">
-              <Col xl={{ span: 6, offset: 1 }} className="mb-5 pb-5">
+            <Row className="d-flex justify-content-center pb-5">
+              <Col
+                xs={{ span: 9 }}
+                sm={{ span: 9 }}
+                md={7}
+                lg={7}
+                xl={{ span: 6, offset: 1 }}
+                className="mb-5 pb-5"
+              >
                 {favoritesArray.map(favoriteSet => {
                   return (
                     <>
@@ -273,13 +280,16 @@ class Favorites extends React.Component {
                       </Row>
                       {favoriteSet.items.map(item => {
                         return (
-                          <Row className="d-flex ml-5  w-75">
+                          <Row className="d-flex ml-2 ml-md-5 w-100 w-md-75">
                             <Link to={item.link} target="_blank">
-                              <p className=" text-light  w-semibold mb-0">
+                              <p className=" text-light  w-semibold mb-0 ">
                                 {" "}
                                 {item.subTitle}{" "}
                               </p>
-                              <p className=" text-light p-text">
+                              <p
+                                className=" text-light p-text w-100 w-md-75"
+                                style={{ fontSize: `14px` }}
+                              >
                                 {item.subText}
                               </p>
                             </Link>

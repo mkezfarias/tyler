@@ -27,6 +27,7 @@ import twitterIMG from "../images/twitter.svg"
 import mailIMG from "../images/mail.svg"
 import linkedinIMG from "../images/linkedin.svg"
 import LogoFixedMobile from "../components/LogoFixedMobile"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 class Calendly extends React.Component {
   constructor(props) {
@@ -45,22 +46,53 @@ class Calendly extends React.Component {
           keywords={[`blog`, `Tyler Vawser`, `Tvawser`, `react`]}
         />
         <LogoFixedMobile />
-        <Col xl={6} sm={11}>
+
+        <AniLink
+          style={{
+            color: "var(--textTitle)",
+          }}
+          to="/"
+          cover
+          bg="var(--gradient-background)"
+          direction="right"
+          top="entry"
+          duration={1}
+          entryOffset={800}
+          className="d-none d-sm-block"
+        >
+          {" "}
+          <img
+            src={whiteLogo}
+            onClick={this.handleClose}
+            alt="Tyler Vawser"
+            className="logo-fixed"
+            style={{ zIndex: `1` }}
+          ></img>
+        </AniLink>
+        <Col xl={7} sm={12} md={8} lg={8} style={{ minHeight: `1120px` }}>
           <CalendlyEmbed account="tyler-apptegy" eventName="call-with-tyler" />
         </Col>
         <div className="sidebar-fixed pl-5 ">
           <Row
-            className="mx-auto px-auto"
+            className="mx-auto px-auto mr-sm-3 pr-sm-3"
             style={{ position: `fixed`, bottom: `10px` }}
           >
             <Col
+              xs={11}
+              sm={11}
+              md={10}
+              lg={10}
               xl={10}
-              style={{ fontSize: `20px`, zIndex: 0 }}
-              className="wider wsans w-medium line-height-1 text-light h2 md-h1 w-semibold align-center m-auto m-md-4 pl-5 pt-4 text-right"
+              style={{ fontSize: `20px` }}
+              className="wider wsans w-medium line-height-1 text-light h2 sm-h1 w-semibold align-center m-auto m-sm-4 pl-5 pt-4 text-right social-text"
             >
               You can also check out my social media
             </Col>
             <Col
+              xs={11}
+              sm={11}
+              md={12}
+              lg={12}
               xl={{ span: 8, offset: 2 }}
               className="d-flex  justify-content-between pt-3 pl-5 "
             >

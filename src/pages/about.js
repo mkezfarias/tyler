@@ -75,7 +75,7 @@ class About extends React.Component {
                 margin: `auto`,
                 maxWidth: `90vw`,
                 padding: `10vh 10vw 0 10vw`,
-                fontSize: `calc(10px + .7vw)`,
+                fontSize: `calc(14px + .7vw)`,
               }}
               className="roboto w-medium"
             >
@@ -92,7 +92,7 @@ class About extends React.Component {
                 margin: `auto`,
                 maxWidth: `90vw`,
                 padding: `0 10vw 0 10vw`,
-                fontSize: `calc(10px + .7vw)`,
+                fontSize: `calc(11px + .7vw)`,
               }}
               className="roboto w-medium"
             >
@@ -102,7 +102,14 @@ class About extends React.Component {
         </div>
         <Container fluid style={{}}>
           <Row className="d-flex justify-content-center pb-5">
-            <Col xl={{ span: 7 }} className="mb-5 pb-5 pt-5">
+            <Col
+              xl={7}
+              xs={10}
+              sm={10}
+              md={10}
+              lg={10}
+              className="mb-5 pb-5 pt-5 px-2"
+            >
               <p
                 style={{
                   color: "var(--textNormal)",

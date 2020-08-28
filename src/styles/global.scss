@@ -30,34 +30,33 @@
     width: 100px !important;
     height: 100px !important;
     z-index: 10;
-
   }
 
-  .menu-fixed-mobile {
-    position: absolute !important;
-    top: 25px !important;
-    right: -40px !important;
-    width: 100px !important;
-    height: 100px !important;
-    z-index: 10;
+  .menu-fixed.menu-fixed {
+    position: fixed !important;
+    right: 4vw !important; 
+    top: 4vh !important;
+    z-index: 10 !important;
   }
+}
 
-  .calendly-widget, .calendly-inline-widget {
-    margin-top: 0 !important;
-   }
-  
-   .sidebar-fixed.sidebar-fixed.sidebar-fixed {
+@media (max-width: 767px) {
+
+  .sidebar-fixed.sidebar-fixed.sidebar-fixed {
     position: absolute !important;
     right: 0 !important;
     margin: 0 !important;
     bottom: 0 !important;
-    top: calc(100% - 25vh) !important;
-    height: 25vh !important;
+    top: calc(100% - 30vh) !important;
+    height: 30vh !important;
     width: 100vw !important;
     background: var(--gradient-background) !important;
   }
-}
+  .calendly-widget, .calendly-inline-widget {
+    margin-top: 0 !important;
+   }
 
+}
 :root {
   --day-gray: #666461;
   --night-gray: #FCFCFC;
@@ -114,7 +113,7 @@ body.dark {
   --menu-img: var(--nightMenu-bg);
   --gradient-background: linear-gradient(180deg, #063C84 0%, #041D3B 100%) 0% 0% no-repeat padding-box;
   --footer: #041D3B;
-  --card-bg: 7px 7px 14px #1b1b1d, -7px -7px 14px #232327 ;
+  --card-bg: 7px 7px 14px #1b1b1dc9, -7px -7px 14px #232327 ;
   p, h2, h3, h4, h5, h6, li, blockquote {
     color: var(--night-black);
   }
@@ -245,12 +244,6 @@ a.fancy-link:hover::before {
   z-index: 10;
 }
 
-.tl-edges { 
-  width: 100% !important;
-  overflow: unset;
-  overflow-y: hidden;
-}
-
 .sidebar-fixed {
   position: absolute !important;
   right: 0 !important;
@@ -344,6 +337,11 @@ a.fancy-link:hover::before {
   top: 20vh;
 }
 
+div.tl-edges { 
+   width: 100%;
+   overflow-y: hidden !important;
+
+}
 
   
 
