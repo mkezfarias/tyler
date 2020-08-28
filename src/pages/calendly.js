@@ -100,12 +100,22 @@ class Calendly extends React.Component {
                 href="mailto:tvawser@gmail.com?subject=Saw%20your%20website%20lets%20chat"
                 className="d-flex align-items-end justify-content-between"
               >
-                <img
-                  src={twitterIMG}
-                  alt="Link to Tyler's twitter"
-                  className="d-flex align-self-end"
-                />
-              </a>
+
+                <Col xl={12}>Tyler is on social media.</Col>
+                <Col
+                  xl={{ span: 8, offset: 3 }}
+                  className="d-flex  justify-content-between pt-3 "
+                >
+                  <a
+                    href="https://twitter.com/Tvaw"
+                    className="d-flex align-items-end justify-content-between"
+                  >
+                    <img
+                      src={twitterIMG}
+                      alt="Link to Tyler's twitter"
+                      className="d-flex align-self-end"
+                    />
+                  </a>
 
               <a href="https://www.linkedin.com/in/tylervawser/">
                 <img
@@ -115,13 +125,26 @@ class Calendly extends React.Component {
                 />
               </a>
 
-              <a href="https://twitter.com/Tvaw">
-                <img
-                  src={mailIMG}
-                  alt="Link to Tyler's twitter"
-                  className="d-flex align-self-end"
-                />
-              </a>
+
+                  <a href="mailto:tvawser@gmail.com?subject=Saw%20your%20website%20lets%20chat">
+                    <img
+                      src={mailIMG}
+                      alt="Link to Tyler's email"
+                      className="d-flex align-self-end"
+                    />
+                  </a>
+                </Col>
+              </Row>
+              <Row
+                style={{
+                  padding: `6vw`,
+                  marginBottom: `20vh`,
+                  textAlign: `end`,
+                  position: `fixed`,
+                  bottom: `20px`,
+                }}
+              ></Row>
+
             </Col>
           </Row>
         </div>
