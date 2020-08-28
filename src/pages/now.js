@@ -25,60 +25,75 @@ import footerIMG from "../images/footer.png"
 import footerIMG2 from "../images/footer@2x.png"
 import Menu from "../components/menu"
 import LogoFixedMobile from "../components/LogoFixedMobile"
+import FooterBlue from "../components/Footer"
 
 const nowContent = {
   title: "What Tyler is doing now",
 }
 
-const bigNow = [
-  "1. Living in Little Rock, Arkansas",
-  "2. Building teams at Apptegy",
-  "3. Hiring RoR & Vue engineers in Little Rock and Monterrey",
-  "4. Exploring digital minimalism & classical piano",
-  "5. Keeping up with 4 kids",
-]
-
-const onMyMind = [
-  "How to use my phone for 1 hour or less a day",
-  "Finding the best music to focus & read",
-  "Johatsu—people that disappear",
-  "Consistent actions create enourmous results",
-  "How I can act, think, and become fast-er",
-]
-
-const onMyMindLinks = [
+const favoritesArray = [
   {
-    link: "https://www.calnewport.com/books/digital-minimalism/",
-    text: "Digital Minimalism by Cal Newport",
-    type: "(book)",
+    title: "What I am doing now:",
+    items: [
+      "1. Living in Little Rock, Arkansas",
+      "2. Building teams at Apptegy",
+      "3. Hiring RoR & Vue engineers in Little Rock and Monterrey",
+      "4. Exploring digital minimalism & classical piano",
+      "5. Keeping up with 4 kids",
+    ],
   },
   {
-    link:
-      "https://open.spotify.com/playlist/7wgD1FW1Pp3LTp9di8YHBB?si=JZwsWRKMQm-knYVxl9fIKQ",
-    text: "Minimal piano",
-    type: "(playlist)",
-  },
-  {
-    link:
-      "https://readjapaneseliterature.com/2020/07/24/manazuru-by-hiromi-kawakami-and-a-man-by-keiichiro-hirano/",
-    text: "Manazura by Hiromi Kawakami",
-    type: "(book)",
-  },
-  {
-    link: "https://jamesclear.com/atomic-habits",
-    text: "Atomic Habits by James Clear",
-    type: "(book)",
-  },
-  {
-    link: "https://firstround.com/review/speed-as-a-habit/",
-    text: "Speed as a Habit",
-    type: "(article)",
+    title: "What is on my mind:",
+    items: [
+      "How to use my phone for 1 hour or less a day",
+      "Finding the best music to focus & read",
+      "Johatsu—people that disappear",
+      "Consistent actions create enourmous results",
+      "How I can act, think, and become fast-er",
+    ],
   },
 ]
 
-const nowUpdate = [
-  "I would like to hear your story and know who you are and what you’re working on. The easiest way to connect is by picking a time here that works for you.",
-]
+const onMyMindLinks = {
+  title: "Also on my mind (Links)",
+  items: [
+    {
+      link: "https://www.calnewport.com/books/digital-minimalism/",
+      text: "Digital Minimalism by Cal Newport",
+      type: "(book)",
+    },
+    {
+      link:
+        "https://open.spotify.com/playlist/7wgD1FW1Pp3LTp9di8YHBB?si=JZwsWRKMQm-knYVxl9fIKQ",
+      text: "Minimal piano",
+      type: "(playlist)",
+    },
+    {
+      link:
+        "https://readjapaneseliterature.com/2020/07/24/manazuru-by-hiromi-kawakami-and-a-man-by-keiichiro-hirano/",
+      text: "Manazura by Hiromi Kawakami",
+      type: "(book)",
+    },
+    {
+      link: "https://jamesclear.com/atomic-habits",
+      text: "Atomic Habits by James Clear",
+      type: "(book)",
+    },
+    {
+      link: "https://firstround.com/review/speed-as-a-habit/",
+      text: "Speed as a Habit",
+      type: "(article)",
+    },
+  ],
+}
+
+const letsTalk = {
+  title: "Let's talk:",
+  content:
+    "I would like to hear your story and know who you are and what you’re working on. The easiest way to connect is by picking a time here that works for you.",
+  linkText: "Get in touch.",
+}
+
 class Now extends React.Component {
   constructor(props) {
     super(props)
@@ -157,7 +172,7 @@ class Now extends React.Component {
         </div>
         <Container fluid>
           <Row className="d-flex justify-content-center pb-5">
-            <Col xl={{ span: 7 }} className="mb-5 pb-5 pt-5">
+            <Col xl={{ span: 7 }} xs={10} sm={10} className="mb-5 pb-5 pt-5">
               <p
                 style={{
                   color: "var(--textNormal)",
@@ -249,6 +264,7 @@ class Now extends React.Component {
                     href="https://nownownow.com/about"
                     style={{ color: `var(--skyblue3)` }}
                   >
+                    {" "}
                     Derek Sivers
                   </a>
                   . It is similar to an about page, but it tells you what I am
@@ -274,94 +290,86 @@ class Now extends React.Component {
               </p>
             </Col>
           </Row>
-          <Row
-            style={{
-              background: "var(--gradient-background)",
-              width: `110vw`,
-              margin: `0 -10vw 0 -10vw`,
-            }}
-          >
+        </Container>
+        <Container
+          fluid
+          style={{
+            background: "var(--gradient-background)",
+            width: `110vw`,
+            margin: `6vh -10vw 0 -10vw`,
+          }}
+        >
+          <Row className="d-flex justify-content-center pb-5 pt-4">
             <Col
-              xl={11}
-              style={{
-                color: "var(--textNormal)",
-                transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-                transition: `0.4s`,
-                margin: `auto`,
-                maxWidth: `80vw`,
-                padding: `10vh 10vw 30vh 10vw`,
-                fontSize: `calc(20px + .5vw)`,
-              }}
-              className="wider wsans w-semibold mb-0 line-height-1 mt-0 w-semibold "
+              xs={{ span: 9 }}
+              sm={{ span: 9 }}
+              md={7}
+              lg={7}
+              xl={{ span: 6, offset: 1 }}
+              className="mb-5 pb-5"
             >
-              <Row className="text-light mb-3">What I am doing now:</Row>
-
-              <Row className="mx-auto">
-                <Col xl={10} className="m-auto mb-3 pb-3">
-                  {bigNow.map(big => (
-                    <Row className=" w-regular roboto text-light h5 wider ml-4">
-                      {big}
+              {favoritesArray.map(favoriteSet => {
+                return (
+                  <>
+                    <Row className="d-flex align-items-baseline">
+                      <span className="px-2 mt-4 wsans w-regular fav-title">
+                        {favoriteSet.title}
+                      </span>
                     </Row>
-                  ))}
-                </Col>
+                    {favoriteSet.items.map(item => {
+                      return (
+                        <Row className="d-flex ml-2 ml-md-5 w-100 w-md-75">
+                          <p className="py-1 fancy-link text-light  w-semibold mb-0 ">
+                            {item}
+                          </p>
+                        </Row>
+                      )
+                    })}
+                  </>
+                )
+              })}
+              <Row className="d-flex align-items-baseline">
+                <span className="px-2 mt-4 wsans w-regular fav-title">
+                  {onMyMindLinks.title}
+                </span>
               </Row>
-              <hr
-                className="pb-1 mt-5 b-none"
-                style={{ backgroundColor: `#79BCFF`, transform: `scaleX(1.3)` }}
-              />
-
-              <Row className="text-light my-4 pt-5 mb-3">
-                What is on my mind:
-              </Row>
-              <Col xl={12} className="d-flex justify-content-around">
-                <div className=" w-regular roboto text-light h5 wider">
-                  {onMyMind.map(mind => (
-                    <Row className="text-left py-1">{mind}</Row>
-                  ))}
-                </div>
-                <div className=" w-regular roboto text-light h5 wider ml-4">
-                  {onMyMindLinks.map(mind => (
-                    <Row className="text-left">
-                      {" "}
-                      <a
-                        style={{ color: `#add5ff` }}
-                        className="py-1 fancy-link"
-                        href={mind.link}
-                      >
-                        {mind.text} {mind.type}
-                      </a>
-                    </Row>
-                  ))}
-                </div>
-              </Col>
-
-              <hr
-                className="pb-1 mt-5 b-none"
-                style={{ backgroundColor: `#79BCFF`, transform: `scaleX(1.3)` }}
-              />
-              <Row className="text-light py-1 my-4 py-5 ">
-                <Col xl={5}>Let's talk:</Col>
-                <Col xl={{ span: 6, offset: 4 }}>
-                  <Row className=" w-regular roboto text-light h5 wider">
-                    <Row className="text-left pt-4">{nowUpdate} </Row>
-                    <Row className="text-left pt-4">
-                      <Link
-                        style={{ color: `#add5ff` }}
-                        className="fancy-link"
-                        to="/calendly"
-                      >
-                        Get in touch.
-                      </Link>
-                    </Row>
+              {onMyMindLinks.items.map(mind => (
+                <Row className="text-left pl-3">
+                  {" "}
+                  <Row className="d-flex ml-2 ml-md-5 w-100 w-md-75">
+                    <a
+                      style={{ color: `#add5ff` }}
+                      className="py-1 fancy-link text-light  w-semibold mb-0 "
+                      href={mind.link}
+                    >
+                      {mind.text} {mind.type}
+                    </a>
                   </Row>
-                </Col>
+                </Row>
+              ))}
+              <Row className="d-flex align-items-baseline">
+                <span className="px-2 mt-4 wsans w-regular fav-title">
+                  {letsTalk.title}
+                </span>
+              </Row>
+              <Row className="d-flex ml-2 ml-md-5 w-100 w-md-50">
+                <p className=" text-light  w-semibold mb-0 py-2">
+                  {letsTalk.content}
+                </p>
+              </Row>
+              <Row className="ml-md-0 ml-0">
+                <Link
+                  style={{ color: `#add5ff` }}
+                  className="fancy-link d-flex ml-md-5 py-3"
+                  to="/calendly"
+                >
+                  {letsTalk.linkText}
+                </Link>
               </Row>
             </Col>
           </Row>
         </Container>
-
-        <img
-          src={footerIMG}
+        <FooterBlue
           style={{
             position: "absolute",
             bottom: `0`,
@@ -369,7 +377,7 @@ class Now extends React.Component {
             left: `0`,
             margin: `0 0 0 0`,
           }}
-        ></img>
+        />
       </Layout>
     )
   }
