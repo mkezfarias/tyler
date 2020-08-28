@@ -21,6 +21,7 @@ import dayButton from "../images/daymode.svg"
 import nightButton from "../images/night-button.svg"
 import closeBTN from "../images/x.svg"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
+import MenuFixedIcon from "./MenuFixedIcon"
 
 class Layout extends React.Component {
   constructor(props) {
@@ -38,6 +39,8 @@ class Layout extends React.Component {
     const { location, title, children } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
     const blogPath = `${__PATH_PREFIX__}/blog/`
+    const fullMenuPath = `${__PATH_PREFIX__}/full-menu`
+    const fullMenuPath2 = `${__PATH_PREFIX__}/full-menu/`
     let header
     let menu
 
@@ -59,9 +62,9 @@ class Layout extends React.Component {
                   `growing <a class="fancy-link " href="https://www.apptegy.com/">Apptegy</a>.`,
                   `reading <a class="fancy-link " href="https://readjapaneseliterature.com/2020/07/24/manazuru-by-hiromi-kawakami-and-a-man-by-keiichiro-hirano/">Manazura</a>.`,
                   "on a Zoom call.",
-                  "hiring thoughtful software engineers.",
+                  "answering emails.",
                   "meeting interesting people.",
-                  "exploring digital minimalism.",
+                  "is going for a walk.",
                   "drinking coffee.",
                   `listening to <a class="fancy-link " href="https://open.spotify.com/playlist/7wgD1FW1Pp3LTp9di8YHBB?si=JZwsWRKMQm-knYVxl9fIKQ">minimal piano</a>.`,
                 ],
@@ -78,12 +81,15 @@ class Layout extends React.Component {
             color: "var(--textTitle)",
             transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
             transition: `0.6s`,
+            height: "30px",
+            width: "30px",
+            zIndex: `300`,
           }}
           to="/full-menu"
-          className="fancy-link"
+          className="menu-fixed-mobile d-none d-md-block"
           cover
           bg="var(--gradient-background)"
-          direction="left"
+          direction="right"
           top="entry"
           duration={1}
         >
@@ -94,11 +100,16 @@ class Layout extends React.Component {
               transition: `0.4s`,
               height: "30px",
               width: "30px",
+              zIndex: `300`,
             }}
+            className="d-none d-md-block"
           ></div>
         </AniLink>
       )
-    } else {
+    } else if (
+      location.pathname === fullMenuPath ||
+      location.pathname === fullMenuPath2
+    ) {
       header = (
         <Row>
           <Col
@@ -119,20 +130,28 @@ class Layout extends React.Component {
           </Col>
         </Row>
       )
-      menu = (
-        <div
-          onClick={this.handleShow}
-          style={{
-            background: `var(--menu-img)`,
-            transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-            transition: `0.4s`,
-            height: "30px",
-            width: "30px",
-            zIndex: `300`,
-          }}
-          className="menu-fixed"
-        ></div>
+      menu = null
+    } else {
+      header = (
+        <Row>
+          <Col
+            xl={12}
+            style={{
+              color: "var(--textNormal)",
+              transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+              transition: `0.4s`,
+              textAlign: `center`,
+              margin: `auto`,
+              maxWidth: `100vw`,
+              fontSize: `calc(20px + 2vw)`,
+            }}
+            className="wider wsans w-medium pb-0 mb-0 line-height-1 mt-0 w-semibold "
+          >
+            {title}
+          </Col>
+        </Row>
       )
+      menu = <MenuFixedIcon handleShow={this.handleShow} />
     }
     return (
       <Wrapper
@@ -143,16 +162,43 @@ class Layout extends React.Component {
           minHeight: `100vh`,
         }}
       >
+        <ThemeToggler>
+          {({ theme, toggleTheme }) => {
+            let hours = parseInt(
+              new Date().toLocaleTimeString("en-GB").slice(0, 2)
+            )
+
+            if (hours >= 7 && hours < 17) {
+              hours = "light"
+              typeof window !== "undefined" &&
+                window.localStorage.setItem("theme", "light")
+            } else {
+              hours = "dark"
+              typeof window !== "undefined" &&
+                window.localStorage.setItem("theme", "dark")
+            }
+
+            return (
+              <label>
+                <input
+                  hidden
+                  type="checkbox"
+                  checked={hours === "dark" ? true : false}
+                />{" "}
+              </label>
+            )
+          }}
+        </ThemeToggler>
         <div
           style={{
             marginLeft: `auto`,
             marginRight: `auto`,
             maxWidth: `1400px`,
             backgroundColor: `var(--bg)`,
-            padding: `${rhythm(5.5)} ${rhythm(1.5)} 0 ${rhythm(1.5)} `,
           }}
+          className="pt-5 pl-1 pl-3 pl-1 mt-4 mt-md-5 mr-md-4 mb-md-1 ml-md-4"
         >
-          <header className="d-flex justify-content-between align-items-center mb-5">
+          <header className="d-flex justify-content-between align-items-center mb-5 mt-md-5">
             <div onClick={this.handleShow}>{header}</div>
           </header>
           <div className="menu-fixed">{menu}</div>

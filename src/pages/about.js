@@ -24,6 +24,7 @@ import videosIcon from "../images/favorite videos icon.svg"
 import footerIMG from "../images/footer.png"
 import footerIMG2 from "../images/footer@2x.png"
 import Menu from "../components/menu"
+import LogoFixedMobile from "../components/LogoFixedMobile"
 
 class About extends React.Component {
   constructor(props) {
@@ -44,6 +45,7 @@ class About extends React.Component {
           title="Tyler Vawser"
           keywords={[`blog`, `Tyler Vawser`, `Tvawser`, `react`]}
         />
+        <LogoFixedMobile />
         <div>
           <Row>
             <Col
@@ -485,57 +487,6 @@ class About extends React.Component {
             </Col>
           </Row>
         </Container>
-        {/* <Modal
-          onEntered={this.bgTransparent}
-          show={this.state.show}
-          animation={false}
-          onHide={this.handleClose}
-          className="modal-menu bg-transparent"
-          backdropClassName="transparent-opacity"
-        >
-          <Modal.Body
-            style={{
-              background: "var(--gradient-background)",
-              transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-              transition: `0.4s`,
-            }}
-          >
-            <Menu handleClose={this.handleClose} />
-            <div onClick={this.handleClose}>
-              <img
-                src={closeBTN}
-                alt="Close Button"
-                className="close-button"
-              ></img>
-            </div>
-          </Modal.Body>
-        </Modal> */}
-        <AniLink
-          style={{
-            color: "var(--textTitle)",
-          }}
-          cover
-          bg="var(--gradient-background)"
-          direction="left"
-          top="entry"
-          duration={1}
-          entryOffset={800}
-          className="text-light roboto w-regular h2 my-3 fancy-link"
-          to="/"
-        >
-          <img src={darkLogo} alt="Tyler Vawser" className="logo-fixed"></img>
-        </AniLink>
-        {/* <div
-          onClick={this.handleShow}
-          style={{
-            background: `var(--menu-img)`,
-            transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-            transition: `0.4s`,
-            height: "30px",
-            width: "30px",
-          }}
-          className="menu-fixed"
-        ></div> */}
         <img
           src={footerIMG}
           style={{

@@ -1,6 +1,9 @@
 import React from "react"
 
 class CalendlyEmbed extends React.Component {
+  constructor(props) {
+    super(props)
+  }
   calendlyScriptSrc = "https://assets.calendly.com/assets/external/widget.js"
   buildCalendlyUrl = (account, eventName) =>
     `https://calendly.com/${account}/${eventName}`
@@ -20,11 +23,11 @@ class CalendlyEmbed extends React.Component {
   render() {
     const { account, eventName } = this.props
     return (
-      <div id="schedule_form" style={{ backgroundColor: "var(--bg)" }}>
+      <div id="schedule_form">
         <div
           className="calendly-inline-widget"
           data-url={this.buildCalendlyUrl(account, eventName)}
-          style={{ minWidth: "480px", height: "1100px" }}
+          style={{ minWidth: "280px", height: "1100px" }}
         />
       </div>
     )

@@ -9,6 +9,8 @@ import "../styles/global.scss"
 import TransitionLink from "gatsby-plugin-transition-link"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import ThemeToggler from "gatsby-plugin-dark-mode/ThemeToggler"
+import MenuFixedIcon from "../components/MenuFixedIcon"
+import LogoFixedMobile from "../components/LogoFixedMobile"
 
 class IndexPage extends React.Component {
   render() {
@@ -25,199 +27,203 @@ class IndexPage extends React.Component {
             `VP of People`,
           ]}
         />
-        <ThemeToggler>
-          {({ theme, toggleTheme }) => {
-            let hours = parseInt(
-              new Date().toLocaleTimeString("en-GB").slice(0, 2)
-            )
-
-            if (hours >= 7 && hours < 17) {
-              hours = "light"
-              typeof window !== "undefined" &&
-                window.localStorage.setItem("theme", "light")
-            } else {
-              hours = "dark"
-              typeof window !== "undefined" &&
-                window.localStorage.setItem("theme", "dark")
-            }
-
-            return (
-              <label>
-                <input
-                  hidden
-                  type="checkbox"
-                  checked={hours === "dark" ? true : false}
-                />{" "}
-              </label>
-            )
-          }}
-        </ThemeToggler>
-        <Row
-          style={{
-            color: "var(--textNormal)",
-            transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-            transition: `0.4s`,
-          }}
-          className="wider ml-3 wsans w-medium h2 pt-3 pb-0 mb-0 line-height-1"
-        >
-          Let’s talk.
-        </Row>
-        <Row
-          style={{
-            color: "var(--textTitle)",
-            transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-            transition: `0.4s`,
-          }}
-          className="ml-3 roboto w-regular h4 pt-0 mt-0 line-height-1"
-        >
-          <AniLink
+        <LogoFixedMobile noDisplay={"d-none"} />
+        <div fluid className="container-static">
+          <Row
+            style={{
+              color: "var(--textNormal)",
+              transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+              transition: `0.4s`,
+            }}
+            className="wider ml-3 wsans w-medium h1 md-h2 pt-md-3 pb-0 mb-0 line-height-1"
+          >
+            Let’s talk.
+          </Row>
+          <Row
             style={{
               color: "var(--textTitle)",
               transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
               transition: `0.4s`,
             }}
-            className="fancy-link"
-            cover
-            bg="#663399"
-            direction="left"
-            top="exit"
-            to="calendly"
+            className="ml-3 roboto w-regular h2 md-h4 pt-0 mt-0 line-height-1"
           >
-            Set up a call
-          </AniLink>
-        </Row>
-        <Row
-          style={{
-            color: "var(--textTitle)",
-            transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-            transition: `0.4s`,
-          }}
-          className="ml-0 mr-5 pr-5 roboto w-regular h6 d-flex justify-content-between flex-md-nowrap w-100 align-items-end mt-5 pt-5"
-        >
-          <Col lg={3} md={2}>
-            <a
+            <AniLink
               style={{
                 color: "var(--textTitle)",
                 transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
                 transition: `0.4s`,
               }}
-              className="fancy-link "
-              href="https://twitter.com/tvaw"
+              className="fancy-link mb-0 pb-0"
+              cover
+              bg="#663399"
+              direction="left"
+              top="exit"
+              to="calendly"
             >
-              Twitter
-            </a>{" "}
-            /{" "}
-            <a
-              style={{
-                color: "var(--textTitle)",
-                transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-                transition: `0.4s`,
-              }}
-              className="fancy-link "
-              href="mailto:tvawser@gmail.com?subject=Saw%20your%20website%20lets%20chat"
-            >
-              Email
-            </a>{" "}
-            /{" "}
-            <a
-              style={{
-                color: "var(--textTitle)",
-                transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-                transition: `0.4s`,
-              }}
-              className="fancy-link "
-              href="https://www.linkedin.com/in/tylervawser/"
-            >
-              LinkedIn
-            </a>
-          </Col>
-          <Col
-            xl={{ span: 4, offset: 4 }}
-            className="mr-3 pr-5 d-flex justify-items-end flex-column align-items-end"
+              Set up a call
+            </AniLink>
+          </Row>
+          <Row
+            style={{
+              color: "var(--textTitle)",
+              transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+              transition: `0.4s`,
+            }}
+            className="ml-0 mr-5 pr-5 mt-0 roboto w-regular h6 d-flex justify-content-between flex-md-nowrap w-100 align-items-end pt-0 pt-md-5"
           >
-            <Row
-              style={{
-                color: "var(--textNormal)",
-                transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-                transition: `0.4s`,
-              }}
-              className="justify-content-end wsans w-medium h4 d-flex ml-auto"
+            <Col lg={3} xs={4} className="mt-0">
+              <a
+                style={{
+                  color: "var(--textTitle)",
+                  transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+                  transition: `0.4s`,
+                }}
+                href="https://twitter.com/tvaw"
+                className="link-mobile fancy-link"
+              >
+                Twitter
+              </a>{" "}
+              <span className="d-none d-md-inline">/ </span>
+              <a
+                style={{
+                  color: "var(--textTitle)",
+                  transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+                  transition: `0.4s`,
+                }}
+                className="link-mobile fancy-link"
+                href="mailto:tvawser@gmail.com?subject=Saw%20your%20website%20lets%20chat"
+              >
+                Email
+              </a>{" "}
+              <span className="d-none d-md-inline">/ </span>
+              <a
+                style={{
+                  color: "var(--textTitle)",
+                  transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+                  transition: `0.4s`,
+                }}
+                className="link-mobile fancy-link"
+                href="https://www.linkedin.com/in/tylervawser/"
+              >
+                LinkedIn
+              </a>
+            </Col>
+            <Col
+              xl={{ span: 4, offset: 4 }}
+              xs={12}
+              className="ml-5 mt-5 previously-mobile"
             >
-              Previously at
-            </Row>
-            <Row className="justify-content-end d-flex ml-auto">
-              <Col
-                xl={5}
-                className="d-flex justify-items-around text-nowrap ml-auto"
+              <Row
+                style={{
+                  color: "var(--textNormal)",
+                  transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+                  transition: `0.4s`,
+                }}
+                className="justify-content-md-around justify-content-end wsans w-medium md-h4 d-flex ml-auto pr-3 pr-md-5 mr-md-0 h3"
               >
-                <a
-                  style={{
-                    color: "var(--textTitle)",
-                    transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-                    transition: `0.4s`,
-                  }}
-                  className="fancy-link  ml-auto"
-                  href="https://www.stickermule.com/"
-                >
-                  Sticker Mule{" "}
-                </a>
-                <div className="pl-1"> / </div>
-              </Col>
-              <Col
-                xl={5}
-                className="d-flex justify-items-around text-nowrap ml-auto mr-0 pr-0"
+                Previously at
+              </Row>
+              <Row
+                className="justify-content-end d-flex flex-column ml-md-auto align-items-end pr-3 pr-md-0 flex-md-row"
+                style={{ justifyContent: `space-evenly` }}
               >
-                <a
-                  style={{
-                    color: "var(--textTitle)",
-                    transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-                    transition: `0.4s`,
-                  }}
-                  className="fancy-link ml-auto"
-                  href="https://museumhack.com/"
-                >
-                  Museum Hack{"  "}
-                </a>
-                <div className="pl-1"> /</div>
-              </Col>
+                <div className="d-flex line" style={{ flexBasis: `40%` }}>
+                  <a
+                    style={{
+                      color: "var(--textTitle)",
+                      transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+                      transition: `0.4s`,
+                    }}
+                    className="fancy-link ml-0 d-flex "
+                    href="https://www.stickermule.com/"
+                  >
+                    Sticker Mule
+                  </a>
+                  <span className="d-none d-md-inline pl-1">/ </span>
+                </div>
+                <div className="d-flex line" style={{ flexBasis: `40%` }}>
+                  <a
+                    style={{
+                      color: "var(--textTitle)",
+                      transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+                      transition: `0.4s`,
+                    }}
+                    className="fancy-link ml-0 d-flex"
+                    href="https://museumhack.com/"
+                  >
+                    Museum Hack
+                  </a>
+                  <span className="d-none d-md-inline pl-1">/ </span>
+                </div>
+                <div className="d-flex line" style={{ flexBasis: `40%` }}>
+                  <a
+                    style={{
+                      color: "var(--textTitle)",
+                      transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+                      transition: `0.4s`,
+                    }}
+                    className="fancy-link ml-0 d-flex"
+                    href="https://okdork.com/"
+                  >
+                    OkDork
+                  </a>
+                  <span className="d-none d-md-inline pl-1">/</span>
+                </div>
+                <div className="d-flex line" style={{ flexBasis: `40%` }}>
+                  <a
+                    style={{
+                      color: "var(--textTitle)",
+                      transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+                      transition: `0.4s`,
+                    }}
+                    className="fancy-link ml-0 d-flex"
+                    href="https://www.tkc.edu/"
+                  >
+                    The Kings College
+                  </a>
+                  <span className="d-none d-md-inline pl-1">/ </span>
+                </div>
+                {/*                   
+                
 
-              <Col
-                xl={5}
-                className="d-flex justify-items-around text-nowrap ml-auto"
-              >
-                <a
-                  style={{
-                    color: "var(--textTitle)",
-                    transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-                    transition: `0.4s`,
-                  }}
-                  className="fancy-link ml-auto"
-                  href="https://okdork.com/"
+                <Col
+                  xl={5}
+                  className="d-flex justify-items-end text-nowrap ml-md-1"
                 >
-                  OkDork
-                </a>
-                <div className="pl-1"> /</div>
-              </Col>
-              <Col
-                xl={5}
-                className="d-flex justify-items-around text-nowrap ml-auto mr-2"
-              >
-                <a
-                  style={{
-                    color: "var(--textTitle)",
-                    transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-                    transition: `0.4s`,
-                  }}
-                  className="fancy-link ml-auto "
-                  href="https://www.tkc.edu/"
+                  <a
+                    style={{
+                      color: "var(--textTitle)",
+                      transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+                      transition: `0.4s`,
+                    }}
+                    className="fancy-link ml-auto"
+                    
+                  >
+                    OkDork
+                  </a>
+                  <span className="d-none d-md-inline pl-1">/ </span>
+                </Col>
+                <Col
+                  xl={5}
+                  className="d-flex justify-items-end text-nowrap ml-md-auto"
                 >
-                  The Kings College
-                </a>
-                <div className="pl-1"> / </div>
-              </Col>
-            </Row>
-          </Col>
-        </Row>
+                  <a
+                    style={{
+                      color: "var(--textTitle)",
+                      transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+                      transition: `0.4s`,
+                    }}
+                    className="fancy-link ml-auto "
+                    
+                  >
+                    The Kings College
+                  </a>
+                  <span className="d-none d-md-inline pl-1">/ </span>
+                </Col> */}
+              </Row>
+            </Col>
+          </Row>
+        </div>
       </Layout>
     )
   }
