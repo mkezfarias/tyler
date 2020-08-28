@@ -86,7 +86,7 @@ class Calendly extends React.Component {
               style={{ fontSize: `20px` }}
               className="wider wsans w-medium line-height-1 text-light h2 sm-h1 w-semibold align-center m-auto m-sm-4 pl-5 pt-4 text-right social-text"
             >
-              You can also check out my social media
+              Tyler is on social media.
             </Col>
             <Col
               xs={11}
@@ -97,7 +97,7 @@ class Calendly extends React.Component {
               className="d-flex  justify-content-between pt-3 pl-5 "
             >
               <a
-                href="https://twitter.com/Tvaw"
+                href="mailto:tvawser@gmail.com?subject=Saw%20your%20website%20lets%20chat"
                 className="d-flex align-items-end justify-content-between"
               >
 

@@ -49,7 +49,7 @@ const favoritesArray = [
       "Finding the best music to focus & read",
       "Johatsu or people that choose to disappear.",
       "Habits and what are the small things I can do now that compound over time",
-      "How I can act, think, and become faster",
+      "How I can act, think, and become fast-er",
     ],
   },
 ]
@@ -369,15 +369,7 @@ class Now extends React.Component {
             </Col>
           </Row>
         </Container>
-        <FooterBlue
-          style={{
-            position: "absolute",
-            bottom: `0`,
-            right: `0`,
-            left: `0`,
-            margin: `0 0 0 0`,
-          }}
-        />
+        <FooterBlue />
       </Layout>
     )
   }

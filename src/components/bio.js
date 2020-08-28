@@ -23,6 +23,7 @@ function Bio() {
             <p>
              
             </p>
+
           </Container>
         )
       }}
