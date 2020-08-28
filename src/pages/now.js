@@ -43,19 +43,19 @@ const favoritesArray = [
     ],
   },
   {
-    title: "What is on my mind:",
+    title: "What is on my mind right now:",
     items: [
       "How to use my phone for 1 hour or less a day",
       "Finding the best music to focus & read",
-      "Johatsu—people that disappear",
-      "Consistent actions create enourmous results",
-      "How I can act, think, and become fast-er",
+      "Johatsu or people that choose to disappear.",
+      "Habits and what are the small things I can do now that compound over time",
+      "How I can act, think, and become faster",
     ],
   },
 ]
 
 const onMyMindLinks = {
-  title: "Also on my mind (Links)",
+  title: "What I'm into right now:",
   items: [
     {
       link: "https://www.calnewport.com/books/digital-minimalism/",
