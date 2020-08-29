@@ -26,6 +26,7 @@ import footerIMG2 from "../images/footer@2x.png"
 import Menu from "../components/menu"
 import LogoFixedMobile from "../components/LogoFixedMobile"
 import FooterBlue from "../components/Footer"
+import { GatsbySeo } from "gatsby-plugin-next-seo"
 
 const nowContent = {
   title: "What Tyler is doing now",
@@ -43,19 +44,19 @@ const favoritesArray = [
     ],
   },
   {
-    title: "What is on my mind:",
+    title: "What is on my mind right now:",
     items: [
       "How to use my phone for 1 hour or less a day",
       "Finding the best music to focus & read",
-      "Johatsu—people that disappear",
-      "Consistent actions create enourmous results",
+      "Johatsu or people that choose to disappear.",
+      "Habits and what are the small things I can do now that compound over time",
       "How I can act, think, and become fast-er",
     ],
   },
 ]
 
 const onMyMindLinks = {
-  title: "Also on my mind (Links)",
+  title: "What I'm into right now:",
   items: [
     {
       link: "https://www.calnewport.com/books/digital-minimalism/",
@@ -111,10 +112,43 @@ class Now extends React.Component {
   render() {
     return (
       <Layout location={this.props.location}>
-        <SEO
+        <GatsbySeo
+          title="Tyler Vawser"
+          description="Tyler Vawser Tyler Vawser Tyler Vawser."
+          canonical="https://www.tylervawser.com/"
+          keywords="prayuth,taksin"
+          openGraph={{
+            url: "https://www.url.ie/a",
+            title: "Open Graph Title",
+            description: "Open Graph Description",
+            images: [
+              {
+                url: "https://www.example.ie/og-image-01.jpg",
+                width: 800,
+                height: 600,
+                alt: "Og Image Alt",
+              },
+              {
+                url: "https://www.example.ie/og-image-02.jpg",
+                width: 900,
+                height: 800,
+                alt: "Og Image Alt Second",
+              },
+              { url: "https://www.example.ie/og-image-03.jpg" },
+              { url: "https://www.example.ie/og-image-04.jpg" },
+            ],
+            site_name: "TylerVawser",
+          }}
+          twitter={{
+            handle: "@handle",
+            site: "@site",
+            cardType: "summary_large_image",
+          }}
+        />
+        {/* <SEO
           title="Tyler Vawser"
           keywords={[`blog`, `Tyler Vawser`, `Tvawser`, `react`]} //edit these on each page depending on the content of the page
-        />
+        /> */}
         <LogoFixedMobile />
         <div>
           <Row>
@@ -181,9 +215,9 @@ class Now extends React.Component {
                 Right now, I spend my waking hours finding and talking to great
                 people who want to continue building{" "}
                 <a
-                  target="_blank"
                   href="https://www.apptegy.com/careers/"
                   style={{ color: `var(--skyblue3)` }}
+                  target="_blank"
                 >
                   Apptegy
                 </a>
@@ -260,9 +294,9 @@ class Now extends React.Component {
                 <em>
                   This is a Now page. Now pages are inspired by
                   <a
-                    target="_blank"
                     href="https://nownownow.com/about"
                     style={{ color: `var(--skyblue3)` }}
+                    target="_blank"
                   >
                     {" "}
                     Derek Sivers
@@ -296,10 +330,10 @@ class Now extends React.Component {
           style={{
             background: "var(--gradient-background)",
             width: `110vw`,
-            margin: `6vh -10vw 0 -10vw`,
+            margin: `6vh -10vw 10vh -10vw`,
           }}
         >
-          <Row className="d-flex justify-content-center pb-5 pt-4">
+          <Row className="d-flex justify-content-center pb-5 pt-4 ">
             <Col
               xs={{ span: 9 }}
               sm={{ span: 9 }}
@@ -341,6 +375,7 @@ class Now extends React.Component {
                       style={{ color: `#add5ff` }}
                       className="py-1 fancy-link text-light  w-semibold mb-0 "
                       href={mind.link}
+                      target="_blank"
                     >
                       {mind.text} {mind.type}
                     </a>
@@ -368,16 +403,8 @@ class Now extends React.Component {
               </Row>
             </Col>
           </Row>
+          <FooterBlue />
         </Container>
-        <FooterBlue
-          style={{
-            position: "absolute",
-            bottom: `0`,
-            right: `0`,
-            left: `0`,
-            margin: `0 0 0 0`,
-          }}
-        />
       </Layout>
     )
   }
