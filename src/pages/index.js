@@ -79,6 +79,7 @@ class IndexPage extends React.Component {
                 }}
                 href="https://twitter.com/tvaw"
                 className="link-mobile fancy-link"
+                target="_blank"
               >
                 Twitter
               </a>{" "}
@@ -91,6 +92,7 @@ class IndexPage extends React.Component {
                 }}
                 className="link-mobile fancy-link"
                 href="mailto:tvawser@gmail.com?subject=Saw%20your%20website%20lets%20chat"
+                target="_blank"
               >
                 Email
               </a>{" "}
@@ -103,6 +105,7 @@ class IndexPage extends React.Component {
                 }}
                 className="link-mobile fancy-link"
                 href="https://www.linkedin.com/in/tylervawser/"
+                target="_blank"
               >
                 LinkedIn
               </a>
@@ -135,6 +138,7 @@ class IndexPage extends React.Component {
                     }}
                     className="fancy-link ml-0 d-flex "
                     href="https://www.stickermule.com/"
+                    target="_blank"
                   >
                     Sticker Mule
                   </a>
@@ -149,6 +153,7 @@ class IndexPage extends React.Component {
                     }}
                     className="fancy-link ml-0 d-flex"
                     href="https://museumhack.com/"
+                    target="_blank"
                   >
                     Museum Hack
                   </a>
@@ -163,6 +168,7 @@ class IndexPage extends React.Component {
                     }}
                     className="fancy-link ml-0 d-flex"
                     href="https://okdork.com/"
+                    target="_blank"
                   >
                     OkDork
                   </a>
@@ -177,6 +183,7 @@ class IndexPage extends React.Component {
                     }}
                     className="fancy-link ml-0 d-flex"
                     href="https://www.tkc.edu/"
+                    target="_blank"
                   >
                     The Kings College
                   </a>
