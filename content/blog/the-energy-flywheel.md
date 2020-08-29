@@ -4,7 +4,7 @@ date: 2020-08-23T01:04:30.389Z
 title: The Energy Flywheel
 description: To go faster, stop trying to balance your time and energy.
 ---
-![Energy Flywheel](/cbf09088-a414-4904-92e9-98b5a2115fbb)
+![Energy Flywheel](../assets/energy-flywheel.jpg)
 
 The most draining, dull and lifeless days I have start the same way: trying to relax and take it easy. I feel worse that I did when I started the day and don't really feel rested at all. 
 
@@ -26,4 +26,4 @@ The more energy I put in the more I get out. Pouring my full-self (energy, atten
 
 On a podcast I heard Neil Pasricha, the writer, say something like, "At work if you love it, you're in the zone, you're having breakthroughs, you're energized and you feel awesome. Guess which version of you, you take home? The awesome version of you."
 
-That's my approach to energy management now. Have breakthroughs and do your best work and use that same energy and version of you in your personal life. 
+That's my approach to energy management now. Have breakthroughs and do your best work and use that same energy and version of you in your personal life.
