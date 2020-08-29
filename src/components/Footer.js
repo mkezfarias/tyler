@@ -65,7 +65,7 @@ const FooterBlue = () => {
               <div className="px-2 footer-links">/</div>
               <div className="footer-links">
                 <a
-                  href="/calendly"
+                  href="mailto:tvawser@gmail.com?subject=Saw%20your%20website%20lets%20chat"
                   className="text-light fancy-link-footer"
                   target="_blank"
                 >
@@ -75,11 +75,11 @@ const FooterBlue = () => {
               <div className="px-2 footer-links">/</div>
               <div className="footer-links">
                 <a
-                  href="/calendly"
+                  href="https://www.linkedin.com/in/tylervawser/"
                   className="text-light fancy-link-footer"
                   target="_blank"
                 >
-                  Linkedin
+                  LinkedIn
                 </a>
               </div>
             </div>
@@ -93,31 +93,19 @@ const FooterBlue = () => {
             </div>
             <div className="d-flex text-right">
               <div className="footer-links">
-                <a
-                  href="/calendly"
-                  className="text-light fancy-link-footer"
-                  target="_blank"
-                >
+                <a href="/about" className="text-light fancy-link-footer">
                   About
                 </a>
               </div>
               <div className="px-2 footer-links">/</div>
               <div className="footer-links">
-                <a
-                  href="/calendly"
-                  className="text-light fancy-link-footer"
-                  target="_blank"
-                >
+                <a href="/blog" className="text-light fancy-link-footer">
                   Posts
                 </a>
               </div>
               <div className="px-2 footer-links">/</div>
               <div className="footer-links">
-                <a
-                  href="/calendly"
-                  className="text-light fancy-link-footer"
-                  target="_blank"
-                >
+                <a href="/favorites" className="text-light fancy-link-footer">
                   Favorites
                 </a>
               </div>

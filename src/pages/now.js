@@ -184,6 +184,7 @@ class Now extends React.Component {
                   target="_blank"
                   href="https://www.apptegy.com/careers/"
                   style={{ color: `var(--skyblue3)` }}
+                  target="_blank"
                 >
                   Apptegy
                 </a>
@@ -263,6 +264,7 @@ class Now extends React.Component {
                     target="_blank"
                     href="https://nownownow.com/about"
                     style={{ color: `var(--skyblue3)` }}
+                    target="_blank"
                   >
                     {" "}
                     Derek Sivers
@@ -341,6 +343,7 @@ class Now extends React.Component {
                       style={{ color: `#add5ff` }}
                       className="py-1 fancy-link text-light  w-semibold mb-0 "
                       href={mind.link}
+                      target="_blank"
                     >
                       {mind.text} {mind.type}
                     </a>

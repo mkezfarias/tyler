@@ -104,6 +104,7 @@ class Calendly extends React.Component {
                   <a
                     href="https://twitter.com/Tvaw"
                     className="d-flex align-items-end justify-content-between"
+                    target="_blank"
                   >
                     <img
                       src={twitterIMG}
@@ -112,7 +113,10 @@ class Calendly extends React.Component {
                     />
                   </a>
 
-                  <a href="https://www.linkedin.com/in/tylervawser/">
+                  <a
+                    href="https://www.linkedin.com/in/tylervawser/"
+                    target="_blank"
+                  >
                     <img
                       className="d-flex align-self-end"
                       src={linkedinIMG}
@@ -120,7 +124,10 @@ class Calendly extends React.Component {
                     />
                   </a>
 
-                  <a href="mailto:tvawser@gmail.com?subject=Saw%20your%20website%20lets%20chat">
+                  <a
+                    href="mailto:tvawser@gmail.com?subject=Saw%20your%20website%20lets%20chat"
+                    target="_blank"
+                  >
                     <img
                       src={mailIMG}
                       alt="Link to Tyler's email"
