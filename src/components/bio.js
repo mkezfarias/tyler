@@ -20,7 +20,10 @@ function Bio() {
         const { author, social } = data.site.siteMetadata
         return (
           <Container>
-            <p></p>
+            <p>
+             
+            </p>
+
           </Container>
         )
       }}
