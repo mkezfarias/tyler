@@ -4,8 +4,6 @@ date: 2020-08-23T01:04:30.389Z
 title: The Energy Flywheel
 description: To go faster, stop trying to balance your time and energy.
 ---
-![Energy Flywheel](../assets/energy-flywheel.jpg)
-
 The most draining, dull and lifeless days I have start the same way: trying to relax and take it easy. I feel worse that I did when I started the day and don't really feel rested at all. 
 
 The days when I know I can't relax and I just have to get work done are the days when energy comes easily and I can tackle whatever else pops up. It's really remarkable how much I've completed some days. 
