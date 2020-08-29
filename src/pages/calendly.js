@@ -74,16 +74,16 @@ class Calendly extends React.Component {
         </Col>
         <div className="sidebar-fixed pl-5 ">
           <Row
-            className="mx-auto px-auto mr-sm-3 pr-sm-3"
+            className="mx-auto px-auto mr-3 pr-3"
             style={{ position: `fixed`, bottom: `10px` }}
           >
             <Col
               xs={11}
               sm={11}
-              md={10}
-              lg={10}
-              xl={10}
-              style={{ fontSize: `20px` }}
+              md={11}
+              lg={11}
+              xl={11}
+              style={{ fontSize: `20px`, paddingTop: `20px` }}
               className="wider wsans w-medium line-height-1 text-light h2 sm-h1 w-semibold align-center m-auto m-sm-4 pl-5 pt-4 text-right social-text"
             >
               Tyler is on social media.
@@ -99,7 +99,7 @@ class Calendly extends React.Component {
               <Row className="d-flex align-items-end justify-content-between">
                 <Col
                   xl={{ span: 12, offset: 2 }}
-                  className="d-flex justify-content-between pt-3 "
+                  className="d-flex justify-content-between pt-5 mt-5"
                 >
                   <a
                     href="https://twitter.com/Tvaw"

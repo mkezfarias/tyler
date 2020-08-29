@@ -298,10 +298,10 @@ class Now extends React.Component {
           style={{
             background: "var(--gradient-background)",
             width: `110vw`,
-            margin: `6vh -10vw 0 -10vw`,
+            margin: `6vh -10vw 10vh -10vw`,
           }}
         >
-          <Row className="d-flex justify-content-center pb-5 pt-4">
+          <Row className="d-flex justify-content-center pb-5 pt-4 ">
             <Col
               xs={{ span: 9 }}
               sm={{ span: 9 }}
@@ -371,8 +371,8 @@ class Now extends React.Component {
               </Row>
             </Col>
           </Row>
+          <FooterBlue />
         </Container>
-        <FooterBlue />
       </Layout>
     )
   }

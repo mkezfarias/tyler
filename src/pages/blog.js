@@ -29,6 +29,7 @@ import footerIMG from "../images/footer.png"
 import footerIMG2 from "../images/footer@2x.png"
 import Menu from "../components/menu"
 import LogoFixedMobile from "../components/LogoFixedMobile"
+import FooterBlue from "../components/Footer"
 
 class Blog extends React.Component {
   constructor(props) {
@@ -135,6 +136,7 @@ class Blog extends React.Component {
             margin: `0 0 0 0`,
           }}
         ></img>
+        <FooterBlue />
       </Layout>
     )
   }
