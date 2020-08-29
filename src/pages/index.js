@@ -10,11 +10,46 @@ import TransitionLink from "gatsby-plugin-transition-link"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import ThemeToggler from "gatsby-plugin-dark-mode/ThemeToggler"
 import MenuFixedIcon from "../components/MenuFixedIcon"
+import { GatsbySeo } from "gatsby-plugin-next-seo"
 
 class IndexPage extends React.Component {
   render() {
     return (
       <Layout location={this.props.location}>
+        <GatsbySeo
+          title="Tyler Vawser"
+          description="Tyler Vawser Tyler Vawser Tyler Vawser."
+          canonical="https://www.tylervawser.com/"
+          keywords="prayuth,taksin"
+          openGraph={{
+            url: "https://www.url.ie/a",
+            title: "Open Graph Title",
+            description: "Open Graph Description",
+            images: [
+              {
+                url: "https://www.example.ie/og-image-01.jpg",
+                width: 800,
+                height: 600,
+                alt: "Og Image Alt",
+              },
+              {
+                url: "https://www.example.ie/og-image-02.jpg",
+                width: 900,
+                height: 800,
+                alt: "Og Image Alt Second",
+              },
+              { url: "https://www.example.ie/og-image-03.jpg" },
+              { url: "https://www.example.ie/og-image-04.jpg" },
+            ],
+            site_name: "TylerVawser",
+          }}
+          twitter={{
+            handle: "@handle",
+            site: "@site",
+            cardType: "summary_large_image",
+          }}
+        />
+
         <SEO
           title="Tyler Vawser"
           keywords={[

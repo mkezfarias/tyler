@@ -26,6 +26,7 @@ import footerIMG2 from "../images/footer@2x.png"
 import Menu from "../components/menu"
 import LogoFixedMobile from "../components/LogoFixedMobile"
 import FooterBlue from "../components/Footer"
+import { GatsbySeo } from "gatsby-plugin-next-seo"
 
 const nowContent = {
   title: "What Tyler is doing now",
@@ -111,10 +112,43 @@ class Now extends React.Component {
   render() {
     return (
       <Layout location={this.props.location}>
-        <SEO
+        <GatsbySeo
+          title="Tyler Vawser"
+          description="Tyler Vawser Tyler Vawser Tyler Vawser."
+          canonical="https://www.tylervawser.com/"
+          keywords="prayuth,taksin"
+          openGraph={{
+            url: "https://www.url.ie/a",
+            title: "Open Graph Title",
+            description: "Open Graph Description",
+            images: [
+              {
+                url: "https://www.example.ie/og-image-01.jpg",
+                width: 800,
+                height: 600,
+                alt: "Og Image Alt",
+              },
+              {
+                url: "https://www.example.ie/og-image-02.jpg",
+                width: 900,
+                height: 800,
+                alt: "Og Image Alt Second",
+              },
+              { url: "https://www.example.ie/og-image-03.jpg" },
+              { url: "https://www.example.ie/og-image-04.jpg" },
+            ],
+            site_name: "TylerVawser",
+          }}
+          twitter={{
+            handle: "@handle",
+            site: "@site",
+            cardType: "summary_large_image",
+          }}
+        />
+        {/* <SEO
           title="Tyler Vawser"
           keywords={[`blog`, `Tyler Vawser`, `Tvawser`, `react`]} //edit these on each page depending on the content of the page
-        />
+        /> */}
         <LogoFixedMobile />
         <div>
           <Row>
@@ -181,7 +215,6 @@ class Now extends React.Component {
                 Right now, I spend my waking hours finding and talking to great
                 people who want to continue building{" "}
                 <a
-                  target="_blank"
                   href="https://www.apptegy.com/careers/"
                   style={{ color: `var(--skyblue3)` }}
                   target="_blank"
@@ -261,7 +294,6 @@ class Now extends React.Component {
                 <em>
                   This is a Now page. Now pages are inspired by
                   <a
-                    target="_blank"
                     href="https://nownownow.com/about"
                     style={{ color: `var(--skyblue3)` }}
                     target="_blank"

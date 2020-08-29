@@ -30,6 +30,7 @@ import footerIMG2 from "../images/footer@2x.png"
 import Menu from "../components/menu"
 import LogoFixedMobile from "../components/LogoFixedMobile"
 import FooterBlue from "../components/Footer"
+import { GatsbySeo } from "gatsby-plugin-next-seo"
 
 class Blog extends React.Component {
   constructor(props) {
@@ -49,7 +50,42 @@ class Blog extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
+        <GatsbySeo
+          title="Tyler Vawser"
+          description="Tyler Vawser Tyler Vawser Tyler Vawser."
+          canonical="https://www.tylervawser.com/"
+          keywords="prayuth,taksin"
+          openGraph={{
+            url: "https://www.url.ie/a",
+            title: "Open Graph Title",
+            description: "Open Graph Description",
+            images: [
+              {
+                url: "https://www.example.ie/og-image-01.jpg",
+                width: 800,
+                height: 600,
+                alt: "Og Image Alt",
+              },
+              {
+                url: "https://www.example.ie/og-image-02.jpg",
+                width: 900,
+                height: 800,
+                alt: "Og Image Alt Second",
+              },
+              { url: "https://www.example.ie/og-image-03.jpg" },
+              { url: "https://www.example.ie/og-image-04.jpg" },
+            ],
+            site_name: "TylerVawser",
+          }}
+          twitter={{
+            handle: "@handle",
+            site: "@site",
+            cardType: "summary_large_image",
+          }}
+        />
+
         <SEO title="All posts" />
+
         <LogoFixedMobile />
 
         <Row
@@ -126,16 +162,6 @@ class Blog extends React.Component {
           })}
         </Row>
 
-        <img
-          src={footerIMG}
-          style={{
-            position: "absolute",
-            bottom: `0`,
-            right: `0`,
-            left: `0`,
-            margin: `0 0 0 0`,
-          }}
-        ></img>
         <FooterBlue />
       </Layout>
     )
