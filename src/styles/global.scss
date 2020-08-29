@@ -42,16 +42,38 @@
 
 @media (max-width: 767px) {
 
+  .footer-title.footer-title{
+    font-size: calc(12px + 0.8vw) !important;
+    position: relative;
+    right: 10px !important;
+  }
+  
+  .footer-links.footer-links {
+    font-size: calc(10px + 0.5vw) !important;
+  }
+  
+  .border-footer.border-footer {
+    padding-right: 10px !important;
+    padding-top: 20px !important;
+    padding-bottom: 10px !important;
+    border-right: solid 0 ;
+    max-height: 10px !important;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+  }
+
   .sidebar-fixed.sidebar-fixed.sidebar-fixed {
     position: absolute !important;
     right: 0 !important;
     margin: 0 !important;
     bottom: 0 !important;
     top: calc(100% - 30vh) !important;
-    height: 30vh !important;
+    height: 40vh !important;
     width: 100vw !important;
     background: var(--gradient-background) !important;
+    z-index: 5;
   }
+  
   .calendly-widget, .calendly-inline-widget {
     margin-top: 0 !important;
    }
@@ -132,6 +154,11 @@ text-decoration: none !important;
 box-shadow: 0 0 0 0 currentColor;
 }
 
+.social-text {
+position: relative;
+top: 70px;
+}
+
 .h2.h2.h2{
   font-size: calc(20px + 1vw) !important;
   line-height: 1;
@@ -167,7 +194,7 @@ box-shadow: 0 0 0 0 currentColor;
   line-height: 1;
 }
 
-.items-fixed > a.fancy-link {
+.items-fixed > a.fancy-link, a.fancy-link-footer {
   position: relative;
   color: (white);
 }
@@ -177,7 +204,7 @@ a.fancy-link {
   color: var(--day-gray);
 }
 
-.items-fixed > a.fancy-link:hover{
+.items-fixed > a.fancy-link:hover, a.fancy-link-footer:hover {
  color: white;
 }
 
@@ -185,12 +212,12 @@ a.fancy-link:hover{
   color: var(--day-gray);
 }
 
-.items-fixed > a.fancy-link::before, .items-fixed > a.fancy-link:hover::before {
+.items-fixed > a.fancy-link::before, .items-fixed > a.fancy-link:hover::before, a.fancy-link-footer::before, a.fancy-link-footer:hover::before {
 background-color: whitesmoke;  
 color: white;
 }
 
-a.fancy-link::before {
+a.fancy-link::before, .fancy-link-footer::before {
   content: '';
   position: absolute;
   bottom: 0;
@@ -202,7 +229,7 @@ a.fancy-link::before {
   color: var(--day-gray);
 }
 
-a.fancy-link:hover::before {
+a.fancy-link:hover::before, a.fancy-link-footer:hover::before {
   visibility: visible;
   width: 100%;
   left: 0;
@@ -343,7 +370,24 @@ div.tl-edges {
 
 }
 
-  
+.footer-title{
+  font-size: calc(10px + 0.8vw) !important;
+}
+
+.footer-links {
+  font-size: calc(8px + 0.5vw) !important;
+}
+
+.border-footer {
+  padding-right: 10px !important;
+  padding-top: 50px !important;
+  padding-bottom: 10px !important;
+  border-right: solid 2px ;
+  max-height: 20px !important;
+  margin-top: 30px !important;
+  margin-bottom: 30px !important;
+}
+
 
 // Import Bootstrap and its default variables
 @import '~bootstrap/scss/bootstrap.scss';
