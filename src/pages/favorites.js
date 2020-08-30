@@ -77,7 +77,7 @@ const favoritesArray = [
   },
   {
     icon: videosIcon,
-    title: "Favorite Books",
+    title: "Favorite books",
     items: [
       {
         link: "https://bookshop.org/books/the-brothers-karamazov-9781911091059/9780374528379",
@@ -125,7 +125,7 @@ const favoritesArray = [
 
   {
     icon: travelIcon,
-    title: "Favorite travel things",
+    title: "Favorite things",
     items: [
       {
         link: "https://www.tombihn.com/products/aeronaut-45",
@@ -163,37 +163,37 @@ const favoritesArray = [
         subTitle: "Tommy John Undershirts and Underwear",
         subText: "Incredibly comfortable. I haven't bought anything else since 2014.",
       },
+      {
+        link: "https://republicwireless.com/",
+        subTitle: "Republic Wireless",
+        subText: "In 2016 I reduced my phone bill from ~$150 a month to $45 with Republic Wireless. It's been an excellent service that is similar to Google Fi, but cheaper.",
+      },
     ],
   },
   {
     icon: podcastsIcon,
-    title: "Favorite podcasts",
+    title: "Favorite links",
     items: [
       {
-        link: "https://www.google.com",
-        subTitle: "Google",
-        subText: "dolor sit amet, consetetur sadipscing elitr, sed diam nonumy",
+        link: "https://elemental.medium.com/extreme-athleticism-is-the-new-midlife-crisis-d87199a18bed",
+        subTitle: "Extreme Athleticism Is the New Midlife Crisis",
+        subText: " “...a fear that the weaknesses that have dogged you are not just temporary challenges to cope with, but a permanent part of who you are.” ",
       },
       {
-        link: "#",
-        subTitle: "Lorem ipsum",
+        link: "https://medium.com/@thejakers/raising-entrepreneurs-26be9abf3c52",
+        subTitle: "Raising Entrepreneurs",
         subText:
-          "dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod",
+          " “Part of parenting is being able to receive feedback, learn from it, and put it those lessons into practice, no matter what form it comes in.” ",
       },
       {
-        link: "#",
-        subTitle: "Lorem ipsum",
-        subText: "dolor sit amet, consetetur sadipscing elitr, sed",
+        link: "https://www.financialsamurai.com/",
+        subTitle: "Financial Samurai",
+        subText: " “dig deep, no matter what, and have an unwavering focus to keep on going despite all the worry.” ",
       },
       {
-        link: "#",
-        subTitle: "Lorem ipsum",
-        subText: "dolor sit amet, consetetur sadipscing elitr diam nonumy",
-      },
-      {
-        link: "#",
-        subTitle: "Lorem ipsum",
-        subText: "dolor sit amet, consetetur sadipscing elitr, sed diam nonumy",
+        link: "https://tynan.com/lovework",
+        subTitle: "Love Work",
+        subText: " “Work is a skill. Like any skill, you'll enjoy it more if you are good at it. And this is how you get good at it-- you do it a lot, you dive deep into it, and you create a positive attitude around it.” ",
       },
     ],
   },
