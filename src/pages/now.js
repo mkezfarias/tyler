@@ -39,12 +39,12 @@ const favoritesArray = [
       "1. Living in Little Rock, Arkansas",
       "2. Building teams at Apptegy",
       "3. Hiring RoR & Vue engineers in Little Rock and Monterrey",
-      "4. Exploring digital minimalism & minimal piano",
+      "4. Exploring digital minimalism & classical piano",
       "5. Keeping up with 4 kids",
     ],
   },
   {
-    title: "What is on my mind:",
+    title: "What is on my mind right now:",
     items: [
       "How to use my phone for 1 hour or less a day",
       "Finding the best music to focus & read",
@@ -56,7 +56,7 @@ const favoritesArray = [
 ]
 
 const onMyMindLinks = {
-  title: "What I'm reading/listening/watching:",
+  title: "What I'm into right now:",
   items: [
     {
       link: "https://www.calnewport.com/books/digital-minimalism/",
@@ -234,7 +234,7 @@ class Now extends React.Component {
                 <strong>This has been a year focused on... focusing.</strong>{" "}
                 That has meant returning to habits that made me who I am. Each
                 day, after I pour my first cup of coffee I sit down in a white
-                swivel chair next to my bookshelf and I read. I read whatever is
+                swivel chair next to my bookshelf. And I read whatever is
                 nearby: a Japanese novel, an improvement book, or poetry (e.g.
                 Thomas Hardy).
               </p>
@@ -279,10 +279,10 @@ class Now extends React.Component {
               >
                 The most important part of my life now and for the next 20 years
                 are my kids. Spending time with them, building marble
-                contraptions, playing Rummikub, teaching them the love of reading, and
-                teaching them how to think are the highlight
+                contraptions, playing Rummikub, teaching them to read, and
+                teaching them how to think about mathematics are the highlight
                 of every day. As much as I love working and driving towards a
-                goal, I want to use the energy and momentum I build at work to
+                goal, I want to use that energy and momentum I build at work to
                 pour into my kids.{" "}
               </p>
 
@@ -302,7 +302,8 @@ class Now extends React.Component {
                     Derek Sivers
                   </a>
                   . It is similar to an about page, but it tells you what I am
-                  doing now (how I am spending my time and what I am focused on)— not just what I have done in the past. This entire site
+                  doing now (what my priorities are and how I am spending my
+                  time)— not just what I have done in the past. This entire site
                   is inspired with that in mind.
                 </em>
               </p>
@@ -312,7 +313,7 @@ class Now extends React.Component {
                   color: "var(--textNormal)",
                 }}
               >
-                Last updated: August 29, 2020
+                Last updated: August 15, 2020
               </p>
               <p
                 style={{
