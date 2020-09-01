@@ -52,6 +52,7 @@ class Layout extends React.Component {
               color: "var(--textNormal)",
               transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
               transition: `0.4s`,
+              position: `relative`,
             }}
             className="main-title wsans w-semibold"
           >
@@ -309,7 +310,7 @@ class Layout extends React.Component {
 }
 
 const Wrapper = styled.div`
-  min-height: 100vh;
+  height: 100vh;
 `
 
 export default Layout

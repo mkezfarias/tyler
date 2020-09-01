@@ -103,7 +103,7 @@ class IndexPage extends React.Component {
               transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
               transition: `0.4s`,
             }}
-            className="ml-0 mr-5 pr-5 mt-0 roboto w-regular h6 d-flex justify-content-between flex-md-nowrap w-100 align-items-end pt-0 pt-md-5"
+            className="ml-0 mr-5 pr-5 mt-0 roboto w-regular h6 d-flex justify-content-between flex-md-nowrap w-100 align-items-end pt-0 pt-md-0"
           >
             <Col
               xs={12}
