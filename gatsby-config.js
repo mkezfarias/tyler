@@ -1,12 +1,12 @@
 module.exports = {
   siteMetadata: {
     // edit below
-    title: `Tyler’s latest posts:`, // this is the blog page title
+    title: `Read more about Tyler Vawser`, // this is the blog page title
     author: `Gatsby`, // do not change
-    description: `Tyler Vawser is growing Apptegy`, // update meta description
+    description: `Tyler Vawser`, // update meta description
     siteUrl: `https://tylervawser.com/`, // updated url
     social: {
-      twitter: `gatsbyjs`, // update twitter handle
+      twitter: `tvaw`, // update twitter handle
     },
   },
 
@@ -78,7 +78,7 @@ module.exports = {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         // edit below
-        // trackingId: `ADD YOUR TRACKING ID HERE`,
+        trackingId: `UA-38989531-1`,
       },
     },
     {
