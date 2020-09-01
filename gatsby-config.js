@@ -3,8 +3,8 @@ module.exports = {
     // edit below
     title: `Tyler’s latest posts:`, // this is the blog page title
     author: `Gatsby`, // do not change
-    description: `meta description`, // update meta description
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`, // updated url
+    description: `Tyler Vawser is growing Apptegy`, // update meta description
+    siteUrl: `https://tylervawser.com/`, // updated url
     social: {
       twitter: `gatsbyjs`, // update twitter handle
     },
@@ -91,7 +91,7 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         // edit below
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `static/favicon.ico`,
       },
     },
     {
