@@ -396,7 +396,7 @@ class Now extends React.Component {
                 <Link
                   style={{ color: `#add5ff` }}
                   className="fancy-link d-flex ml-md-5 py-3"
-                  to="/calendly"
+                  to="/connect"
                 >
                   {letsTalk.linkText}
                 </Link>
