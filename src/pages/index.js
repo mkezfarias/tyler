@@ -50,7 +50,7 @@ class IndexPage extends React.Component {
             cardType: "summary_large_image",
           }}
         />
-
+        {/* 
         <SEO
           title="Tyler Vawser"
           keywords={[
@@ -61,7 +61,7 @@ class IndexPage extends React.Component {
             `Apptegy`,
             `VP of People`,
           ]}
-        />
+        /> */}
 
         <div fluid className="container-static">
           <Row

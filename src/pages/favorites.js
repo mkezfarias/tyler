@@ -244,7 +244,7 @@ class Favorites extends React.Component {
       <>
         <Layout location={this.props.location}>
           <GatsbySeo
-            title="Tyler Vawser"
+            title="Tyler Vawser favorites test"
             description="Tyler Vawser Tyler Vawser Tyler Vawser."
             canonical="https://www.tylervawser.com/"
             keywords="prayuth,taksin"
@@ -276,10 +276,10 @@ class Favorites extends React.Component {
               cardType: "summary_large_image",
             }}
           />
-          <SEO
+          {/* <SEO
             title="Tyler Vawser"
             keywords={[`blog`, `Tyler Vawser`, `Tvawser`, `react`]}
-          />
+          /> */}
           <LogoFixedMobile />
           <div>
             <Row>

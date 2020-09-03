@@ -43,7 +43,7 @@ class Calendly extends React.Component {
     return (
       <Layout location={this.props.location}>
         <GatsbySeo
-          title="Tyler Vawser"
+          title="Tyler Vawser calendly test"
           description="Tyler Vawser Tyler Vawser Tyler Vawser."
           canonical="https://www.tylervawser.com/"
           keywords="prayuth,taksin"
@@ -76,10 +76,10 @@ class Calendly extends React.Component {
           }}
         />
 
-        <SEO
+        {/* <SEO
           title="Tyler Vawser"
           keywords={[`blog`, `Tyler Vawser`, `Tvawser`, `react`]}
-        />
+        /> */}
         <LogoFixedMobile />
 
         <AniLink

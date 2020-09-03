@@ -84,7 +84,7 @@ class Blog extends React.Component {
           }}
         />
 
-        <SEO title="All posts" />
+        {/* <SEO title="All posts" /> */}
 
         <LogoFixedMobile />
 

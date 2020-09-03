@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     // edit below
     title: `Read more about Tyler Vawser`, // this is the blog page title
-    author: `Gatsby`, // do not change
+    author: `Tyler Vawser`, // do not change
     description: `Tyler Vawser`, // update meta description
     siteUrl: `https://tylervawser.com/`, // updated url
     social: {
