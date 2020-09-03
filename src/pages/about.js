@@ -44,10 +44,10 @@ class About extends React.Component {
     return (
       <Layout location={this.props.location}>
         <GatsbySeo
-          title="Tyler Vawser about test"
-          description="Tyler Vawser Tyler Vawser Tyler Vawser about test description"
-          canonical="https://www.tylervawser.com/"
-          keywords="prayuth,taksin"
+          title="Tyler Vawser about test" //// this is the title of the window and seo title
+          description="Tyler Vawser Tyler Vawser Tyler Vawser about test description" // seo description
+          canonical="https://www.tylervawser.com/about"
+          keywords="prayuth,taksin" // keywords list
           openGraph={{
             url: "https://www.url.ie/a",
             title: "Open Graph Title",
