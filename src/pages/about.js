@@ -44,8 +44,8 @@ class About extends React.Component {
     return (
       <Layout location={this.props.location}>
         <GatsbySeo
-          title="Tyler Vawser"
-          description="Tyler Vawser Tyler Vawser Tyler Vawser."
+          title="Tyler Vawser about test"
+          description="Tyler Vawser Tyler Vawser Tyler Vawser about test description"
           canonical="https://www.tylervawser.com/"
           keywords="prayuth,taksin"
           openGraph={{
@@ -76,10 +76,10 @@ class About extends React.Component {
             cardType: "summary_large_image",
           }}
         />
-        <SEO
+        {/* <SEO
           title="Tyler Vawser"
           keywords={[`blog`, `Tyler Vawser`, `Tvawser`, `react`]}
-        />
+        /> */}
         <LogoFixedMobile />
         <div>
           <Row>
