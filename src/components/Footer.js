@@ -46,7 +46,7 @@ const FooterBlue = () => {
               <div className="d-flex text-right px-5 px-md-1">
                 <div className="footer-links">
                   <a
-                    href="/calendly"
+                    href="/connect"
                     className="text-light fancy-link-footer"
                     target="_blank"
                   >

@@ -121,7 +121,7 @@ class Connect extends React.Component {
               style={{ fontSize: `20px`, paddingTop: `20px` }}
               className="wider wsans w-medium line-height-1 text-light h2 sm-h1 w-semibold align-center m-auto m-sm-4 pl-5 pt-4 text-right social-text"
             >
-              Tyler is on social media.
+              Tyler wants to hear from you.
             </Col>
             <Col
               xs={11}

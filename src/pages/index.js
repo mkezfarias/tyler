@@ -93,7 +93,7 @@ class IndexPage extends React.Component {
               bg="#663399"
               direction="left"
               top="exit"
-              to="calendly"
+              to="connect"
             >
               Set up a call
             </AniLink>
