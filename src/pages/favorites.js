@@ -246,12 +246,12 @@ class Favorites extends React.Component {
           <GatsbySeo
             title="Tyler Vawser's Favorites"
             description="Tyler Vawser's favorite tools, books, things, and more."
-            canonical="https://www.tylervawser.com/"
+            canonical="https://www.tylervawser.com/favorites"
           keywords="tylervawser,tyler vawser,favorite tools" // keywords list
           openGraph={{
-            url: "https://www.tylervawser.com/about",
+            url: "https://www.tylervawser.com/favorites",
             title: "About Tyler Vawser",
-            description: "Tyler Vawser creates connections with people and creates growth in companies.",
+            description: "Tyler Vawser's favorite tools, books, things, and more.",
             images: [
               {
                 url: "../src/images/OGtylervawser.jpg",
