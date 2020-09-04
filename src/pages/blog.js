@@ -51,34 +51,26 @@ class Blog extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <GatsbySeo
-          title="Tyler Vawser"
-          description="Tyler Vawser Tyler Vawser Tyler Vawser."
+          title="Tyler Vawser's Blog"
+          description="Tyler's thoughts and writings."
           canonical="https://www.tylervawser.com/"
-          keywords="prayuth,taksin"
+          keywords="tylervawser,tyler vawser"
           openGraph={{
-            url: "https://www.url.ie/a",
-            title: "Open Graph Title",
-            description: "Open Graph Description",
-            images: [
+            url: "https://www.tylervawser.com/blog",
+            title: "Tyler Vawser's Blog",
+            description: "Tyler's thoughts and writings",
+           images: [
               {
-                url: "https://www.example.ie/og-image-01.jpg",
-                width: 800,
-                height: 600,
-                alt: "Og Image Alt",
+                url: "../src/images/OGtylervawser.jpg",
+                width: 1200,
+                height: 1200,
+                alt: "About Tyler Vawser",
               },
-              {
-                url: "https://www.example.ie/og-image-02.jpg",
-                width: 900,
-                height: 800,
-                alt: "Og Image Alt Second",
-              },
-              { url: "https://www.example.ie/og-image-03.jpg" },
-              { url: "https://www.example.ie/og-image-04.jpg" },
             ],
             site_name: "TylerVawser",
           }}
           twitter={{
-            handle: "@handle",
+            handle: "@tvaw",
             site: "@site",
             cardType: "summary_large_image",
           }}
