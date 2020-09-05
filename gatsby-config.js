@@ -23,7 +23,6 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-feed-mdx`,
     `gatsby-plugin-next-seo`,
-    `gatsby-plugin-remove-trailing-slashes`,
     {
       resolve: "gatsby-plugin-mailchimp",
       options: {
