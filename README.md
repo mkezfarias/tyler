@@ -4,9 +4,7 @@
     <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
   </a>
 </p>
-<h1 align="center">
-  Gatsby Personal Starter Blog
-</h1>
+
 
 <img alt="screenshot" src="./screenshot.png">
 
