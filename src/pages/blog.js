@@ -146,13 +146,13 @@ class Blog extends React.Component {
                     </Card.Title>
                     <Card.Text>
                       <p
-                        style={{ color: `var(--textNormal)` }}
+                        style={{ color: `var(--textNormal)`, fontSize: "20px" }}
                         dangerouslySetInnerHTML={{
                           __html: node.frontmatter.description || node.excerpt,
                         }}
                       />
                     </Card.Text>
-                    <small className="text-muted">
+                    <small style={{ fontSize: `18px` }} className="text-muted">
                       {node.frontmatter.date}
                     </small>
                   </Card.Body>

@@ -366,15 +366,18 @@ class Favorites extends React.Component {
                       </Row>
                       {favoriteSet.items.map(item => {
                         return (
-                          <Row className="d-flex ml-2 ml-md-5 w-100 w-md-75">
+                          <Row className="d-flex ml-2 ml-md-3 w-100 w-md-75">
                             <Link to={item.link} target="_blank">
-                              <p className=" text-light  w-semibold mb-0 ">
+                              <p
+                                style={{ fontSize: `23px` }}
+                                className=" text-light  w-semibold mb-0 "
+                              >
                                 {" "}
                                 {item.subTitle}{" "}
                               </p>
                               <p
                                 className=" text-light p-text w-100 w-md-75"
-                                style={{ fontSize: `14px` }}
+                                style={{ fontSize: `20px` }}
                               >
                                 {item.subText}
                               </p>
