@@ -369,7 +369,11 @@ class Favorites extends React.Component {
                       {favoriteSet.items.map(item => {
                         return (
                           <Row className="d-flex ml-2 ml-md-3 w-100 w-md-75">
-                            <Link to={item.link} target="_blank">
+                            <a
+                              href={item.link}
+                              target="_blank"
+                              className="fancy-link"
+                            >
                               <p
                                 style={{ fontSize: `21px` }}
                                 className=" text-light  w-semibold mb-0 "
@@ -377,13 +381,13 @@ class Favorites extends React.Component {
                                 {" "}
                                 {item.subTitle}{" "}
                               </p>
-                              <p
-                                className=" text-light p-text w-100 w-md-75 pr-md-5"
-                                style={{ fontSize: `17px` }}
-                              >
-                                {item.subText}
-                              </p>
-                            </Link>
+                            </a>{" "}
+                            <p
+                              className=" text-light p-text w-100 w-md-75 pr-md-5"
+                              style={{ fontSize: `17px` }}
+                            >
+                              {item.subText}
+                            </p>
                           </Row>
                         )
                       })}
