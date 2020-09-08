@@ -154,14 +154,15 @@ class About extends React.Component {
                 <strong>Hi! My name is Tyler Vawser.</strong>
                 <br /> I create connections with people and growth in companies.
                 Right now, I spend my waking hours finding and talking to great
-                people who want to continue building{" "}
-                <Link
+                people who want to continue building <br />
+                <a
                   target="_blank"
-                  to="https://www.apptegy.com/careers/"
+                  href="https://www.apptegy.com/careers/"
                   style={{ color: `var(--skyblue3)` }}
+                  className="fancy-link"
                 >
                   Apptegy
-                </Link>
+                </a>
                 .
               </p>
 
@@ -237,13 +238,14 @@ class About extends React.Component {
               >
                 What’s next? More serendipity. If you’re reading this, let’s
                 chat.{" "}
-                <Link
+                <a
                   target="_blank"
-                  to="https://calendly.com/tyler-apptegy/chat"
+                  href="https://calendly.com/tyler-apptegy/chat"
                   style={{ color: `var(--skyblue3)` }}
+                  className="fancy-link"
                 >
                   Set up a call for us
-                </Link>
+                </a>
                 .{" "}
               </p>
 
@@ -543,13 +545,14 @@ class About extends React.Component {
                 className="mb-5"
               >
                 The easiest way to connect is by{" "}
-                <Link
+                <a
                   target="_blank"
-                  to="https://calendly.com/tyler-apptegy/chat"
+                  href="https://calendly.com/tyler-apptegy/chat"
                   style={{ color: `var(--skyblue3)` }}
+                  className="fancy-link"
                 >
                   picking a time here that works for you
-                </Link>
+                </a>
                 .{" "}
               </p>
             </Col>

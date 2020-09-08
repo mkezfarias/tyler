@@ -21,6 +21,8 @@ import toolsIcon from "../images/favorite tools icon.svg"
 import podcastsIcon from "../images/favorite podcasts icon.svg"
 import travelIcon from "../images/favorite podcasts icon.svg"
 import videosIcon from "../images/favorite videos icon.svg"
+import booksIcon from "../images/books-svgrepo-com (1).svg"
+import thingsIcon from "../images/shoe-svgrepo-com.svg"
 import footerIMG from "../images/footer.png"
 import footerIMG2 from "../images/footer@2x.png"
 import Menu from "../components/menu"
@@ -78,7 +80,7 @@ const favoritesArray = [
     ],
   },
   {
-    icon: videosIcon,
+    icon: toolsIcon,
     title: "Favorite books",
     items: [
       {
@@ -139,7 +141,7 @@ const favoritesArray = [
   },
 
   {
-    icon: travelIcon,
+    icon: toolsIcon,
     title: "Favorite things",
     items: [
       {
@@ -369,15 +371,15 @@ class Favorites extends React.Component {
                           <Row className="d-flex ml-2 ml-md-3 w-100 w-md-75">
                             <Link to={item.link} target="_blank">
                               <p
-                                style={{ fontSize: `23px` }}
+                                style={{ fontSize: `21px` }}
                                 className=" text-light  w-semibold mb-0 "
                               >
                                 {" "}
                                 {item.subTitle}{" "}
                               </p>
                               <p
-                                className=" text-light p-text w-100 w-md-75"
-                                style={{ fontSize: `20px` }}
+                                className=" text-light p-text w-100 w-md-75 pr-md-5"
+                                style={{ fontSize: `17px` }}
                               >
                                 {item.subText}
                               </p>
