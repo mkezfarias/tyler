@@ -297,6 +297,7 @@ class Now extends React.Component {
                     href="https://nownownow.com/about"
                     style={{ color: `var(--skyblue3)` }}
                     target="_blank"
+                    className="fancy-link"
                   >
                     {" "}
                     Derek Sivers
