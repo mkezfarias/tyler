@@ -122,6 +122,16 @@ const FooterBlue = () => {
                     Favorites
                   </a>
                 </div>
+                <div className="px-2 footer-links">/</div>
+                <div className="footer-links">
+                  <a
+                    href="/favorites"
+                    className="text-light fancy-link-footer"
+                    target="_blank"
+                  >
+                    Links
+                  </a>
+                </div>
               </div>
             </div>
           </div>

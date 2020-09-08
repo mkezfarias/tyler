@@ -140,12 +140,13 @@ class About extends React.Component {
               <p
                 style={{
                   color: "var(--textNormal)",
+                  fontSize: "20px",
                 }}
               >
-                <strong>Hi! My name is Tyler Vawser.</strong> I create
-                connections with people and growth in companies. Right now, I
-                spend my waking hours finding and talking to great people who
-                want to continue building{" "}
+                <strong>Hi! My name is Tyler Vawser.</strong>
+                <br /> I create connections with people and growth in companies.
+                Right now, I spend my waking hours finding and talking to great
+                people who want to continue building{" "}
                 <Link
                   target="_blank"
                   to="https://www.apptegy.com/careers/"
@@ -159,6 +160,7 @@ class About extends React.Component {
               <p
                 style={{
                   color: "var(--textNormal)",
+                  fontSize: "20px",
                 }}
               >
                 <strong>
@@ -172,6 +174,7 @@ class About extends React.Component {
               <p
                 style={{
                   color: "var(--textNormal)",
+                  fontSize: "20px",
                 }}
               >
                 The best way I know to do that is to bring thoughtful and
@@ -183,6 +186,7 @@ class About extends React.Component {
               <p
                 style={{
                   color: "var(--textNormal)",
+                  fontSize: "20px",
                 }}
               >
                 I’m working on finding thoughtful people that find meaning in
@@ -197,6 +201,7 @@ class About extends React.Component {
               <p
                 style={{
                   color: "var(--textNormal)",
+                  fontSize: "20px",
                 }}
               >
                 Before Apptegy, I had nothing to do with recruiting, HR, People
@@ -208,6 +213,7 @@ class About extends React.Component {
               <p
                 style={{
                   color: "var(--textNormal)",
+                  fontSize: "20px",
                 }}
               >
                 For me, having a particular career or following a linear path
@@ -218,6 +224,7 @@ class About extends React.Component {
               <p
                 style={{
                   color: "var(--textNormal)",
+                  fontSize: "20px",
                 }}
               >
                 What’s next? More serendipity. If you’re reading this, let’s
@@ -237,6 +244,7 @@ class About extends React.Component {
               <p
                 style={{
                   color: "var(--textNormal)",
+                  fontSize: "20px",
                 }}
               >
                 Early in my career,{" "}
@@ -252,6 +260,7 @@ class About extends React.Component {
               <p
                 style={{
                   color: "var(--textNormal)",
+                  fontSize: "20px",
                 }}
               >
                 On the one hand I enjoy hosting dinner parties with strangers.
@@ -263,6 +272,7 @@ class About extends React.Component {
               <p
                 style={{
                   color: "var(--textNormal)",
+                  fontSize: "20px",
                 }}
               >
                 My ideal weekly routine involves talking to high-performers
@@ -275,6 +285,7 @@ class About extends React.Component {
               <p
                 style={{
                   color: "var(--textNormal)",
+                  fontSize: "20px",
                 }}
               >
                 <strong>
@@ -287,6 +298,7 @@ class About extends React.Component {
               <p
                 style={{
                   color: "var(--textNormal)",
+                  fontSize: "20px",
                 }}
               >
                 <strong>
@@ -303,6 +315,7 @@ class About extends React.Component {
               <p
                 style={{
                   color: "var(--textNormal)",
+                  fontSize: "20px",
                 }}
               >
                 Creativity to me isn’t painting a canvas, but figuring it out
@@ -315,6 +328,7 @@ class About extends React.Component {
               <p
                 style={{
                   color: "var(--textNormal)",
+                  fontSize: "20px",
                 }}
               >
                 Thankfulness or gratitude is the only way to live a happy life.
@@ -326,6 +340,7 @@ class About extends React.Component {
               <p
                 style={{
                   color: "var(--textNormal)",
+                  fontSize: "20px",
                 }}
               >
                 <strong>
@@ -341,6 +356,7 @@ class About extends React.Component {
               <p
                 style={{
                   color: "var(--textNormal)",
+                  fontSize: "20px",
                 }}
               >
                 <strong>
@@ -358,6 +374,7 @@ class About extends React.Component {
               <p
                 style={{
                   color: "var(--textNormal)",
+                  fontSize: "20px",
                 }}
               >
                 <strong>In the past…</strong>
@@ -366,6 +383,7 @@ class About extends React.Component {
               <p
                 style={{
                   color: "var(--textNormal)",
+                  fontSize: "20px",
                 }}
               >
                 <strong>
@@ -387,6 +405,7 @@ class About extends React.Component {
               <p
                 style={{
                   color: "var(--textNormal)",
+                  fontSize: "20px",
                 }}
               >
                 <strong>
@@ -403,6 +422,7 @@ class About extends React.Component {
               <p
                 style={{
                   color: "var(--textNormal)",
+                  fontSize: "20px",
                 }}
               >
                 <strong>
@@ -418,6 +438,7 @@ class About extends React.Component {
               <p
                 style={{
                   color: "var(--textNormal)",
+                  fontSize: "20px",
                 }}
               >
                 That kicked off my informal training into the world of Quant
@@ -434,6 +455,7 @@ class About extends React.Component {
               <p
                 style={{
                   color: "var(--textNormal)",
+                  fontSize: "20px",
                 }}
               >
                 <strong>
@@ -455,6 +477,7 @@ class About extends React.Component {
               <p
                 style={{
                   color: "var(--textNormal)",
+                  fontSize: "20px",
                 }}
               >
                 <strong>
@@ -475,6 +498,7 @@ class About extends React.Component {
               <p
                 style={{
                   color: "var(--textNormal)",
+                  fontSize: "20px",
                 }}
               >
                 I’m pretty sure that spending summers in Hong Kong (1x) or Japan
@@ -493,6 +517,7 @@ class About extends React.Component {
               <p
                 style={{
                   color: "var(--textNormal)",
+                  fontSize: "20px",
                 }}
               >
                 <strong>This is the most I’ve written about myself</strong> but
@@ -505,6 +530,7 @@ class About extends React.Component {
               <p
                 style={{
                   color: "var(--textNormal)",
+                  fontSize: "20px",
                 }}
                 className="mb-5"
               >

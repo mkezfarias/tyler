@@ -56,7 +56,7 @@ const favoritesArray = [
 ]
 
 const onMyMindLinks = {
-  title: "What I'm reading/listening/watching:",
+  title: "What I'm reading / listening / watching:",
   items: [
     {
       link: "https://www.calnewport.com/books/digital-minimalism/",
@@ -201,6 +201,7 @@ class Now extends React.Component {
             <Col xl={{ span: 7 }} xs={10} sm={10} className="mb-5 pb-5 pt-5">
               <p
                 style={{
+                  fontSize: `20px`,
                   color: "var(--textNormal)",
                 }}
               >
@@ -210,6 +211,7 @@ class Now extends React.Component {
                   href="https://www.apptegy.com/careers/"
                   style={{ color: `var(--skyblue3)` }}
                   target="_blank"
+                  className="fancy-link"
                 >
                   Apptegy
                 </a>
@@ -220,6 +222,7 @@ class Now extends React.Component {
 
               <p
                 style={{
+                  fontSize: `20px`,
                   color: "var(--textNormal)",
                 }}
               >
@@ -233,6 +236,7 @@ class Now extends React.Component {
 
               <p
                 style={{
+                  fontSize: `20px`,
                   color: "var(--textNormal)",
                 }}
               >
@@ -243,6 +247,7 @@ class Now extends React.Component {
 
               <p
                 style={{
+                  fontSize: `20px`,
                   color: "var(--textNormal)",
                 }}
               >
@@ -255,6 +260,7 @@ class Now extends React.Component {
 
               <p
                 style={{
+                  fontSize: `20px`,
                   color: "var(--textNormal)",
                 }}
               >
@@ -266,6 +272,7 @@ class Now extends React.Component {
 
               <p
                 style={{
+                  fontSize: `20px`,
                   color: "var(--textNormal)",
                 }}
               >
@@ -280,6 +287,7 @@ class Now extends React.Component {
 
               <p
                 style={{
+                  fontSize: `20px`,
                   color: "var(--textNormal)",
                 }}
               >
@@ -302,6 +310,7 @@ class Now extends React.Component {
 
               <p
                 style={{
+                  fontSize: `20px`,
                   color: "var(--textNormal)",
                 }}
               >
@@ -344,8 +353,13 @@ class Now extends React.Component {
                     </Row>
                     {favoriteSet.items.map(item => {
                       return (
-                        <Row className="d-flex ml-2 ml-md-5 w-100 w-md-75">
-                          <p className="py-1 fancy-link text-light  w-semibold mb-0 ">
+                        <Row className="d-flex ml-2 ml-md-4 w-100 w-md-75">
+                          <p
+                            className="py-1 fancy-link text-light  w-semibold mb-0 "
+                            style={{
+                              fontSize: `20px`,
+                            }}
+                          >
                             {item}
                           </p>
                         </Row>
@@ -355,14 +369,17 @@ class Now extends React.Component {
                 )
               })}
               <Row className="d-flex align-items-baseline">
-                <span className="px-2 mt-4 wsans w-regular fav-title">
+                <div className="px-2 mt-4 wsans w-regular fav-title">
                   {onMyMindLinks.title}
-                </span>
+                </div>
               </Row>
               {onMyMindLinks.items.map(mind => (
-                <Row className="text-left pl-3">
+                <Row
+                  className="pr-md-5 text-left pl-3"
+                  style={{ fontSize: `20px` }}
+                >
                   {" "}
-                  <Row className="d-flex ml-2 ml-md-5 w-100 w-md-75">
+                  <Row className="d-flex ml-2 ml-md-4 w-100 w-md-75">
                     <a
                       style={{ color: `#add5ff` }}
                       className="py-1 fancy-link text-light  w-semibold mb-0 "
@@ -379,15 +396,18 @@ class Now extends React.Component {
                   {letsTalk.title}
                 </span>
               </Row>
-              <Row className="d-flex ml-2 ml-md-5 w-100 w-md-50">
-                <p className=" text-light  w-semibold mb-0 py-2">
+              <Row className="d-flex ml-2 ml-md-3 w-100 w-md-50">
+                <p
+                  className=" text-light  w-semibold mb-0 py-2"
+                  style={{ fontSize: `20px` }}
+                >
                   {letsTalk.content}
                 </p>
               </Row>
-              <Row className="ml-md-0 ml-0">
+              <Row className="ml-md-0 ml-0 mb-2">
                 <Link
-                  style={{ color: `#add5ff` }}
-                  className="fancy-link d-flex ml-md-5 py-3"
+                  style={{ color: `#add5ff`, fontSize: `20px` }}
+                  className="fancy-link d-flex ml-md-3 "
                   to="/connect"
                 >
                   {letsTalk.linkText}
@@ -395,7 +415,7 @@ class Now extends React.Component {
               </Row>
             </Col>
           </Row>
-          <FooterBlue />
+          <FooterBlue className="pt-5" />
         </Container>
       </Layout>
     )
