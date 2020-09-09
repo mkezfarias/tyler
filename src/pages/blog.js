@@ -2,33 +2,15 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import addToMailchimp from "gatsby-plugin-mailchimp"
 
-import Bio from "../components/bio"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+
 import { rhythm } from "../utils/typography"
-import Button from "../components/button"
+
 import AniLink from "gatsby-plugin-transition-link/AniLink"
-import { TransitionState } from "gatsby-plugin-transition-link"
 
 import { Card, Container, Row, Col, Modal, CardColumns } from "react-bootstrap"
 import "../styles/global.scss"
-import TransitionLink from "gatsby-plugin-transition-link"
-import { ThemeToggler } from "gatsby-plugin-dark-mode"
-import whiteLogo from "../images/logo-white.svg"
-import darkLogo from "../images/logo.svg"
-import dayButton from "../images/daymode.svg"
-import nightButton from "../images/night-button.svg"
-import closeBTN from "../images/x.svg"
-import menuIMG from "../images/menu.svg"
-import menuDarkIMG from "../images/menu2.svg"
-import arrowIMG from "../images/arrow.svg"
-import toolsIcon from "../images/favorite tools icon.svg"
-import podcastsIcon from "../images/favorite podcasts icon.svg"
-import travelIcon from "../images/favorite podcasts icon.svg"
-import videosIcon from "../images/favorite videos icon.svg"
-import footerIMG from "../images/footer.png"
-import footerIMG2 from "../images/footer@2x.png"
-import Menu from "../components/menu"
+
 import LogoFixedMobile from "../components/LogoFixedMobile"
 import FooterBlue from "../components/Footer"
 import { GatsbySeo } from "gatsby-plugin-next-seo"
@@ -39,26 +21,18 @@ class Blog extends React.Component {
 
     this.state = {
       show: false,
-      email: undefined,
-      name: undefined,
-      result: undefined,
     }
 
     this.handleClose = () => this.setState({ show: false })
     this.handleShow = () => this.setState({ show: true })
 
     this._handleSubmit = e => {
-      addToMailchimp(this.state.email, { FNAME: `${this.state.name}` }) // listFields are optional if you are only capturing the email address.
+      addToMailchimp(this.state.email, { FNAME: `${this.state.name}` })
         .then(data => {
-          // I recommend setting data to React state
-          // but you can do whatever you want (including ignoring this `then()` altogether)
           console.log(data)
+          alert("subscribed (temporary message)")
         })
-        .catch(() => {
-          // unnecessary because Mailchimp only ever
-          // returns a 200 status code
-          // see below for how to handle errors
-        })
+        .catch(() => {})
     }
   }
 
@@ -103,8 +77,6 @@ class Blog extends React.Component {
           }}
         />
 
-        {/* <SEO title="All posts" /> */}
-
         <LogoFixedMobile />
 
         <Row
@@ -119,7 +91,7 @@ class Blog extends React.Component {
               transition: `0.4s`,
               textAlign: `center`,
               margin: `auto`,
-              maxWidth: `80vw`,
+              maxWidth: `90vw`,
               padding: `-20vh 10vw 0 10vw`,
               fontSize: `calc(20px + 4vw)`,
             }}
@@ -191,10 +163,10 @@ class Blog extends React.Component {
           })}
         </Row>
         <Row className="w50 d-flex justify-content-center pb-5 mb-5 text-center">
-          <Col className="pb-5">
+          <Col>
             <div
               style={{ color: `var(--textNormal)` }}
-              className="h1 wsans w-medium "
+              className="h1 wsans w-medium"
             >
               Thank you for reading.
             </div>
@@ -224,7 +196,7 @@ class Blog extends React.Component {
                 <input
                   type="email"
                   name="EMAIL"
-                  className="m-2 p-2 "
+                  className="m-2 p-2 pr-md-5"
                   id="mce-EMAIL"
                   placeholder="Email"
                   onChange={e => {
@@ -232,7 +204,7 @@ class Blog extends React.Component {
                   }}
                 />
 
-                <div className="clear">
+                <div className="clear mb-5">
                   <input
                     type="submit"
                     value="Sign up"
@@ -252,3 +224,28 @@ class Blog extends React.Component {
 }
 
 export default Blog
+
+export const pageQuery = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
+      edges {
+        node {
+          excerpt
+          fields {
+            slug
+          }
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            title
+            description
+          }
+        }
+      }
+    }
+  }
+`
