@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Button from "../components/button"
+
 import { Container, Row, Col, Modal } from "react-bootstrap"
 import "../styles/global.scss"
 import TransitionLink from "gatsby-plugin-transition-link"
