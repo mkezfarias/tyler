@@ -1,7 +1,7 @@
 ---
 path: Action in uncertainty
 date: 2020-08-25T13:10:56.626Z
-title: How to Take Action in Uncertainty
+title: Action in Uncertainty
 description: "To be better, assume you already are. "
 ---
 "What do I do?" We all ask this simple question when we confront an unfamiliar situation.

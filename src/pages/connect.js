@@ -1,27 +1,11 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
-import Button from "../components/button"
-import { Container, Row, Col, Modal } from "react-bootstrap"
+
+import { Row, Col } from "react-bootstrap"
 import "../styles/global.scss"
-import { ThemeToggler } from "gatsby-plugin-dark-mode"
+
 import whiteLogo from "../images/logo-white.svg"
-import darkLogo from "../images/logo.svg"
-import dayButton from "../images/daymode.svg"
-import nightButton from "../images/night-button.svg"
-import closeBTN from "../images/x.svg"
-import menuIMG from "../images/menu.svg"
-import menuDarkIMG from "../images/menu2.svg"
-import arrowIMG from "../images/arrow.svg"
-import toolsIcon from "../images/favorite tools icon.svg"
-import podcastsIcon from "../images/favorite podcasts icon.svg"
-import travelIcon from "../images/favorite podcasts icon.svg"
-import videosIcon from "../images/favorite videos icon.svg"
-import footerIMG from "../images/footer.png"
-import footerIMG2 from "../images/footer@2x.png"
-import Menu from "../components/menu"
 import CalendlyEmbed from "../components/CalendlyEmbed"
 import twitterIMG from "../images/twitter.svg"
 import mailIMG from "../images/mail.svg"
@@ -43,34 +27,26 @@ class Connect extends React.Component {
     return (
       <Layout location={this.props.location}>
         <GatsbySeo
-          title="Tyler Vawser calendly test"
-          description="Tyler Vawser Tyler Vawser Tyler Vawser."
-          canonical="https://www.tylervawser.com/"
-          keywords="prayuth,taksin"
+          title="Connect with Tyler Vawser"
+          description="Set a time to chat with Tyler"
+          canonical="https://www.tylervawser.com/connect"
+          keywords="tylervawser,tyler vawser,apptegy,people ops," // keywords list
           openGraph={{
-            url: "https://www.url.ie/a",
-            title: "Open Graph Title",
-            description: "Open Graph Description",
-            images: [
+            url: "https://www.tylervawser.com/connect",
+            title: "Chat with Tyler",
+            description: "Set up a call with Tyler Vawser",
+           images: [
               {
-                url: "https://www.example.ie/og-image-01.jpg",
-                width: 800,
-                height: 600,
-                alt: "Og Image Alt",
+                url: "../src/images/OGtylervawser.jpg",
+                width: 1200,
+                height: 1200,
+                alt: "About Tyler Vawser",
               },
-              {
-                url: "https://www.example.ie/og-image-02.jpg",
-                width: 900,
-                height: 800,
-                alt: "Og Image Alt Second",
-              },
-              { url: "https://www.example.ie/og-image-03.jpg" },
-              { url: "https://www.example.ie/og-image-04.jpg" },
             ],
             site_name: "TylerVawser",
           }}
           twitter={{
-            handle: "@handle",
+            handle: "@tvaw",
             site: "@site",
             cardType: "summary_large_image",
           }}

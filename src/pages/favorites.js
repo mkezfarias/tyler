@@ -1,34 +1,18 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
-import Button from "../components/button"
-import { Container, Row, Col, Modal } from "react-bootstrap"
+
+import { Container, Row, Col } from "react-bootstrap"
 import "../styles/global.scss"
-import TransitionLink from "gatsby-plugin-transition-link"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
-import { ThemeToggler } from "gatsby-plugin-dark-mode"
-import whiteLogo from "../images/logo-white.svg"
-import darkLogo from "../images/logo.svg"
-import dayButton from "../images/daymode.svg"
-import nightButton from "../images/night-button.svg"
-import closeBTN from "../images/x.svg"
-import menuIMG from "../images/menu.svg"
-import menuDarkIMG from "../images/menu2.svg"
 import arrowIMG from "../images/arrow.svg"
 import toolsIcon from "../images/favorite tools icon.svg"
-import podcastsIcon from "../images/favorite podcasts icon.svg"
-import travelIcon from "../images/favorite podcasts icon.svg"
-import videosIcon from "../images/favorite videos icon.svg"
+
 import booksIcon from "../images/booksIcon.png"
 import thingsIcon from "../images/thingsIcon.png"
 import linksIcon from "../images/linksIcon.png"
-import footerIMG from "../images/footer.png"
-import footerIMG2 from "../images/footer@2x.png"
-import Menu from "../components/menu"
+
 import LogoFixedMobile from "../components/LogoFixedMobile"
-import FooterBlue from "../components/Footer"
+
 import { GatsbySeo } from "gatsby-plugin-next-seo"
 
 const favoritesArray = [
@@ -247,34 +231,26 @@ class Favorites extends React.Component {
       <>
         <Layout location={this.props.location}>
           <GatsbySeo
-            title="Tyler Vawser favorites test"
-            description="Tyler Vawser Tyler Vawser Tyler Vawser."
-            canonical="https://www.tylervawser.com/"
-            keywords="prayuth,taksin"
-            openGraph={{
-              url: "https://www.url.ie/a",
-              title: "Open Graph Title",
-              description: "Open Graph Description",
-              images: [
-                {
-                  url: "https://www.example.ie/og-image-01.jpg",
-                  width: 800,
-                  height: 600,
-                  alt: "Og Image Alt",
+            title="Tyler Vawser's Favorites"
+            description="Tyler Vawser's favorite tools, books, things, and more."
+            canonical="https://www.tylervawser.com/favorites"
+          keywords="tylervawser,tyler vawser,favorite tools" // keywords list
+          openGraph={{
+            url: "https://www.tylervawser.com/favorites",
+            title: "About Tyler Vawser",
+            description: "Tyler Vawser's favorite tools, books, things, and more.",
+            images: [
+              {
+                url: "../src/images/OGtylervawser.jpg",
+                width: 1200,
+                height: 1200,
+                alt: "About Tyler Vawser",
                 },
-                {
-                  url: "https://www.example.ie/og-image-02.jpg",
-                  width: 900,
-                  height: 800,
-                  alt: "Og Image Alt Second",
-                },
-                { url: "https://www.example.ie/og-image-03.jpg" },
-                { url: "https://www.example.ie/og-image-04.jpg" },
               ],
               site_name: "TylerVawser",
             }}
             twitter={{
-              handle: "@handle",
+              handle: "@tvaw",
               site: "@site",
               cardType: "summary_large_image",
             }}

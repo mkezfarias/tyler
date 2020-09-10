@@ -1,15 +1,12 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
-import Button from "../components/button"
-import { Container, Row, Col, Modal } from "react-bootstrap"
+
+import { Row, Col } from "react-bootstrap"
 import "../styles/global.scss"
-import TransitionLink from "gatsby-plugin-transition-link"
+
 import AniLink from "gatsby-plugin-transition-link/AniLink"
-import ThemeToggler from "gatsby-plugin-dark-mode/ThemeToggler"
-import MenuFixedIcon from "../components/MenuFixedIcon"
+
 import { GatsbySeo } from "gatsby-plugin-next-seo"
 
 class IndexPage extends React.Component {
@@ -18,29 +15,21 @@ class IndexPage extends React.Component {
       <Layout location={this.props.location}>
         <GatsbySeo
           title="Tyler Vawser"
-          description="Learn more about Tyler Vawser, what he's doing now, his work, and favorites."
+          description="Learn more about Tyler Vawser, what he's doing now, his work, and more."
           canonical="https://www.tylervawser.com/"
           keywords="tylervawser,tyler,vawser,apptegy,stickermule,museumhack"
           openGraph={{
             url: "https://www.tylervawser.com",
 
-            title: "Open Graph Title",
-            description: "Open Graph Description",
+            title: "Tyler Vawser",
+            description: "Learn more about Tyler Vawser and his work",
             images: [
               {
-                url: "https://www.example.ie/og-image-01.jpg",
+                url: "../src/images/OGtylervawser.jpg",
                 width: 800,
                 height: 600,
-                alt: "Og Image Alt",
+                alt: "Tyler Vawser",
               },
-              {
-                url: "https://www.example.ie/og-image-02.jpg",
-                width: 900,
-                height: 800,
-                alt: "Og Image Alt Second",
-              },
-              { url: "https://www.example.ie/og-image-03.jpg" },
-              { url: "https://www.example.ie/og-image-04.jpg" },
             ],
             site_name: "TylerVawser",
           }}
