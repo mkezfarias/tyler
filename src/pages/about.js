@@ -150,8 +150,8 @@ class About extends React.Component {
                 <a
                   target="_blank"
                   href="https://www.apptegy.com/careers/"
-                  style={{ color: `var(--skyblue3)` }}
-                  className="fancy-link"
+                  style={{ color: `var(--skyblue)` }}
+                  className="fancy-link-footer"
                 >
                   Apptegy
                 </a>
@@ -233,8 +233,8 @@ class About extends React.Component {
                 <a
                   target="_blank"
                   href="https://calendly.com/tyler-apptegy/chat"
-                  style={{ color: `var(--skyblue3)` }}
-                  className="fancy-link"
+                  style={{ color: `var(--skyblue)` }}
+                  className="fancy-link-footer"
                 >
                   Set up a call for us
                 </a>
@@ -540,8 +540,8 @@ class About extends React.Component {
                 <a
                   target="_blank"
                   href="https://calendly.com/tyler-apptegy/chat"
-                  style={{ color: `var(--skyblue3)` }}
-                  className="fancy-link"
+                  style={{ color: `var(--skyblue)` }}
+                  className="fancy-link-footer"
                 >
                   picking a time here that works for you
                 </a>

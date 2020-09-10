@@ -196,8 +196,9 @@ top: 70px;
 
 .items-fixed > a.fancy-link, a.fancy-link-footer {
   position: relative;
-  color: (white);
+  color: var(--skyblue3);
 }
+
 
 a.fancy-link {
   position: relative;
@@ -205,7 +206,7 @@ a.fancy-link {
 }
 
 .items-fixed > a.fancy-link:hover, a.fancy-link-footer:hover {
- color: white;
+ color: var(--skyblue3);
 }
 
 a.fancy-link:hover{
@@ -213,8 +214,8 @@ a.fancy-link:hover{
 }
 
 .items-fixed > a.fancy-link::before, .items-fixed > a.fancy-link:hover::before, a.fancy-link-footer::before, a.fancy-link-footer:hover::before {
-background-color: whitesmoke;  
-color: white;
+background-color: var(--skyblue3);  
+color: var(--skyblue3);
 }
 
 a.fancy-link::before, .fancy-link-footer::before {
