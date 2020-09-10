@@ -22,6 +22,7 @@ import nightButton from "../images/night-button.svg"
 import closeBTN from "../images/x.svg"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import MenuFixedIcon from "./MenuFixedIcon"
+import FooterBlue from "./Footer"
 
 class Layout extends React.Component {
   constructor(props) {
@@ -43,6 +44,7 @@ class Layout extends React.Component {
     const fullMenuPath2 = `${__PATH_PREFIX__}/full-menu/`
     let header
     let menu
+    let footer
 
     if (location.pathname === rootPath) {
       header = (
@@ -118,6 +120,7 @@ class Layout extends React.Component {
           ></div>
         </AniLink>
       )
+      footer = null
     } else if (
       location.pathname === fullMenuPath ||
       location.pathname === fullMenuPath2
@@ -143,6 +146,7 @@ class Layout extends React.Component {
         </Row>
       )
       menu = null
+      footer = null
     } else {
       header = (
         <Row className="mx-md-2 mx-px-2 mx-1 px-1">
@@ -219,6 +223,7 @@ class Layout extends React.Component {
           ></div>
         </div>
       )
+      footer = <FooterBlue />
     }
     return (
       <Wrapper
@@ -304,6 +309,7 @@ class Layout extends React.Component {
             </div>
           </Modal.Body>
         </Modal>
+        <div className="mt-5 pt-5">{footer} </div>
       </Wrapper>
     )
   }

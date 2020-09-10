@@ -397,8 +397,6 @@ class Favorites extends React.Component {
               </Col>
             </Row>
           </Container>
-
-          <FooterBlue />
         </Layout>
       </>
     )
