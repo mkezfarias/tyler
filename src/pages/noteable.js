@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
+
 import { Container, Row, Col, Modal } from "react-bootstrap"
 import "../styles/global.scss"
 
@@ -30,32 +31,45 @@ const noteableArray = [
       {
         link: "https://www.quora.com/profile/Tyler-Vawser",
         subTitle: "Tyler on Quora",
+
         subText: " ",
+
       },
       {
         link: "https://yourstack.com/@Tvaw",
         subTitle: "Your Stack",
+
         subText: " ",
+
       },
       {
         link: "https://www.linkedin.com/in/tylervawser",
         subTitle: "Tyler's LinkedIn",
+
         subText: " ",
       },
       {
         link: "https://www.producthunt.com/@tvaw/",
         subTitle: "Tyler on Product Hunt",
-        subText: " ",
+
+        subText:
+          " ",
+
       },
       {
         link: "https://angel.co/u/tyler-vawser",
         subTitle: "Tyler's AngelList",
-        subText: " ",
+
+        subText:
+          " ",
+
       },
       {
         link: "https://medium.com/@tvaw",
         subTitle: "Medium",
-        subText: " ",
+        subText:
+          " ",
+
       },
     ],
   },
@@ -65,6 +79,7 @@ const noteableArray = [
     items: [
       {
         link: "https://copyhour.com/tyler-vawser-interview/",
+
         subTitle:
           "How Tyler Vawser Quit His Job & Went Full-Time As A Marketing Consultant | CopyHour.com",
         subText: " ",
@@ -86,10 +101,12 @@ const noteableArray = [
       {
         link:
           "https://mailchimp.com/resources/how-sticker-mule-combines-e-commerce-and-email/",
+
         subTitle: "How Sticker Mule Combines E-Commerce and Email",
         subText: " ",
       },
       {
+
         link:
           "https://www.fatherly.com/play/12-awesome-activities-to-do-with-your-kids-in-2016/",
         subTitle: "12 Awesome Activities To Do With Your Kids in 2016",
@@ -107,6 +124,7 @@ const noteableArray = [
           "https://okdork.com/interview-with-siggi-hilmarsson-of-siggis-icelandic-skyr-yogurt/",
         subTitle:
           "Interview with Siggi Hilmarsson of Siggi’s Icelandic Skyr Yogurt",
+
         subText: " ",
       },
       {
@@ -114,10 +132,12 @@ const noteableArray = [
         subTitle: "How It Actually Works, the newsletter",
         subText: " ",
       },
+
       {
         link: "https://cxl.com/blog/conversion-rate-optimization-principles/",
         subTitle:
           "9 Conversion Rate Optimization Principles to Get You Started",
+
         subText: " ",
       },
     ],
@@ -135,6 +155,7 @@ const noteableArray = [
       {
         link: "https://www.stickermule.com/blog/author/tyler-vawser",
         subTitle: "Posts by Tyler Vawser | Sticker Mule",
+
         subText: " ",
       },
       {
@@ -298,6 +319,7 @@ class Noteable extends React.Component {
                             >
                               {item.subTitle}{" "}
                             </a>
+
                           </Row>
                         )
                       })}
