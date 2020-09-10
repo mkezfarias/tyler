@@ -29,7 +29,7 @@ class CalendlyEmbed extends React.Component {
           data-url={this.buildCalendlyUrl(account, eventName)}
           style={{
             minWidth: "290px",
-            height: "1100px",
+            height: "1200px",
             zIndex: `1`,
             paddingBottom: 0,
           }}

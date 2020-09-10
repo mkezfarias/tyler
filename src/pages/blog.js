@@ -209,7 +209,6 @@ class Blog extends React.Component {
             </div>
           </Col>
         </Row>
-        <FooterBlue />
       </Layout>
     )
   }

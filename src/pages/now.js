@@ -416,7 +416,6 @@ class Now extends React.Component {
               </Row>
             </Col>
           </Row>
-          <FooterBlue className="pt-5" />
         </Container>
       </Layout>
     )
