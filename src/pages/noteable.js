@@ -158,7 +158,7 @@ const noteableArray = [
   },
 ]
 
-class Links extends React.Component {
+class Noteable extends React.Component {
   constructor(props) {
     super(props)
 
