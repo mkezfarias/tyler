@@ -92,14 +92,22 @@ class BlogPostTemplate extends React.Component {
             >
               <li>
                 {previous && (
-                  <Link to={`/blog${previous.fields.slug}`} rel="prev">
+                  <Link
+                    to={`/blog${previous.fields.slug}`}
+                    rel="prev"
+                    className="fancy-link"
+                  >
                     ← {previous.frontmatter.title}
                   </Link>
                 )}
               </li>
               <li>
                 {next && (
-                  <Link to={`/blog${next.fields.slug}`} rel="next">
+                  <Link
+                    to={`/blog${next.fields.slug}`}
+                    rel="next"
+                    className="fancy-link"
+                  >
                     {next.frontmatter.title} →
                   </Link>
                 )}
@@ -107,17 +115,6 @@ class BlogPostTemplate extends React.Component {
             </ul>
           </Col>
         </Container>
-
-        <img
-          src={footerIMG}
-          style={{
-            position: "absolute",
-            bottom: `0`,
-            right: `0`,
-            left: `0`,
-            margin: `0 0 0 0`,
-          }}
-        ></img>
       </Layout>
     )
   }

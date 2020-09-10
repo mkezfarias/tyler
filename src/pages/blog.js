@@ -85,6 +85,10 @@ class Blog extends React.Component {
         >
           <Col
             xl={8}
+            lg={8}
+            md={8}
+            sm={10}
+            xs={10}
             style={{
               color: "var(--textNormal)",
               transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
@@ -103,6 +107,10 @@ class Blog extends React.Component {
         >
           <Col
             xl={8}
+            lg={8}
+            md={8}
+            sm={10}
+            xs={10}
             style={{
               color: "var(--textNormal)",
               transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
@@ -111,7 +119,7 @@ class Blog extends React.Component {
               fontSize: `16px`,
               lineHeight: `1.2`,
             }}
-            className="roboto  pb-0 mb-4 line-height-1 mt-0"
+            className="roboto pb-0 mb-4 line-height-1 mt-0 pr-5"
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -130,11 +138,11 @@ class Blog extends React.Component {
           {posts.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
             return (
-              <Col lg={5} xs={12} sm={12} md={12}>
+              <Col lg={5} xs={10} sm={10} md={11} className="px-0">
                 <Card
                   key={node.fields.slug}
                   style={{
-                    margin: "20px 30px 20px 10px",
+                    margin: "20px 30px 20px 0px",
                     border: `none`,
                     borderRadius: `0px`,
                     background: `var(--bg)`,
