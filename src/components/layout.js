@@ -50,7 +50,9 @@ class Layout extends React.Component {
             <Typewriter
               onInit={typewriter => {
                 typewriter
-                  .typeString("hello")
+                  .typeString(
+                    `growing <a target="_blank" class="fancy-link " href="https://www.apptegy.com/">Apptegy</a>.`
+                  )
                   .pauseFor(2500)
                   .deleteAll()
                   .typeString(getString())
