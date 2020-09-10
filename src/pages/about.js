@@ -44,34 +44,26 @@ class About extends React.Component {
     return (
       <Layout location={this.props.location}>
         <GatsbySeo
-          title="Tyler Vawser about test" //// this is the title of the window and seo title
-          description="Tyler Vawser Tyler Vawser Tyler Vawser about test description" // seo description
+          title="About Tyler Vawser" //// this is the title of the window and seo title
+          description="Tyler Vawser creates connections with people and creates growth in companies." // seo description
           canonical="https://www.tylervawser.com/about"
-          keywords="prayuth,taksin" // keywords list
+          keywords="tylervawser,tyler vawser,apptegy,people ops," // keywords list
           openGraph={{
-            url: "https://www.url.ie/a",
-            title: "Open Graph Title",
-            description: "Open Graph Description",
+            url: "https://www.tylervawser.com/about",
+            title: "About Tyler Vawser",
+            description: "Tyler Vawser creates connections with people and creates growth in companies.",
             images: [
               {
-                url: "https://www.example.ie/og-image-01.jpg",
-                width: 800,
-                height: 600,
-                alt: "Og Image Alt",
+                url: "../src/images/OGtylervawser.jpg",
+                width: 1200,
+                height: 1200,
+                alt: "About Tyler Vawser",
               },
-              {
-                url: "https://www.example.ie/og-image-02.jpg",
-                width: 900,
-                height: 800,
-                alt: "Og Image Alt Second",
-              },
-              { url: "https://www.example.ie/og-image-03.jpg" },
-              { url: "https://www.example.ie/og-image-04.jpg" },
             ],
             site_name: "TylerVawser",
           }}
           twitter={{
-            handle: "@handle",
+            handle: "@tvaw",
             site: "@site",
             cardType: "summary_large_image",
           }}

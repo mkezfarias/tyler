@@ -18,29 +18,21 @@ class IndexPage extends React.Component {
       <Layout location={this.props.location}>
         <GatsbySeo
           title="Tyler Vawser"
-          description="Learn more about Tyler Vawser, what he's doing now, his work, and favorites."
+          description="Learn more about Tyler Vawser, what he's doing now, his work, and more."
           canonical="https://www.tylervawser.com/"
           keywords="tylervawser,tyler,vawser,apptegy,stickermule,museumhack"
           openGraph={{
             url: "https://www.tylervawser.com",
 
-            title: "Open Graph Title",
-            description: "Open Graph Description",
+            title: "Tyler Vawser",
+            description: "Learn more about Tyler Vawser and his work",
             images: [
               {
-                url: "https://www.example.ie/og-image-01.jpg",
+                url: "../src/images/OGtylervawser.jpg",
                 width: 800,
                 height: 600,
-                alt: "Og Image Alt",
+                alt: "Tyler Vawser",
               },
-              {
-                url: "https://www.example.ie/og-image-02.jpg",
-                width: 900,
-                height: 800,
-                alt: "Og Image Alt Second",
-              },
-              { url: "https://www.example.ie/og-image-03.jpg" },
-              { url: "https://www.example.ie/og-image-04.jpg" },
             ],
             site_name: "TylerVawser",
           }}
