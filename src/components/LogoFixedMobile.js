@@ -1,5 +1,11 @@
 import React from "react"
 
+
+import Layout from "../components/layout"
+
+import Button from "../components/button"
+import { Container, Row, Col, Modal } from "react-bootstrap"
+
 import "../styles/global.scss"
 
 import AniLink from "gatsby-plugin-transition-link/AniLink"
