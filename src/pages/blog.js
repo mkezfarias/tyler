@@ -29,7 +29,7 @@ class Blog extends React.Component {
       addToMailchimp(this.state.email, { FNAME: `${this.state.name}` })
         .then(data => {
           console.log(data)
-          alert("subscribed (temporary message)")
+          alert("Thank you for signing up")
         })
         .catch(() => {})
     }

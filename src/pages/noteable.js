@@ -3,27 +3,17 @@ import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Button from "../components/button"
+
+
 import { Container, Row, Col, Modal } from "react-bootstrap"
 import "../styles/global.scss"
-import TransitionLink from "gatsby-plugin-transition-link"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
-import { ThemeToggler } from "gatsby-plugin-dark-mode"
-import whiteLogo from "../images/logo-white.svg"
-import darkLogo from "../images/logo.svg"
-import dayButton from "../images/daymode.svg"
-import nightButton from "../images/night-button.svg"
-import closeBTN from "../images/x.svg"
-import menuIMG from "../images/menu.svg"
-import menuDarkIMG from "../images/menu2.svg"
+
 import arrowIMG from "../images/arrow.svg"
 import toolsIcon from "../images/favorite tools icon.svg"
-import podcastsIcon from "../images/favorite podcasts icon.svg"
+
 import travelIcon from "../images/favorite podcasts icon.svg"
 import videosIcon from "../images/favorite videos icon.svg"
-import footerIMG from "../images/footer.png"
-import footerIMG2 from "../images/footer@2x.png"
-import Menu from "../components/menu"
+
 import LogoFixedMobile from "../components/LogoFixedMobile"
 import FooterBlue from "../components/Footer"
 import { GatsbySeo } from "gatsby-plugin-next-seo"
@@ -41,38 +31,45 @@ const noteableArray = [
       {
         link: "https://www.quora.com/profile/Tyler-Vawser",
         subTitle: "Tyler on Quora",
-        subText:
-          " ",
+
+        subText: " ",
+
       },
       {
         link: "https://yourstack.com/@Tvaw",
         subTitle: "Your Stack",
-        subText:
-          " ",
+
+        subText: " ",
+
       },
       {
         link: "https://www.linkedin.com/in/tylervawser",
         subTitle: "Tyler's LinkedIn",
-        subText:
-          " ",
+
+        subText: " ",
       },
       {
         link: "https://www.producthunt.com/@tvaw/",
         subTitle: "Tyler on Product Hunt",
+
         subText:
           " ",
+
       },
       {
         link: "https://angel.co/u/tyler-vawser",
         subTitle: "Tyler's AngelList",
+
         subText:
           " ",
+
       },
       {
         link: "https://medium.com/@tvaw",
         subTitle: "Medium",
         subText:
           " ",
+
       },
     ],
   },
@@ -82,38 +79,52 @@ const noteableArray = [
     items: [
       {
         link: "https://copyhour.com/tyler-vawser-interview/",
-        subTitle: "How Tyler Vawser Quit His Job & Went Full-Time As A Marketing Consultant | CopyHour.com",
+
+        subTitle:
+          "How Tyler Vawser Quit His Job & Went Full-Time As A Marketing Consultant | CopyHour.com",
         subText: " ",
       },
       {
-        link: "https://wistia.com/learn/showcase/sticker-mule-showcasing-your-product",
-        subTitle: "Showcasing Your Product: How Sticker Mule Uses Video to Stand Out",
-        subText:
-          " ",
-      },
-      {
-        link: "https://www.shopify.com/retail/the-power-of-retail-packaging-why-branded-bags-and-mailers-are-worth-the-investment",
-        subTitle: "The Power of Retail Packaging: Why Branded Mailers Are Worth the Investment",
+        link:
+          "https://wistia.com/learn/showcase/sticker-mule-showcasing-your-product",
+        subTitle:
+          "Showcasing Your Product: How Sticker Mule Uses Video to Stand Out",
         subText: " ",
       },
       {
-        link: "https://mailchimp.com/resources/how-sticker-mule-combines-e-commerce-and-email/",
+        link:
+          "https://www.shopify.com/retail/the-power-of-retail-packaging-why-branded-bags-and-mailers-are-worth-the-investment",
+        subTitle:
+          "The Power of Retail Packaging: Why Branded Mailers Are Worth the Investment",
+        subText: " ",
+      },
+      {
+        link:
+          "https://mailchimp.com/resources/how-sticker-mule-combines-e-commerce-and-email/",
+
         subTitle: "How Sticker Mule Combines E-Commerce and Email",
         subText: " ",
       },
       {
-        link: "https://www.fatherly.com/play/12-awesome-activities-to-do-with-your-kids-in-2016/",
+
+        link:
+          "https://www.fatherly.com/play/12-awesome-activities-to-do-with-your-kids-in-2016/",
         subTitle: "12 Awesome Activities To Do With Your Kids in 2016",
         subText: " ",
       },
-       {
-        link: "https://www.huffpost.com/entry/how-to-make-museums-fun-for-kids_b_8333862",
-        subTitle: "A Museum Hacker on How to Make Any Museum Awesome For Kids | HuffPost Life",
+      {
+        link:
+          "https://www.huffpost.com/entry/how-to-make-museums-fun-for-kids_b_8333862",
+        subTitle:
+          "A Museum Hacker on How to Make Any Museum Awesome For Kids | HuffPost Life",
         subText: " ",
       },
-       {
-        link: "https://okdork.com/interview-with-siggi-hilmarsson-of-siggis-icelandic-skyr-yogurt/",
-        subTitle: "Interview with Siggi Hilmarsson of Siggi’s Icelandic Skyr Yogurt",
+      {
+        link:
+          "https://okdork.com/interview-with-siggi-hilmarsson-of-siggis-icelandic-skyr-yogurt/",
+        subTitle:
+          "Interview with Siggi Hilmarsson of Siggi’s Icelandic Skyr Yogurt",
+
         subText: " ",
       },
       {
@@ -121,9 +132,12 @@ const noteableArray = [
         subTitle: "How It Actually Works, the newsletter",
         subText: " ",
       },
-  	{
+
+      {
         link: "https://cxl.com/blog/conversion-rate-optimization-principles/",
-        subTitle: "9 Conversion Rate Optimization Principles to Get You Started",
+        subTitle:
+          "9 Conversion Rate Optimization Principles to Get You Started",
+
         subText: " ",
       },
     ],
@@ -141,8 +155,8 @@ const noteableArray = [
       {
         link: "https://www.stickermule.com/blog/author/tyler-vawser",
         subTitle: "Posts by Tyler Vawser | Sticker Mule",
-        subText:
-          " ",
+
+        subText: " ",
       },
       {
         link: "https://buzzsumo.com/blog/5-ways-use-buzzsumo-grow-email-list/ ",
@@ -298,18 +312,14 @@ class Noteable extends React.Component {
                       {noteableSet.items.map(item => {
                         return (
                           <Row className="d-flex ml-2 ml-md-5 w-100 w-md-75">
-                            <Link to={item.link} target="_blank">
-                              <p className=" text-light  w-semibold mb-0 ">
-                                {" "}
-                                {item.subTitle}{" "}
-                              </p>
-                              <p
-                                className=" text-light p-text w-100 w-md-75"
-                                style={{ fontSize: `14px` }}
-                              >
-                                {item.subText}
-                              </p>
-                            </Link>
+                            <a
+                              href={item.link}
+                              target="_blank"
+                              className="fancy-link-footer text-light w-semibold my-1"
+                            >
+                              {item.subTitle}{" "}
+                            </a>
+
                           </Row>
                         )
                       })}
