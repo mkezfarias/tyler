@@ -2,16 +2,12 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
-import darkLogo from "../images/logo.svg"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
-import { Container, Col, Modal } from "react-bootstrap"
-import Menu from "../components/menu"
-import closeBTN from "../images/x.svg"
-import footerIMG from "../images/footer.svg"
+
+import { Container, Col } from "react-bootstrap"
+
 import LogoFixedMobile from "../components/LogoFixedMobile"
 
 class BlogPostTemplate extends React.Component {
