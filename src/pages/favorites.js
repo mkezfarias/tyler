@@ -21,8 +21,9 @@ import toolsIcon from "../images/favorite tools icon.svg"
 import podcastsIcon from "../images/favorite podcasts icon.svg"
 import travelIcon from "../images/favorite podcasts icon.svg"
 import videosIcon from "../images/favorite videos icon.svg"
-import booksIcon from "../images/books-svgrepo-com (1).svg"
-import thingsIcon from "../images/shoe-svgrepo-com.svg"
+import booksIcon from "../images/booksIcon.png"
+import thingsIcon from "../images/thingsIcon.png"
+import linksIcon from "../images/linksIcon.png"
 import footerIMG from "../images/footer.png"
 import footerIMG2 from "../images/footer@2x.png"
 import Menu from "../components/menu"
@@ -80,7 +81,7 @@ const favoritesArray = [
     ],
   },
   {
-    icon: toolsIcon,
+    icon: booksIcon,
     title: "Favorite books",
     items: [
       {
@@ -141,7 +142,7 @@ const favoritesArray = [
   },
 
   {
-    icon: toolsIcon,
+    icon: thingsIcon,
     title: "Favorite things",
     items: [
       {
@@ -196,7 +197,7 @@ const favoritesArray = [
     ],
   },
   {
-    icon: podcastsIcon,
+    icon: linksIcon,
     title: "Favorite links",
     items: [
       {
