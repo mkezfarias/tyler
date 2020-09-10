@@ -72,7 +72,7 @@ class Blog extends React.Component {
         <LogoFixedMobile />
 
         <Row
-          className="mx-md-5 mx-px-5 px-0 mx-2 d-flex justify-content-center"
+          className="mx-md-0 mx-px-5 px-0 mx-2 d-flex justify-content-center"
           style={{ color: `var(--textNormal)` }}
         >
           <Col
@@ -81,15 +81,37 @@ class Blog extends React.Component {
               color: "var(--textNormal)",
               transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
               transition: `0.4s`,
-              textAlign: `center`,
-              margin: `auto`,
-              maxWidth: `90vw`,
-              padding: `-20vh 10vw 0 10vw`,
-              fontSize: `calc(20px + 4vw)`,
+              padding: `0 0 0 0`,
+              fontSize: `calc(20px + 2vw)`,
             }}
             className="wider wsans w-medium pb-0 mb-4 line-height-1 mt-0 w-semibold align-center"
           >
             Read more about Tyler Vawser
+          </Col>
+        </Row>
+        <Row
+          className="mx-md-0 mx-px-5 px-0 mx-2 d-flex justify-content-center"
+          style={{ color: `var(--textNormal)` }}
+        >
+          <Col
+            xl={8}
+            style={{
+              color: "var(--textNormal)",
+              transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+              transition: `0.4s`,
+              padding: `2vh 5vw 0 0`,
+              fontSize: `16px`,
+              lineHeight: `1.2`,
+            }}
+            className="roboto  pb-0 mb-4 line-height-1 mt-0"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
           </Col>
         </Row>
 
@@ -112,7 +134,7 @@ class Blog extends React.Component {
                   }}
                 >
                   <Card.Body>
-                    <Card.Title>
+                    <Card.Title style={{ minHeight: `40px` }}>
                       <h3
                         className="wsans w-medium"
                         style={{
@@ -123,10 +145,9 @@ class Blog extends React.Component {
                         <AniLink
                           style={{
                             bg: "var(--gradient-background)",
-                            color: "#5ba9ed",
+                            color: "var(--textNormal)",
                             transition: `0.4s`,
                           }}
-                          className="fancy-link"
                           cover
                           bg="var(--gradient-background)"
                           top="exit"
@@ -139,15 +160,31 @@ class Blog extends React.Component {
                     </Card.Title>
                     <Card.Text>
                       <p
-                        style={{ color: `var(--textNormal)`, fontSize: "20px" }}
+                        style={{ color: `var(--textNormal)`, fontSize: "16px" }}
                         dangerouslySetInnerHTML={{
                           __html: node.frontmatter.description || node.excerpt,
                         }}
                       />
                     </Card.Text>
-                    <small style={{ fontSize: `18px` }} className="text-muted">
-                      {node.frontmatter.date}
-                    </small>
+                    <div
+                      style={{
+                        borderTop: `1px gray solid`,
+                        marginTop: `30px`,
+                        paddingTop: `20px`,
+                      }}
+                    >
+                      <Link
+                        style={{
+                          color: `#5ba9ed`,
+                          fontWeight: `500`,
+                        }}
+                        className="wsans"
+                        className="fancy-link"
+                        to={`/blog${node.fields.slug}`}
+                      >
+                        Read more
+                      </Link>
+                    </div>
                   </Card.Body>
                 </Card>
               </Col>
