@@ -372,7 +372,7 @@ class Favorites extends React.Component {
                             <a
                               href={item.link}
                               target="_blank"
-                              className="fancy-link"
+                              className="fancy-link-footer"
                             >
                               <p
                                 style={{ fontSize: `21px` }}

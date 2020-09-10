@@ -88,7 +88,7 @@ class IndexPage extends React.Component {
                 transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
                 transition: `0.4s`,
               }}
-              className="fancy-link mb-0 pb-0"
+              className=" mb-0 pb-0 fancy-link-footer"
               cover
               bg="#663399"
               direction="left"
@@ -121,7 +121,7 @@ class IndexPage extends React.Component {
                   transition: `0.4s`,
                 }}
                 href="https://twitter.com/tvaw"
-                className="link-mobile fancy-link d-block"
+                className="link-mobile fancy-link-footer d-block"
                 target="_blank"
               >
                 Twitter
@@ -133,7 +133,7 @@ class IndexPage extends React.Component {
                   transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
                   transition: `0.4s`,
                 }}
-                className="link-mobile fancy-link  d-block"
+                className="link-mobile fancy-link-footer  d-block"
                 href="mailto:tvawser@gmail.com?subject=Saw%20your%20website%20lets%20chat"
                 target="_blank"
               >
@@ -146,7 +146,7 @@ class IndexPage extends React.Component {
                   transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
                   transition: `0.4s`,
                 }}
-                className="link-mobile fancy-link  d-block"
+                className="link-mobile fancy-link-footer  d-block"
                 href="https://www.linkedin.com/in/tylervawser/"
                 target="_blank"
               >
@@ -179,7 +179,7 @@ class IndexPage extends React.Component {
                     transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
                     transition: `0.4s`,
                   }}
-                  className="fancy-link ml-0 d-flex "
+                  className="fancy-link-footer ml-0 d-flex "
                   href="https://www.stickermule.com/"
                   target="_blank"
                 >
@@ -193,7 +193,7 @@ class IndexPage extends React.Component {
                     transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
                     transition: `0.4s`,
                   }}
-                  className="fancy-link ml-0 d-flex"
+                  className="fancy-link-footer ml-0 d-flex"
                   href="https://museumhack.com/"
                   target="_blank"
                 >
@@ -207,7 +207,7 @@ class IndexPage extends React.Component {
                     transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
                     transition: `0.4s`,
                   }}
-                  className="fancy-link ml-0 d-flex"
+                  className="fancy-link-footer ml-0 d-flex"
                   href="https://okdork.com/"
                   target="_blank"
                 >
@@ -221,7 +221,7 @@ class IndexPage extends React.Component {
                     transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
                     transition: `0.4s`,
                   }}
-                  className="fancy-link ml-0 d-flex justify-content-end"
+                  className="fancy-link-footer ml-0 d-flex justify-content-end"
                   href="https://www.tkc.edu/"
                   target="_blank"
                 >

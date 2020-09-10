@@ -119,7 +119,7 @@ class Blog extends React.Component {
               fontSize: `16px`,
               lineHeight: `1.2`,
             }}
-            className="roboto pb-0 mb-4 line-height-1 mt-0 pr-5"
+            className="roboto pb-0 mb-4 line-height-1 mt-0 pr-0 pr-sm-0"
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim

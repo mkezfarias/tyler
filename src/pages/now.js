@@ -217,9 +217,9 @@ class Now extends React.Component {
                 people who want to continue building{" "}
                 <a
                   href="https://www.apptegy.com/careers/"
-                  style={{ color: `var(--skyblue3)` }}
+                  style={{ color: `var(--skyblue)` }}
                   target="_blank"
-                  className="fancy-link"
+                  className="fancy-link-footer"
                 >
                   Apptegy
                 </a>
@@ -303,9 +303,9 @@ class Now extends React.Component {
                   This is a Now page. Now pages are inspired by
                   <a
                     href="https://nownownow.com/about"
-                    style={{ color: `var(--skyblue3)` }}
+                    style={{ color: `var(--skyblue)` }}
                     target="_blank"
-                    className="fancy-link"
+                    className="fancy-link-footer"
                   >
                     {" "}
                     Derek Sivers
@@ -364,7 +364,7 @@ class Now extends React.Component {
                       return (
                         <Row className="d-flex ml-2 ml-md-4 w-100 w-md-75">
                           <p
-                            className="py-1 fancy-link text-light  w-semibold mb-0 "
+                            className="py-1 fancy-link-footer text-light  w-semibold mb-0 "
                             style={{
                               fontSize: `20px`,
                             }}
@@ -391,7 +391,7 @@ class Now extends React.Component {
                   <Row className="d-flex ml-2 ml-md-4 w-100 w-md-75">
                     <a
                       style={{ color: `#add5ff` }}
-                      className="py-1 fancy-link text-light  w-semibold mb-0 "
+                      className="py-1 fancy-link-footer text-light  w-semibold mb-0 "
                       href={mind.link}
                       target="_blank"
                     >
@@ -416,7 +416,7 @@ class Now extends React.Component {
               <Row className="ml-md-0 ml-0 mb-2">
                 <Link
                   style={{ color: `#add5ff`, fontSize: `20px` }}
-                  className="fancy-link d-flex ml-md-3 "
+                  className="fancy-link-footer d-flex ml-md-3 "
                   to="/connect"
                 >
                   {letsTalk.linkText}
