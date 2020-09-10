@@ -53,7 +53,7 @@ class Layout extends React.Component {
                   .typeString(
                     `growing <a target="_blank" class="fancy-link " href="https://www.apptegy.com/">Apptegy</a>.`
                   )
-                  .pauseFor(2500)
+                  .pauseFor(15000)
                   .deleteAll()
                   .typeString(getString())
                   .start()
