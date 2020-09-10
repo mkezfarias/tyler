@@ -113,7 +113,7 @@ class Connect extends React.Component {
                   className="d-flex justify-content-between pt-5 mt-5"
                 >
                   <a
-                    href="https://twitter.com/Tvaw"
+                    href="https://twitter.com/intent/follow?screen_name=tvaw"
                     className="d-flex align-items-end justify-content-between"
                     target="_blank"
                   >
