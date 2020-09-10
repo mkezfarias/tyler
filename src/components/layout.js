@@ -1,28 +1,16 @@
 import React, { useEffect, useState } from "react"
-import { Link } from "gatsby"
+
 import styled from "styled-components"
 
-import { rhythm, scale } from "../utils/typography"
-import menuIMG from "../images/menu.svg"
-import menuDarkIMG from "../images/menu2.svg"
 import Typewriter from "typewriter-effect"
-import {
-  Modal,
-  Row,
-  Col,
-  Container,
-  Button,
-  CloseButton,
-} from "react-bootstrap"
+import { Modal, Row, Col, Container } from "react-bootstrap"
 import Menu from "./menu"
 import { ThemeToggler } from "gatsby-plugin-dark-mode"
-import whiteLogo from "../images/logo-white.svg"
-import dayButton from "../images/daymode.svg"
-import nightButton from "../images/night-button.svg"
 import closeBTN from "../images/x.svg"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import MenuFixedIcon from "./MenuFixedIcon"
 import FooterBlue from "./Footer"
+import { getString, typewriterStrings } from "../components/content.js"
 
 class Layout extends React.Component {
   constructor(props) {
@@ -39,7 +27,7 @@ class Layout extends React.Component {
   render() {
     const { location, title, children } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
-    const blogPath = `${__PATH_PREFIX__}/blog/`
+    const blogPath = `${__PATH_PREFIX__}/blog`
     const fullMenuPath = `${__PATH_PREFIX__}/full-menu`
     const fullMenuPath2 = `${__PATH_PREFIX__}/full-menu/`
     let header
@@ -60,20 +48,28 @@ class Layout extends React.Component {
           >
             <span className="mb-0 pb-0">Tyler Vawser is</span>
             <Typewriter
-              options={{
-                strings: [
-                  `growing <a target="_blank" class="fancy-link " href="https://www.apptegy.com/">Apptegy</a>.`,
-                  `reading <a target="_blank"class="fancy-link " href="https://readjapaneseliterature.com/2020/07/24/manazuru-by-hiromi-kawakami-and-a-man-by-keiichiro-hirano/">Manazura</a>.`,
-                  "on a Zoom call.",
-                  "answering emails.",
-                  "meeting interesting people.",
-                  "is going for a walk.",
-                  "drinking coffee.",
-                  `listening to <a target="_blank" class="fancy-link " href="https://open.spotify.com/playlist/7wgD1FW1Pp3LTp9di8YHBB?si=JZwsWRKMQm-knYVxl9fIKQ">minimal piano</a>.`,
-                ],
-                autoStart: true,
-                loop: true,
+              onInit={typewriter => {
+                typewriter
+                  .typeString("hello")
+                  .pauseFor(2500)
+                  .deleteAll()
+                  .typeString(getString())
+                  .start()
               }}
+              // options={{
+              //   strings: [
+              //     `growing <a target="_blank" class="fancy-link " href="https://www.apptegy.com/">Apptegy</a>.`,
+              //     `reading <a target="_blank"class="fancy-link " href="https://readjapaneseliterature.com/2020/07/24/manazuru-by-hiromi-kawakami-and-a-man-by-keiichiro-hirano/">Manazura</a>.`,
+              //     "on a Zoom call.",
+              //     "answering emails.",
+              //     "meeting interesting people.",
+              //     "is going for a walk.",
+              //     "drinking coffee.",
+              //     `listening to <a target="_blank" class="fancy-link " href="https://open.spotify.com/playlist/7wgD1FW1Pp3LTp9di8YHBB?si=JZwsWRKMQm-knYVxl9fIKQ">minimal piano</a>.`,
+              //   ],
+              //   autoStart: true,
+              //   loop: true,
+              // }}
             />
           </div>
         </Container>
