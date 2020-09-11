@@ -124,11 +124,7 @@ const FooterBlue = () => {
                 </div>
                 <div className="px-2 footer-links">/</div>
                 <div className="footer-links">
-                  <a
-                    href="/links"
-                    className="text-light fancy-link-footer"
-                    target="_blank"
-                  >
+                  <a href="/links" className="text-light fancy-link-footer">
                     Links
                   </a>
                 </div>
