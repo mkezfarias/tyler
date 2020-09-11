@@ -58,20 +58,6 @@ class Layout extends React.Component {
                   .typeString(getString())
                   .start()
               }}
-              // options={{
-              //   strings: [
-              //     `growing <a target="_blank" class="fancy-link " href="https://www.apptegy.com/">Apptegy</a>.`,
-              //     `reading <a target="_blank"class="fancy-link " href="https://readjapaneseliterature.com/2020/07/24/manazuru-by-hiromi-kawakami-and-a-man-by-keiichiro-hirano/">Manazura</a>.`,
-              //     "on a Zoom call.",
-              //     "answering emails.",
-              //     "meeting interesting people.",
-              //     "is going for a walk.",
-              //     "drinking coffee.",
-              //     `listening to <a target="_blank" class="fancy-link " href="https://open.spotify.com/playlist/7wgD1FW1Pp3LTp9di8YHBB?si=JZwsWRKMQm-knYVxl9fIKQ">minimal piano</a>.`,
-              //   ],
-              //   autoStart: true,
-              //   loop: true,
-              // }}
             />
           </div>
         </Container>

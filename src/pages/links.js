@@ -206,7 +206,13 @@ class Links extends React.Component {
           />
 
           <LogoFixedMobile />
-          <Container>
+          <Container
+            fluid
+            style={{
+              width: `100vw`,
+              margin: `6vh -2vw 0 0vw`,
+            }}
+          >
             <div>
               <Row>
                 <Col
@@ -257,11 +263,12 @@ class Links extends React.Component {
                   }}
                   className="roboto w-medium"
                 >
-                  <img src={arrowIMG} alt="Arrow down"></img>
+                  <img src={arrowIMG} alt="Arrow down" />
                 </Col>
               </Row>
             </div>
           </Container>
+
           <Container
             fluid
             style={{
