@@ -211,10 +211,6 @@ class Links extends React.Component {
               cardType: "summary_large_image",
             }}
           />
-          <SEO
-            title="Tyler Vawser"
-            keywords={[`blog`, `Tyler Vawser`, `Tvawser`, `react`]}
-          />
           <LogoFixedMobile />
           <div>
             <Row>
@@ -318,8 +314,6 @@ class Links extends React.Component {
               </Col>
             </Row>
           </Container>
-
-          <FooterBlue />
         </Layout>
       </>
     )
