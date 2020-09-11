@@ -274,7 +274,7 @@ class Links extends React.Component {
               </Col>
             </Row>
           </div>
-          <Container
+          {/* <Container
             fluid
             style={{
               background: "var(--gradient-background)",
@@ -295,10 +295,7 @@ class Links extends React.Component {
                   return (
                     <>
                       <Row className="d-flex align-items-baseline">
-                        {/* <img
-                          src={favoriteSet.icon}
-                          alt={favoriteSet.title}
-                        ></img> */}
+                       
                         <span className="px-2 mt-4 wsans w-regular fav-title">
                           {favoriteSet.title}
                         </span>
@@ -333,7 +330,7 @@ class Links extends React.Component {
                 })}
               </Col>
             </Row>
-          </Container>
+          </Container> */}
         </Layout>
       </>
     )
