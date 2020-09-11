@@ -206,60 +206,62 @@ class Links extends React.Component {
           />
 
           <LogoFixedMobile />
-          <div>
-            <Row>
-              <Col
-                xl={8}
-                style={{
-                  color: "var(--textNormal)",
-                  transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-                  transition: `0.4s`,
-                  textAlign: `center`,
-                  margin: `auto`,
-                  maxWidth: `90vw`,
-                  padding: `-20vh 10vw 0 10vw`,
-                  fontSize: `calc(20px + 4vw)`,
-                }}
-                className="wider wsans w-medium pb-0 mb-4 line-height-1 mt-0 w-semibold align-center"
-              >
-                Links about Tyler Vawser{" "}
-              </Col>
-            </Row>
-            <Row>
-              <Col
-                style={{
-                  color: "var(--textNormal)",
-                  transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-                  transition: `0.4s`,
-                  textAlign: `center`,
-                  margin: `auto`,
-                  maxWidth: `90vw`,
-                  padding: `10vh 10vw 0 10vw`,
-                  fontSize: `calc(14px + .7vw)`,
-                }}
-                className="roboto w-medium"
-              >
-                Check them out here
-              </Col>
-            </Row>
-            <Row>
-              <Col
-                style={{
-                  color: "var(--textNormal)",
-                  transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-                  transition: `0.4s`,
-                  textAlign: `center`,
-                  margin: `auto`,
-                  maxWidth: `90vw`,
-                  padding: `0 10vw 0 10vw`,
-                  fontSize: `calc(10px + .7vw)`,
-                }}
-                className="roboto w-medium"
-              >
-                <img src={arrowIMG} alt="Arrow down"></img>
-              </Col>
-            </Row>
-          </div>
+          <Container>
+            <div>
+              <Row>
+                <Col
+                  xl={8}
+                  style={{
+                    color: "var(--textNormal)",
+                    transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+                    transition: `0.4s`,
+                    textAlign: `center`,
+                    margin: `auto`,
+                    maxWidth: `90vw`,
+                    padding: `-20vh 10vw 0 10vw`,
+                    fontSize: `calc(20px + 4vw)`,
+                  }}
+                  className="wider wsans w-medium pb-0 mb-4 line-height-1 mt-0 w-semibold align-center"
+                >
+                  Links about Tyler Vawser{" "}
+                </Col>
+              </Row>
+              <Row>
+                <Col
+                  style={{
+                    color: "var(--textNormal)",
+                    transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+                    transition: `0.4s`,
+                    textAlign: `center`,
+                    margin: `auto`,
+                    maxWidth: `90vw`,
+                    padding: `10vh 10vw 0 10vw`,
+                    fontSize: `calc(14px + .7vw)`,
+                  }}
+                  className="roboto w-medium"
+                >
+                  Check them out here
+                </Col>
+              </Row>
+              <Row>
+                <Col
+                  style={{
+                    color: "var(--textNormal)",
+                    transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+                    transition: `0.4s`,
+                    textAlign: `center`,
+                    margin: `auto`,
+                    maxWidth: `90vw`,
+                    padding: `0 10vw 0 10vw`,
+                    fontSize: `calc(10px + .7vw)`,
+                  }}
+                  className="roboto w-medium"
+                >
+                  <img src={arrowIMG} alt="Arrow down"></img>
+                </Col>
+              </Row>
+            </div>
+          </Container>
           <Container
             fluid
             style={{
