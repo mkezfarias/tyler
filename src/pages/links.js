@@ -3,21 +3,35 @@ import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-
+import Button from "../components/button"
 import { Container, Row, Col, Modal } from "react-bootstrap"
 import "../styles/global.scss"
-
+import TransitionLink from "gatsby-plugin-transition-link"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
+import { ThemeToggler } from "gatsby-plugin-dark-mode"
+import whiteLogo from "../images/logo-white.svg"
+import darkLogo from "../images/logo.svg"
+import dayButton from "../images/daymode.svg"
+import nightButton from "../images/night-button.svg"
+import closeBTN from "../images/x.svg"
+import menuIMG from "../images/menu.svg"
+import menuDarkIMG from "../images/menu2.svg"
 import arrowIMG from "../images/arrow.svg"
 import toolsIcon from "../images/favorite tools icon.svg"
-
+import podcastsIcon from "../images/favorite podcasts icon.svg"
 import travelIcon from "../images/favorite podcasts icon.svg"
 import videosIcon from "../images/favorite videos icon.svg"
-
+import booksIcon from "../images/booksIcon.png"
+import thingsIcon from "../images/thingsIcon.png"
+import linksIcon from "../images/linksIcon.png"
+import footerIMG from "../images/footer.png"
+import footerIMG2 from "../images/footer@2x.png"
+import Menu from "../components/menu"
 import LogoFixedMobile from "../components/LogoFixedMobile"
 import FooterBlue from "../components/Footer"
 import { GatsbySeo } from "gatsby-plugin-next-seo"
 
-const noteableArray = [
+const LinksArray = [
   {
     //icon: toolsIcon,
     title: "Profile links",
@@ -206,69 +220,60 @@ class Links extends React.Component {
           />
 
           <LogoFixedMobile />
-          <Container
-            fluid
-            style={{
-              width: `100vw`,
-              margin: `6vh -2vw 0 0vw`,
-            }}
-          >
-            <div>
-              <Row>
-                <Col
-                  xl={8}
-                  style={{
-                    color: "var(--textNormal)",
-                    transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-                    transition: `0.4s`,
-                    textAlign: `center`,
-                    margin: `auto`,
-                    maxWidth: `90vw`,
-                    padding: `-20vh 10vw 0 10vw`,
-                    fontSize: `calc(20px + 4vw)`,
-                  }}
-                  className="wider wsans w-medium pb-0 mb-4 line-height-1 mt-0 w-semibold align-center"
-                >
-                  Links about Tyler Vawser{" "}
-                </Col>
-              </Row>
-              <Row>
-                <Col
-                  style={{
-                    color: "var(--textNormal)",
-                    transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-                    transition: `0.4s`,
-                    textAlign: `center`,
-                    margin: `auto`,
-                    maxWidth: `90vw`,
-                    padding: `10vh 10vw 0 10vw`,
-                    fontSize: `calc(14px + .7vw)`,
-                  }}
-                  className="roboto w-medium"
-                >
-                  Check them out here
-                </Col>
-              </Row>
-              <Row>
-                <Col
-                  style={{
-                    color: "var(--textNormal)",
-                    transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-                    transition: `0.4s`,
-                    textAlign: `center`,
-                    margin: `auto`,
-                    maxWidth: `90vw`,
-                    padding: `0 10vw 0 10vw`,
-                    fontSize: `calc(10px + .7vw)`,
-                  }}
-                  className="roboto w-medium"
-                >
-                  <img src={arrowIMG} alt="Arrow down" />
-                </Col>
-              </Row>
-            </div>
-          </Container>
-
+          <div>
+            <Row>
+              <Col
+                xl={8}
+                style={{
+                  color: "var(--textNormal)",
+                  transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+                  transition: `0.4s`,
+                  textAlign: `center`,
+                  margin: `auto`,
+                  maxWidth: `90vw`,
+                  padding: `-20vh 10vw 0 10vw`,
+                  fontSize: `calc(20px + 4vw)`,
+                }}
+                className="wider wsans w-medium pb-0 mb-4 line-height-1 mt-0 w-semibold align-center"
+              >
+                Links about Tyler Vawser
+              </Col>
+            </Row>
+            <Row>
+              <Col
+                style={{
+                  color: "var(--textNormal)",
+                  transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+                  transition: `0.4s`,
+                  textAlign: `center`,
+                  margin: `auto`,
+                  maxWidth: `90vw`,
+                  padding: `10vh 10vw 0 10vw`,
+                  fontSize: `calc(14px + .7vw)`,
+                }}
+                className="roboto w-medium"
+              >
+                Check them out here
+              </Col>
+            </Row>
+            <Row>
+              <Col
+                style={{
+                  color: "var(--textNormal)",
+                  transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+                  transition: `0.4s`,
+                  textAlign: `center`,
+                  margin: `auto`,
+                  maxWidth: `90vw`,
+                  padding: `0 10vw 0 10vw`,
+                  fontSize: `calc(10px + .7vw)`,
+                }}
+                className="roboto w-medium"
+              >
+                <img src={arrowIMG} alt="Arrow down"></img>
+              </Col>
+            </Row>
+          </div>
           <Container
             fluid
             style={{
@@ -286,28 +291,40 @@ class Links extends React.Component {
                 xl={{ span: 6, offset: 1 }}
                 className="mb-5 pb-5"
               >
-                {noteableArray.map(noteableSet => {
+                {LinksArray.map(favoriteSet => {
                   return (
                     <>
                       <Row className="d-flex align-items-baseline">
                         {/* <img
-                          src={noteableSet.icon}
-                          alt={noteableSet.title}
+                          src={favoriteSet.icon}
+                          alt={favoriteSet.title}
                         ></img> */}
                         <span className="px-2 mt-4 wsans w-regular fav-title">
-                          {noteableSet.title}
+                          {favoriteSet.title}
                         </span>
                       </Row>
-                      {noteableSet.items.map(item => {
+                      {favoriteSet.items.map(item => {
                         return (
-                          <Row className="d-flex ml-2 ml-md-5 w-100 w-md-75">
+                          <Row className="d-flex ml-2 ml-md-3 w-100 w-md-75">
                             <a
                               href={item.link}
                               target="_blank"
-                              className="fancy-link-footer text-light w-semibold my-1"
+                              className="fancy-link-footer"
                             >
-                              {item.subTitle}{" "}
-                            </a>
+                              <p
+                                style={{ fontSize: `17px` }}
+                                className=" text-light  w-semibold mb-0 "
+                              >
+                                {" "}
+                                {item.subTitle}{" "}
+                              </p>
+                            </a>{" "}
+                            <p
+                              className=" text-light p-text w-100 w-md-75 pr-md-5"
+                              style={{ fontSize: `17px` }}
+                            >
+                              {item.subText}
+                            </p>
                           </Row>
                         )
                       })}
