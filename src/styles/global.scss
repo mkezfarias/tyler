@@ -388,7 +388,10 @@ div.tl-edges {
   margin-top: 30px !important;
   margin-bottom: 30px !important;
 }
-
-
+.bg-gradient {
+  background: var(--gradient-background);
+  width: 110vw;
+  margin: 6vh -10vw 0 -10vw;
+            }
 // Import Bootstrap and its default variables
 @import '~bootstrap/scss/bootstrap.scss';

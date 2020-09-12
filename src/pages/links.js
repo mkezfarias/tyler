@@ -274,14 +274,7 @@ class Links extends React.Component {
               </Col>
             </Row>
           </div>
-          {/* <Container
-            fluid
-            style={{
-              background: "var(--gradient-background)",
-              width: `110vw`,
-              margin: `6vh -10vw 0 -10vw`,
-            }}
-          >
+          <div className="bg-gradient">
             <Row className="d-flex justify-content-center pb-5">
               <Col
                 xs={{ span: 9 }}
@@ -293,6 +286,19 @@ class Links extends React.Component {
               >
                 {LinksArray.map(favoriteSet => {
                   return (
+                    <Row className="d-flex align-items-baseline">
+                      <span className="px-2 mt-4 wsans w-regular fav-title">
+                        {favoriteSet.title}
+                      </span>
+                    </Row>
+                  )
+                })}
+              </Col>
+            </Row>
+          </div>
+          {/* 
+            
+                {
                     <>
                       <Row className="d-flex align-items-baseline">
                        
