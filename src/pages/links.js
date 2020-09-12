@@ -60,7 +60,7 @@ const LinksArray = [
         subText: " ",
       },
       {
-        link: "https://www.producthunt.com/@tvaw/",
+        link: "https://www.producthunt.com/@tvaw",
         subTitle: "Tyler on Product Hunt",
 
         subText: " ",
@@ -83,7 +83,7 @@ const LinksArray = [
     title: "Interviews & Quoted by",
     items: [
       {
-        link: "https://copyhour.com/tyler-vawser-interview/",
+        link: "https://copyhour.com/tyler-vawser-interview",
 
         subTitle:
           "How Tyler Vawser Quit His Job & Went Full-Time As A Marketing Consultant | CopyHour.com",
@@ -105,7 +105,7 @@ const LinksArray = [
       },
       {
         link:
-          "https://mailchimp.com/resources/how-sticker-mule-combines-e-commerce-and-email/",
+          "https://mailchimp.com/resources/how-sticker-mule-combines-e-commerce-and-email",
 
         subTitle: "How Sticker Mule Combines E-Commerce and Email",
         subText: " ",
