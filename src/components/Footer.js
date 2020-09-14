@@ -45,9 +45,21 @@ const FooterBlue = () => {
               </div>
               <div className="d-flex text-right px-5 px-md-1">
                 <div className="footer-links">
-                  <Link to="/connect" className="text-light fancy-link-footer">
+                  <AniLink
+                    style={{
+                      color: "var(--textTitle)",
+                    }}
+                    cover
+                    bg="var(--gradient-background)"
+                    direction="right"
+                    top="entry"
+                    duration={1}
+                    entryOffset={800}
+                    to="/connect"
+                    className="text-light fancy-link-footer"
+                  >
                     Set up a Call
-                  </Link>
+                  </AniLink>
                 </div>
                 <div className="px-2 footer-links">/</div>
                 <div className="footer-links">
@@ -87,30 +99,76 @@ const FooterBlue = () => {
               </div>
               <div className="d-flex text-right">
                 <div className="footer-links">
-                  <Link to="/about" className="text-light fancy-link-footer">
+                  <AniLink
+                    style={{
+                      color: "var(--textTitle)",
+                    }}
+                    cover
+                    bg="var(--gradient-background)"
+                    direction="right"
+                    top="entry"
+                    duration={1}
+                    entryOffset={800}
+                    to="/connect"
+                    className="text-light fancy-link-footer"
+                  >
                     About
-                  </Link>
+                  </AniLink>
                 </div>
                 <div className="px-2 footer-links">/</div>
                 <div className="footer-links">
-                  <Link to="/blog" className="text-light fancy-link-footer">
+                  <AniLink
+                    style={{
+                      color: "var(--textTitle)",
+                    }}
+                    cover
+                    bg="var(--gradient-background)"
+                    direction="right"
+                    top="entry"
+                    duration={1}
+                    entryOffset={800}
+                    to="/blog"
+                    className="text-light fancy-link-footer"
+                  >
                     Posts
-                  </Link>
+                  </AniLink>
                 </div>
                 <div className="px-2 footer-links">/</div>
                 <div className="footer-links">
-                  <Link
+                  <AniLink
+                    style={{
+                      color: "var(--textTitle)",
+                    }}
+                    cover
+                    bg="var(--gradient-background)"
+                    direction="right"
+                    top="entry"
+                    duration={1}
+                    entryOffset={800}
+                    className="text-light fancy-link-footer"
                     to="/favorites"
                     className="text-light fancy-link-footer"
                   >
                     Favorites
-                  </Link>
+                  </AniLink>
                 </div>
                 <div className="px-2 footer-links">/</div>
                 <div className="footer-links">
-                  <Link to="/links" className="text-light fancy-link-footer">
+                  <AniLink
+                    style={{
+                      color: "var(--textTitle)",
+                    }}
+                    cover
+                    bg="var(--gradient-background)"
+                    direction="right"
+                    top="entry"
+                    duration={1}
+                    entryOffset={800}
+                    to="/links"
+                    className="text-light fancy-link-footer"
+                  >
                     Links
-                  </Link>
+                  </AniLink>
                 </div>
               </div>
             </div>
