@@ -317,7 +317,7 @@ class Favorites extends React.Component {
             style={{
               background: "var(--gradient-background)",
               width: `110vw`,
-              margin: `6vh -10vw 0 -10vw`,
+              margin: `6vh -10vw 15vh -10vw`,
             }}
           >
             <Row className="d-flex justify-content-center pb-5">
