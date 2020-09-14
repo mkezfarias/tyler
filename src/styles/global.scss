@@ -1,4 +1,8 @@
 // Override default variables before the import
+
+// Import Bootstrap and its default variables
+@import '~bootstrap/scss/bootstrap.scss';
+
 @media (max-width: 576px) {
 
   .main-title {
@@ -9,8 +13,7 @@
   }
 
   .container-static{
-    position: absolute;
-    bottom: 0;
+    //position: absolute;
   }
 
   .link-mobile {
@@ -388,10 +391,9 @@ div.tl-edges {
   margin-top: 30px !important;
   margin-bottom: 30px !important;
 }
-.bg-gradient {
+
+.bg-gradient-section {
   background: var(--gradient-background);
   width: 110vw;
   margin: 6vh -10vw 0 -10vw;
-            }
-// Import Bootstrap and its default variables
-@import '~bootstrap/scss/bootstrap.scss';
+}

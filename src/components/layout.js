@@ -210,14 +210,7 @@ class Layout extends React.Component {
       footer = <FooterBlue />
     }
     return (
-      <Wrapper
-        style={{
-          backgroundColor: "var(--bg)",
-          transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-          transition: `0.4s`,
-          minHeight: `100vh`,
-        }}
-      >
+      <Wrapper>
         <ThemeToggler>
           {({ theme, toggleTheme }) => {
             let hours = parseInt(
@@ -235,13 +228,11 @@ class Layout extends React.Component {
             }
 
             return (
-              <label>
-                <input
-                  hidden
-                  type="checkbox"
-                  checked={hours === "dark" ? true : false}
-                />{" "}
-              </label>
+              <input
+                hidden
+                type="checkbox"
+                checked={hours === "dark" ? true : false}
+              />
             )
           }}
         </ThemeToggler>
@@ -250,23 +241,17 @@ class Layout extends React.Component {
             marginLeft: `auto`,
             marginRight: `auto`,
             maxWidth: `1400px`,
-            backgroundColor: `var(--bg)`,
           }}
           className="pt-5 pl-1 pl-3 pl-1 mt-4 mt-md-5 mr-md-4 mb-md-1 ml-md-4"
         >
           <header className="d-flex justify-content-between align-items-center mb-5 mt-md-5">
+            {" "}
             <div onClick={this.handleShow}>{header}</div>
           </header>
           <div className="menu-fixed menu-fixed-mobile ">{menu}</div>
-          <main
-            style={{
-              transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-              transition: `0.5s`,
-            }}
-          >
-            {children}
-          </main>
         </div>
+        <div>{children}</div>
+        <div className="mt-5 pt-5"> {footer} </div>
         <Modal
           onEntered={this.bgTransparent}
           show={this.state.show}
@@ -285,15 +270,10 @@ class Layout extends React.Component {
             <Menu handleClose={this.handleClose} />
 
             <div onClick={this.handleClose}>
-              <img
-                src={closeBTN}
-                alt="Close Button"
-                className="close-button"
-              ></img>
+              <img src={closeBTN} alt="Close Button" className="close-button" />
             </div>
           </Modal.Body>
         </Modal>
-        <div className="mt-5 pt-5">{footer} </div>
       </Wrapper>
     )
   }
