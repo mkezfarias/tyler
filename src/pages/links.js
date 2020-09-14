@@ -291,30 +291,25 @@ class Links extends React.Component {
                 xl={{ span: 6, offset: 1 }}
                 className="mb-5 pb-5"
               >
-                {LinksArray.map(favoriteSet => {
+                {LinksArray.map(linkSet => {
                   return (
                     <>
                       <Row className="d-flex align-items-baseline">
                         <span className="px-2 mt-4 wsans w-regular fav-title">
-                          {favoriteSet.title}
+                          {linkSet.title}
                         </span>
                       </Row>
-                      {favoriteSet.items.map(item => {
+                      {linkSet.items.map(item => {
                         return (
                           <Row className="d-flex ml-2 ml-md-3 w-100 w-md-75">
                             <a
                               href={item.link}
                               target="_blank"
-                              className="fancy-link-footer"
+                              style={{ fontSize: `17px` }}
+                              className="fancy-link-footer text-light  w-semibold mb-0 "
                             >
-                              <p
-                                style={{ fontSize: `17px` }}
-                                className=" text-light  w-semibold mb-0 "
-                              >
-                                {" "}
-                                {item.subTitle}{" "}
-                              </p>
-                            </a>{" "}
+                              {item.subTitle}
+                            </a>
                             <p
                               className=" text-light p-text w-100 w-md-75 pr-md-5"
                               style={{ fontSize: `17px` }}
