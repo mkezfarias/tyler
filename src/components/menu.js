@@ -108,24 +108,6 @@ const Menu = ({ handleClose, zIndex }) => {
         </AniLink>
       </div>
       <Col className="d-flex flex-column night-fixed">
-        {/* <Row className="d-flex justify-content-start w-50 pl-3">
-          <a href="a" className="text-light roboto w-regular pr-2 pl-1">
-            EN
-          </a>
-          <a
-            href={`http://translate.google.com/translate?hl=&sl=en&tl=ja&u=www.tylervawser.com`}
-            className="text-light roboto w-regular px-2"
-          >
-            日本
-          </a>
-          <a
-            href={`http://translate.google.com/translate?hl=&sl=en&tl=es&u=www.tylervawser.com`}
-            className="text-light roboto w-regular px-2"
-          >
-            ES
-          </a>
-        </Row> */}
-
         <ThemeToggler>
           {({ theme, toggleTheme }) => {
             return (
