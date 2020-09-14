@@ -44,9 +44,13 @@ const FooterBlue = () => {
               </div>
               <div className="d-flex text-right px-5 px-md-1">
                 <div className="footer-links">
-                  <Link to="/connect" className="text-light fancy-link-footer">
+                  <a
+                    href="/connect"
+                    className="text-light fancy-link-footer"
+                    target="_blank"
+                  >
                     Set up a Call
-                  </Link>
+                  </a>
                 </div>
                 <div className="px-2 footer-links">/</div>
                 <div className="footer-links">
@@ -81,35 +85,47 @@ const FooterBlue = () => {
               </div>
             </div>
             <div className="text-light roboto w-medium d-flex flex-column justify-content-end border-footer px-5 px-md-4 ml-2">
-              <div className="footer-title py-0 my-0 text-left text-md-right">
+              <div
+                className="footer-title py-0 my-0 text-left text-md-right"
+                target="_blank"
+              >
                 Learn More
               </div>
               <div className="d-flex text-right">
                 <div className="footer-links">
-                  <Link to="/about" className="text-light fancy-link-footer">
-                    About
-                  </Link>
-                </div>
-                <div className="px-2 footer-links">/</div>
-                <div className="footer-links">
-                  <Link to="/blog" className="text-light fancy-link-footer">
-                    Posts
-                  </Link>
-                </div>
-                <div className="px-2 footer-links">/</div>
-                <div className="footer-links">
-                  <Link
-                    to="/favorites"
+                  <a
+                    href="/about"
                     className="text-light fancy-link-footer"
+                    target="_blank"
+                  >
+                    About
+                  </a>
+                </div>
+                <div className="px-2 footer-links">/</div>
+                <div className="footer-links">
+                  <a
+                    href="/blog"
+                    className="text-light fancy-link-footer"
+                    target="_blank"
+                  >
+                    Posts
+                  </a>
+                </div>
+                <div className="px-2 footer-links">/</div>
+                <div className="footer-links">
+                  <a
+                    href="/favorites"
+                    className="text-light fancy-link-footer"
+                    target="_blank"
                   >
                     Favorites
-                  </Link>
+                  </a>
                 </div>
                 <div className="px-2 footer-links">/</div>
                 <div className="footer-links">
-                  <Link to="/links" className="text-light fancy-link-footer">
+                  <a href="/links" className="text-light fancy-link-footer">
                     Links
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>
