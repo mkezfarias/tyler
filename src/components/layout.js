@@ -280,7 +280,7 @@ class Layout extends React.Component {
 }
 
 const Wrapper = styled.div`
-  min-height: 92vh;
+  min-height: 100vh;
 `
 
 export default Layout
