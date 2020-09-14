@@ -251,7 +251,7 @@ class Layout extends React.Component {
           <div className="menu-fixed menu-fixed-mobile ">{menu}</div>
         </div>
         <div>{children}</div>
-        <div className="mt-5 pt-5"> {footer} </div>
+        <div> {footer} </div>
         <Modal
           onEntered={this.bgTransparent}
           show={this.state.show}
@@ -280,7 +280,7 @@ class Layout extends React.Component {
 }
 
 const Wrapper = styled.div`
-  min-height: 100vh;
+  min-height: 92vh;
 `
 
 export default Layout
