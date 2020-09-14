@@ -2,7 +2,6 @@ import React from "react"
 import { Link, navigate } from "gatsby"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
 import { Row, Col } from "react-bootstrap"
 import "../styles/global.scss"
 import TransitionLink from "gatsby-plugin-transition-link"
@@ -23,16 +22,31 @@ class FullMenu extends React.Component {
   render() {
     return (
       <Layout location={this.props.location}>
-        <SEO
-          title="Tyler Vawser"
-          keywords={[
-            `blog`,
-            `Tyler Vawser`,
-            `Tvawser`,
-            `Tvaw`,
-            `VP of People`,
-            `Apptegy`,
-          ]}
+        <GatsbySeo
+          title="Tyler Vawser's Menu"
+          description="Tyler Vawser's favorite tools, books, things, and more."
+          canonical="https://www.tylervawser.com/favorites"
+          keywords="tylervawser,tyler vawser,favorite tools" // keywords list
+          openGraph={{
+            url: "https://www.tylervawser.com/favorites",
+            title: "About Tyler Vawser",
+            description:
+              "Tyler Vawser's favorite tools, books, things, and more.",
+            images: [
+              {
+                url: "../src/images/OGtylervawser.jpg",
+                width: 1200,
+                height: 1200,
+                alt: "About Tyler Vawser",
+              },
+            ],
+            site_name: "TylerVawser",
+          }}
+          twitter={{
+            handle: "@tvaw",
+            site: "@site",
+            cardType: "summary_large_image",
+          }}
         />
 
         <Row
