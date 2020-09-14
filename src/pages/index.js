@@ -39,25 +39,11 @@ class IndexPage extends React.Component {
             cardType: "summary_large_image",
           }}
         />
-        {/* 
-        <SEO
-          title="Tyler Vawser"
-          keywords={[
-            `blog`,
-            `Tyler Vawser`,
-            `Tvawser`,
-            `tvaw`,
-            `Apptegy`,
-            `VP of People`,
-          ]}
-        /> */}
 
-        <div fluid className="container-static">
+        <div fluid className="container-static ml-2 ml-md-5">
           <Row
             style={{
               color: "var(--textNormal)",
-              transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-              transition: `0.4s`,
             }}
             className="wider ml-3 wsans w-medium h1 md-h2 pt-md-3 pb-0 mb-0 line-height-1"
           >
