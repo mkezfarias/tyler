@@ -234,17 +234,18 @@ class Favorites extends React.Component {
             title="Tyler Vawser's Favorites"
             description="Tyler Vawser's favorite tools, books, things, and more."
             canonical="https://www.tylervawser.com/favorites"
-          keywords="tylervawser,tyler vawser,favorite tools" // keywords list
-          openGraph={{
-            url: "https://www.tylervawser.com/favorites",
-            title: "About Tyler Vawser",
-            description: "Tyler Vawser's favorite tools, books, things, and more.",
-            images: [
-              {
-                url: "../src/images/OGtylervawser.jpg",
-                width: 1200,
-                height: 1200,
-                alt: "About Tyler Vawser",
+            keywords="tylervawser,tyler vawser,favorite tools" // keywords list
+            openGraph={{
+              url: "https://www.tylervawser.com/favorites",
+              title: "About Tyler Vawser",
+              description:
+                "Tyler Vawser's favorite tools, books, things, and more.",
+              images: [
+                {
+                  url: "../src/images/OGtylervawser.jpg",
+                  width: 1200,
+                  height: 1200,
+                  alt: "About Tyler Vawser",
                 },
               ],
               site_name: "TylerVawser",
@@ -255,10 +256,7 @@ class Favorites extends React.Component {
               cardType: "summary_large_image",
             }}
           />
-          {/* <SEO
-            title="Tyler Vawser"
-            keywords={[`blog`, `Tyler Vawser`, `Tvawser`, `react`]}
-          /> */}
+
           <LogoFixedMobile />
           <div>
             <Row>
