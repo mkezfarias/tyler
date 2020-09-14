@@ -274,7 +274,7 @@ class Links extends React.Component {
               </Col>
             </Row>
           </div>
-          <Container
+          {/* <Container
             fluid
             style={{
               background: "var(--gradient-background)",
@@ -324,7 +324,7 @@ class Links extends React.Component {
                 })}
               </Col>
             </Row>
-          </Container>
+          </Container> */}
         </Layout>
       </>
     )
