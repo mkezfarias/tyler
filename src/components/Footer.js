@@ -55,7 +55,7 @@ const FooterBlue = () => {
                     top="entry"
                     duration={1}
                     entryOffset={800}
-                    to="/connect"
+                    to="/connect/"
                     className="text-light fancy-link-footer"
                   >
                     Set up a Call
@@ -109,7 +109,7 @@ const FooterBlue = () => {
                     top="entry"
                     duration={1}
                     entryOffset={800}
-                    to="/connect"
+                    to="/about/"
                     className="text-light fancy-link-footer"
                   >
                     About
@@ -146,7 +146,7 @@ const FooterBlue = () => {
                     duration={1}
                     entryOffset={800}
                     className="text-light fancy-link-footer"
-                    to="/favorites"
+                    to="/favorites/"
                     className="text-light fancy-link-footer"
                   >
                     Favorites
@@ -164,7 +164,7 @@ const FooterBlue = () => {
                     top="entry"
                     duration={1}
                     entryOffset={800}
-                    to="/links"
+                    to="/links/"
                     className="text-light fancy-link-footer"
                   >
                     Links

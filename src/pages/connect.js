@@ -51,7 +51,7 @@ class Connect extends React.Component {
             url: "https://www.tylervawser.com/connect",
             title: "Chat with Tyler",
             description: "Set up a call with Tyler Vawser",
-           images: [
+            images: [
               {
                 url: "../src/images/OGtylervawser.jpg",
                 width: 1200,
@@ -68,10 +68,6 @@ class Connect extends React.Component {
           }}
         />
 
-        {/* <SEO
-          title="Tyler Vawser"
-          keywords={[`blog`, `Tyler Vawser`, `Tvawser`, `react`]}
-        /> */}
         <LogoFixedMobile />
 
         <AniLink
@@ -96,7 +92,13 @@ class Connect extends React.Component {
             style={{ zIndex: `1` }}
           ></img>
         </AniLink>
-        <Col xl={7} sm={12} md={8} lg={8} style={{ minHeight: `1120px` }}>
+        <Col
+          xl={7}
+          sm={12}
+          md={8}
+          lg={8}
+          style={{ minHeight: `1120px`, marginBottom: `50px` }}
+        >
           <CalendlyEmbed account="tyler-apptegy" eventName="call-with-tyler" />
         </Col>
         <div className="sidebar-fixed pl-5 ">
