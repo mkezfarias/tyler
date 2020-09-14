@@ -12,6 +12,7 @@ import dayButton from "../images/daymode.svg"
 import nightButton from "../images/night-button.svg"
 import closeBTN from "../images/x.svg"
 import Menu from "../components/menu"
+import { GatsbySeo } from "gatsby-plugin-next-seo"
 
 class FullMenu extends React.Component {
   constructor(props) {
