@@ -12,6 +12,8 @@ import AniLink from "gatsby-plugin-transition-link/AniLink"
 import FooterBlue from "./Footer"
 import { getString } from "../components/content.js"
 
+import translate from '../i18n/messages/translateHelper';
+
 class Layout extends React.Component {
   constructor(props) {
     super(props)
@@ -55,7 +57,7 @@ class Layout extends React.Component {
                   )
                   .pauseFor(15000)
                   .deleteAll()
-                  .typeString(getString())
+                  .typeString( translate(getString()) )
                   .start()
               }}
             />
