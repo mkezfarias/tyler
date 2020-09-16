@@ -34,7 +34,11 @@ const FooterBlue = () => {
               entryOffset={800}
               className="py-5"
             >
-              <img src={logoWhite} alt="Tyler Vawser" className="pt-4 pl-5" />
+              <img src={logoWhite} alt="Tyler Vawser" className="pl-5" 
+                style={{
+                  height: "100%",
+                }}
+              />
             </AniLink>
           </div>
           <div className="d-flex justify-content-start flex-column flex-md-row">
