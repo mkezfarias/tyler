@@ -71,7 +71,7 @@ class IndexPage extends React.Component {
               bg="#663399"
               direction="left"
               top="exit"
-              to="connect"
+              to="/connect/"
             >
               Set up a call
             </AniLink>

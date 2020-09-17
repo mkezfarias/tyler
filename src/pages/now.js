@@ -409,7 +409,7 @@ class Now extends React.Component {
                 <Link
                   style={{ color: `#add5ff`, fontSize: `20px` }}
                   className="fancy-link-footer d-flex ml-md-3 "
-                  to="/connect"
+                  to="/connect/"
                 >
                   {letsTalk.linkText}
                 </Link>
