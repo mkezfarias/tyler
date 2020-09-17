@@ -1,15 +1,12 @@
 import React from "react"
-import { Link, navigate } from "gatsby"
+import { navigate } from "gatsby"
 
 import Layout from "../components/layout"
 import { Row, Col } from "react-bootstrap"
 import "../styles/global.scss"
-import TransitionLink from "gatsby-plugin-transition-link"
+
 import AniLink from "gatsby-plugin-transition-link/AniLink"
-import { ThemeToggler } from "gatsby-plugin-dark-mode"
-import whiteLogo from "../images/logo-white.svg"
-import dayButton from "../images/daymode.svg"
-import nightButton from "../images/night-button.svg"
+
 import closeBTN from "../images/x.svg"
 import Menu from "../components/menu"
 import { GatsbySeo } from "gatsby-plugin-next-seo"

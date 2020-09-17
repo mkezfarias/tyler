@@ -1,9 +1,8 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import logoWhite from "../images/logo-white.svg"
-import { Row, Col, Container } from "react-bootstrap"
+import { Row, Container } from "react-bootstrap"
 
 const FooterBlue = () => {
   return (

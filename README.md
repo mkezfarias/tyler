@@ -1,59 +1,69 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
-  </a>
-</p>
 
+## Tyler Vawser's personal website
+<img src="https://imgur.com/2VQVIOJ.png">
 
-<img alt="screenshot" src="./screenshot.png">
+#### Tyler Vawser's personal website. The website includes a CMS to write blog posts. Template from gatsby-personal-starter-blog
+Stack: Gatsby, React, Netlify
 
-Starter is a fork of Gatsby Starter Blog, the most popular starter by far – with second place being Gatsby Starter Netlify CMS. So I decided to combine the 2!
+## Dependencies 
+- gatsby-plugin-transition-link (for transitions)
+- gatsby-plugin-dark-mode (for dark mode)
+- bootstrap (for styles)
+- gatsby-plugin-next-seo (for SEO)
+- gatsby-plugin-mailchimp (for mailing lists)
+- gatsby-plugin-google-fonts (for fonts)
+- TypewriterJS v2 (for typewritter effect)
 
-Too see a search-enabled version of this starter, please visit the [with-search](https://github.com/thomaswang/gatsby-personal-starter-blog/tree/with-search) branch.
 
 ## 🚀 Quick start
 
-1.  **Create a Gatsby site.**
+1.  **Clone the repo locally**
 
-    Use the Gatsby CLI to create a new site, specifying the blog starter.
-
+    from the command line
     ```sh
-    # create a new Gatsby site using the blog starter
-    gatsby new my-blog-starter https://github.com/thomaswang/gatsby-personal-starter-blog
+    #to create your parent directory
+    $ mkdir projects
+    $ cd projects
+    $ git clone git@github.com:TylerVawser/TylerVawserSite.git
+    $ cd TylerVawserSite
     ```
 
-1.  **Start developing.**
+2.  **Installs**
 
-    Navigate into your new site’s directory and start it up.
+    Make sure you are in TylerVawserSite folder, and you have npm and node installed in your system
 
+    
     ```sh
-    cd my-blog-starter/
-    gatsby develop
+    #To install all the dependencies and npm modules
+    $ npm install
     ```
+    
+    
+    ```sh
+    To run the appat locally    
+    $ gatsby develop
+    ```
+    
+    Your site is now running at `http://localhost:8000`! Open your browser and go to localhost:8000 to see it live, it will reload when you make changes
+    
 
-1.  **Open the source code and start editing!**
-
-    Your site is now running at `http://localhost:8000`!
-
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
-
-    Open the `my-blog-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
-
-## 🎓 Learning Gatsby
-
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.org/). Here are some places to start:
-
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
-
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
-
-## 📔 Learning Netlify CMS with Gatsby
-
-Start from [this point](https://www.gatsbyjs.org/docs/sourcing-from-netlify-cms/#authenticating-with-github) in the Gatsby documentation to finish the set up for your personal Netlify CMS with authentication.
-
-## 💫 Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/thomaswangio/gatsby-personal-starter-blog)
-
-<!-- AUTO-GENERATED-CONTENT:END -->
+3.  **Git**
+    It's recommended to work on a different branch when making changes, to create a new branch based on master, use this command while on master
+    
+    ```sh
+    $ git checkout -b "new-branch-name"
+    ```
+    
+    When your changes are working locally and you want to push them to netlify, follow the follwing steps
+    
+     ```sh
+    $ git add .
+    $ git commit -m "Commit Message"
+    $ git push origin "new-branch-name"
+    ```
+   Once you are done with the pushing and are finally ready to merge, go to https://github.com/TylerVawser/TylerVawserSite/
+   1. Create a pull request from "new-branch-name" to "master"
+   2. Wait for the netlify checks to pass before merging to master, if they are not passign, it means there's something wrong with the code, you can read the  
+   netliy log for more details, but it's usually syntax errors or non oudated/deprecated/non-compatible dependencies being used.
+   3. Click merge pull request, you may delete the branch or keep it
+    

@@ -8,11 +8,10 @@ import { rhythm } from "../utils/typography"
 
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
-import { Card, Container, Row, Col, Modal, CardColumns } from "react-bootstrap"
+import { Card, Row, Col } from "react-bootstrap"
 import "../styles/global.scss"
 
 import LogoFixedMobile from "../components/LogoFixedMobile"
-import FooterBlue from "../components/Footer"
 import { GatsbySeo } from "gatsby-plugin-next-seo"
 
 class Blog extends React.Component {

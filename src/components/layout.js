@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
 
 import styled from "styled-components"
 
@@ -8,9 +8,9 @@ import Menu from "./menu"
 import { ThemeToggler } from "gatsby-plugin-dark-mode"
 import closeBTN from "../images/x.svg"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
-import MenuFixedIcon from "./MenuFixedIcon"
+
 import FooterBlue from "./Footer"
-import { getString, typewriterStrings } from "../components/content.js"
+import { getString } from "../components/content.js"
 
 class Layout extends React.Component {
   constructor(props) {
@@ -46,12 +46,12 @@ class Layout extends React.Component {
             }}
             className="main-title wsans w-semibold"
           >
-            <span className="mb-0 pb-0">Tyler Vawser is</span>
+            <span className="mb-0 pb-0">Tyler Vawser</span>
             <Typewriter
               onInit={typewriter => {
                 typewriter
                   .typeString(
-                    `growing <a target="_blank" class="fancy-link " href="https://www.apptegy.com/">Apptegy</a>.`
+                    `is growing <a target="_blank" class="fancy-link " href="https://www.apptegy.com/">Apptegy</a>.`
                   )
                   .pauseFor(15000)
                   .deleteAll()

@@ -1,15 +1,12 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
-import Button from "../components/button"
-import { Container, Row, Col, Modal } from "react-bootstrap"
+
+import { Row, Col } from "react-bootstrap"
 import "../styles/global.scss"
-import TransitionLink from "gatsby-plugin-transition-link"
+
 import AniLink from "gatsby-plugin-transition-link/AniLink"
-import ThemeToggler from "gatsby-plugin-dark-mode/ThemeToggler"
-import MenuFixedIcon from "../components/MenuFixedIcon"
+
 import { GatsbySeo } from "gatsby-plugin-next-seo"
 
 class IndexPage extends React.Component {
