@@ -72,7 +72,7 @@ class Layout extends React.Component {
             width: "30px",
             zIndex: `300`,
           }}
-          to="/full-menu"
+          to="/full-menu/"
           className="menu-fixed d-block"
           cover
           bg="var(--gradient-background)"
@@ -172,7 +172,7 @@ class Layout extends React.Component {
               width: "30px",
               zIndex: `300`,
             }}
-            to="/full-menu"
+            to="/full-menu/"
             className="menu-fixed d-block"
             cover
             bg="var(--gradient-background)"
