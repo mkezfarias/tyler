@@ -89,7 +89,7 @@ class Blog extends React.Component {
             }}
             className="wider wsans w-medium pb-0 mb-4 line-height-1 mt-0 w-semibold align-center"
           >
-            Read more about Tyler Vawser
+            Tyler's been writing
           </Col>
         </Row>
         <Row
