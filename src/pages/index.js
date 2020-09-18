@@ -13,9 +13,35 @@ import { I18nProvider, LOCALES } from '../i18n';
 import translate from '../i18n/messages/translateHelper';
 
 class IndexPage extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = { locale: LOCALES.ENGLISH }
+  }
+
+  componentDidMount() {
+    if (!!window.localStorage.getItem("language")) {
+      this.setState({ locale: window.localStorage.getItem("language") })
+    }
+    else {
+      const userLang = navigator.language.split('-')[0];
+      if (userLang) {
+        switch (navigator.language) {
+          case 'es': this.setState({ locale: LOCALES.SPANISH }); break;
+          case 'ja': this.setState({ locale: LOCALES.JAPANESE }); break;
+          case 'en':
+          default: this.setState({ locale: LOCALES.ENGLISH });
+        }
+
+        window.localStorage.setItem("language", this.state.locale)
+      }
+    }
+  }
+
   render() {
+
     return (
-      <I18nProvider locale={LOCALES.ENGLISH}>
+      <I18nProvider locale={this.state.locale}>
         <Layout location={this.props.location}>
           <GatsbySeo
             title="Tyler Vawser"
@@ -51,8 +77,8 @@ class IndexPage extends React.Component {
               }}
               className="wider ml-3 wsans w-medium h1 md-h2 pt-md-3 pb-0 mb-0 line-height-1"
             >
-              { translate('letsTalk') }
-          </Row>
+              {translate('letsTalk')}
+            </Row>
             <Row
               style={{
                 color: "var(--textTitle)",
@@ -74,8 +100,8 @@ class IndexPage extends React.Component {
                 top="exit"
                 to="connect"
               >
-                { translate('setCall') }
-            </AniLink>
+                {translate('setCall')}
+              </AniLink>
             </Row>
             <Row
               style={{
@@ -104,8 +130,8 @@ class IndexPage extends React.Component {
                   className="link-mobile fancy-link-footer d-block"
                   target="_blank"
                 >
-                  Twitter
-              </a>{" "}
+                  {translate('twitter')}
+                </a>{" "}
                 <span className="d-none d-md-inline px-2">/ </span>
                 <a
                   style={{
@@ -117,8 +143,8 @@ class IndexPage extends React.Component {
                   href="mailto:tvawser@gmail.com?subject=Saw%20your%20website%20lets%20chat"
                   target="_blank"
                 >
-                  Email
-              </a>{" "}
+                  {translate('email')}
+                </a>{" "}
                 <span className="d-none d-md-inline px-2">/ </span>
                 <a
                   style={{
@@ -130,8 +156,8 @@ class IndexPage extends React.Component {
                   href="https://www.linkedin.com/in/tylervawser/"
                   target="_blank"
                 >
-                  LinkedIn
-              </a>
+                  {translate('linkedIn')}
+                </a>
               </Col>
               <Col
                 xl={6}
@@ -149,8 +175,8 @@ class IndexPage extends React.Component {
                   }}
                   className="d-flex justify-content-end wsans w-medium md-h4 d-flex ml-auto pr-3 pr-sm-5 mr-sm-0 h3"
                 >
-                  { translate('previouslyAt') }
-              </Row>
+                  {translate('previouslyAt')}
+                </Row>
 
                 <Row className="d-flex justify-content-end pr-0 pr-sm-5 mr-1">
                   <a
@@ -208,6 +234,77 @@ class IndexPage extends React.Component {
                     The Kings College
                 </a>
                 </Row>
+              </Col>
+            </Row>
+
+            <Row
+              style={{
+                color: "var(--textTitle)",
+                transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+                transition: `0.4s`,
+                paddingRight: `10rem`,
+                fontSize: '12px'
+              }}
+              className="ml-0 mr-5 mt-5 roboto w-regular d-flex justify-content-between flex-md-nowrap w-100 align-items-end pt-0 pt-md-0"
+            >
+              <Col
+                xs={12}
+                sm={12}
+                xl={6}
+                lg={6}
+                md={6}
+                className="mt-0 d-sm-flex flex-column flex-md-row"
+              >
+                <a
+                  style={{
+                    color: "var(--textTitle)",
+                    transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+                    transition: `0.4s`,
+                  }}
+                  className="link-mobile fancy-link-footer d-block"
+                  target="_blank"
+                  onClick={() => {
+                    window.localStorage.setItem("language", 'en')
+                    this.setState({ locale: 'en' })
+                    window.location.reload(false)
+                  }}
+                >
+                  {translate('en')}
+                </a>{" "}
+                <span className="d-none d-md-inline px-2">/ </span>
+                <a
+                  style={{
+                    color: "var(--textTitle)",
+                    transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+                    transition: `0.4s`,
+                  }}
+                  className="link-mobile fancy-link-footer d-block"
+                  target="_blank"
+                  onClick={() => {
+                    window.localStorage.setItem("language", 'es')
+                    this.setState({ locale: 'es' })
+                    window.location.reload(false)
+                  }}
+                >
+                  {translate('es')}
+                </a>{" "}
+                <span className="d-none d-md-inline px-2">/ </span>
+                <a
+                  style={{
+                    color: "var(--textTitle)",
+                    transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+                    transition: `0.4s`,
+                  }}
+                  className="link-mobile fancy-link-footer d-block"
+                  target="_blank"
+                  onClick={() => {
+                    window.localStorage.setItem("language", 'jp')
+                    this.setState({ locale: 'jp' })
+                    window.location.reload(false)
+                  }}
+                >
+                  {translate('jp')}
+                </a>{" "}
               </Col>
             </Row>
           </div>

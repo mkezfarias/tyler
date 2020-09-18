@@ -10,15 +10,38 @@ import AniLink from "gatsby-plugin-transition-link/AniLink"
 import closeBTN from "../images/x.svg"
 import Menu from "../components/menu"
 import { GatsbySeo } from "gatsby-plugin-next-seo"
+import { I18nProvider, LOCALES } from '../i18n';
+import translate from '../i18n/messages/translateHelper';
 
 class FullMenu extends React.Component {
   constructor(props) {
     super(props)
     this.handleCloseX = () => navigate("/")
+    this.state = { locale: LOCALES.ENGLISH }
   }
 
+  componentDidMount() {
+    if (!!window.localStorage.getItem("language")) {
+      this.setState({ locale: window.localStorage.getItem("language") })
+    }
+    else {
+      const userLang = navigator.language.split('-')[0];
+      if (userLang) {
+        switch (navigator.language) {
+          case 'es': this.setState({ locale: LOCALES.SPANISH }); break;
+          case 'ja': this.setState({ locale: LOCALES.JAPANESE }); break;
+          case 'en':
+          default: this.setState({ locale: LOCALES.ENGLISH });
+        }
+
+        window.localStorage.setItem("language", this.state.locale)
+      }
+    }
+  }
+  
   render() {
     return (
+      <I18nProvider locale={this.state.locale}>
       <Layout location={this.props.location}>
         <GatsbySeo
           title="Tyler Vawser's Menu"
@@ -61,7 +84,7 @@ class FullMenu extends React.Component {
             className="w-semibold "
             style={{ fontSize: `calc(18px + 5vw)` }}
           >
-            Tyler is waiting to see what you’ll pick first.{" "}
+            { translate('waitingChoice') }{" "}
           </Col>
 
           <Col
@@ -96,6 +119,7 @@ class FullMenu extends React.Component {
           </AniLink>
         </Row>
       </Layout>
+      </I18nProvider>
     )
   }
 }

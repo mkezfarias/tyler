@@ -2,6 +2,8 @@ import { LOCALES } from '../locations';
 
 export default {
     [LOCALES.SPANISH]: {
+        'growingApptegy': 'está haciendo crecer {value}.',
+        'taylerVawser': 'Tayler Vawser',
         'letsTalk': 'Hablemos.',
         'setCall': 'Agendemos una llamada',
         'previouslyAt': 'Previamente en',
@@ -24,5 +26,16 @@ export default {
         'is reading a book.': 'está leyendo un libro.',
         'is preparing for tomorrow.': 'se está preparando para mañana.',
         'is getting sleepy.': 'está por dormir.',
+        'twitter': 'Twitter',
+        'email': 'Correo Electrónico',
+        'linkedIn': 'LinkedIn',
+        'posts': 'Publicaciones',
+        'favorites': 'Favoritos',
+        'now': 'Ahora',
+        'about': 'Sobre mi',
+        'en': 'Inglés',
+        'es': 'Español',
+        'jp': 'Japonés',
+        'waitingChoice': 'Tyler está esperando tu elección.'
     }
 }
