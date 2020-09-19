@@ -129,6 +129,7 @@ class Connect extends React.Component {
                   <a
                     href="https://www.linkedin.com/in/tylervawser/"
                     target="_blank"
+                    className="px-4"
                   >
                     <img
                       className="d-flex align-self-end"

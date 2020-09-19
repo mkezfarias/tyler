@@ -67,7 +67,7 @@ class Layout extends React.Component {
             }}
             className="main-title wsans w-semibold"
           >
-            <span className="mb-0 pb-0">{ translate('taylerVawser') }</span>
+            <span className="mb-0 pb-0">{ translate('tylerVawser') }</span>
             <TypewriterHelper />
           </div>
         </Container>
@@ -82,7 +82,7 @@ class Layout extends React.Component {
             width: "30px",
             zIndex: `300`,
           }}
-          to="/full-menu"
+          to="/full-menu/"
           className="menu-fixed d-block"
           cover
           bg="var(--gradient-background)"
@@ -182,7 +182,7 @@ class Layout extends React.Component {
               width: "30px",
               zIndex: `300`,
             }}
-            to="/full-menu"
+            to="/full-menu/"
             className="menu-fixed d-block"
             cover
             bg="var(--gradient-background)"

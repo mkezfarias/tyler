@@ -29,7 +29,7 @@ class Blog extends React.Component {
       addToMailchimp(this.state.email, { FNAME: `${this.state.name}` })
         .then(data => {
           console.log(data)
-          alert("Thank you for signing up")
+          alert("Thank you for subscribing")
         })
         .catch(() => {})
     }
@@ -89,7 +89,7 @@ class Blog extends React.Component {
             }}
             className="wider wsans w-medium pb-0 mb-4 line-height-1 mt-0 w-semibold align-center"
           >
-            Read more about Tyler Vawser
+            Tyler's been writing
           </Col>
         </Row>
         <Row
@@ -112,13 +112,9 @@ class Blog extends React.Component {
             }}
             className="roboto pb-0 mb-4 line-height-1 mt-0 pr-0 pr-sm-0"
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+            Hello! Right <a href="https://www.tylervawser.com/now/">now</a>, I am the VP of People at <a href="https://www.apptegy.com/">Apptegy</a>, where I find smart, driven people to help us empower school leaders to run better schools. 
+      Before that I supported marketing teams at startups and headed up marketing for <a href="https://www.stickermule.com//">Sticker Mule</a>. 
+    This is where I write infrequently about what I'm learning and what is on my mind. 
           </Col>
         </Row>
 

@@ -130,7 +130,7 @@ const FooterBlue = () => {
                     top="entry"
                     duration={1}
                     entryOffset={800}
-                    to="/blog"
+                    to="/blog/"
                     className="text-light fancy-link-footer"
                   >
                     Posts

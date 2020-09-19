@@ -47,7 +47,7 @@ const Menu = ({ handleClose, zIndex }) => {
           duration={1}
           entryOffset={800}
           className="text-light roboto w-regular h2 my-3 fancy-link "
-          to="/connect"
+          to="/connect/"
         >
           <span onClick={handleClose}>{ translate('setCall') }</span>
         </AniLink>
@@ -62,7 +62,7 @@ const Menu = ({ handleClose, zIndex }) => {
           duration={1}
           entryOffset={800}
           className="text-light roboto w-regular h2 my-3 fancy-link"
-          to="/blog"
+          to="/blog/"
         >
           <span onClick={handleClose}>{ translate('posts') }</span>
         </AniLink>
@@ -77,7 +77,7 @@ const Menu = ({ handleClose, zIndex }) => {
           duration={1}
           entryOffset={800}
           className="text-light roboto w-regular h2 my-3 fancy-link"
-          to="/favorites"
+          to="/favorites/"
         >
           <span onClick={handleClose}> { translate('favorites') }</span>
         </AniLink>
@@ -92,7 +92,7 @@ const Menu = ({ handleClose, zIndex }) => {
           duration={1}
           entryOffset={800}
           className="text-light roboto w-regular h2 my-3 fancy-link"
-          to="/now"
+          to="/now/"
         >
           <span onClick={handleClose}>{ translate('now') }</span>
         </AniLink>
@@ -103,7 +103,7 @@ const Menu = ({ handleClose, zIndex }) => {
           top="exit"
           direction="right"
           className="text-light roboto w-regular h2 my-4 fancy-link"
-          to="/about"
+          to="/about/"
         >
           <span onClick={handleClose}>{ translate('about') }</span>
         </AniLink>
