@@ -269,7 +269,7 @@ class IndexPage extends React.Component {
                     window.location.reload(false)
                   }}
                 >
-                  {translate('en')}
+                  EN
                 </a>{" "}
                 <span className="d-none d-md-inline px-2">/ </span>
                 <a
@@ -286,7 +286,7 @@ class IndexPage extends React.Component {
                     window.location.reload(false)
                   }}
                 >
-                  {translate('es')}
+                  ES
                 </a>{" "}
                 <span className="d-none d-md-inline px-2">/ </span>
                 <a
@@ -303,7 +303,7 @@ class IndexPage extends React.Component {
                     window.location.reload(false)
                   }}
                 >
-                  {translate('jp')}
+                  日本語
                 </a>{" "}
               </Col>
             </Row>

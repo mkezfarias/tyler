@@ -3,7 +3,7 @@ import { LOCALES } from '../locations';
 export default {
     [LOCALES.JAPANESE]: {
         'growingApptegy': '{value}を建てています。',
-        'taylerVawser': 'Tylerは',
+        'tylerVawser': 'Tylerは',
         'letsTalk': '話しましょう',
         'setCall': '電話相談をご予約ください',
         'previouslyAt': '前職',
