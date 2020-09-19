@@ -98,7 +98,7 @@ class IndexPage extends React.Component {
                 bg="#663399"
                 direction="left"
                 top="exit"
-                to="connect"
+                to="/connect/"
               >
                 {translate('setCall')}
               </AniLink>
