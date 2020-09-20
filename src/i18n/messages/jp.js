@@ -1,0 +1,41 @@
+import { LOCALES } from '../locations';
+
+export default {
+    [LOCALES.JAPANESE]: {
+        'growingApptegy': '{value}を建てています。',
+        'tylerVawser': 'Tylerは',
+        'letsTalk': '話しましょう',
+        'setCall': '電話相談をご予約ください',
+        'previouslyAt': '前職',
+        'is sleeping.': 'は寝ています。',
+        'is waking up.': 'はコーヒーを飲んでいます。',
+        'is drinking coffee.': 'はコーヒーを飲んでいます。',
+        'is reading.': 'ば読んでいます。',
+        'is answering emails.': '目的を書いています。',
+        'is on a Zoom call.': 'はZoomミーティングしています。',
+        'is meeting interesting people.': 'は賢い人と話しています。',
+        'is going for a walk.': 'は歩いています。',
+        'is eating lunch.': '昼ご飯を食べます。',
+        'is asking questions.': 'は質問しています。',
+        'is focused.': '集中しています。',
+        'is on the phone.': 'は携帯を使用しています。',
+        'is on Slack.': 'はSlackを使用しています。',
+        'is eating dinner with his family.': 'は家族と夕食を食べています。',
+        'is playing games.': 'は遊んでいます。',
+        'is cleaning up.': 'はTwitterを使っています。',
+        'is reading a book.': 'は本を読んでいます。',
+        'is preparing for tomorrow.': '明日の準備をしています。',
+        'is getting sleepy.': 'は眠い。',
+        'twitter': 'ツイッター',
+        'email': 'メール',
+        'linkedIn': 'LinkedIn',
+        'posts': 'ブログ',
+        'favorites': 'お気に入り',
+        'now': '今',
+        'about': 'Tylerについて',
+        'en': '英語',
+        'es': 'スペイン語',
+        'jp': '日本語',
+        'waitingChoice': 'Tylerはあなたの選択を待っています。'
+    }
+}

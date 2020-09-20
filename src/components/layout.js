@@ -2,7 +2,6 @@ import React from "react"
 
 import styled from "styled-components"
 
-import Typewriter from "typewriter-effect"
 import { Modal, Row, Col, Container } from "react-bootstrap"
 import Menu from "./menu"
 import { ThemeToggler } from "gatsby-plugin-dark-mode"
@@ -10,7 +9,9 @@ import closeBTN from "../images/x.svg"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 import FooterBlue from "./Footer"
-import { getString } from "../components/content.js"
+import translate from '../i18n/messages/translateHelper'
+import TypewriterHelper from './typewriter'
+import { I18nProvider, LOCALES } from '../i18n';
 
 class Layout extends React.Component {
   constructor(props) {
@@ -18,14 +19,34 @@ class Layout extends React.Component {
 
     this.state = {
       show: false,
+      locale: LOCALES.ENGLISH
     }
 
     this.handleClose = () => this.setState({ show: false })
     this.handleShow = () => this.setState({ show: true })
   }
 
+  componentDidMount() {
+    if (!!window.localStorage.getItem("language")) {
+      this.setState({ locale: window.localStorage.getItem("language") })
+    }
+    else {
+      const userLang = navigator.language.split('-')[0];
+      if (userLang) {
+        switch (navigator.language) {
+          case 'es': this.setState({ locale: LOCALES.SPANISH }); break;
+          case 'ja': this.setState({ locale: LOCALES.JAPANESE }); break;
+          case 'en':
+          default: this.setState({ locale: LOCALES.ENGLISH });
+        }
+
+        window.localStorage.setItem("language", this.state.locale)
+      }
+    }
+  }
+
   render() {
-    const { location, title, children } = this.props
+    const { location, title, children, intl } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
     const blogPath = `${__PATH_PREFIX__}/blog`
     const fullMenuPath = `${__PATH_PREFIX__}/full-menu`
@@ -46,19 +67,8 @@ class Layout extends React.Component {
             }}
             className="main-title wsans w-semibold"
           >
-            <span className="mb-0 pb-0">Tyler Vawser</span>
-            <Typewriter
-              onInit={typewriter => {
-                typewriter
-                  .typeString(
-                    `is growing <a target="_blank" class="fancy-link " href="https://www.apptegy.com/">Apptegy</a>.`
-                  )
-                  .pauseFor(15000)
-                  .deleteAll()
-                  .typeString(getString())
-                  .start()
-              }}
-            />
+            <span className="mb-0 pb-0">{ translate('tylerVawser') }</span>
+            <TypewriterHelper />
           </div>
         </Container>
       )
@@ -267,7 +277,9 @@ class Layout extends React.Component {
               transition: `0.4s`,
             }}
           >
+            <I18nProvider locale={this.state.locale}>
             <Menu handleClose={this.handleClose} />
+            </I18nProvider>
 
             <div onClick={this.handleClose}>
               <img src={closeBTN} alt="Close Button" className="close-button" />

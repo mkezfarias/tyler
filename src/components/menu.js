@@ -10,6 +10,7 @@ import whiteLogo from "../images/logo-white.svg"
 import dayButton from "../images/daymode.svg"
 import nightButton from "../images/night-button.svg"
 import closeBTN from "../images/x.svg"
+import translate from '../i18n/messages/translateHelper';
 
 const Menu = ({ handleClose, zIndex }) => {
   return (
@@ -48,7 +49,7 @@ const Menu = ({ handleClose, zIndex }) => {
           className="text-light roboto w-regular h2 my-3 fancy-link "
           to="/connect/"
         >
-          <span onClick={handleClose}>Set up a call</span>
+          <span onClick={handleClose}>{ translate('setCall') }</span>
         </AniLink>
         <AniLink
           style={{
@@ -63,7 +64,7 @@ const Menu = ({ handleClose, zIndex }) => {
           className="text-light roboto w-regular h2 my-3 fancy-link"
           to="/blog/"
         >
-          <span onClick={handleClose}>Posts</span>
+          <span onClick={handleClose}>{ translate('posts') }</span>
         </AniLink>
         <AniLink
           style={{
@@ -78,7 +79,7 @@ const Menu = ({ handleClose, zIndex }) => {
           className="text-light roboto w-regular h2 my-3 fancy-link"
           to="/favorites/"
         >
-          <span onClick={handleClose}> Favorites</span>
+          <span onClick={handleClose}> { translate('favorites') }</span>
         </AniLink>
         <AniLink
           style={{
@@ -93,7 +94,7 @@ const Menu = ({ handleClose, zIndex }) => {
           className="text-light roboto w-regular h2 my-3 fancy-link"
           to="/now/"
         >
-          <span onClick={handleClose}>Now</span>
+          <span onClick={handleClose}>{ translate('now') }</span>
         </AniLink>
         <AniLink
           className="fancy-link"
@@ -104,7 +105,7 @@ const Menu = ({ handleClose, zIndex }) => {
           className="text-light roboto w-regular h2 my-4 fancy-link"
           to="/about/"
         >
-          <span onClick={handleClose}>About</span>
+          <span onClick={handleClose}>{ translate('about') }</span>
         </AniLink>
       </div>
       <Col className="d-flex flex-column night-fixed">
