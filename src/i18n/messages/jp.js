@@ -2,16 +2,16 @@ import { LOCALES } from '../locations';
 
 export default {
     [LOCALES.JAPANESE]: {
-        'growingApptegy': '{value}を建てています。',
+        'growingApptegy': '{value}を開発しています。',
         'tylerVawser': 'Tylerは',
         'letsTalk': '話しましょう',
-        'setCall': '電話相談をご予約ください',
+        'setCall': '会議を設定する',
         'previouslyAt': '前職',
         'is sleeping.': 'は寝ています。',
         'is waking up.': 'はコーヒーを飲んでいます。',
         'is drinking coffee.': 'はコーヒーを飲んでいます。',
         'is reading.': 'ば読んでいます。',
-        'is answering emails.': '目的を書いています。',
+        'is answering emails.': '優先リストを書いています。',
         'is on a Zoom call.': 'はZoomミーティングしています。',
         'is meeting interesting people.': 'は賢い人と話しています。',
         'is going for a walk.': 'は歩いています。',
@@ -30,7 +30,7 @@ export default {
         'email': 'メール',
         'linkedIn': 'LinkedIn',
         'posts': 'ブログ',
-        'favorites': 'お気に入り',
+        'favorites': 'ブックマーク',
         'now': '今',
         'about': 'Tylerについて',
         'en': '英語',

@@ -3,7 +3,7 @@ import { LOCALES } from '../locations';
 export default {
     [LOCALES.ENGLISH]: {
         'growingApptegy': 'is growing {value}.',
-        'tylerVawser': 'Tayler Vawser',
+        'tylerVawser': 'Tyler Vawser',
         'letsTalk': 'Let\'s talk.',
         'setCall': 'Set up a call',
         'previouslyAt': 'Previously at',
