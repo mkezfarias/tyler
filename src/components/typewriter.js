@@ -14,7 +14,7 @@ function TypewriterHelper(props) {
             onInit={typewriter => {
             typewriter
                 .typeString(growing)
-                .pauseFor(15000)
+                .pauseFor(10000)
                 .deleteAll()
                 .typeString(status)
                 .start()
