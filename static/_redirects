@@ -1,9 +1,7 @@
 # zelip.me/talks
 
 
-/now http://localhost:9000/now/ 200!
-/now/ http://localhost:9000/now/ 200!
-/talks/using-github https://zelip-talks.netlify.com/talks/using-github/ 200!
-/talks/node-mvc https://zelip-talks.netlify.com/talks/node-mvc/ 200!
-/talks/azellaz-jamstack https://zelip-talks.netlify.com/talks/azellaz-jamstack/ 200!
-/talks/* https://zelip-talks.netlify.com/talks/:splat 200!	/talks/* https://zelip-talks.netlify.com/talks/:splat 200!
+/now https://gatsby-blogo.netlify.app/now/ 200!
+/now/ https://gatsby-blogo.netlify.app/now/ 200!
+/favorites https://gatsby-blogo.netlify.app/favorites/ 200!
+/favorites/ https://gatsby-blogo.netlify.app/favorites/ 200!
