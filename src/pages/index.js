@@ -3,7 +3,7 @@ import React from "react"
 import Layout from "../components/layout"
 
 import { Row, Col } from "react-bootstrap"
-import "../styles/global.scss"
+//import "../styles/global.scss"
 
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 

@@ -13,6 +13,7 @@ module.exports = {
   //don't change these configs please
   plugins: [
     `gatsby-plugin-netlify-cms`,
+    `gatsby-plugin-netlify`,
     `gatsby-plugin-transition-link`,
     `gatsby-plugin-dark-mode`,
     `gatsby-plugin-sass`,
