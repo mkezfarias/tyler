@@ -1,7 +1,7 @@
-// custom typefaces
-import React from "react"
-import "typeface-montserrat"
-import "typeface-merriweather"
-// import "src/styles/global.scss"
 
-
+exports.replaceHydrateFunction = () => {
+    return (element, container, callback) => {
+      console.log("rendering!");
+      ReactDOM.render(element, container, callback);
+    };
+  };

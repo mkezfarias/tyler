@@ -12,7 +12,7 @@
     "@mdx-js/react": "^1.5.1",
     "@xavivars/gatsby-plugin-static-site": "^0.2.3",
     "babel-plugin-styled-components": "^1.10.0",
-    "bootstrap": "^4.5.2",
+    "bootstrap": "^4.5.1",
     "gatsby": "2.24.7",
     "gatsby-image": "^2.0.39",
     "gatsby-plugin-dark-mode": "^1.1.2",
@@ -25,7 +25,6 @@
     "gatsby-plugin-netlify": "^2.3.15",
     "gatsby-plugin-netlify-cms": "^4.3.7",
     "gatsby-plugin-next-seo": "^1.6.1",
-    "gatsby-plugin-offline": "^2.0.25",
     "gatsby-plugin-page-transitions": "^1.0.8",
     "gatsby-plugin-react-helmet": "^3.0.12",
     "gatsby-plugin-sass": "^2.3.12",
@@ -63,7 +62,6 @@
   },
   "devDependencies": {
     "gatsby-plugin-remove-trailing-slashes": "^2.3.11",
-    "gatsby-plugin-root-import": "^2.0.5",
     "prettier": "^1.17.0"
   },
   "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",

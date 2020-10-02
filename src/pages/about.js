@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 
 import { Container, Row, Col } from "react-bootstrap"
 
+
 import arrowIMG from "../images/arrow.svg"
 import LogoFixedMobile from "../components/LogoFixedMobile"
 

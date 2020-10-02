@@ -12,16 +12,12 @@ module.exports = {
 
   //don't change these configs please
   plugins: [
-    `gatsby-plugin-root-import`,
     `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-netlify`,
     `gatsby-plugin-transition-link`,
     `gatsby-plugin-dark-mode`,
-    `gatsby-plugin-sass`,
-    `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-feed-mdx`,
     `gatsby-plugin-next-seo`,
@@ -95,12 +91,6 @@ module.exports = {
         display: `minimal-ui`,
         // edit below
         icon: `static/favicon.ico`,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `src/utils/typography`,
       },
     },
     {
