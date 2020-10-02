@@ -228,7 +228,7 @@ class Favorites extends React.Component {
 
   render() {
     return (
-      <>
+      <div>
         <Layout location={this.props.location}>
           <GatsbySeo
             title="Tyler Vawser's Favorites"
@@ -331,7 +331,7 @@ class Favorites extends React.Component {
               >
                 {favoritesArray.map(favoriteSet => {
                   return (
-                    <>
+                    <div>
                       <Row className="d-flex align-items-baseline">
                         <img
                           src={favoriteSet.icon}
@@ -366,14 +366,14 @@ class Favorites extends React.Component {
                           </Row>
                         )
                       })}
-                    </>
+                    </div>
                   )
                 })}
               </Col>
             </Row>
           </Container>
         </Layout>
-      </>
+      </div>
     )
   }
 }

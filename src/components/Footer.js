@@ -6,7 +6,7 @@ import { Row, Container } from "react-bootstrap"
 
 const FooterBlue = () => {
   return (
-    <>
+    <div>
       <Container
         fluid
         className=""
@@ -178,7 +178,7 @@ const FooterBlue = () => {
           </div>
         </Row>
       </Container>
-    </>
+    </div>
   )
 }
 

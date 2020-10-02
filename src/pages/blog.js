@@ -1,8 +1,9 @@
 import React from "react"
+import Layout from "../components/layout"
 import { Link, graphql } from "gatsby"
 import addToMailchimp from "gatsby-plugin-mailchimp"
 
-import Layout from "../components/layout"
+
 
 import { rhythm } from "../utils/typography"
 

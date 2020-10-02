@@ -1,24 +1,13 @@
 import React from "react"
 
 
-import Layout from "../components/layout"
-
-import SEO from "../components/seo"
-
-
-import Button from "../components/button"
-
-import { Container, Row, Col, Modal } from "react-bootstrap"
-
-
-
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 import darkLogo from "../images/logo.svg"
 
 const LogoFixedMobile = ({ noDisplay }) => {
   return (
-    <>
+    <div>
       <AniLink
         style={{
           color: "var(--textTitle)",
@@ -43,7 +32,7 @@ const LogoFixedMobile = ({ noDisplay }) => {
           className="logo-fixed-mobile d-block d-sm-none"
         />
       </AniLink>
-    </>
+    </div>
   )
 }
 

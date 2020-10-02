@@ -1,11 +1,10 @@
 import React from "react"
-import { Link } from "gatsby"
 import Layout from "../components/layout"
-import { Container, Row, Col } from "react-bootstrap"
+import { Link } from "gatsby"
 import arrowIMG from "../images/arrow.svg"
 import LogoFixedMobile from "../components/LogoFixedMobile"
-
 import { GatsbySeo } from "gatsby-plugin-next-seo"
+import { Container, Row, Col } from "react-bootstrap"
 
 const nowContent = {
   title: "What Tyler is doing now",
@@ -325,7 +324,7 @@ class Now extends React.Component {
             >
               {favoritesArray.map(favoriteSet => {
                 return (
-                  <>
+                  <div>
                     <Row className="d-flex align-items-baseline">
                       <span className="px-2 mt-4 wsans w-regular fav-title">
                         {favoriteSet.title}
@@ -345,7 +344,7 @@ class Now extends React.Component {
                         </Row>
                       )
                     })}
-                  </>
+                  </div>
                 )
               })}
               <Row className="d-flex align-items-baseline">
