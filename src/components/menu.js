@@ -1,7 +1,7 @@
 import React from "react"
 
 import { Col } from "react-bootstrap"
-import "../styles/global.scss"
+
 
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import { ThemeToggler } from "gatsby-plugin-dark-mode"
@@ -10,6 +10,7 @@ import whiteLogo from "../images/logo-white.svg"
 import dayButton from "../images/daymode.svg"
 import nightButton from "../images/night-button.svg"
 import closeBTN from "../images/x.svg"
+import translate from '../i18n/messages/translateHelper';
 
 const Menu = ({ handleClose, zIndex }) => {
   return (
@@ -46,9 +47,9 @@ const Menu = ({ handleClose, zIndex }) => {
           duration={1}
           entryOffset={800}
           className="text-light roboto w-regular h2 my-3 fancy-link "
-          to="/connect"
+          to="/connect/"
         >
-          <span onClick={handleClose}>Set up a call</span>
+          <span onClick={handleClose}>{ translate('setCall') }</span>
         </AniLink>
         <AniLink
           style={{
@@ -61,9 +62,9 @@ const Menu = ({ handleClose, zIndex }) => {
           duration={1}
           entryOffset={800}
           className="text-light roboto w-regular h2 my-3 fancy-link"
-          to="/blog"
+          to="/blog/"
         >
-          <span onClick={handleClose}>Posts</span>
+          <span onClick={handleClose}>{ translate('posts') }</span>
         </AniLink>
         <AniLink
           style={{
@@ -76,9 +77,9 @@ const Menu = ({ handleClose, zIndex }) => {
           duration={1}
           entryOffset={800}
           className="text-light roboto w-regular h2 my-3 fancy-link"
-          to="/favorites"
+          to="/favorites/"
         >
-          <span onClick={handleClose}> Favorites</span>
+          <span onClick={handleClose}> { translate('favorites') }</span>
         </AniLink>
         <AniLink
           style={{
@@ -91,9 +92,9 @@ const Menu = ({ handleClose, zIndex }) => {
           duration={1}
           entryOffset={800}
           className="text-light roboto w-regular h2 my-3 fancy-link"
-          to="/now"
+          to="/now/"
         >
-          <span onClick={handleClose}>Now</span>
+          <span onClick={handleClose}>{ translate('now') }</span>
         </AniLink>
         <AniLink
           className="fancy-link"
@@ -102,30 +103,12 @@ const Menu = ({ handleClose, zIndex }) => {
           top="exit"
           direction="right"
           className="text-light roboto w-regular h2 my-4 fancy-link"
-          to="/about"
+          to="/about/"
         >
-          <span onClick={handleClose}>About</span>
+          <span onClick={handleClose}>{ translate('about') }</span>
         </AniLink>
       </div>
       <Col className="d-flex flex-column night-fixed">
-        {/* <Row className="d-flex justify-content-start w-50 pl-3">
-          <a href="a" className="text-light roboto w-regular pr-2 pl-1">
-            EN
-          </a>
-          <a
-            href={`http://translate.google.com/translate?hl=&sl=en&tl=ja&u=www.tylervawser.com`}
-            className="text-light roboto w-regular px-2"
-          >
-            日本
-          </a>
-          <a
-            href={`http://translate.google.com/translate?hl=&sl=en&tl=es&u=www.tylervawser.com`}
-            className="text-light roboto w-regular px-2"
-          >
-            ES
-          </a>
-        </Row> */}
-
         <ThemeToggler>
           {({ theme, toggleTheme }) => {
             return (

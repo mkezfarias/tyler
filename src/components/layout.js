@@ -2,15 +2,17 @@ import React from "react"
 
 import styled from "styled-components"
 
-import Typewriter from "typewriter-effect"
 import { Modal, Row, Col, Container } from "react-bootstrap"
 import Menu from "./menu"
 import { ThemeToggler } from "gatsby-plugin-dark-mode"
 import closeBTN from "../images/x.svg"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
+import "src/styles/global.scss"
 
 import FooterBlue from "./Footer"
-import { getString } from "../components/content.js"
+import translate from '../i18n/messages/translateHelper'
+import TypewriterHelper from './typewriter'
+import { I18nProvider, LOCALES } from '../i18n';
 
 class Layout extends React.Component {
   constructor(props) {
@@ -18,14 +20,34 @@ class Layout extends React.Component {
 
     this.state = {
       show: false,
+      locale: LOCALES.ENGLISH
     }
 
     this.handleClose = () => this.setState({ show: false })
     this.handleShow = () => this.setState({ show: true })
   }
 
+  componentDidMount() {
+    if (!!window.localStorage.getItem("language")) {
+      this.setState({ locale: window.localStorage.getItem("language") })
+    }
+    else {
+      const userLang = navigator.language.split('-')[0];
+      if (userLang) {
+        switch (navigator.language) {
+          case 'es': this.setState({ locale: LOCALES.SPANISH }); break;
+          case 'ja': this.setState({ locale: LOCALES.JAPANESE }); break;
+          case 'en':
+          default: this.setState({ locale: LOCALES.ENGLISH });
+        }
+
+        window.localStorage.setItem("language", this.state.locale)
+      }
+    }
+  }
+
   render() {
-    const { location, title, children } = this.props
+    const { location, title, children, intl } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
     const blogPath = `${__PATH_PREFIX__}/blog`
     const fullMenuPath = `${__PATH_PREFIX__}/full-menu`
@@ -40,25 +62,12 @@ class Layout extends React.Component {
           <div
             style={{
               color: "var(--textNormal)",
-              transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-              transition: `0.4s`,
               position: `relative`,
             }}
             className="main-title wsans w-semibold"
           >
-            <span className="mb-0 pb-0">Tyler Vawser is</span>
-            <Typewriter
-              onInit={typewriter => {
-                typewriter
-                  .typeString(
-                    `growing <a target="_blank" class="fancy-link " href="https://www.apptegy.com/">Apptegy</a>.`
-                  )
-                  .pauseFor(15000)
-                  .deleteAll()
-                  .typeString(getString())
-                  .start()
-              }}
-            />
+            <span className="mb-0 pb-0">{ translate('tylerVawser') }</span>
+            <TypewriterHelper />
           </div>
         </Container>
       )
@@ -66,13 +75,11 @@ class Layout extends React.Component {
         <AniLink
           style={{
             color: "var(--textTitle)",
-            transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-            transition: `0.6s`,
             height: "30px",
             width: "30px",
             zIndex: `300`,
           }}
-          to="/full-menu"
+          to="/full-menu/"
           className="menu-fixed d-block"
           cover
           bg="var(--gradient-background)"
@@ -83,8 +90,6 @@ class Layout extends React.Component {
           <div
             style={{
               background: `var(--menu-img)`,
-              transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-              transition: `0.4s`,
               height: "30px",
               width: "30px",
               zIndex: `300`,
@@ -94,8 +99,6 @@ class Layout extends React.Component {
           <div
             style={{
               background: `var(--menu-img)`,
-              transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-              transition: `0.4s`,
               height: "30px",
               width: "30px",
               zIndex: `300`,
@@ -115,8 +118,6 @@ class Layout extends React.Component {
             xl={12}
             style={{
               color: "var(--textNormal)",
-              transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-              transition: `0.4s`,
               textAlign: `center`,
               margin: `auto`,
               maxWidth: `100vw`,
@@ -136,16 +137,14 @@ class Layout extends React.Component {
         <Row className="mx-md-2 mx-px-2 mx-1 px-1">
           <Col
             xl={12}
-            style={{
-              color: "var(--textNormal)",
-              transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-              transition: `0.4s`,
-              textAlign: `center`,
-              margin: `auto`,
-              maxWidth: `100vw`,
-              fontSize: `calc(20px + 2vw)`,
-            }}
-            className="wider wsans w-medium mx-md-5 mx-px-5 line-height-1 mt-0 w-semibold "
+            // style={{
+            //   color: "var(--textNormal)",
+            //   textAlign: `center`,
+            //   margin: `auto`,
+            //   maxWidth: `100vw`,
+            //   fontSize: `calc(20px + 2vw)`,
+            // }}
+            // className="wider wsans w-medium mx-md-5 mx-px-5 line-height-1 mt-0 w-semibold "
           >
             {title}
           </Col>
@@ -155,8 +154,6 @@ class Layout extends React.Component {
         <div
           style={{
             color: "var(--textTitle)",
-            transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-            transition: `0.6s`,
             height: "30px",
             width: "30px",
             zIndex: `300`,
@@ -166,13 +163,11 @@ class Layout extends React.Component {
           <AniLink
             style={{
               color: "var(--textTitle)",
-              transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-              transition: `0.6s`,
               height: "30px",
               width: "30px",
               zIndex: `300`,
             }}
-            to="/full-menu"
+            to="/full-menu/"
             className="menu-fixed d-block"
             cover
             bg="var(--gradient-background)"
@@ -183,8 +178,6 @@ class Layout extends React.Component {
             <div
               style={{
                 background: `var(--menu-img)`,
-                transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-                transition: `0.4s`,
                 height: "30px",
                 width: "30px",
                 zIndex: `300`,
@@ -196,8 +189,6 @@ class Layout extends React.Component {
           <div
             style={{
               background: `var(--menu-img)`,
-              transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-              transition: `0.4s`,
               height: "30px",
               width: "30px",
               zIndex: `300`,
@@ -210,14 +201,7 @@ class Layout extends React.Component {
       footer = <FooterBlue />
     }
     return (
-      <Wrapper
-        style={{
-          backgroundColor: "var(--bg)",
-          transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-          transition: `0.4s`,
-          minHeight: `100vh`,
-        }}
-      >
+      <Wrapper>
         <ThemeToggler>
           {({ theme, toggleTheme }) => {
             let hours = parseInt(
@@ -235,13 +219,11 @@ class Layout extends React.Component {
             }
 
             return (
-              <label>
-                <input
-                  hidden
-                  type="checkbox"
-                  checked={hours === "dark" ? true : false}
-                />{" "}
-              </label>
+              <input
+                hidden
+                type="checkbox"
+                checked={hours === "dark" ? true : false}
+              />
             )
           }}
         </ThemeToggler>
@@ -250,23 +232,17 @@ class Layout extends React.Component {
             marginLeft: `auto`,
             marginRight: `auto`,
             maxWidth: `1400px`,
-            backgroundColor: `var(--bg)`,
           }}
           className="pt-5 pl-1 pl-3 pl-1 mt-4 mt-md-5 mr-md-4 mb-md-1 ml-md-4"
         >
           <header className="d-flex justify-content-between align-items-center mb-5 mt-md-5">
+            {" "}
             <div onClick={this.handleShow}>{header}</div>
           </header>
           <div className="menu-fixed menu-fixed-mobile ">{menu}</div>
-          <main
-            style={{
-              transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-              transition: `0.5s`,
-            }}
-          >
-            {children}
-          </main>
         </div>
+        <div>{children}</div>
+        <div> {footer} </div>
         <Modal
           onEntered={this.bgTransparent}
           show={this.state.show}
@@ -282,18 +258,15 @@ class Layout extends React.Component {
               transition: `0.4s`,
             }}
           >
+            <I18nProvider locale={this.state.locale}>
             <Menu handleClose={this.handleClose} />
+            </I18nProvider>
 
             <div onClick={this.handleClose}>
-              <img
-                src={closeBTN}
-                alt="Close Button"
-                className="close-button"
-              ></img>
+              <img src={closeBTN} alt="Close Button" className="close-button" />
             </div>
           </Modal.Body>
         </Modal>
-        <div className="mt-5 pt-5">{footer} </div>
       </Wrapper>
     )
   }

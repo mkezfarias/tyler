@@ -3,7 +3,6 @@ import React from "react"
 import Layout from "../components/layout"
 
 import { Container, Row, Col } from "react-bootstrap"
-import "../styles/global.scss"
 
 import arrowIMG from "../images/arrow.svg"
 import LogoFixedMobile from "../components/LogoFixedMobile"
@@ -236,7 +235,7 @@ class About extends React.Component {
                   I learned the hard way that intelligence, fame, money, and
                   title don’t create happiness.
                 </strong>{" "}
-                In fact, having all of the above often leans to misery and
+                In fact, having all of the above often leads to misery and
                 embarrassment. Since that point, I’ve kept away from social
                 media and done my best to live a more private life.{" "}
               </p>
@@ -249,7 +248,7 @@ class About extends React.Component {
               >
                 On the one hand I enjoy hosting dinner parties with strangers.
                 And on the other hand, I’m someone who likes to be left alone.
-                If there’s one daily struggle it’s that I want people to enjoy
+                If there’s one daily struggle, it’s that I want people to enjoy
                 being around me and I also want to keep to myself.{" "}
               </p>
 
@@ -471,11 +470,11 @@ class About extends React.Component {
                 My wife and I wanted to live internationally and decided it
                 would be best to do that before we were too comfortable, had
                 kids, or came up with a good excuse to stay home. We moved to
-                Seki, Japan (Gifu-ken) —north of the large city Nagoya. It was
+                Seki, Japan (Gifu-ken) —north of the large city of Nagoya. It was
                 the same city that I spent my summers in high school living in.
-                I like to think that experience normal Japan —not the otaku,
+                I like to think that I experienced normal Japan —not the otaku,
                 anime-loving, western-projecting Japan that Americans (and
-                others) are so weirdly obsessed with. At the time Seki and
+                others) are so weirdly obsessed with. At the time, Seki and
                 Japan, felt like a second home that I returned to each summer.{" "}
               </p>
 

@@ -1,10 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
-
 import Layout from "../components/layout"
-
 import { Container, Row, Col } from "react-bootstrap"
-import "../styles/global.scss"
 import arrowIMG from "../images/arrow.svg"
 import LogoFixedMobile from "../components/LogoFixedMobile"
 
@@ -119,43 +116,19 @@ class Now extends React.Component {
             cardType: "summary_large_image",
           }}
         />
-        {/* <SEO
-          title="Tyler Vawser"
-          keywords={[`blog`, `Tyler Vawser`, `Tvawser`, `react`]} //edit these on each page depending on the content of the page
-        /> */}
         <LogoFixedMobile />
         <div>
           <Row>
             <Col
               xl={8}
-              style={{
-                color: "var(--textNormal)",
-                transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-                transition: `0.4s`,
-                textAlign: `center`,
-                margin: `auto`,
-                maxWidth: `90vw`,
-                padding: `-20vh 10vw 0 10vw`,
-                fontSize: `calc(20px + 4vw)`,
-              }}
-              className="wider wsans w-medium pb-0 mb-0 line-height-1 mt-0 w-semibold align-center"
+              className="wider wsans w-medium pb-0 mb-0 line-height-1 mt-0 w-semibold align-center now-content"
             >
               {nowContent.title}{" "}
             </Col>
           </Row>
           <Row className="mt-5 py-4">
             <Col
-              style={{
-                color: "var(--textNormal)",
-                transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-                transition: `0.4s`,
-                textAlign: `center`,
-                margin: `auto`,
-                maxWidth: `90vw`,
-                padding: `10vh 10vw 0 10vw`,
-                fontSize: `calc(14px + .7vw)`,
-              }}
-              className="roboto w-medium"
+              className="roboto w-medium check-it-out"
             >
               Check it out here
             </Col>
@@ -163,22 +136,15 @@ class Now extends React.Component {
           <Row>
             <Col
               style={{
-                color: "var(--textNormal)",
-                transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
-                transition: `0.4s`,
                 textAlign: `center`,
                 margin: `auto`,
-                maxWidth: `90vw`,
-                padding: `0 10vw 0 10vw`,
-                fontSize: `calc(10px + .7vw)`,
               }}
-              className="roboto w-medium"
             >
               <img src={arrowIMG} alt="Arrow down"></img>
             </Col>
           </Row>
         </div>
-        <Container fluid>
+        <div>
           <Row className="d-flex justify-content-center pb-5">
             <Col xl={{ span: 7 }} xs={10} sm={10} className="mb-5 pb-5 pt-5">
               <p
@@ -308,11 +274,10 @@ class Now extends React.Component {
               </p>
             </Col>
           </Row>
-        </Container>
-        <Container
-          fluid
+        </div>
+        <section
           style={{
-            background: "var(--gradient-background)",
+            background: "red",
             width: `110vw`,
             margin: `6vh -10vw 10vh -10vw`,
           }}
@@ -391,14 +356,14 @@ class Now extends React.Component {
                 <Link
                   style={{ color: `#add5ff`, fontSize: `20px` }}
                   className="fancy-link-footer d-flex ml-md-3 "
-                  to="/connect"
+                  to="/connect/"
                 >
                   {letsTalk.linkText}
                 </Link>
               </Row>
             </Col>
           </Row>
-        </Container>
+        </section>
       </Layout>
     )
   }

@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     // edit below
-    title: `Read more about Tyler Vawser`, // this is the blog page title
+    title: `Tyler's been writing`, // this is the blog page title
     author: `Tyler Vawser`, // do not change
     description: `Tyler Vawser`, // update meta description
     siteUrl: `https://tylervawser.com/`, // updated url
@@ -12,7 +12,9 @@ module.exports = {
 
   //don't change these configs please
   plugins: [
+    `gatsby-plugin-root-import`,
     `gatsby-plugin-netlify-cms`,
+    `gatsby-plugin-netlify`,
     `gatsby-plugin-transition-link`,
     `gatsby-plugin-dark-mode`,
     `gatsby-plugin-sass`,

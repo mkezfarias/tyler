@@ -1,4 +1,8 @@
 // Override default variables before the import
+
+// Import Bootstrap and its default variables
+@import '~bootstrap/scss/bootstrap.scss';
+
 @media (max-width: 576px) {
 
   .main-title {
@@ -8,10 +12,6 @@
     padding-bottom: 10px;
   }
 
-  .container-static{
-    position: absolute;
-    bottom: 0;
-  }
 
   .link-mobile {
     font-size: calc(12px + 1vw) !important;
@@ -372,11 +372,11 @@ div.tl-edges {
 }
 
 .footer-title{
-  font-size: calc(10px + 0.8vw) !important;
+  font-size: calc(min(10px + 0.8vw, 30px)) !important;
 }
 
 .footer-links {
-  font-size: calc(8px + 0.5vw) !important;
+  font-size: calc(min(8px + 0.5vw, 25px)) !important;
 }
 
 .border-footer {
@@ -389,6 +389,26 @@ div.tl-edges {
   margin-bottom: 30px !important;
 }
 
+.bg-gradient-section {
+  background: var(--gradient-background);
+  width: 110vw;
+  margin: 6vh -10vw 0 -10vw;
+}
 
-// Import Bootstrap and its default variables
-@import '~bootstrap/scss/bootstrap.scss';
+.now-content {
+  color: var(--textNormal);
+  text-align: center;
+  margin: auto;
+  max-width: 90vw;
+  padding: -20vh 10vw 0 10vw;
+  font-size: calc(20px + 4vw);
+}
+
+.check-it-out {
+  color: var(--textNormal);
+  text-align: center;
+  margin: auto;
+  max-width: 90vw;
+  padding: 10vh 10vw 0 10vw;
+  font-size: calc(14px + .7vw);
+}

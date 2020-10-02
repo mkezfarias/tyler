@@ -3,23 +3,36 @@ import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-
-
+import Button from "../components/button"
 import { Container, Row, Col, Modal } from "react-bootstrap"
-
+import TransitionLink from "gatsby-plugin-transition-link"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
+import { ThemeToggler } from "gatsby-plugin-dark-mode"
+import whiteLogo from "../images/logo-white.svg"
+import darkLogo from "../images/logo.svg"
+import dayButton from "../images/daymode.svg"
+import nightButton from "../images/night-button.svg"
+import closeBTN from "../images/x.svg"
+import menuIMG from "../images/menu.svg"
+import menuDarkIMG from "../images/menu2.svg"
 import arrowIMG from "../images/arrow.svg"
 import toolsIcon from "../images/favorite tools icon.svg"
-
+import podcastsIcon from "../images/favorite podcasts icon.svg"
 import travelIcon from "../images/favorite podcasts icon.svg"
 import videosIcon from "../images/favorite videos icon.svg"
-
+import booksIcon from "../images/booksIcon.png"
+import thingsIcon from "../images/thingsIcon.png"
+import linksIcon from "../images/linksIcon.png"
+import footerIMG from "../images/footer.png"
+import footerIMG2 from "../images/footer@2x.png"
+import Menu from "../components/menu"
 import LogoFixedMobile from "../components/LogoFixedMobile"
 import FooterBlue from "../components/Footer"
 import { GatsbySeo } from "gatsby-plugin-next-seo"
 
-const noteableArray = [
+const LinksArray = [
   {
-    icon: toolsIcon,
+    //icon: toolsIcon,
     title: "Profile links",
     items: [
       {
@@ -32,14 +45,12 @@ const noteableArray = [
         subTitle: "Tyler on Quora",
 
         subText: " ",
-
       },
       {
         link: "https://yourstack.com/@Tvaw",
         subTitle: "Your Stack",
 
         subText: " ",
-
       },
       {
         link: "https://www.linkedin.com/in/tylervawser",
@@ -48,36 +59,30 @@ const noteableArray = [
         subText: " ",
       },
       {
-        link: "https://www.producthunt.com/@tvaw/",
+        link: "https://www.producthunt.com/@tvaw",
         subTitle: "Tyler on Product Hunt",
 
-        subText:
-          " ",
-
+        subText: " ",
       },
       {
         link: "https://angel.co/u/tyler-vawser",
         subTitle: "Tyler's AngelList",
 
-        subText:
-          " ",
-
+        subText: " ",
       },
       {
         link: "https://medium.com/@tvaw",
         subTitle: "Medium",
-        subText:
-          " ",
-
+        subText: " ",
       },
     ],
   },
   {
-    icon: videosIcon,
+    //icon: videosIcon,
     title: "Interviews & Quoted by",
     items: [
       {
-        link: "https://copyhour.com/tyler-vawser-interview/",
+        link: "https://copyhour.com/tyler-vawser-interview",
 
         subTitle:
           "How Tyler Vawser Quit His Job & Went Full-Time As A Marketing Consultant | CopyHour.com",
@@ -99,13 +104,12 @@ const noteableArray = [
       },
       {
         link:
-          "https://mailchimp.com/resources/how-sticker-mule-combines-e-commerce-and-email/",
+          "https://mailchimp.com/resources/how-sticker-mule-combines-e-commerce-and-email",
 
         subTitle: "How Sticker Mule Combines E-Commerce and Email",
         subText: " ",
       },
       {
-
         link:
           "https://www.fatherly.com/play/12-awesome-activities-to-do-with-your-kids-in-2016/",
         subTitle: "12 Awesome Activities To Do With Your Kids in 2016",
@@ -143,7 +147,7 @@ const noteableArray = [
   },
 
   {
-    icon: travelIcon,
+    //icon: travelIcon,
     title: "Content I've written",
     items: [
       {
@@ -171,7 +175,7 @@ const noteableArray = [
   },
 ]
 
-class Noteable extends React.Component {
+class Links extends React.Component {
   constructor(props) {
     super(props)
 
@@ -188,42 +192,32 @@ class Noteable extends React.Component {
       <>
         <Layout location={this.props.location}>
           <GatsbySeo
-            title="Tyler Vawser"
-            description="Tyler Vawser Tyler Vawser Tyler Vawser."
-            canonical="https://www.tylervawser.com/"
-            keywords="prayuth,taksin"
+            title="Tyler Vawser's Favorites"
+            description="Tyler Vawser's favorite tools, books, things, and more."
+            canonical="https://www.tylervawser.com/favorites"
+            keywords="tylervawser,tyler vawser,favorite tools" // keywords list
             openGraph={{
-              url: "https://www.url.ie/a",
-              title: "Open Graph Title",
-              description: "Open Graph Description",
+              url: "https://www.tylervawser.com/favorites",
+              title: "About Tyler Vawser",
+              description:
+                "Tyler Vawser's favorite tools, books, things, and more.",
               images: [
                 {
-                  url: "https://www.example.ie/og-image-01.jpg",
-                  width: 800,
-                  height: 600,
-                  alt: "Og Image Alt",
+                  url: "../src/images/OGtylervawser.jpg",
+                  width: 1200,
+                  height: 1200,
+                  alt: "About Tyler Vawser",
                 },
-                {
-                  url: "https://www.example.ie/og-image-02.jpg",
-                  width: 900,
-                  height: 800,
-                  alt: "Og Image Alt Second",
-                },
-                { url: "https://www.example.ie/og-image-03.jpg" },
-                { url: "https://www.example.ie/og-image-04.jpg" },
               ],
               site_name: "TylerVawser",
             }}
             twitter={{
-              handle: "@handle",
+              handle: "@tvaw",
               site: "@site",
               cardType: "summary_large_image",
             }}
           />
-          <SEO
-            title="Tyler Vawser"
-            keywords={[`blog`, `Tyler Vawser`, `Tvawser`, `react`]}
-          />
+
           <LogoFixedMobile />
           <div>
             <Row>
@@ -241,7 +235,7 @@ class Noteable extends React.Component {
                 }}
                 className="wider wsans w-medium pb-0 mb-4 line-height-1 mt-0 w-semibold align-center"
               >
-                Links about Tyler Vawser{" "}
+                Links about Tyler Vawser
               </Col>
             </Row>
             <Row>
@@ -284,7 +278,7 @@ class Noteable extends React.Component {
             style={{
               background: "var(--gradient-background)",
               width: `110vw`,
-              margin: `6vh -10vw 0 -10vw`,
+              margin: `6vh -10vw 15vh -10vw`,
             }}
           >
             <Row className="d-flex justify-content-center pb-5">
@@ -296,29 +290,36 @@ class Noteable extends React.Component {
                 xl={{ span: 6, offset: 1 }}
                 className="mb-5 pb-5"
               >
-                {noteableArray.map(noteableSet => {
+                {LinksArray.map(favoriteSet => {
                   return (
                     <>
                       <Row className="d-flex align-items-baseline">
-                        <img
-                          src={noteableSet.icon}
-                          alt={noteableSet.title}
-                        ></img>
                         <span className="px-2 mt-4 wsans w-regular fav-title">
-                          {noteableSet.title}
+                          {favoriteSet.title}
                         </span>
                       </Row>
-                      {noteableSet.items.map(item => {
+                      {favoriteSet.items.map(item => {
                         return (
-                          <Row className="d-flex ml-2 ml-md-5 w-100 w-md-75">
+                          <Row className="d-flex ml-2 ml-md-3 w-100 w-md-75">
                             <a
                               href={item.link}
                               target="_blank"
-                              className="fancy-link-footer text-light w-semibold my-1"
+                              className="fancy-link-footer"
                             >
-                              {item.subTitle}{" "}
-                            </a>
-
+                              <p
+                                style={{ fontSize: `17px` }}
+                                className=" text-light  w-semibold mb-0 "
+                              >
+                                {" "}
+                                {item.subTitle}{" "}
+                              </p>
+                            </a>{" "}
+                            <p
+                              className=" text-light p-text w-100 w-md-75 pr-md-5"
+                              style={{ fontSize: `17px` }}
+                            >
+                              {item.subText}
+                            </p>
                           </Row>
                         )
                       })}
@@ -328,12 +329,10 @@ class Noteable extends React.Component {
               </Col>
             </Row>
           </Container>
-
-          <FooterBlue />
         </Layout>
       </>
     )
   }
 }
 
-export default Noteable
+export default Links

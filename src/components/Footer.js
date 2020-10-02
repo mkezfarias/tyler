@@ -34,7 +34,11 @@ const FooterBlue = () => {
               entryOffset={800}
               className="py-5"
             >
-              <img src={logoWhite} alt="Tyler Vawser" className="pt-4 pl-5" />
+              <img src={logoWhite} alt="Tyler Vawser" className="pl-5" 
+                style={{
+                  height: "100%",
+                }}
+              />
             </AniLink>
           </div>
           <div className="d-flex justify-content-start flex-column flex-md-row">
@@ -44,13 +48,21 @@ const FooterBlue = () => {
               </div>
               <div className="d-flex text-right px-5 px-md-1">
                 <div className="footer-links">
-                  <a
-                    href="/connect"
+                  <AniLink
+                    style={{
+                      color: "var(--textTitle)",
+                    }}
+                    cover
+                    bg="var(--gradient-background)"
+                    direction="right"
+                    top="entry"
+                    duration={1}
+                    entryOffset={800}
+                    to="/connect/"
                     className="text-light fancy-link-footer"
-                    target="_blank"
                   >
                     Set up a Call
-                  </a>
+                  </AniLink>
                 </div>
                 <div className="px-2 footer-links">/</div>
                 <div className="footer-links">
@@ -85,51 +97,81 @@ const FooterBlue = () => {
               </div>
             </div>
             <div className="text-light roboto w-medium d-flex flex-column justify-content-end border-footer px-5 px-md-4 ml-2">
-              <div
-                className="footer-title py-0 my-0 text-left text-md-right"
-                target="_blank"
-              >
+              <div className="footer-title py-0 my-0 text-left text-md-right">
                 Learn More
               </div>
               <div className="d-flex text-right">
                 <div className="footer-links">
-                  <a
-                    href="/about"
+                  <AniLink
+                    style={{
+                      color: "var(--textTitle)",
+                    }}
+                    cover
+                    bg="var(--gradient-background)"
+                    direction="right"
+                    top="entry"
+                    duration={1}
+                    entryOffset={800}
+                    to="/about/"
                     className="text-light fancy-link-footer"
-                    target="_blank"
                   >
                     About
-                  </a>
+                  </AniLink>
                 </div>
                 <div className="px-2 footer-links">/</div>
                 <div className="footer-links">
-                  <a
-                    href="/blog"
+                  <AniLink
+                    style={{
+                      color: "var(--textTitle)",
+                    }}
+                    cover
+                    bg="var(--gradient-background)"
+                    direction="right"
+                    top="entry"
+                    duration={1}
+                    entryOffset={800}
+                    to="/blog/"
                     className="text-light fancy-link-footer"
-                    target="_blank"
                   >
                     Posts
-                  </a>
+                  </AniLink>
                 </div>
                 <div className="px-2 footer-links">/</div>
                 <div className="footer-links">
-                  <a
-                    href="/favorites"
+                  <AniLink
+                    style={{
+                      color: "var(--textTitle)",
+                    }}
+                    cover
+                    bg="var(--gradient-background)"
+                    direction="right"
+                    top="entry"
+                    duration={1}
+                    entryOffset={800}
                     className="text-light fancy-link-footer"
-                    target="_blank"
+                    to="/favorites/"
+                    className="text-light fancy-link-footer"
                   >
                     Favorites
-                  </a>
+                  </AniLink>
                 </div>
                 <div className="px-2 footer-links">/</div>
                 <div className="footer-links">
-                  <a
-                    href="/links"
+                  <AniLink
+                    style={{
+                      color: "var(--textTitle)",
+                    }}
+                    cover
+                    bg="var(--gradient-background)"
+                    direction="right"
+                    top="entry"
+                    duration={1}
+                    entryOffset={800}
+                    to="/links/"
                     className="text-light fancy-link-footer"
-                    target="_blank"
                   >
                     Links
-                  </a>
+                  </AniLink>
                 </div>
               </div>
             </div>
