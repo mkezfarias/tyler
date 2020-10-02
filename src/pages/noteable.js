@@ -6,6 +6,7 @@ import SEO from "../components/seo"
 
 
 import { Container, Row, Col, Modal } from "react-bootstrap"
+import "../styles/global.scss"
 
 import arrowIMG from "../images/arrow.svg"
 import toolsIcon from "../images/favorite tools icon.svg"

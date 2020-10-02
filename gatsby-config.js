@@ -12,7 +12,6 @@ module.exports = {
 
   //don't change these configs please
   plugins: [
-    `gatsby-plugin-root-import`,
     `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-netlify`,
     `gatsby-plugin-transition-link`,

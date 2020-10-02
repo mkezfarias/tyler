@@ -1,7 +1,7 @@
 import React from "react"
 
 import { Col } from "react-bootstrap"
-
+import "../styles/global.scss"
 
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import { ThemeToggler } from "gatsby-plugin-dark-mode"

@@ -7,7 +7,6 @@ import Menu from "./menu"
 import { ThemeToggler } from "gatsby-plugin-dark-mode"
 import closeBTN from "../images/x.svg"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
-import "src/styles/global.scss"
 
 import FooterBlue from "./Footer"
 import translate from '../i18n/messages/translateHelper'
@@ -62,6 +61,8 @@ class Layout extends React.Component {
           <div
             style={{
               color: "var(--textNormal)",
+              transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+              transition: `0.4s`,
               position: `relative`,
             }}
             className="main-title wsans w-semibold"
@@ -75,6 +76,8 @@ class Layout extends React.Component {
         <AniLink
           style={{
             color: "var(--textTitle)",
+            transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+            transition: `0.6s`,
             height: "30px",
             width: "30px",
             zIndex: `300`,
@@ -90,6 +93,8 @@ class Layout extends React.Component {
           <div
             style={{
               background: `var(--menu-img)`,
+              transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+              transition: `0.4s`,
               height: "30px",
               width: "30px",
               zIndex: `300`,
@@ -99,6 +104,8 @@ class Layout extends React.Component {
           <div
             style={{
               background: `var(--menu-img)`,
+              transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+              transition: `0.4s`,
               height: "30px",
               width: "30px",
               zIndex: `300`,
@@ -118,6 +125,8 @@ class Layout extends React.Component {
             xl={12}
             style={{
               color: "var(--textNormal)",
+              transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+              transition: `0.4s`,
               textAlign: `center`,
               margin: `auto`,
               maxWidth: `100vw`,
@@ -137,14 +146,16 @@ class Layout extends React.Component {
         <Row className="mx-md-2 mx-px-2 mx-1 px-1">
           <Col
             xl={12}
-            // style={{
-            //   color: "var(--textNormal)",
-            //   textAlign: `center`,
-            //   margin: `auto`,
-            //   maxWidth: `100vw`,
-            //   fontSize: `calc(20px + 2vw)`,
-            // }}
-            // className="wider wsans w-medium mx-md-5 mx-px-5 line-height-1 mt-0 w-semibold "
+            style={{
+              color: "var(--textNormal)",
+              transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+              transition: `0.4s`,
+              textAlign: `center`,
+              margin: `auto`,
+              maxWidth: `100vw`,
+              fontSize: `calc(20px + 2vw)`,
+            }}
+            className="wider wsans w-medium mx-md-5 mx-px-5 line-height-1 mt-0 w-semibold "
           >
             {title}
           </Col>
@@ -154,6 +165,8 @@ class Layout extends React.Component {
         <div
           style={{
             color: "var(--textTitle)",
+            transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+            transition: `0.6s`,
             height: "30px",
             width: "30px",
             zIndex: `300`,
@@ -163,6 +176,8 @@ class Layout extends React.Component {
           <AniLink
             style={{
               color: "var(--textTitle)",
+              transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+              transition: `0.6s`,
               height: "30px",
               width: "30px",
               zIndex: `300`,
@@ -178,6 +193,8 @@ class Layout extends React.Component {
             <div
               style={{
                 background: `var(--menu-img)`,
+                transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+                transition: `0.4s`,
                 height: "30px",
                 width: "30px",
                 zIndex: `300`,
@@ -189,6 +206,8 @@ class Layout extends React.Component {
           <div
             style={{
               background: `var(--menu-img)`,
+              transitionTimingFunction: `cubic-bezier(0.25, 0.1, 0.25, 1)`,
+              transition: `0.4s`,
               height: "30px",
               width: "30px",
               zIndex: `300`,

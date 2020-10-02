@@ -3,6 +3,7 @@ import { navigate } from "gatsby"
 
 import Layout from "../components/layout"
 import { Row, Col } from "react-bootstrap"
+import "../styles/global.scss"
 
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
