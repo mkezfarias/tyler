@@ -3,7 +3,6 @@ import React from "react"
 import Layout from "../components/layout"
 
 import { Container, Row, Col } from "react-bootstrap"
-import "../styles/global.scss"
 
 import arrowIMG from "../images/arrow.svg"
 import LogoFixedMobile from "../components/LogoFixedMobile"

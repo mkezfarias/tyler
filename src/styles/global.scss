@@ -394,3 +394,21 @@ div.tl-edges {
   width: 110vw;
   margin: 6vh -10vw 0 -10vw;
 }
+
+.now-content {
+  color: var(--textNormal);
+  text-align: center;
+  margin: auto;
+  max-width: 90vw;
+  padding: -20vh 10vw 0 10vw;
+  font-size: calc(20px + 4vw);
+}
+
+.check-it-out {
+  color: var(--textNormal);
+  text-align: center;
+  margin: auto;
+  max-width: 90vw;
+  padding: 10vh 10vw 0 10vw;
+  font-size: calc(14px + .7vw);
+}

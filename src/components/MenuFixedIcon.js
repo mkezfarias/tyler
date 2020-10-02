@@ -1,6 +1,5 @@
 import React from "react"
 
-import "../styles/global.scss"
 
 const MenuFixedIcon = ({ handleShow, noDisplay }) => {
   return (

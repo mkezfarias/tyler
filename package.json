@@ -12,7 +12,7 @@
     "@mdx-js/react": "^1.5.1",
     "@xavivars/gatsby-plugin-static-site": "^0.2.3",
     "babel-plugin-styled-components": "^1.10.0",
-    "bootstrap": "^4.5.1",
+    "bootstrap": "^4.5.2",
     "gatsby": "2.24.7",
     "gatsby-image": "^2.0.39",
     "gatsby-plugin-dark-mode": "^1.1.2",
@@ -63,6 +63,7 @@
   },
   "devDependencies": {
     "gatsby-plugin-remove-trailing-slashes": "^2.3.11",
+    "gatsby-plugin-root-import": "^2.0.5",
     "prettier": "^1.17.0"
   },
   "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
