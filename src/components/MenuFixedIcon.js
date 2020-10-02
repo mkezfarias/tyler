@@ -4,7 +4,7 @@ import React from "react"
 
 const MenuFixedIcon = ({ handleShow, noDisplay }) => {
   return (
-    <>
+    <div>
       <div
         onClick={handleShow}
         style={{
@@ -17,7 +17,7 @@ const MenuFixedIcon = ({ handleShow, noDisplay }) => {
         }}
         className="menu-fixed d-none d-md-block"
       ></div>
-    </>
+    </div>
   )
 }
 

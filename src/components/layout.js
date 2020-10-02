@@ -1,6 +1,6 @@
 import React from "react"
 
-import styled from "styled-components"
+
 
 import { Modal, Row, Col, Container } from "react-bootstrap"
 import Menu from "./menu"
@@ -13,6 +13,7 @@ import FooterBlue from "./Footer"
 import translate from '../i18n/messages/translateHelper'
 import TypewriterHelper from './typewriter'
 import { I18nProvider, LOCALES } from '../i18n';
+import styled from "styled-components"
 
 class Layout extends React.Component {
   constructor(props) {

@@ -1,7 +1,6 @@
 import React from "react"
-import { Link } from "gatsby"
-
 import Layout from "../components/layout"
+import { Link } from "gatsby"
 import SEO from "../components/seo"
 import Button from "../components/button"
 import { Container, Row, Col, Modal } from "react-bootstrap"
@@ -190,7 +189,7 @@ class Links extends React.Component {
 
   render() {
     return (
-      <>
+      <div>
         <Layout location={this.props.location}>
           <GatsbySeo
             title="Tyler Vawser's Favorites"
@@ -293,7 +292,7 @@ class Links extends React.Component {
               >
                 {LinksArray.map(favoriteSet => {
                   return (
-                    <>
+                    <div>
                       <Row className="d-flex align-items-baseline">
                         <span className="px-2 mt-4 wsans w-regular fav-title">
                           {favoriteSet.title}
@@ -324,14 +323,14 @@ class Links extends React.Component {
                           </Row>
                         )
                       })}
-                    </>
+                    </div>
                   )
                 })}
               </Col>
             </Row>
           </Container>
         </Layout>
-      </>
+      </div>
     )
   }
 }

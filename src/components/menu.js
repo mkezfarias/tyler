@@ -14,7 +14,7 @@ import translate from '../i18n/messages/translateHelper';
 
 const Menu = ({ handleClose, zIndex }) => {
   return (
-    <>
+    <div>
       <AniLink
         style={{
           color: "var(--textTitle)",
@@ -137,7 +137,7 @@ const Menu = ({ handleClose, zIndex }) => {
       <div onClick={handleClose}>
         <img src={closeBTN} alt="Close Button" className="close-button"></img>
       </div>
-    </>
+    </div>
   )
 }
 
