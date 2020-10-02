@@ -10,7 +10,7 @@ import Button from "../components/button"
 
 import { Container, Row, Col, Modal } from "react-bootstrap"
 
-import "../styles/global.scss"
+
 
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 

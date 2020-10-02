@@ -9,7 +9,7 @@ import { rhythm } from "../utils/typography"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 import { Card, Row, Col } from "react-bootstrap"
-import "../styles/global.scss"
+
 
 import LogoFixedMobile from "../components/LogoFixedMobile"
 import { GatsbySeo } from "gatsby-plugin-next-seo"

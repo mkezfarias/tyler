@@ -1,6 +1,3 @@
-// Override default variables before the import
-
-
 
 @media (max-width: 576px) {
 
@@ -113,9 +110,10 @@ body {
   --gradient-background:  linear-gradient(180deg, #0C84EB 0%, #0C84EB 100%) 0% 0% no-repeat padding-box;
   --footer: #0C84EB;
   --card-bg:  7px 7px 14px #d9d9d9, -7px -7px 14px #ffffff;
-  p, h2, h3, h4, h5, h6, li, blockquote:before {
-    color: var(--day-black);
-  }
+}
+
+p, h2, h3, h4, h5, h6, li, blockquote:before {
+  color: var(--day-black);
 }
 
 .tl-wrapper--mount{
@@ -135,9 +133,10 @@ body.dark {
   --gradient-background: linear-gradient(180deg, #063C84 0%, #041D3B 100%) 0% 0% no-repeat padding-box;
   --footer: #041D3B;
   --card-bg: 7px 7px 14px #1b1b1dc9, -7px -7px 14px #232327 ;
-  p, h2, h3, h4, h5, h6, li, blockquote {
-    color: var(--night-black);
-  }
+}
+
+p, h2, h3, h4, h5, h6, li, blockquote {
+  color: var(--night-black);
 }
 
 .night-gray {
@@ -393,5 +392,4 @@ div.tl-edges {
   width: 110vw;
   margin: 6vh -10vw 0 -10vw;
 }
-// Import Bootstrap and its default variables
-@import '~bootstrap/scss/bootstrap.scss';
+

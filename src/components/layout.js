@@ -7,7 +7,8 @@ import Menu from "./menu"
 import { ThemeToggler } from "gatsby-plugin-dark-mode"
 import closeBTN from "../images/x.svg"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import "../pages/styles.css"
 import FooterBlue from "./Footer"
 import translate from '../i18n/messages/translateHelper'
 import TypewriterHelper from './typewriter'
@@ -27,6 +28,7 @@ class Layout extends React.Component {
   }
 
   componentDidMount() {
+    this.state.isClient = true
     if (!!window.localStorage.getItem("language")) {
       this.setState({ locale: window.localStorage.getItem("language") })
     }
@@ -143,7 +145,7 @@ class Layout extends React.Component {
       footer = null
     } else {
       header = (
-        <Row className="mx-md-2 mx-px-2 mx-1 px-1">
+        <Row className="mx-md-2 mx-px-2 mx-1 px-1" >
           <Col
             xl={12}
             style={{
